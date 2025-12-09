@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import menuItems from "@/data/menu.json"; // adjust path accordingly
+import menuItemsData from "@/data/menu.json"; // adjust path accordingly
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
@@ -10,6 +10,14 @@ import { usePathname } from "next/navigation";
 import AnimatedButton from "../animation/AnimatedButton";
 
 gsap.registerPlugin(Flip);
+
+interface MenuItem {
+  title: string;
+  href?: string;
+  submenu?: { label: string; href: string }[];
+}
+
+const menuItems: MenuItem[] = menuItemsData as MenuItem[];
 
 export default function MobileMenu() {
   const pathname = usePathname();

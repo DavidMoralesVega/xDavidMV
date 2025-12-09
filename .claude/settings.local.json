@@ -3,7 +3,8 @@
     "allow": [
       "Bash(dir /s /b \"C:\\Users\\moral\\Desktop\\BeMoreX\\xCode\\xDmV\\components\\*.tsx\")",
       "Bash(ren works-masonry conferencias)",
-      "Bash(move:*)"
+      "Bash(move:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": []
