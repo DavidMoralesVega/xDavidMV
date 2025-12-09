@@ -1,0 +1,8 @@
+[
+  { "title": "Dribbble", "url": "https://dribbble.com/" },
+  { "title": "Behance", "url": "https://www.behance.net/" },
+  { "title": "Instagram", "url": "https://www.instagram.com/" },
+  { "title": "Github", "url": "https://github.com/" },
+  { "title": "Codepen", "url": "https://codepen.io/" },
+  { "title": "Figma Community", "url": "https://www.figma.com/community" }
+]

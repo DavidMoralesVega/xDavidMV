@@ -1,0 +1,28 @@
+{"approach1":[
+  {
+    "title": "Perfection",
+    "description": "From pixel-perfect designs to flawless code, every aspect of our projects is crafted with care to ensure the highest standards of quality.",
+    "icon": "/img/icons/h70_appr-01.webp"
+  },
+  {
+    "title": "Innovative",
+    "description": "We stay ahead of design trends, offering modern and visually impactful solutions that set your brand apart.",
+    "icon": "/img/icons/h70_appr-02.webp"
+  },
+  {
+    "title": "Expertise",
+    "description": "We are passionate about integrating the latest technologies and trends, including interactive animations and mobile-first strategies.",
+    "icon": "/img/icons/h70_appr-03.webp"
+  },
+  {
+    "title": "Full-Cycle services",
+    "description": "From web design to development, branding, SEO, and UX/UI, we provide a full range of services that cover all your digital needs.",
+    "icon": "/img/icons/h70_appr-04.webp"
+  },
+  {
+    "title": "Client Success",
+    "description": "Our clients consistently see improved engagement, conversion rates, and business growth.",
+    "icon": "/img/icons/h70_appr-05.webp"
+  }
+]
+}
