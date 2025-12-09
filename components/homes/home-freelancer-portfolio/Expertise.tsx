@@ -45,7 +45,7 @@ export default function Expertise() {
                 <div className="col-12 col-xl-6 mxd-grid-item no-margin">
                   <div className="mxd-section-title__hrtitle">
                     <RevealText as="h2" className="reveal-type">
-                      My expertise
+                      Mi expertise
                     </RevealText>
                   </div>
                 </div>
@@ -53,7 +53,7 @@ export default function Expertise() {
                 <div className="col-12 col-xl-3 mxd-grid-item no-margin">
                   <div className="mxd-section-title__hrcontrols anim-uni-in-up">
                     <AnimatedButton
-                      text="All Services"
+                      text="Ver servicios"
                       className="btn btn-anim btn-default btn-outline slide-right-up"
                       href={`/services`}
                     >

@@ -1,10 +1,9 @@
 import PreviewPage from "./preview/page";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title:
-    "Preview || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+  title: "David Morales Vega | Solutions Architect & Tech Lead",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Arquitecto de Soluciones y Technical Lead con 7+ años de experiencia en diseño de ecosistemas digitales escalables. Especializado en Angular, NestJS, Microservicios y liderazgo de equipos. Oruro, Bolivia.",
 };
 export default function Home() {
   return (

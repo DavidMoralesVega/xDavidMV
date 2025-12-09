@@ -1,23 +1,107 @@
 [
   {
-    "role": "Illustrator",
-    "agency": "Creative Mind",
-    "agencyUrl": "#",
-    "desc": "I created original images for a range of digital and printed products.",
-    "year": "2019 - 2021"
+    "role": "Technical Lead & Solutions Architect",
+    "agency": "Empresa Metalúrgica Vinto (ENAF)",
+    "agencyUrl": "https://www.vinto.gob.bo",
+    "desc": "Lidero la estrategia tecnológica del ERP corporativo. Diseñé ecosistema de Microservicios con DDD, Arquitectura Hexagonal y CQRS. Stack: Angular, NestJS, GraphQL, MongoDB, Docker.",
+    "year": "2022 - Actualidad"
   },
   {
-    "role": "Graphic designer",
-    "agency": "Moon Light",
-    "agencyUrl": "#",
-    "desc": "My job was to create adverts, branding, signage and other media products.",
+    "role": "Director Ejecutivo Fundador",
+    "agency": "Agencia Digital Bemorex",
+    "agencyUrl": "https://www.bemorex.com",
+    "desc": "Fundé y lidero la agencia enfocada en innovación digital y transformación tecnológica, gestionando proyectos de alto impacto para clientes estratégicos.",
+    "year": "2025 - Actualidad"
+  },
+  {
+    "role": "Lead Software Architect & Developer",
+    "agency": "App Vive Sin Miedo",
+    "agencyUrl": "https://play.google.com/store",
+    "desc": "Lideré el desarrollo de plataforma de prevención de violencia en Bolivia. PWA transformada en app Android (TWA) publicada en Google Play Store. Stack: Angular, Firebase, Signals.",
+    "year": "2024"
+  },
+  {
+    "role": "CEO & Full Stack Developer",
+    "agency": "Agencia Digital Zephyrus",
+    "agencyUrl": "https://www.zephyrus.agency",
+    "desc": "Dirigí la estrategia tecnológica y comercial durante 3 años, supervisando el ciclo completo de desarrollo de soluciones digitales y sitios corporativos.",
     "year": "2021 - 2024"
   },
   {
-    "role": "UI/UX designer",
-    "agency": "Moon Light",
+    "role": "Desarrollador Full Stack - LMS",
+    "agency": "UTO - Facultad de Derecho",
+    "agencyUrl": "https://www.uto.edu.bo",
+    "desc": "Desarrollé PWA integral para gestión de aprendizaje con módulos de seguimiento académico y chat en tiempo real. Stack: PHP, Angular, MySQL, Redux.",
+    "year": "2019"
+  },
+  {
+    "role": "Desarrollador Frontend & Mobile - E-Learning",
+    "agency": "UTO - Facultad de Medicina",
+    "agencyUrl": "https://www.cirguz.org",
+    "desc": "Creé plataforma de aprendizaje online con autenticación segura y bases de datos en tiempo real. Stack: Angular, TypeScript, Firebase, RxJS, PWA.",
+    "year": "2019"
+  },
+  {
+    "role": "Desarrollador Web Full Stack",
+    "agency": "Coteor R.L.",
     "agencyUrl": "#",
-    "desc": "I am actively involved in creating user interfaces for mobile apps and websites.",
-    "year": "2024 - now"
+    "desc": "Diseñé y desarrollé el portal web institucional adaptativo. Stack: PHP, MVC, PDO, MySQL, JavaScript, jQuery.",
+    "year": "2019"
+  },
+  {
+    "role": "Desarrollador Web Full Stack",
+    "agency": "Instituto Técnico Jesús María",
+    "agencyUrl": "https://www.intjem.edu.bo",
+    "desc": "Desarrollé el sitio web institucional y el sistema de preinscripciones online. Stack: HTML5, CSS3, PHP, MVC, MySQL.",
+    "year": "2019"
+  },
+  {
+    "role": "Maestro del Área de Computación",
+    "agency": "U.E. San Juan de Dios",
+    "agencyUrl": "#",
+    "desc": "Impartí formación técnica en computación e informática a estudiantes de secundaria.",
+    "year": "2018 - 2020"
+  },
+  {
+    "role": "Developer & Project Lead - 4ta Feria Institutos Técnicos",
+    "agency": "Dirección Departamental de Educación Oruro",
+    "agencyUrl": "#",
+    "desc": "Proyecto: Big Data Aplicado al Sector Público (Farmacias). Sistema de análisis de datos con data mining y reportes analíticos. Stack: PHP, MVC, PDO, MySQL.",
+    "year": "Septiembre 2018"
+  },
+  {
+    "role": "Pasantía - Departamento de Informática",
+    "agency": "Instituto Técnico de Formación Superior KHANA MARKA",
+    "agencyUrl": "#",
+    "desc": "Soporte técnico y asistencia en operaciones del departamento de sistemas.",
+    "year": "2018"
+  },
+  {
+    "role": "Developer & Project Lead - 3ra Feria Institutos Técnicos",
+    "agency": "Dirección Departamental de Educación Oruro",
+    "agencyUrl": "#",
+    "desc": "Proyecto: Lucha contra la Trata y Tráfico de Niños. Sistema de Reconocimiento Facial para validar identidad. Stack: C#, SQL Server, OpenCV.",
+    "year": "Septiembre 2017"
+  },
+  {
+    "role": "Técnico en Mantenimiento de Computadoras",
+    "agency": "U.E. Nacional de Toledo / U.E. Jesús María",
+    "agencyUrl": "#",
+    "desc": "Mantenimiento preventivo y correctivo de laboratorios de cómputo.",
+    "year": "2016 - 2017"
+  },
+  {
+    "role": "Técnico Logístico (STIKEADORES)",
+    "agency": "Organismo Electoral Plurinacional (OEP)",
+    "agencyUrl": "#",
+    "desc": "Adjudicación de cargo administrativo y logístico para el Referéndum Constitucional Aprobatorio.",
+    "year": "Febrero 2016"
+  },
+  {
+    "role": "Asistente Despacho Legal",
+    "agency": "Dr. Osmar D. Morales Vega",
+    "agencyUrl": "#",
+    "desc": "Presté servicios como asistente, demostrando responsabilidad, puntualidad y eficiencia en la gestión administrativa.",
+    "year": "2015"
   }
 ]

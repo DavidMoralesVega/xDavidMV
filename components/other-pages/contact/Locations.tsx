@@ -9,7 +9,7 @@ export default function Locations() {
               <div className="col-12 col-xl-5 mxd-grid-item no-margin">
                 <div className="mxd-block__name">
                   <h2 className="reveal-type anim-uni-in-up">
-                    Welcome to our office
+                    Ubicación y contacto
                   </h2>
                 </div>
               </div>
@@ -17,9 +17,9 @@ export default function Locations() {
                 <div className="mxd-block__content">
                   <div className="mxd-block__paragraph">
                     <p className="t-large t-bright anim-uni-in-up">
-                      Inspiring ideas, creative insights, and the latest in
-                      design and tech. Fueling innovation for your digital
-                      journey.
+                      Arquitecto de Soluciones y Technical Lead con 7+ años de experiencia
+                      en ecosistemas digitales escalables. Disponible para proyectos remotos
+                      y presenciales en Bolivia.
                     </p>
                     <div className="mxd-paragraph__lists">
                       <div className="container-fluid p-0">
@@ -27,31 +27,29 @@ export default function Locations() {
                           <div className="col-12 col-md-6 col-xl-5 mxd-paragraph__lists-item">
                             <div className="mxd-paragraph__lists-title">
                               <p className="t-large t-bright t-caption anim-uni-in-up">
-                                New York
+                                Oruro, Bolivia
                               </p>
                             </div>
                             <ul>
                               <li className="anim-uni-in-up">
                                 <a
                                   className="anim-uni-in-up"
-                                  href="https://goo.gl/maps/nWXKpGaDPuyH6gxRA"
+                                  href="https://maps.google.com/?q=Oruro,Bolivia"
                                   target="_blank"
                                 >
-                                  11 West 53 Street,
+                                  Oruro,
                                   <br />
-                                  New York, NY
-                                  <br />
-                                  10019
+                                  Bolivia
                                 </a>
                               </li>
                             </ul>
                             <ul>
                               <li className="anim-uni-in-up">
-                                <a href="tel:+12127089400">+1 212-708-9400</a>
+                                <a href="tel:+59161816001">+591 61816001</a>
                               </li>
                               <li className="anim-uni-in-up">
-                                <a href="mailto:example@example.com?subject=Message%20from%20your%20site">
-                                  hello@rayo.com
+                                <a href="mailto:moralesvegadavid@gmail.com?subject=Mensaje%20desde%20tu%20sitio%20web">
+                                  moralesvegadavid@gmail.com
                                 </a>
                               </li>
                             </ul>
@@ -59,30 +57,28 @@ export default function Locations() {
                           <div className="col-12 col-md-6 col-xl-5 mxd-paragraph__lists-item">
                             <div className="mxd-paragraph__lists-title">
                               <p className="t-large t-bright t-caption anim-uni-in-up">
-                                Oakland
+                                Agencia Bemorex
                               </p>
                             </div>
                             <ul>
                               <li className="anim-uni-in-up">
                                 <a
-                                  href="https://goo.gl/maps/xap5o3MZBuC6DFHz8"
+                                  href="https://www.bemorex.com"
                                   target="_blank"
                                 >
-                                  3400 Broadway,
+                                  Director Ejecutivo
                                   <br />
-                                  Oakland, CA
-                                  <br />
-                                  94611
+                                  Fundador
                                 </a>
                               </li>
                             </ul>
                             <ul>
                               <li className="anim-uni-in-up">
-                                <a href="tel:+15104570211">+1 510-457-0211</a>
+                                <a href="https://www.bemorex.com" target="_blank">www.bemorex.com</a>
                               </li>
                               <li className="anim-uni-in-up">
-                                <a href="mailto:example@example.com?subject=Message%20from%20your%20site">
-                                  hello@rayo.com
+                                <a href="https://www.moralesvegadavid.com" target="_blank">
+                                  www.moralesvegadavid.com
                                 </a>
                               </li>
                             </ul>

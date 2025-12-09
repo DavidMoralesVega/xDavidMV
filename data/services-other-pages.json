@@ -1,55 +1,81 @@
 [
   {
-    "title": "Design",
+    "title": "Arquitectura de Software",
     "image": "/img/illustrations/360x440_list-01.webp",
-    "desc": "We create visually compelling designs that enhance user experience. From UI/UX design to stunning websites, mobile apps, and print materials, we make sure your brand’s visuals resonate with your audience.",
+    "desc": "Diseño ecosistemas digitales escalables aplicando Microservicios, DDD, Arquitectura Hexagonal, EDA y CQRS para garantizar alto rendimiento y mantenibilidad.",
     "tags": [
-      "UI/UX",
-      "Web design",
-      "Applications",
-      "Print design",
-      "Packaging",
-      "Motion",
-      "3D models"
+      "Microservicios",
+      "DDD",
+      "Arquitectura Hexagonal",
+      "EDA",
+      "CQRS",
+      "SEO Técnico"
     ]
   },
   {
-    "title": "Development",
+    "title": "Desarrollo Frontend & Mobile",
     "image": "/img/illustrations/360x440_list-02.webp",
-    "desc": "We build high-performance websites and applications using modern technologies. Our solutions are designed to be scalable and functional for optimal performance.",
+    "desc": "Implemento aplicaciones modernas con Angular (v17+), Next.js y Flutter. Especializado en PWA, componentes Standalone, Signals y sistemas de diseño UI/UX.",
     "tags": [
-      "Frontend",
-      "Interactions",
-      "Backend",
-      "E-Commerce",
-      "Mobile Apps",
-      "Maintenance",
-      "Support"
+      "Angular",
+      "Next.js",
+      "Flutter",
+      "PWA",
+      "Angular Material",
+      "Figma",
+      "UI/UX"
     ]
   },
   {
-    "title": "Branding",
+    "title": "Desarrollo Backend & APIs",
     "image": "/img/illustrations/360x440_list-03.webp",
-    "desc": "From logo design to comprehensive brand strategies, we ensure your business stands out with a unique visual identity and consistent messaging across all touchpoints.",
+    "desc": "Construyo soluciones robustas con NestJS, Node.js, Spring Boot y Laravel. APIs GraphQL y RESTful con ORMs como TypeORM, Prisma y Eloquent.",
     "tags": [
-      "Brand strategy",
-      "Logo design",
-      "Guidelines",
-      "Visual identity",
-      "Rebranding"
+      "NestJS",
+      "Node.js",
+      "Spring Boot",
+      "Laravel",
+      "GraphQL",
+      "RESTful APIs",
+      "TypeORM"
     ]
   },
   {
-    "title": "Marketing",
+    "title": "DevOps & Cloud",
     "image": "/img/illustrations/360x440_list-04.webp",
-    "desc": "We develop and execute tailored digital marketing strategies. SEO and content marketing, social media management and paid campaigns - we help you reach and engage your target audience effectively.",
+    "desc": "Implemento pipelines CI/CD con GitHub Actions, orquestación de contenedores con Docker y Podman, y soluciones cloud con Firebase y Cloudflare.",
     "tags": [
-      "Strategy",
-      "Social media",
-      "SEO",
-      "Optimization",
-      "Email",
-      "Campaigns"
+      "Docker",
+      "Podman",
+      "GitHub Actions",
+      "CI/CD",
+      "Firebase",
+      "Cloudflare"
+    ]
+  },
+  {
+    "title": "Liderazgo Técnico",
+    "image": "/img/illustrations/360x440_list-05.webp",
+    "desc": "Dirijo equipos de alto rendimiento, gestión de stakeholders, roadmaps de producto y mentoría técnica. Metodologías ágiles Scrum, Kanban y XP.",
+    "tags": [
+      "Tech Lead",
+      "Scrum",
+      "Kanban",
+      "Mentoría",
+      "Gestión de Equipos",
+      "Product Owner"
+    ]
+  },
+  {
+    "title": "Consultoría Legal-Tech",
+    "image": "/img/illustrations/360x440_list-06.webp",
+    "desc": "Perfil híbrido único con doble titulación (Ingeniería + Derecho). Especializado en alinear estrategia de negocio, cumplimiento normativo y tecnología.",
+    "tags": [
+      "Cumplimiento Normativo",
+      "Contratos Tech",
+      "RGPD",
+      "Propiedad Intelectual",
+      "Conciliación"
     ]
   }
 ]

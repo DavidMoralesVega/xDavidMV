@@ -1,36 +1,36 @@
 [
   {
-    "title": "UI/UX design",
+    "title": "Arquitectura de Software",
     "num": "/ 01",
-    "hoverImage": "/img/illustrations/600x730_cpb-04.webp",
-    "mainImage": "/img/illustrations/1200x800_cpb-04.webp"
-  },
-  {
-    "title": "Hi-end websites",
-    "num": "/ 02",
     "hoverImage": "/img/illustrations/600x730_cpb-01.webp",
     "mainImage": "/img/illustrations/1200x800_cpb-01.webp"
   },
   {
-    "title": "Framer",
-    "num": "/ 03",
+    "title": "Frontend & Mobile",
+    "num": "/ 02",
     "hoverImage": "/img/illustrations/600x730_cpb-02.webp",
     "mainImage": "/img/illustrations/1200x800_cpb-02.webp"
   },
   {
-    "title": "Webflow",
-    "num": "/ 04",
+    "title": "Backend & APIs",
+    "num": "/ 03",
     "hoverImage": "/img/illustrations/600x730_cpb-03.webp",
     "mainImage": "/img/illustrations/1200x800_cpb-03.webp"
   },
   {
-    "title": "3d art",
+    "title": "DevOps & Cloud",
+    "num": "/ 04",
+    "hoverImage": "/img/illustrations/600x730_cpb-04.webp",
+    "mainImage": "/img/illustrations/1200x800_cpb-04.webp"
+  },
+  {
+    "title": "Liderazgo Técnico",
     "num": "/ 05",
     "hoverImage": "/img/illustrations/600x730_cpb-05.webp",
     "mainImage": "/img/illustrations/1200x800_cpb-05.webp"
   },
   {
-    "title": "Motion graphics",
+    "title": "Formación & Mentoría",
     "num": "/ 06",
     "hoverImage": "/img/illustrations/600x730_cpb-06.webp",
     "mainImage": "/img/illustrations/1200x800_cpb-06.webp"

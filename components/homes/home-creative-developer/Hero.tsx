@@ -81,13 +81,13 @@ export default function Hero() {
           {/* top part */}
           <div className="mxd-hero-07__top">
             <h1 className="mxd-hero-07__title">
-              Design. Development. Digital Art. Branding.
+              Arquitectura. Desarrollo. Innovación. Liderazgo.
             </h1>
             <div className="mxd-hero-07__marquee loading__item">
               <VelocityMarquee className="marquee marquee-right--gsap bright">
                 {/* single item */}
                 <div className="marquee__item one-line item-regular text">
-                  <p className="marquee__text">Design</p>
+                  <p className="marquee__text">Arquitectura</p>
                   <div className="marquee__image">
                     <svg
                       version="1.1"
@@ -111,7 +111,7 @@ export default function Hero() {
                 </div>
                 {/* single item */}
                 <div className="marquee__item one-line item-regular text">
-                  <p className="marquee__text">Development</p>
+                  <p className="marquee__text">Desarrollo</p>
                   <div className="marquee__image">
                     <svg
                       version="1.1"
@@ -135,7 +135,7 @@ export default function Hero() {
                 </div>
                 {/* single item */}
                 <div className="marquee__item one-line item-regular text">
-                  <p className="marquee__text">Digital Art</p>
+                  <p className="marquee__text">Innovación</p>
                   <div className="marquee__image">
                     <svg
                       version="1.1"
@@ -159,7 +159,7 @@ export default function Hero() {
                 </div>
                 {/* single item */}
                 <div className="marquee__item one-line item-regular text">
-                  <p className="marquee__text">Branding</p>
+                  <p className="marquee__text">Liderazgo</p>
                   <div className="marquee__image">
                     <svg
                       version="1.1"
@@ -199,7 +199,7 @@ export default function Hero() {
                 <div className="hero-07-circle__item item-01 loading__item">
                   <div className="mxd-hero__mark">
                     <span className="mark-icon" />
-                    <span className="mark-text">Available for freelance</span>
+                    <span className="mark-text">Disponible para proyectos</span>
                   </div>
                 </div>
               </div>
@@ -210,10 +210,10 @@ export default function Hero() {
                       id="stats-counter-1"
                       className="mxd-counter__number mxd-stats-number small"
                     >
-                      <Counter max={3} />+
+                      <Counter max={7} />+
                     </p>
                     <p className="mxd-counter__descr t-140 t-bright t-small">
-                      Years of experience
+                      Años de experiencia
                     </p>
                   </div>
                 </div>
@@ -223,10 +223,10 @@ export default function Hero() {
                       id="stats-counter-2"
                       className="mxd-counter__number mxd-stats-number small"
                     >
-                      <Counter max={70} />+
+                      <Counter max={16} />+
                     </p>
                     <p className="mxd-counter__descr t-140 t-bright t-small">
-                      Successful projects
+                      Charlas y Talleres
                     </p>
                   </div>
                 </div>
@@ -236,48 +236,48 @@ export default function Hero() {
               <div className="hero-07-info__container">
                 <div className="hero-07-info__descr">
                   <p className="t-large t-medium t-140 t-bright">
-                    Hey! I&apos;m Alex Walker.
+                    Hola! Soy David Morales Vega.
                     <br />
-                    Digital artist, illustrator and creative developer.
+                    Arquitecto de Soluciones, Tech Lead e Ing. de Software.
                   </p>
                 </div>
                 <div className="hero-07-info__tags">
                   <span className="tag tag-default tag-outline-medium">
-                    HTML
+                    Angular
                   </span>
                   <span className="tag tag-default tag-outline-medium">
-                    Frontend
+                    NestJS
                   </span>
                   <span className="tag tag-default tag-outline-medium">
-                    Motion design
+                    TypeScript
                   </span>
                   <span className="tag tag-default tag-outline-medium">
-                    3d modeling
+                    Microservices
                   </span>
                   <span className="tag tag-default tag-outline-medium">
-                    Video editing
+                    DevOps
                   </span>
                 </div>
               </div>
               <div className="hero-07-info__container">
                 <div className="hero-07-info__tags right-align-desktop">
                   <span className="tag tag-default tag-outline-medium">
-                    Interactive design
+                    GraphQL
                   </span>
                   <span className="tag tag-default tag-outline-medium">
-                    Editorial
+                    Firebase
                   </span>
                   <span className="tag tag-default tag-outline-medium">
-                    Web experience
+                    Docker
                   </span>
                   <span className="tag tag-default tag-outline-medium">
                     UI/UX
                   </span>
                   <span className="tag tag-default tag-outline-medium">
-                    Branding
+                    DDD
                   </span>
                   <span className="tag tag-default tag-outline-medium">
-                    Web design
+                    Scrum
                   </span>
                 </div>
               </div>
@@ -286,10 +286,10 @@ export default function Hero() {
           {/* scroll for more */}
           <div className="mxd-hero-07__more loading__fade">
             <AnimatedButton
-              text="Scroll for more"
+              text="Descubre más"
               as={"a"}
               className="btn btn-line-default btn-anim slide-down"
-              href="#projects"
+              href="#about"
             >
               <i className="ph-bold ph-arrow-elbow-right-down" />
             </AnimatedButton>

@@ -125,9 +125,8 @@ export default function MobileMenu() {
                 className="mxd-menu__caption fade-in-elm"
                 style={{ transitionDelay: "0.4s" }}
               >
-                🦄 Innovative design
-                <br />
-                and cutting-edge development
+                Solutions Architect
+                <br />& Tech Lead
               </p>
               <div className="main-menu">
                 <nav className="main-menu__content">
@@ -216,9 +215,9 @@ export default function MobileMenu() {
                     className="menu-promo__caption fade-in-elm"
                     style={{ transitionDelay: "0.4s" }}
                   >
-                    👋 New Rayo template is here!
+                    7+ años de experiencia
                     <br />
-                    Showcase your projects, services and expertise with impact.
+                    diseñando ecosistemas digitales escalables y liderando equipos de alto rendimiento.
                   </p>
                   <div
                     className="menu-promo__video fade-in-up-elm"
@@ -256,18 +255,18 @@ export default function MobileMenu() {
               style={{ transitionDelay: "0.4s" }}
             >
               <p className="t-xsmall">
-                Made with <i className="ph-fill ph-heart t-additional" /> by{" "}
-                <a
-                  className="no-effect"
-                  href="https://themeforest.net/user/ib-themes/portfolio"
-                  target="_blank"
-                >
-                  ib themes
-                </a>
+                Oruro, Bolivia <i className="ph-fill ph-map-pin t-additional" />
               </p>
               <p className="t-xsmall">
+                <a
+                  className="no-effect"
+                  href="https://www.moralesvegadavid.com"
+                  target="_blank"
+                >
+                  David Morales Vega
+                </a>{" "}
                 <i className="ph ph-copyright" />
-                2025
+                {new Date().getFullYear()}
               </p>
             </div>
           </div>

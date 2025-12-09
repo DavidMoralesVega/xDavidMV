@@ -31,7 +31,7 @@ export default function PageTitle() {
                     c0,0,1.3-0.1,1.8-0.2c1,0,4,0,4,0c0.2,0,0.4-0.2,0.4-0.4C20,9.8,19.8,9.6,19.6,9.6L19.6,9.6z"
                       />
                     </svg>
-                    <span>Contact</span>
+                    <span>Contacto</span>
                   </p>
                 </div>
               </div>
@@ -41,26 +41,22 @@ export default function PageTitle() {
                 <div className="mxd-block__content">
                   <div className="mxd-block__inner-headline loading__item">
                     <h1 className="inner-headline__title">
-                      Let&apos;s talk
+                      Hablemos de
                       <br />
-                      about your project!
-                      {/* <a class="btn btn-line-headline slide-right-up anim-no-delay" href="mailto:example@example.com?subject=Message%20from%20your%20site">
-                    <span class="btn-caption">hello@rayo.com</span>
-                    <i class="ph-bold ph-arrow-up-right"></i>
-                  </a> */}
+                      tu proyecto!
                     </h1>
                     <a
                       className="btn btn-line-headline slide-right-up anim-no-delay"
-                      href="mailto:example@example.com?subject=Message%20from%20your%20site"
+                      href="mailto:moralesvegadavid@gmail.com?subject=Mensaje%20desde%20tu%20sitio%20web"
                     >
-                      <span className="btn-caption">hello@rayo.com</span>
+                      <span className="btn-caption">moralesvegadavid@gmail.com</span>
                       <i className="ph-bold ph-arrow-up-right" />
                     </a>
                     <p className="inner-headline__text t-large t-bright loading__item">
-                      Have questions? We&apos;ve got the answers! Here,
-                      you&apos;ll find clear and concise information about our
-                      services, process, and what to expect when working with
-                      us. If you need more details, feel free to reach out!
+                      ¿Tienes un proyecto en mente? Ya sea arquitectura de software,
+                      desarrollo web, consultoría tecnológica o una conferencia técnica,
+                      estoy aquí para ayudarte. Escríbeme y conversemos sobre cómo
+                      puedo aportar valor a tu iniciativa.
                     </p>
                   </div>
                 </div>

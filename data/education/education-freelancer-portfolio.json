@@ -1,23 +1,65 @@
 [
   {
-    "title": "Drawing Concentration",
-    "institution": "New York Academy of Art",
-    "institutionUrl": "#",
-    "desc": "Intensive drawing courses that present the fundamental principles of drawing.",
-    "year": "2015 - 2016"
+    "title": "Maestría en Transformación Digital y Gestión de Proyectos Tecnológicos",
+    "institution": "Universidad Mayor de San Andrés (UMSA)",
+    "institutionUrl": "https://www.umsa.bo",
+    "desc": "Enfoque en dirección estratégica de TI, innovación empresarial y gestión ágil de proyectos.",
+    "year": "2022 - Actualidad"
   },
   {
-    "title": "UI/UX Design Specialization",
-    "institution": "California Institute of Arts",
+    "title": "Técnico Básico en Elaboración de Proyectos Productivos",
+    "institution": "Centro de Educación Alternativa CEPROK (Ministerio de Educación)",
     "institutionUrl": "#",
-    "desc": "Research, design, and prototype effective, visually-driven websites and apps.",
-    "year": "2019 - 2021"
+    "desc": "Especialización técnica en formulación y gestión de proyectos productivos.",
+    "year": "Febrero 2025"
   },
   {
-    "title": "UI/UX Designer",
-    "institution": "Coursera",
-    "institutionUrl": "#",
-    "desc": "This course is about how to complete the design process from beginning to end.",
+    "title": "Ingeniería de Sistemas",
+    "institution": "Universidad Adventista de Bolivia (UAB)",
+    "institutionUrl": "https://www.uab.edu.bo",
+    "desc": "Formación superior en ingeniería de software y ciencias de la computación.",
+    "year": "2021 - 2023"
+  },
+  {
+    "title": "Diplomado en Educación Superior",
+    "institution": "Universidad Técnica de Oruro (FBC)",
+    "institutionUrl": "https://www.uto.edu.bo",
+    "desc": "Especialización en metodologías de enseñanza universitaria y pedagogía moderna.",
     "year": "2022"
+  },
+  {
+    "title": "Diplomado en Conciliación, Arbitraje y Negociación",
+    "institution": "Universidad Técnica de Oruro",
+    "institutionUrl": "https://www.uto.edu.bo",
+    "desc": "Formación especializada en resolución alternativa de conflictos (Soft Skills clave para roles de Product Owner).",
+    "year": "2021"
+  },
+  {
+    "title": "Licenciatura en Derecho - Abogado",
+    "institution": "Universidad Técnica de Oruro (UTO)",
+    "institutionUrl": "https://www.uto.edu.bo",
+    "desc": "Formación jurídica integral. Título en Provisión Nacional.",
+    "year": "2016 - 2021"
+  },
+  {
+    "title": "Técnico Superior en Sistemas Informáticos",
+    "institution": "Instituto Técnico Jesús María",
+    "institutionUrl": "https://www.intjem.edu.bo",
+    "desc": "Formación técnica práctica en desarrollo de software, redes y soporte.",
+    "year": "2016 - 2018"
+  },
+  {
+    "title": "Técnico Medio en Sistemas Informáticos",
+    "institution": "Unidad Educativa San Ignacio de Loyola",
+    "institutionUrl": "#",
+    "desc": "Especialidad técnica obtenida junto al bachillerato, marcando el inicio de la trayectoria en TI.",
+    "year": "Diciembre 2015"
+  },
+  {
+    "title": "Diploma de Bachiller en Humanidades",
+    "institution": "Unidad Educativa San Ignacio de Loyola",
+    "institutionUrl": "#",
+    "desc": "Educación secundaria completa con mención en humanidades.",
+    "year": "Diciembre 2015"
   }
 ]

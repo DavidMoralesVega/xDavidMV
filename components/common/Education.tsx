@@ -21,9 +21,9 @@ export default function Education() {
                           <div className="col-12 mxd-grid-item no-margin">
                             <div className="mxd-section-title__title card-split-title">
                               <RevealText as="h2" className="reveal-type">
-                                My
+                                Mi
                                 <br />
-                                education
+                                formación
                               </RevealText>
                             </div>
                           </div>
@@ -44,7 +44,7 @@ export default function Education() {
                               <div className="mxd-res-list__title">
                                 <h4 className="anim-uni-in-up">{item.title}</h4>
                                 <p className="mxd-res-list__source anim-uni-in-up">
-                                  course by{" "}
+                                  en{" "}
                                   <a href={item.institutionUrl} target="_blank">
                                     {item.institution}
                                   </a>

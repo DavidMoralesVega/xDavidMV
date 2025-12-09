@@ -1,15 +1,15 @@
 [
   {
-    "number": 50,
+    "number": 30,
     "suffix": "+",
-    "description": "Happy clients who\ntrust my work",
+    "description": "Clientes satisfechos\nque confían en mi trabajo",
     "image": "/img/illustrations/800x800_card-image-01.webp",
 
     "imageWidth": 800,
     "imageHeight": 800,
     "button": {
-      "text": "Studio",
-      "href": "/about-us",
+      "text": "Sobre mí",
+      "href": "/about-me",
       "iconClass": "ph-bold ph-arrow-up-right",
       "btnClass": "btn btn-anim btn-default btn-outline opposite slide-right-up"
     },
@@ -21,9 +21,9 @@
     "colClass": "col-12 col-xl-5 mxd-stats-cards__item mxd-grid-item anim-uni-scale-in-right"
   },
   {
-    "number": 80,
-    "suffix": "%",
-    "description": "Clients come back for\na new projects",
+    "number": 16,
+    "suffix": "+",
+    "description": "Charlas y talleres\nimpartidos",
     "image": "/img/illustrations/800x800_card-image-02.webp",
     "imageWidth": 800,
     "imageHeight": 800,
@@ -50,14 +50,14 @@
     "colClass": "col-12 col-xl-7 mxd-stats-cards__item mxd-grid-item anim-uni-scale-in-left"
   },
   {
-    "number": 5,
+    "number": 7,
     "suffix": "+",
-    "description": "Years of professional experience in designing digital products",
+    "description": "Años de experiencia profesional en diseño de productos digitales",
     "image": "/img/illustrations/800x800_card-image-03.webp",
     "imageWidth": 800,
     "imageHeight": 800,
     "button": {
-      "text": "Start New Project",
+      "text": "Iniciar proyecto",
       "href": "/contact",
       "iconClass": "ph-bold ph-arrow-down-right",
       "btnClass": "btn btn-anim btn-default btn-outline slide-right-down"
@@ -70,14 +70,14 @@
     "colClass": "col-12 col-xl-7 mxd-stats-cards__item mxd-grid-item anim-uni-scale-in-right"
   },
   {
-    "number": 70,
+    "number": 50,
     "suffix": "+",
-    "description": "Successfully\ncompleted projects",
+    "description": "Proyectos completados\nexitosamente",
     "image": "/img/illustrations/800x800_card-image-04.webp",
     "imageWidth": 800,
     "imageHeight": 800,
     "button": {
-      "text": "Works",
+      "text": "Proyectos",
       "href": "/works-simple",
       "iconClass": "ph-bold ph-arrow-up-right",
       "btnClass": "btn btn-anim btn-default btn-outline slide-right-up"

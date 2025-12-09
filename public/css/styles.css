@@ -118,3 +118,9 @@ html {
 .loading__fade {
   opacity: 0;
 }
+
+/* Hero image - evitar distorsión en pantallas grandes */
+.hero-07-circle__image img {
+  object-fit: cover !important;
+  object-position: center top !important;
+}

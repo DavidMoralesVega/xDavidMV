@@ -1,0 +1,249 @@
+{
+  "institutions": [
+    {
+      "id": "ccbol",
+      "name": "Congreso Nacional de Ciencias de la Computación (CCBOL)",
+      "logo": "/img/logos/logo-ccbol.webp",
+      "events": [
+        {
+          "id": 1,
+          "type": "Speaker",
+          "title": "El Viaje del Arquitecto: Sistemas Empresariales",
+          "date": "Noviembre 2025",
+          "description": "Disertación sobre estrategias de diseño para arquitecturas robustas, migración de sistemas legacy y escalabilidad en entornos de misión crítica.",
+          "topics": ["Arquitectura de Software", "ERP", "Migración", "Estrategia Tecnológica"],
+          "images": [
+            "/img/conferences/ccbol-2025-arquitecto-01.webp",
+            "/img/conferences/ccbol-2025-arquitecto-02.webp",
+            "/img/conferences/ccbol-2025-arquitecto-03.webp"
+          ]
+        },
+        {
+          "id": 2,
+          "type": "Instructor",
+          "title": "Workshop: Decisiones Inteligentes - App de IA",
+          "date": "Noviembre 2025",
+          "description": "Taller técnico intensivo sobre construcción de microservicios de IA, integrando Python (FastAPI) y OpenAI para análisis de datos.",
+          "stack": ["Python", "FastAPI", "Angular", "OpenAI API", "Prompt Engineering", "Microservicios"],
+          "images": [
+            "/img/conferences/ccbol-2025-ia-01.webp",
+            "/img/conferences/ccbol-2025-ia-02.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aiesec",
+      "name": "AIESEC en Bolivia",
+      "logo": "/img/logos/logo-aiesec.webp",
+      "events": [
+        {
+          "id": 3,
+          "type": "Speaker",
+          "title": "Seminario: Tu Carrera Global - De Bolivia al Mundo",
+          "date": "Septiembre 2025",
+          "description": "Ponencia sobre la aplicación estratégica de IA Generativa en Marketing y Branding Personal para la proyección internacional.",
+          "topics": ["IA Generativa", "Marketing Digital", "Branding Personal", "Carrera Internacional"],
+          "images": [
+            "/img/conferences/aiesec-2025-01.webp",
+            "/img/conferences/aiesec-2025-02.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uto-fni",
+      "name": "Universidad Técnica de Oruro - Facultad Nacional de Ingeniería (FNI)",
+      "logo": "/img/logos/logo-uto-fni.webp",
+      "events": [
+        {
+          "id": 4,
+          "type": "Lead Instructor",
+          "title": "Laboratorio de Innovación Tecnológica (FNI Go)",
+          "date": "Mayo 2025 - Junio 2025",
+          "description": "Liderazgo de un entorno laboral simulado guiando el despliegue de una PWA funcional en alianza con Agencia Bemorex.",
+          "stack": ["Angular", "NGRX Signals", "Arquitectura Hexagonal", "Firebase", "CI/CD", "Scrum"],
+          "images": [
+            "/img/conferences/fni-go-2025-01.webp",
+            "/img/conferences/fni-go-2025-02.webp",
+            "/img/conferences/fni-go-2025-03.webp"
+          ]
+        },
+        {
+          "id": 5,
+          "type": "Instructor",
+          "title": "Bootcamp FullStack Development (Nivel Avanzado)",
+          "date": "Noviembre 2022 - Diciembre 2022",
+          "description": "Programa de especialización en arquitecturas complejas y microservicios.",
+          "stack": ["NestJS", "Angular", "TypeScript", "PostgreSQL", "TypeORM", "SOLID", "Patrón Redux"],
+          "images": [
+            "/img/conferences/fni-bootcamp-2022-01.webp",
+            "/img/conferences/fni-bootcamp-2022-02.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "angular-bolivia",
+      "name": "Comunidad Angular Bolivia / Zephyrus Agency",
+      "logo": "/img/logos/logo-angular-bolivia.webp",
+      "events": [
+        {
+          "id": 6,
+          "type": "Organizador y Director Técnico",
+          "title": "NgWorkshop Oruro",
+          "date": "Mayo 2024",
+          "description": "Dirección del evento oficial y desarrollo de la plataforma educativa del taller.",
+          "stack": ["Angular", "Firebase Hosting", "Reactive Forms", "UI/UX Design"],
+          "images": [
+            "/img/conferences/ngworkshop-2024-01.webp",
+            "/img/conferences/ngworkshop-2024-02.webp",
+            "/img/conferences/ngworkshop-2024-03.webp"
+          ]
+        },
+        {
+          "id": 7,
+          "type": "Mentor",
+          "title": "NgShe Angular Cochabamba",
+          "date": "Marzo 2024",
+          "description": "Guié a los participantes en la comprensión de conceptos fundamentales del framework Angular, buenas prácticas de código y resolución de ejercicios prácticos.",
+          "topics": ["Angular", "Buenas Prácticas", "Mentoría", "Comunidad"],
+          "images": [
+            "/img/conferences/ngshe-2024-01.webp",
+            "/img/conferences/ngshe-2024-02.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pyday",
+      "name": "PyDay La Paz - UMSA",
+      "logo": "/img/logos/logo-pyday.webp",
+      "events": [
+        {
+          "id": 8,
+          "type": "Speaker",
+          "title": "Workshop: Chatbots con Python y ChatGPT",
+          "date": "Junio 2023",
+          "description": "Taller sobre integración de LLMs con WhatsApp Business API para automatización de respuestas.",
+          "stack": ["Python", "ChatGPT API", "WhatsApp Business API", "NLP"],
+          "images": [
+            "/img/conferences/pyday-2023-01.webp",
+            "/img/conferences/pyday-2023-02.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elemental",
+      "name": "Elemental Bolivia / Tigo / IME",
+      "logo": "/img/logos/logo-elemental.webp",
+      "events": [
+        {
+          "id": 9,
+          "type": "Facilitador",
+          "title": "Evento Warmi Científica (Educación STEAM)",
+          "date": "Febrero 2023",
+          "description": "Capacitación técnica en lógica de programación para fomentar la participación femenina en tecnología.",
+          "stack": ["Python", "Pensamiento Computacional"],
+          "images": [
+            "/img/conferences/warmi-2023-01.webp",
+            "/img/conferences/warmi-2023-02.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jesus-maria",
+      "name": "Instituto Técnico Jesús María",
+      "logo": "/img/logos/logo-jesus-maria.webp",
+      "events": [
+        {
+          "id": 10,
+          "type": "Instructor",
+          "title": "Desarrollo de Software Versión II",
+          "date": "Septiembre 2021 - Octubre 2021",
+          "description": "Actualización del stack hacia tecnologías asíncronas y refactorización de proyectos.",
+          "stack": ["JS Vanilla", "Axios", "PHP", "Bootstrap", "MVC", "MySQL", "GitHub"],
+          "images": [
+            "/img/conferences/jm-2021-v2-01.webp"
+          ]
+        },
+        {
+          "id": 11,
+          "type": "Instructor",
+          "title": "Desarrollo de Software (Fundamentos)",
+          "date": "Agosto 2019",
+          "description": "Mentoría en ciclo de vida del software y construcción de sistemas CRUD.",
+          "stack": ["PHP", "Bootstrap", "jQuery", "AJAX", "MVC", "POO"],
+          "images": [
+            "/img/conferences/jm-2019-fundamentos-01.webp"
+          ]
+        },
+        {
+          "id": 12,
+          "type": "Instructor",
+          "title": "Taller del Framework Angular",
+          "date": "Junio 2019 - Julio 2019",
+          "description": "Capacitación práctica en maquetación basada en componentes.",
+          "stack": ["Angular Framework", "TypeScript"],
+          "images": [
+            "/img/conferences/jm-2019-angular-01.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uto-tecnica",
+      "name": "Universidad Técnica de Oruro - Facultad Técnica",
+      "logo": "/img/logos/logo-uto.webp",
+      "events": [
+        {
+          "id": 13,
+          "type": "Instructor",
+          "title": "Ms. Excel (Business Intelligence)",
+          "date": "Abril 2021 - Mayo 2021",
+          "description": "Taller enfocado en manipulación y visualización de datos masivos.",
+          "stack": ["Funciones Avanzadas", "BigQuery", "Analytics", "Power Query"],
+          "images": [
+            "/img/conferences/uto-excel-2021-01.webp"
+          ]
+        },
+        {
+          "id": 14,
+          "type": "Instructor",
+          "title": "Apps Web Progresivas con Angular + Firebase",
+          "date": "Abril 2021 - Mayo 2021",
+          "description": "Creación de SPAs con funcionalidades real-time y despliegue Cloud.",
+          "stack": ["Angular", "TypeScript", "Firebase", "Redux", "RxJS"],
+          "images": [
+            "/img/conferences/uto-angular-2021-01.webp",
+            "/img/conferences/uto-angular-2021-02.webp"
+          ]
+        },
+        {
+          "id": 15,
+          "type": "Instructor",
+          "title": "Curso Intensivo Desarrollo Web con PHP 7",
+          "date": "Diciembre 2019",
+          "description": "Desarrollo backend seguro, autenticación y patrones de diseño.",
+          "stack": ["PHP 7", "MySQL", "PDO", "MVC", "Bootstrap"],
+          "images": [
+            "/img/conferences/uto-php-2019-01.webp"
+          ]
+        },
+        {
+          "id": 16,
+          "type": "Instructor",
+          "title": "Desarrollo Web Nivel Inicial",
+          "date": "Junio 2019 - Agosto 2019",
+          "description": "Introducción al ecosistema web y construcción de sitios responsivos.",
+          "stack": ["HTML 5", "CSS", "JavaScript", "PHP", "MySQL"],
+          "images": [
+            "/img/conferences/uto-web-2019-01.webp"
+          ]
+        }
+      ]
+    }
+  ]
+}

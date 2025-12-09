@@ -158,7 +158,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
             {/* links */}
             <div className="footer-blocks__links anim-uni-in-up">
               <AnimatedButton
-                text="Privacy Policy"
+                text="Política de privacidad"
                 as={"a"}
                 className="btn btn-line-xsmall btn-muted slide-right anim-no-delay"
                 href="#"
@@ -166,7 +166,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                 <i className="ph ph-arrow-right" />
               </AnimatedButton>
               <AnimatedButton
-                text="Terms &amp; conditions"
+                text="Términos y condiciones"
                 as={"a"}
                 className="btn btn-line-xsmall btn-muted slide-right anim-no-delay"
                 href="#"
@@ -202,8 +202,8 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
             c0,0,1.3-0.1,1.8-0.2c1,0,4,0,4,0c0.2,0,0.4-0.2,0.4-0.4C20,9.8,19.8,9.6,19.6,9.6L19.6,9.6z"
                 />
               </svg>
-              <a href="mailto:example@example.com?subject=Message%20from%20your%20site">
-                hello@rayostudio.com
+              <a href="mailto:moralesvegadavid@gmail.com?subject=Contacto%20desde%20tu%20sitio%20web">
+                moralesvegadavid@gmail.com
               </a>
             </p>
           </div>
@@ -231,7 +231,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
             c0,0,1.3-0.1,1.8-0.2c1,0,4,0,4,0c0.2,0,0.4-0.2,0.4-0.4C20,9.8,19.8,9.6,19.6,9.6L19.6,9.6z"
                 />
               </svg>
-              <a href="tel:+12127089400">+1 212-708-9400</a>
+              <a href="tel:+59161816001">+591 61816001</a>
             </p>
           </div>
           {/* inner card */}
@@ -239,7 +239,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
             {/* card title */}
             <div className="footer-blocks__title anim-uni-in-up">
               <p className="footer-blocks__title-m">
-                Subscribe to our insights:
+                Suscríbete a mis novedades:
               </p>
             </div>
             {/* subscribe form container */}
@@ -247,12 +247,12 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
               {/* reply messages */}
               <div className="form__reply subscription-ok">
                 <span className="reply__text">
-                  Done! Thanks for subscribing.
+                  Listo! Gracias por suscribirte.
                 </span>
               </div>
               <div className="form__reply subscription-error">
                 <span className="reply__text">
-                  Ooops! Something went wrong. Please try again later.
+                  Oops! Algo salió mal. Intenta de nuevo más tarde.
                 </span>
               </div>
               {/* subscribe form */}
@@ -268,7 +268,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
             <div className="footer-blocks__block">
               {/* card title */}
               <div className="footer-blocks__title anim-uni-in-up">
-                <p className="footer-blocks__title-l">Ecosystem</p>
+                <p className="footer-blocks__title-l">Redes</p>
               </div>
               {/* footer socials */}
               <div className="footer-blocks__socials">
@@ -292,10 +292,10 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
               <p className="t-xsmall t-muted">
                 <a
                   className="no-effect"
-                  href="https://themeforest.net/user/ib-themes/portfolio"
+                  href="https://www.moralesvegadavid.com"
                   target="_blank"
                 >
-                  ib themes
+                  David Morales Vega
                 </a>
                 <i className="ph-bold ph-copyright" />
                 {new Date().getFullYear()}

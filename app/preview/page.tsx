@@ -1,51 +1,67 @@
-import Blogs from "@/components/common/Blogs";
+import Awards from "@/components/common/Awards";
+import Conferences from "@/components/common/Conferences";
 import Cta from "@/components/common/Cta";
-import Facts from "@/components/common/Facts";
+import Education from "@/components/common/Education";
 import Footer2 from "@/components/footers/Footer2";
-import ProjectsOne from "@/components/homes/home-1/Projects";
-import Projects from "@/components/homes/home-creative-developer/Projects";
 
 import About from "@/components/homes/home-freelancer-portfolio/About";
-
-import Education from "@/components/common/Education";
 import Experiences from "@/components/homes/home-freelancer-portfolio/Experiences";
-import Expertise from "@/components/homes/home-freelancer-portfolio/Expertise";
+import Services from "@/components/other-pages/services/Services";
 import Hero from "@/components/homes/home-creative-developer/Hero";
-
 import MarqueeSlider from "@/components/homes/home-freelancer-portfolio/MarqueeSlider";
 import ParallaxDivider from "@/components/homes/home-freelancer-portfolio/ParallaxDivider";
 import ParallaxDivider2 from "@/components/homes/home-freelancer-portfolio/ParallaxDivider2";
-import ParallaxDivider3 from "@/components/homes/home-freelancer-portfolio/ParallaxDivider3";
-
 import TechStack from "@/components/homes/home-freelancer-portfolio/TechStack";
+
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title:
-    "Freelancer Portfolio || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+  title: "David Morales Vega | Solutions Architect & Tech Lead",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Arquitecto de Soluciones y Technical Lead con 7+ años de experiencia en diseño de ecosistemas digitales escalables. Especializado en Angular, NestJS, Microservicios y liderazgo de equipos de alto rendimiento.",
 };
+
 export default function PreviewPage() {
   return (
     <>
       <main id="mxd-page-content" className="mxd-page-content">
+        {/* 1. Presentación - Hero impactante */}
         <Hero />
-        <Projects />
-        <ProjectsOne />
-        <ParallaxDivider />
-        <MarqueeSlider />
+
+        {/* 2. Filosofía y enfoque - Quién soy */}
         <About />
-        <Facts />
-        <Expertise />
+
+        {/* 11. Visual divider */}
         <ParallaxDivider2 />
+
+        {/* 3. CONFERENCIAS - Credibilidad y autoridad (16+ eventos) */}
+        <Conferences />
+
+        {/* 4. Servicios/Expertise - Qué ofrezco */}
+        <Services />
+
+        {/* 5. Visual divider */}
+        <ParallaxDivider />
+
+        {/* 6. Experiencia profesional - Trayectoria */}
         <Experiences />
+
+        {/* 7. Stack tecnológico - Herramientas */}
         <TechStack />
+
+        {/* 8. Visual marquee */}
+        <MarqueeSlider />
+
+        {/* 9. Formación académica */}
         <Education />
-        <ParallaxDivider3 />
-        <Blogs />
+
+        {/* 10. Premios y reconocimientos */}
+        <Awards />
+
+        {/* 12. Call to action final - Contacto */}
         <Cta />
       </main>
-      <Footer2 text="alexwalker" />
+      <Footer2 text="davidmoralesvega" />
     </>
   );
 }

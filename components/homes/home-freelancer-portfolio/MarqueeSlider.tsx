@@ -9,7 +9,7 @@ export default function MarqueeSlider() {
           <VelocityMarquee className="marquee marquee-right--gsap muted-extra">
             {/* single item */}
             <div className="marquee__item one-line item-regular text">
-              <p className="marquee__text">About Me</p>
+              <p className="marquee__text">Sobre mí</p>
               <div className="marquee__image">
                 <svg
                   version="1.1"
@@ -33,7 +33,7 @@ export default function MarqueeSlider() {
             </div>
             {/* single item */}
             <div className="marquee__item one-line item-regular text">
-              <p className="marquee__text">About Me</p>
+              <p className="marquee__text">Sobre mí</p>
               <div className="marquee__image">
                 <svg
                   version="1.1"
@@ -57,7 +57,7 @@ export default function MarqueeSlider() {
             </div>
             {/* single item */}
             <div className="marquee__item one-line item-regular text">
-              <p className="marquee__text">About Me</p>
+              <p className="marquee__text">Sobre mí</p>
               <div className="marquee__image">
                 <svg
                   version="1.1"
@@ -81,7 +81,7 @@ export default function MarqueeSlider() {
             </div>
             {/* single item */}
             <div className="marquee__item one-line item-regular text">
-              <p className="marquee__text">About Me</p>
+              <p className="marquee__text">Sobre mí</p>
               <div className="marquee__image">
                 <svg
                   version="1.1"

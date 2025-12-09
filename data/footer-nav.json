@@ -1,27 +1,15 @@
 [
   {
-    "label": "Home",
-    "href": "/home-main"
+    "label": "Inicio",
+    "href": "/"
   },
   {
-    "label": "About us",
-    "href": "/about-us"
+    "label": "Conferencias",
+    "href": "/conferencias",
+    "counter": 16
   },
   {
-    "label": "Works",
-    "href": "/works-simple",
-    "counter": 10
-  },
-  {
-    "label": "Services",
-    "href": "/services"
-  },
-  {
-    "label": "Insights",
-    "href": "/blog-standard"
-  },
-  {
-    "label": "Contact",
+    "label": "Contacto",
     "href": "/contact"
   }
 ]

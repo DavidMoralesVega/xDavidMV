@@ -8,10 +8,9 @@ import PageTitle from "@/components/other-pages/contact/PageTitle";
 import Socials from "@/components/other-pages/contact/Socials";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title:
-    "Contact || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+  title: "Contacto | David Morales Vega - Solutions Architect & Tech Lead",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Contáctame para proyectos de arquitectura de software, desarrollo web, consultoría tecnológica o conferencias. Oruro, Bolivia. +591 61816001",
 };
 export default function ContactPage() {
   return (
@@ -41,7 +40,7 @@ export default function ContactPage() {
                       key={idx}
                       className="marquee__item one-line item-regular text"
                     >
-                      <p className="marquee__text">Connect</p>
+                      <p className="marquee__text">Conectemos</p>
                       <div className="marquee__image">
                         <svg
                           version="1.1"
@@ -74,7 +73,7 @@ export default function ContactPage() {
         <Locations />
         <Cta />
       </main>
-      <Footer2 />
+      <Footer2 text="davidmoralesvega" />
     </>
   );
 }

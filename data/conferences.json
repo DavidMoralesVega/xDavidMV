@@ -1,0 +1,250 @@
+{
+  "conferences": [
+    {
+      "id": 1,
+      "title": "El Viaje del Arquitecto:",
+      "description": "Sistemas Empresariales - CCBOL 2025",
+      "images": [
+        "/img/works/preview/1400x1400_prv-01.webp",
+        "/img/works/preview/1400x1400_prv-02.webp"
+      ],
+      "tags": ["Arquitectura", "ERP", "CCBOL"],
+      "anim": "anim-uni-in-up",
+      "type": "Speaker",
+      "date": "Noviembre 2025",
+      "institution": "CCBOL",
+      "stack": ["Arquitectura de Software", "ERP", "Migración", "Estrategia Tecnológica"]
+    },
+    {
+      "id": 2,
+      "title": "Decisiones Inteligentes:",
+      "description": "App de IA con Python y OpenAI - CCBOL 2025",
+      "images": [
+        "/img/works/preview/1400x1400_prv-02.webp",
+        "/img/works/preview/1400x1400_prv-03.webp",
+        "/img/works/preview/1400x1400_prv-04.webp"
+      ],
+      "tags": ["Python", "FastAPI", "OpenAI"],
+      "anim": "anim-uni-in-up",
+      "type": "Instructor - Workshop",
+      "date": "Noviembre 2025",
+      "institution": "CCBOL",
+      "stack": ["Python", "FastAPI", "Angular", "OpenAI API", "Prompt Engineering", "Microservicios"]
+    },
+    {
+      "id": 3,
+      "title": "Tu Carrera Global:",
+      "description": "De Bolivia al Mundo - AIESEC 2025",
+      "images": [
+        "/img/works/preview/1400x1400_prv-03.webp",
+        "/img/works/preview/1400x1400_prv-01.webp"
+      ],
+      "tags": ["IA Generativa", "Branding", "Marketing"],
+      "anim": "anim-uni-in-up",
+      "type": "Speaker - Seminario",
+      "date": "Septiembre 2025",
+      "institution": "AIESEC Bolivia",
+      "stack": ["IA Generativa", "Marketing Digital", "Branding Personal"]
+    },
+    {
+      "id": 4,
+      "title": "FNI Go:",
+      "description": "Laboratorio de Innovación Tecnológica - UTO 2025",
+      "images": [
+        "/img/works/preview/1400x1400_prv-04.webp",
+        "/img/works/preview/1400x1400_prv-05.webp",
+        "/img/works/preview/1400x1400_prv-06.webp"
+      ],
+      "tags": ["Angular", "NGRX", "Firebase"],
+      "anim": "anim-uni-in-up",
+      "type": "Lead Instructor",
+      "date": "Mayo - Junio 2025",
+      "institution": "UTO - FNI",
+      "stack": ["Angular", "NGRX Signals", "Arquitectura Hexagonal", "Firebase", "CI/CD", "Scrum"]
+    },
+    {
+      "id": 5,
+      "title": "NgWorkshop Oruro:",
+      "description": "Evento oficial Angular Bolivia 2024",
+      "images": [
+        "/img/works/preview/1400x1400_prv-05.webp",
+        "/img/works/preview/1400x1400_prv-07.webp"
+      ],
+      "tags": ["Angular", "Workshop", "Organizador"],
+      "anim": "anim-uni-in-up",
+      "type": "Organizador y Director Técnico",
+      "date": "Mayo 2024",
+      "institution": "Angular Bolivia / Zephyrus",
+      "stack": ["Angular", "Firebase Hosting", "Reactive Forms", "UI/UX Design"]
+    },
+    {
+      "id": 6,
+      "title": "NgShe Cochabamba:",
+      "description": "Mentoría Angular para mujeres en tech",
+      "images": [
+        "/img/works/preview/1400x1400_prv-06.webp",
+        "/img/works/preview/1400x1400_prv-01.webp"
+      ],
+      "tags": ["Angular", "Mentoría", "Comunidad"],
+      "anim": "anim-uni-in-up",
+      "type": "Mentor",
+      "date": "Marzo 2024",
+      "institution": "Angular Bolivia",
+      "stack": ["Angular", "Buenas Prácticas", "Mentoría"]
+    },
+    {
+      "id": 7,
+      "title": "Chatbots con Python:",
+      "description": "ChatGPT + WhatsApp Business - PyDay 2023",
+      "images": [
+        "/img/works/preview/1400x1400_prv-07.webp",
+        "/img/works/preview/1400x1400_prv-02.webp",
+        "/img/works/preview/1400x1400_prv-03.webp"
+      ],
+      "tags": ["Python", "ChatGPT", "WhatsApp"],
+      "anim": "anim-uni-in-up",
+      "type": "Speaker - Workshop",
+      "date": "Junio 2023",
+      "institution": "PyDay La Paz - UMSA",
+      "stack": ["Python", "ChatGPT API", "WhatsApp Business API", "NLP"]
+    },
+    {
+      "id": 8,
+      "title": "Warmi Científica:",
+      "description": "Educación STEAM para mujeres - Elemental 2023",
+      "images": [
+        "/img/works/preview/1400x1400_prv-01.webp",
+        "/img/works/preview/1400x1400_prv-04.webp"
+      ],
+      "tags": ["Python", "STEAM", "Educación"],
+      "anim": "anim-uni-in-up",
+      "type": "Facilitador",
+      "date": "Febrero 2023",
+      "institution": "Elemental Bolivia / Tigo / IME",
+      "stack": ["Python", "Pensamiento Computacional"]
+    },
+    {
+      "id": 9,
+      "title": "Bootcamp FullStack:",
+      "description": "Nivel Avanzado - UTO FNI 2022",
+      "images": [
+        "/img/works/preview/1400x1400_prv-02.webp",
+        "/img/works/preview/1400x1400_prv-05.webp",
+        "/img/works/preview/1400x1400_prv-06.webp"
+      ],
+      "tags": ["NestJS", "Angular", "PostgreSQL"],
+      "anim": "anim-uni-in-up",
+      "type": "Instructor",
+      "date": "Nov - Dic 2022",
+      "institution": "UTO - FNI",
+      "stack": ["NestJS", "Angular", "TypeScript", "PostgreSQL", "TypeORM", "SOLID", "Redux"]
+    },
+    {
+      "id": 10,
+      "title": "Desarrollo Software V2:",
+      "description": "Tecnologías asíncronas - Instituto JM 2021",
+      "images": [
+        "/img/works/preview/1400x1400_prv-03.webp",
+        "/img/works/preview/1400x1400_prv-07.webp"
+      ],
+      "tags": ["JavaScript", "PHP", "GitHub"],
+      "anim": "anim-uni-in-up",
+      "type": "Instructor",
+      "date": "Sep - Oct 2021",
+      "institution": "Instituto Técnico Jesús María",
+      "stack": ["JS Vanilla", "Axios", "PHP", "Bootstrap", "MVC", "MySQL", "GitHub"]
+    },
+    {
+      "id": 11,
+      "title": "Excel BI:",
+      "description": "Business Intelligence - UTO Técnica 2021",
+      "images": [
+        "/img/works/preview/1400x1400_prv-04.webp",
+        "/img/works/preview/1400x1400_prv-01.webp"
+      ],
+      "tags": ["Excel", "BigQuery", "Analytics"],
+      "anim": "anim-uni-in-up",
+      "type": "Instructor",
+      "date": "Abril - Mayo 2021",
+      "institution": "UTO - Facultad Técnica",
+      "stack": ["Funciones Avanzadas", "BigQuery", "Analytics", "Power Query"]
+    },
+    {
+      "id": 12,
+      "title": "PWA con Angular:",
+      "description": "Apps real-time + Firebase - UTO 2021",
+      "images": [
+        "/img/works/preview/1400x1400_prv-05.webp",
+        "/img/works/preview/1400x1400_prv-02.webp",
+        "/img/works/preview/1400x1400_prv-03.webp"
+      ],
+      "tags": ["Angular", "Firebase", "PWA"],
+      "anim": "anim-uni-in-up",
+      "type": "Instructor",
+      "date": "Abril - Mayo 2021",
+      "institution": "UTO - Facultad Técnica",
+      "stack": ["Angular", "TypeScript", "Firebase", "Redux", "RxJS"]
+    },
+    {
+      "id": 13,
+      "title": "PHP 7 Intensivo:",
+      "description": "Backend seguro y patrones - UTO 2019",
+      "images": [
+        "/img/works/preview/1400x1400_prv-06.webp",
+        "/img/works/preview/1400x1400_prv-04.webp"
+      ],
+      "tags": ["PHP", "MySQL", "MVC"],
+      "anim": "anim-uni-in-up",
+      "type": "Instructor",
+      "date": "Diciembre 2019",
+      "institution": "UTO - Facultad Técnica",
+      "stack": ["PHP 7", "MySQL", "PDO", "MVC", "Bootstrap"]
+    },
+    {
+      "id": 14,
+      "title": "Desarrollo Software:",
+      "description": "Fundamentos y CRUD - Instituto JM 2019",
+      "images": [
+        "/img/works/preview/1400x1400_prv-07.webp",
+        "/img/works/preview/1400x1400_prv-05.webp"
+      ],
+      "tags": ["PHP", "jQuery", "AJAX"],
+      "anim": "anim-uni-in-up",
+      "type": "Instructor",
+      "date": "Agosto 2019",
+      "institution": "Instituto Técnico Jesús María",
+      "stack": ["PHP", "Bootstrap", "jQuery", "AJAX", "MVC", "POO"]
+    },
+    {
+      "id": 15,
+      "title": "Framework Angular:",
+      "description": "Maquetación componentes - Instituto JM 2019",
+      "images": [
+        "/img/works/preview/1400x1400_prv-01.webp",
+        "/img/works/preview/1400x1400_prv-06.webp",
+        "/img/works/preview/1400x1400_prv-07.webp"
+      ],
+      "tags": ["Angular", "TypeScript", "Componentes"],
+      "anim": "anim-uni-in-up",
+      "type": "Instructor",
+      "date": "Junio - Julio 2019",
+      "institution": "Instituto Técnico Jesús María",
+      "stack": ["Angular Framework", "TypeScript"]
+    },
+    {
+      "id": 16,
+      "title": "Desarrollo Web:",
+      "description": "Nivel Inicial - UTO Técnica 2019",
+      "images": [
+        "/img/works/preview/1400x1400_prv-02.webp",
+        "/img/works/preview/1400x1400_prv-03.webp"
+      ],
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "anim": "anim-uni-in-up",
+      "type": "Instructor",
+      "date": "Junio - Agosto 2019",
+      "institution": "UTO - Facultad Técnica",
+      "stack": ["HTML 5", "CSS", "JavaScript", "PHP", "MySQL"]
+    }
+  ]
+}

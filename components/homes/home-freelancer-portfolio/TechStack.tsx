@@ -22,9 +22,9 @@ export default function TechStack() {
                           <div className="col-12 mxd-grid-item no-margin">
                             <div className="mxd-section-title__title card-split-title">
                               <RevealText as="h2" className="reveal-type">
-                                My favorite
+                                Mi stack
                                 <br />
-                                stack
+                                tecnológico
                               </RevealText>
                             </div>
                           </div>
