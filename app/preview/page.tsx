@@ -1,4 +1,4 @@
-import Awards from "@/components/common/Awards";
+import Blogs from "@/components/common/Blogs";
 import Conferences from "@/components/common/Conferences";
 import Cta from "@/components/common/Cta";
 import Education from "@/components/common/Education";
@@ -55,13 +55,16 @@ export default function PreviewPage() {
         {/* 9. Formación académica */}
         <Education />
 
-        {/* 10. Premios y reconocimientos */}
-        <Awards />
+        {/* 10. Blog - Publicaciones y artículos */}
+        <Blogs
+          title="Publicaciones recientes"
+          desc="Artículos sobre educación, tecnología e innovación. Contribuyendo al conocimiento de la comunidad tecnológica boliviana."
+        />
 
-        {/* 12. Call to action final - Contacto */}
+        {/* 11. Call to action final - Contacto */}
         <Cta />
       </main>
-      <Footer2 text="davidmoralesvega" />
+      <Footer2 text="David Morales Vega" />
     </>
   );
 }

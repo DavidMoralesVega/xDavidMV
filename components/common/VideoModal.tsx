@@ -1,36 +1,42 @@
-// VideoModal.tsx
+"use client";
 
-import ReactPlayer from "react-player";
-import Modal from "react-modal";
-
-interface Props {
-  videoSrc: string;
+interface VideoModalProps {
   open: boolean;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setOpen: (open: boolean) => void;
+  videoSrc?: string;
 }
 
-export default function VideoModal({ videoSrc, open, setOpen }: Props) {
+export default function VideoModal({ open, setOpen, videoSrc }: VideoModalProps) {
+  if (!open) return null;
+
   return (
-    <Modal
-      isOpen={open}
-      onRequestClose={() => setOpen(false)}
-      className="videoModal__content"
-      overlayClassName="videoModal__overlay"
-      bodyOpenClassName="videoModal__bodyOpen" // <— body scroll lock
-      ariaHideApp={false}
-      shouldCloseOnEsc
-      shouldCloseOnOverlayClick
+    <div
+      className="video-modal"
+      onClick={() => setOpen(false)}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: "rgba(0, 0, 0, 0.9)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 9999,
+      }}
     >
-      <div className="videoModal__playerWrap">
-        <ReactPlayer
-          src={videoSrc} // <— use `url` not `src`
-          playing={open}
-          controls
-          width="100%"
-          height="100%"
-          style={{ position: "absolute", inset: 0 }}
-        />
+      <div onClick={(e) => e.stopPropagation()}>
+        {videoSrc && (
+          <video
+            controls
+            autoPlay
+            style={{ maxWidth: "90vw", maxHeight: "90vh" }}
+          >
+            <source src={videoSrc} type="video/mp4" />
+          </video>
+        )}
       </div>
-    </Modal>
+    </div>
   );
 }

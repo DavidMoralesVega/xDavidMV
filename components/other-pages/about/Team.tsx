@@ -4,8 +4,24 @@ import Image from "next/image";
 import teamData from "@/data/team.json";
 import AnimatedButton from "@/components/animation/AnimatedButton";
 
+type TeamMember = {
+  id: string | number;
+  image: {
+    alt: string;
+    src: string;
+    width: number;
+    height: number;
+  };
+  socials: Array<{
+    name: string;
+    url: string;
+  }>;
+  name: string;
+  position: string;
+};
+
 // Team members data
-const teamMembers = teamData;
+const teamMembers = teamData as TeamMember[];
 
 export default function Team() {
   return (

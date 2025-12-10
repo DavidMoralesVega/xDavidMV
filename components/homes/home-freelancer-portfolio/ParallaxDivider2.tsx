@@ -8,7 +8,7 @@ export default function ParallaxDivider2() {
           <div className="mxd-divider__video">
             <VideoParallax
               className="video parallax-video"
-              src={"/video/1920x1080_video-05.webm"}
+              src={"video/hero-video.webm"}
               poster="video/1920x1080_video-05.webp"
             />
           </div>

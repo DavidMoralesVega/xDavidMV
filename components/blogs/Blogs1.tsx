@@ -2,33 +2,33 @@ import Link from "next/link";
 import socials from "@/data/socials.json";
 import Image from "next/image";
 import { blogs2, blogs3, blogs4 } from "@/data/blogs.json";
-import SearchForm from "./SearchForm";
+// import SearchForm from "./SearchForm";
 import AnimatedButton from "../animation/AnimatedButton";
 // -------------------- Data (NO LINKS INSIDE) --------------------
 const headlineTags = [
-  "Midjourney",
-  "AI",
-  "Editorial",
-  "Interactive design",
-  "Web experience",
-  "Web design",
-  "Branding",
-  "UI",
-  "HTML",
-  "Frontend",
-  "UX",
-  "Motion design",
-  "3d modeling",
-  "Video editing",
+  "Educación",
+  "Tecnología",
+  "Innovación",
+  "Transformación Digital",
+  "Arquitectura de Software",
+  "Angular",
+  "NestJS",
+  "Microservicios",
+  "TypeScript",
+  "Python",
+  "DevOps",
+  "Cloud Computing",
+  "Inteligencia Artificial",
+  "Desarrollo Web",
 ];
 
 const sidebarCategories = [
-  "Design",
-  "Development",
-  "Digital Marketing",
-  "Technology",
-  "Case Studies",
-  "Trends",
+  "Educación",
+  "Tecnología",
+  "Arquitectura de Software",
+  "Desarrollo Web",
+  "Innovación",
+  "Transformación Digital",
 ];
 
 // -------------------- Small helpers --------------------
@@ -60,7 +60,7 @@ export default function Blogs1() {
                   <div className="mxd-block__content">
                     <div className="mxd-block__inner-headline loading__item">
                       <h1 className="inner-headline__title headline-img-before headline-img-06">
-                        Our digital digest
+                        Publicaciones
                       </h1>
                     </div>
                   </div>
@@ -88,9 +88,9 @@ export default function Blogs1() {
                   <div className="inner-headline__breadcrumbs loading__fade">
                     <div className="breadcrumbs__nav">
                       <span>
-                        <Link href={`/index-main`}>Home</Link>
+                        <Link href={`/`}>Inicio</Link>
                       </span>
-                      <span className="current-item">Insights</span>
+                      <span className="current-item">Blog</span>
                     </div>
                   </div>
                 </div>
@@ -114,7 +114,10 @@ export default function Blogs1() {
                   key={featured.id}
                   className="mxd-post post-featured radius-m"
                 >
-                  <Link className="post-featured__thumb" href={`/blog-article`}>
+                  <Link
+                    className="post-featured__thumb"
+                    href={featured.slug ? `/blog-article/${featured.slug}` : `/blog-article`}
+                  >
                     <Image
                       alt="Featured Post Thumb"
                       src={featured.img}
@@ -143,7 +146,9 @@ export default function Blogs1() {
                     </div>
 
                     <h3 className="post-featured__title">
-                      <Link href={`/blog-article`}>{featured.title}</Link>
+                      <Link href={featured.slug ? `/blog-article/${featured.slug}` : `/blog-article`}>
+                        {featured.title}
+                      </Link>
                     </h3>
 
                     <div className="post-featured__excerpt">
@@ -246,9 +251,9 @@ export default function Blogs1() {
             {/* Sidebar Start */}
             <div className="mxd-sidebar mxd-grid-item">
               {/* search widget */}
-              <div className="mxd-sidebar__widget bg-base-tint radius-m widget-search">
+              {/* <div className="mxd-sidebar__widget bg-base-tint radius-m widget-search">
                 <SearchForm />
-              </div>
+              </div> */}
 
               {/* categories widget */}
               <div className="mxd-sidebar__widget bg-base-tint radius-m">

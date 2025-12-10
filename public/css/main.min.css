@@ -367,7 +367,7 @@
   background-image: url(/img/illustrations/1920x1080_divider-03.webp);
 }
 .divider-image-4 {
-  background-image: url(/img/illustrations/1920x1080_divider-04.webp);
+  background-image: url(/img/services/material-you.jpg);
 }
 .divider-image-5 {
   background-image: url(/img/illustrations/2400x1350_divider-05.webp);
@@ -1643,48 +1643,31 @@ html.lenis body {
   font: normal var(--fw-regular) 1.8rem/1.4 var(--_font-accent);
   color: var(--t-medium);
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0))
+    ),
     -webkit-gradient(linear, left top, right top, from(var(--t-bright)), to(var(--t-bright)));
-  background:
-    -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     -moz-linear-gradient(left, var(--t-bright), var(--t-bright));
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     linear-gradient(to right, var(--t-bright), var(--t-bright));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.3s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
+  -webkit-transition: background-size 0.3s, color 0.3s;
+  -moz-transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
+  transition: background-size 0.3s, color 0.3s;
+  transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
 }
 .no-touch .mxd-paragraph__lists-item ul li a:hover {
   color: var(--t-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 @media only screen and (min-width: 1200px) {
   .mxd-paragraph__lists-item {
@@ -1914,59 +1897,53 @@ p span {
 }
 p a {
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(var(--t-medium)), to(var(--t-medium))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--t-medium)),
+      to(var(--t-medium))
+    ),
     -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-  background:
-    -moz-linear-gradient(left, var(--t-medium), var(--t-medium)),
+  background: -moz-linear-gradient(left, var(--t-medium), var(--t-medium)),
     -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  background:
-    linear-gradient(to right, var(--t-medium), var(--t-medium)),
+  background: linear-gradient(to right, var(--t-medium), var(--t-medium)),
     linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.4s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
-  transition:
-    background-size 0.4s,
-    color 0.3s;
-  transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
+  -webkit-transition: background-size 0.4s, color 0.3s;
+  -moz-transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
+  transition: background-size 0.4s, color 0.3s;
+  transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
 }
 p a.opposite {
-  background:
-    -webkit-gradient(linear, left top, right top, from(var(--t-opp-medium)), to(var(--t-opp-medium))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--t-opp-medium)),
+      to(var(--t-opp-medium))
+    ),
     -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-  background:
-    -moz-linear-gradient(left, var(--t-opp-medium), var(--t-opp-medium)),
+  background: -moz-linear-gradient(
+      left,
+      var(--t-opp-medium),
+      var(--t-opp-medium)
+    ),
     -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  background:
-    linear-gradient(to right, var(--t-opp-medium), var(--t-opp-medium)),
+  background: linear-gradient(
+      to right,
+      var(--t-opp-medium),
+      var(--t-opp-medium)
+    ),
     linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 .no-touch p a:hover {
   color: var(--t-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 .no-touch p a:hover.opposite {
   color: var(--t-opp-bright);
@@ -2006,48 +1983,31 @@ p.t-muted a {
   font-weight: var(--fw-regular);
   color: var(--t-muted);
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(var(--t-muted)), to(var(--t-muted))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--t-muted)),
+      to(var(--t-muted))
+    ),
     -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-  background:
-    -moz-linear-gradient(left, var(--t-muted), var(--t-muted)),
+  background: -moz-linear-gradient(left, var(--t-muted), var(--t-muted)),
     -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  background:
-    linear-gradient(to right, var(--t-muted), var(--t-muted)),
+  background: linear-gradient(to right, var(--t-muted), var(--t-muted)),
     linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.4s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
-  transition:
-    background-size 0.4s,
-    color 0.3s;
-  transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
+  -webkit-transition: background-size 0.4s, color 0.3s;
+  -moz-transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
+  transition: background-size 0.4s, color 0.3s;
+  transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
 }
 .no-touch p.t-muted a:hover {
   color: var(--t-medium);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 p.t-muted a.no-effect {
   background: 0 0;
@@ -2061,48 +2021,39 @@ p.t-opposite-medium {
 p.t-opposite-medium a {
   color: var(--t-opp-bright);
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(var(--t-opp-medium)), to(var(--t-opp-medium))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--t-opp-medium)),
+      to(var(--t-opp-medium))
+    ),
     -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-  background:
-    -moz-linear-gradient(left, var(--t-opp-medium), var(--t-opp-medium)),
+  background: -moz-linear-gradient(
+      left,
+      var(--t-opp-medium),
+      var(--t-opp-medium)
+    ),
     -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  background:
-    linear-gradient(to right, var(--t-opp-medium), var(--t-opp-medium)),
+  background: linear-gradient(
+      to right,
+      var(--t-opp-medium),
+      var(--t-opp-medium)
+    ),
     linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.4s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
-  transition:
-    background-size 0.4s,
-    color 0.3s;
-  transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
+  -webkit-transition: background-size 0.4s, color 0.3s;
+  -moz-transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
+  transition: background-size 0.4s, color 0.3s;
+  transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
 }
 .no-touch p.t-opposite-medium a:hover {
   color: var(--t-opp-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 p.t-bright {
   color: var(--t-bright);
@@ -2264,21 +2215,17 @@ p.t-semibold {
   -moz-border-radius: 50%;
   border-radius: 50%;
   background-color: transparent;
-  -webkit-transition:
-    background-color var(--_animspeed-medium) var(--_animbezier),
+  -webkit-transition: background-color var(--_animspeed-medium)
+      var(--_animbezier),
     -webkit-transform var(--_animspeed-medium);
-  transition:
-    background-color var(--_animspeed-medium) var(--_animbezier),
+  transition: background-color var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium);
-  -moz-transition:
-    transform var(--_animspeed-medium),
+  -moz-transition: transform var(--_animspeed-medium),
     background-color var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium);
-  transition:
-    transform var(--_animspeed-medium),
+  transition: transform var(--_animspeed-medium),
     background-color var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium),
+  transition: transform var(--_animspeed-medium),
     background-color var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium),
     -moz-transform var(--_animspeed-medium);
@@ -2295,14 +2242,13 @@ p.t-semibold {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-medium)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
   transition: transform var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  transition: transform var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
 }
@@ -2367,14 +2313,13 @@ p.t-semibold {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-medium)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
   transition: transform var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  transition: transform var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
 }
@@ -2556,14 +2501,13 @@ p.t-semibold {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-medium)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
   transition: transform var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  transition: transform var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
   z-index: 9;
@@ -2818,14 +2762,13 @@ p.t-semibold {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-medium)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
   transition: transform var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  transition: transform var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
 }
@@ -2890,21 +2833,16 @@ p.t-semibold {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition:
-    color var(--_animspeed-medium) var(--_animbezier),
+  -webkit-transition: color var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium);
-  transition:
-    color var(--_animspeed-medium) var(--_animbezier),
+  transition: color var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium);
-  -moz-transition:
-    transform var(--_animspeed-medium),
+  -moz-transition: transform var(--_animspeed-medium),
     color var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium);
-  transition:
-    transform var(--_animspeed-medium),
+  transition: transform var(--_animspeed-medium),
     color var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium),
+  transition: transform var(--_animspeed-medium),
     color var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium),
     -moz-transform var(--_animspeed-medium);
@@ -3026,12 +2964,10 @@ p.t-semibold {
   display: inline-block;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.76, 0, 0.024, 1);
   transition: -webkit-transform 0.5s cubic-bezier(0.76, 0, 0.024, 1);
-  -moz-transition:
-    transform 0.5s cubic-bezier(0.76, 0, 0.024, 1),
+  -moz-transition: transform 0.5s cubic-bezier(0.76, 0, 0.024, 1),
     -moz-transform 0.5s cubic-bezier(0.76, 0, 0.024, 1);
   transition: transform 0.5s cubic-bezier(0.76, 0, 0.024, 1);
-  transition:
-    transform 0.5s cubic-bezier(0.76, 0, 0.024, 1),
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.024, 1),
     -webkit-transform 0.5s cubic-bezier(0.76, 0, 0.024, 1),
     -moz-transform 0.5s cubic-bezier(0.76, 0, 0.024, 1);
 }
@@ -4522,39 +4458,26 @@ form textarea:required:valid {
 }
 .mxd-data-list__content a {
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(var(--st-medium)), to(var(--st-medium))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--st-medium)),
+      to(var(--st-medium))
+    ),
     -webkit-gradient(linear, left top, right top, from(var(--accent)), to(var(--accent)));
-  background:
-    -moz-linear-gradient(left, var(--st-medium), var(--st-medium)),
+  background: -moz-linear-gradient(left, var(--st-medium), var(--st-medium)),
     -moz-linear-gradient(left, var(--accent), var(--accent));
-  background:
-    linear-gradient(to right, var(--st-medium), var(--st-medium)),
+  background: linear-gradient(to right, var(--st-medium), var(--st-medium)),
     linear-gradient(to right, var(--accent), var(--accent));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.4s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
-  transition:
-    background-size 0.4s,
-    color 0.3s;
-  transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
+  -webkit-transition: background-size 0.4s, color 0.3s;
+  -moz-transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
+  transition: background-size 0.4s, color 0.3s;
+  transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
   -webkit-transform-origin: bottom right;
   -moz-transform-origin: bottom right;
   -ms-transform-origin: bottom right;
@@ -4562,12 +4485,8 @@ form textarea:required:valid {
 }
 .no-touch .mxd-data-list__content a:hover {
   color: var(--t-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
   -webkit-transform-origin: bottom left;
   -moz-transform-origin: bottom left;
   -ms-transform-origin: bottom left;
@@ -4728,14 +4647,11 @@ form textarea:required:valid {
   align-items: center;
   gap: 0.8rem;
   opacity: 0;
-  -webkit-transition:
-    fbackdrop-filter var(--_animspeed-medium),
+  -webkit-transition: fbackdrop-filter var(--_animspeed-medium),
     opacity var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    fbackdrop-filter var(--_animspeed-medium),
+  -moz-transition: fbackdrop-filter var(--_animspeed-medium),
     opacity var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    fbackdrop-filter var(--_animspeed-medium),
+  transition: fbackdrop-filter var(--_animspeed-medium),
     opacity var(--_animspeed-medium) var(--_animbezier);
 }
 .mxd-preview-hover__icon {
@@ -5040,48 +4956,31 @@ form textarea:required:valid {
   font: normal var(--fw-regular) 2.2rem/1.4 var(--_font-accent);
   color: var(--t-medium);
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0))
+    ),
     -webkit-gradient(linear, left top, right top, from(var(--t-bright)), to(var(--t-bright)));
-  background:
-    -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     -moz-linear-gradient(left, var(--t-bright), var(--t-bright));
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     linear-gradient(to right, var(--t-bright), var(--t-bright));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.3s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
+  -webkit-transition: background-size 0.3s, color 0.3s;
+  -moz-transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
+  transition: background-size 0.3s, color 0.3s;
+  transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
 }
 .no-touch .mxd-project-item__name a:hover {
   color: var(--t-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 .mxd-project-item__name a span {
   font-weight: var(--fw-medium);
@@ -5160,21 +5059,16 @@ form textarea:required:valid {
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
-  -webkit-transition:
-    color var(--_animspeed-medium) var(--_animbezier),
+  -webkit-transition: color var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium);
-  transition:
-    color var(--_animspeed-medium) var(--_animbezier),
+  transition: color var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium);
-  -moz-transition:
-    transform var(--_animspeed-medium),
+  -moz-transition: transform var(--_animspeed-medium),
     color var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium);
-  transition:
-    transform var(--_animspeed-medium),
+  transition: transform var(--_animspeed-medium),
     color var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium),
+  transition: transform var(--_animspeed-medium),
     color var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium),
     -moz-transform var(--_animspeed-medium);
@@ -5190,14 +5084,13 @@ form textarea:required:valid {
   -moz-transform: translateX(0) rotate(0);
   -ms-transform: translateX(0) rotate(0);
   transform: translateX(0) rotate(0);
-  -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-medium)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
   transition: transform var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  transition: transform var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
 }
@@ -5746,48 +5639,31 @@ form textarea:required:valid {
 .mxd-menu__data p a {
   color: var(--t-opp-medium);
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(var(--t-opp-muted)), to(var(--t-opp-muted))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--t-opp-muted)),
+      to(var(--t-opp-muted))
+    ),
     -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-  background:
-    -moz-linear-gradient(left, var(--t-opp-muted), var(--t-opp-muted)),
+  background: -moz-linear-gradient(left, var(--t-opp-muted), var(--t-opp-muted)),
     -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  background:
-    linear-gradient(to right, var(--t-opp-muted), var(--t-opp-muted)),
+  background: linear-gradient(to right, var(--t-opp-muted), var(--t-opp-muted)),
     linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.4s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
-  transition:
-    background-size 0.4s,
-    color 0.3s;
-  transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
+  -webkit-transition: background-size 0.4s, color 0.3s;
+  -moz-transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
+  transition: background-size 0.4s, color 0.3s;
+  transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
 }
 .no-touch .mxd-menu__data p a:hover {
   color: var(--t-opp-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 @media only screen and (min-width: 1200px) {
   .mxd-menu__data {
@@ -5938,14 +5814,13 @@ form textarea:required:valid {
   display: inline-flex;
   width: 1.9rem;
   height: 1.9rem;
-  -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-medium)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
   transition: transform var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  transition: transform var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
 }
@@ -7736,17 +7611,37 @@ form textarea:required:valid {
 .dash-line {
   --s: 0.8rem;
   height: 3px;
-  background:
-    -moz-radial-gradient(circle closest-side, var(--st-muted) 98%, rgba(0, 0, 0, 0)) 0 0 / var(--s) 100%,
-    -moz-linear-gradient(left, var(--st-muted) 50%, rgba(0, 0, 0, 0) 0) -moz-calc(var(--s) / 2) 0 / calc(2 * var(--s))
-      100%;
-  background:
-    radial-gradient(circle closest-side, var(--st-muted) 98%, rgba(0, 0, 0, 0)) 0 0 / var(--s) 100%,
-    -webkit-gradient(linear, left top, right top, color-stop(50%, var(--st-muted)), color-stop(0, rgba(0, 0, 0, 0)))
+  background: -moz-radial-gradient(
+        circle closest-side,
+        var(--st-muted) 98%,
+        rgba(0, 0, 0, 0)
+      )
+      0 0 / var(--s) 100%,
+    -moz-linear-gradient(left, var(--st-muted) 50%, rgba(0, 0, 0, 0) 0) -moz-calc(
+        var(--s) / 2
+      )
+      0 / calc(2 * var(--s)) 100%;
+  background: radial-gradient(
+        circle closest-side,
+        var(--st-muted) 98%,
+        rgba(0, 0, 0, 0)
+      )
+      0 0 / var(--s) 100%,
+    -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(50%, var(--st-muted)),
+        color-stop(0, rgba(0, 0, 0, 0))
+      ) calc(var(--s) / 2) 0 / calc(2 * var(--s)) 100%;
+  background: radial-gradient(
+        circle closest-side,
+        var(--st-muted) 98%,
+        rgba(0, 0, 0, 0)
+      )
+      0 0 / var(--s) 100%,
+    linear-gradient(90deg, var(--st-muted) 50%, rgba(0, 0, 0, 0) 0)
       calc(var(--s) / 2) 0 / calc(2 * var(--s)) 100%;
-  background:
-    radial-gradient(circle closest-side, var(--st-muted) 98%, rgba(0, 0, 0, 0)) 0 0 / var(--s) 100%,
-    linear-gradient(90deg, var(--st-muted) 50%, rgba(0, 0, 0, 0) 0) calc(var(--s) / 2) 0 / calc(2 * var(--s)) 100%;
 }
 .mxd-hero-01__data-btn {
   margin-bottom: 3.1rem;
@@ -8290,15 +8185,11 @@ form textarea:required:valid {
   position: relative;
   -moz-border-radius: var(--_radius-m);
   border-radius: var(--_radius-m);
-  -webkit-box-shadow:
-    0 29px 58px rgba(0, 0, 0, 0.3),
+  -webkit-box-shadow: 0 29px 58px rgba(0, 0, 0, 0.3),
     0 25px 22px rgba(0, 0, 0, 0.22);
-  -moz-box-shadow:
-    0 29px 58px rgba(0, 0, 0, 0.3),
+  -moz-box-shadow: 0 29px 58px rgba(0, 0, 0, 0.3),
     0 25px 22px rgba(0, 0, 0, 0.22);
-  box-shadow:
-    0 29px 58px rgba(0, 0, 0, 0.3),
-    0 25px 22px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 29px 58px rgba(0, 0, 0, 0.3), 0 25px 22px rgba(0, 0, 0, 0.22);
   overflow: hidden;
 }
 .no-touch .mxd-hero-02-image__inner:hover .mxd-preview-hover {
@@ -9560,8 +9451,16 @@ form textarea:required:valid {
       color-stop(20%, rgba(0, 0, 0, 0)),
       to(rgba(0, 0, 0, 0.6))
     );
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.6) 100%);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.6) 100%);
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
   }
 }
 .mxd-hero-06__data {
@@ -10742,107 +10641,75 @@ form textarea:required:valid {
   display: inline;
   color: var(--t-muted);
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0))
+    ),
     -webkit-gradient(linear, left top, right top, from(var(--t-muted)), to(var(--t-muted)));
-  background:
-    -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     -moz-linear-gradient(left, var(--t-muted), var(--t-muted));
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     linear-gradient(to right, var(--t-muted), var(--t-muted));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.4s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
-  transition:
-    background-size 0.4s,
-    color 0.3s;
-  transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
+  -webkit-transition: background-size 0.4s, color 0.3s;
+  -moz-transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
+  transition: background-size 0.4s, color 0.3s;
+  transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
 }
 .no-touch .breadcrumbs__nav span a:hover {
   color: var(--t-medium);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 .breadcrumbs__nav span.current-item {
   text-decoration: none;
-  background: -webkit-gradient(linear, left top, right top, from(var(--t-muted)), to(var(--t-muted)));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(var(--t-muted)),
+    to(var(--t-muted))
+  );
   background: -moz-linear-gradient(left, var(--t-muted), var(--t-muted));
   background: linear-gradient(to right, var(--t-muted), var(--t-muted));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
   background-position: 100% 100%;
   background-repeat: no-repeat;
 }
 .breadcrumbs__nav span.current-item a {
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(var(--t-muted)), to(var(--t-muted))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--t-muted)),
+      to(var(--t-muted))
+    ),
     -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-  background:
-    -moz-linear-gradient(left, var(--t-muted), var(--t-muted)),
+  background: -moz-linear-gradient(left, var(--t-muted), var(--t-muted)),
     -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  background:
-    linear-gradient(to right, var(--t-muted), var(--t-muted)),
+  background: linear-gradient(to right, var(--t-muted), var(--t-muted)),
     linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.4s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
-  transition:
-    background-size 0.4s,
-    color 0.3s;
-  transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
+  -webkit-transition: background-size 0.4s, color 0.3s;
+  -moz-transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
+  transition: background-size 0.4s, color 0.3s;
+  transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
 }
 .no-touch .breadcrumbs__nav span.current-item a:hover {
   color: var(--t-medium);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 @media only screen and (min-width: 1200px) {
   .breadcrumbs__nav {
@@ -11080,48 +10947,35 @@ form textarea:required:valid {
   display: inline;
   color: var(--pt-t-light-bright);
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0))
+    ),
     -webkit-gradient(linear, left top, right top, from(var(--pt-t-light-bright)), to(var(--pt-t-light-bright)));
-  background:
-    -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     -moz-linear-gradient(left, var(--pt-t-light-bright), var(--pt-t-light-bright));
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    linear-gradient(to right, var(--pt-t-light-bright), var(--pt-t-light-bright));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    linear-gradient(
+      to right,
+      var(--pt-t-light-bright),
+      var(--pt-t-light-bright)
+    );
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.4s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
-  transition:
-    background-size 0.4s,
-    color 0.3s;
-  transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
+  -webkit-transition: background-size 0.4s, color 0.3s;
+  -moz-transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
+  transition: background-size 0.4s, color 0.3s;
+  transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
 }
 .no-touch .post-featured__title a:hover {
   color: var(--pt-t-light-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 .post-featured__excerpt p {
   color: var(--pt-t-light-bright);
@@ -11292,48 +11146,31 @@ form textarea:required:valid {
   display: inline;
   color: var(--t-bright);
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0))
+    ),
     -webkit-gradient(linear, left top, right top, from(var(--t-bright)), to(var(--t-bright)));
-  background:
-    -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     -moz-linear-gradient(left, var(--t-bright), var(--t-bright));
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     linear-gradient(to right, var(--t-bright), var(--t-bright));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.3s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
+  -webkit-transition: background-size 0.3s, color 0.3s;
+  -moz-transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
+  transition: background-size 0.3s, color 0.3s;
+  transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
 }
 .no-touch .post-simple__title a:hover {
   color: var(--t-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 .post-secondary {
   position: relative;
@@ -11508,48 +11345,31 @@ form textarea:required:valid {
   display: inline;
   color: var(--t-bright);
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0))
+    ),
     -webkit-gradient(linear, left top, right top, from(var(--t-bright)), to(var(--t-bright)));
-  background:
-    -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     -moz-linear-gradient(left, var(--t-bright), var(--t-bright));
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     linear-gradient(to right, var(--t-bright), var(--t-bright));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.3s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
+  -webkit-transition: background-size 0.3s, color 0.3s;
+  -moz-transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
+  transition: background-size 0.3s, color 0.3s;
+  transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
 }
 .no-touch .post-secondary__title a:hover {
   color: var(--t-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 .mxd-projects-archive {
   position: relative;
@@ -11669,14 +11489,13 @@ form textarea:required:valid {
     -moz-transform: translateX(-50px);
     -ms-transform: translateX(-50px);
     transform: translateX(-50px);
-    -webkit-transition: -webkit-transform var(--_animspeed-slow) var(--_animbezier);
+    -webkit-transition: -webkit-transform var(--_animspeed-slow)
+      var(--_animbezier);
     transition: -webkit-transform var(--_animspeed-slow) var(--_animbezier);
-    -moz-transition:
-      transform var(--_animspeed-slow) var(--_animbezier),
+    -moz-transition: transform var(--_animspeed-slow) var(--_animbezier),
       -moz-transform var(--_animspeed-slow) var(--_animbezier);
     transition: transform var(--_animspeed-slow) var(--_animbezier);
-    transition:
-      transform var(--_animspeed-slow) var(--_animbezier),
+    transition: transform var(--_animspeed-slow) var(--_animbezier),
       -webkit-transform var(--_animspeed-slow) var(--_animbezier),
       -moz-transform var(--_animspeed-slow) var(--_animbezier);
   }
@@ -11686,48 +11505,31 @@ form textarea:required:valid {
   }
   .mxd-projects-archive__title p span {
     text-decoration: none;
-    background:
-      -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))),
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgba(0, 0, 0, 0)),
+        to(rgba(0, 0, 0, 0))
+      ),
       -webkit-gradient(linear, left top, right top, from(var(--t-bright)), to(var(--t-bright)));
-    background:
-      -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
       -moz-linear-gradient(left, var(--t-bright), var(--t-bright));
-    background:
-      linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
       linear-gradient(to right, var(--t-bright), var(--t-bright));
-    -moz-background-size:
-      100% 1px,
-      0 1px;
-    background-size:
-      100% 1px,
-      0 1px;
-    background-position:
-      100% 100%,
-      0 100%;
+    -moz-background-size: 100% 1px, 0 1px;
+    background-size: 100% 1px, 0 1px;
+    background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
-    -webkit-transition:
-      background-size 0.3s,
-      color 0.3s;
-    -moz-transition:
-      background-size 0.3s,
-      color 0.3s,
-      -moz-background-size 0.3s;
-    transition:
-      background-size 0.3s,
-      color 0.3s;
-    transition:
-      background-size 0.3s,
-      color 0.3s,
-      -moz-background-size 0.3s;
+    -webkit-transition: background-size 0.3s, color 0.3s;
+    -moz-transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
+    transition: background-size 0.3s, color 0.3s;
+    transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
   }
   .no-touch .mxd-projects-archive__title p span:hover {
     color: var(--t-bright);
-    -moz-background-size:
-      0 1px,
-      100% 1px;
-    background-size:
-      0 1px,
-      100% 1px;
+    -moz-background-size: 0 1px, 100% 1px;
+    background-size: 0 1px, 100% 1px;
   }
 }
 .mxd-projects-archive__image {
@@ -11755,22 +11557,17 @@ form textarea:required:valid {
     height: 8.4rem;
     -moz-border-radius: 0;
     border-radius: 0;
-    -webkit-transition:
-      border-radius 1.5s,
+    -webkit-transition: border-radius 1.5s,
       -webkit-flex-basis var(--_animspeed-medium) var(--_animbezier);
-    transition:
-      border-radius 1.5s,
+    transition: border-radius 1.5s,
       -webkit-flex-basis var(--_animspeed-medium) var(--_animbezier);
-    -moz-transition:
-      border-radius 1.5s,
+    -moz-transition: border-radius 1.5s,
       flex-basis var(--_animspeed-medium) var(--_animbezier),
       -moz-border-radius 1.5s,
       -moz-flex-basis var(--_animspeed-medium) var(--_animbezier);
-    transition:
-      border-radius 1.5s,
+    transition: border-radius 1.5s,
       flex-basis var(--_animspeed-medium) var(--_animbezier);
-    transition:
-      border-radius 1.5s,
+    transition: border-radius 1.5s,
       flex-basis var(--_animspeed-medium) var(--_animbezier),
       -moz-border-radius 1.5s,
       -webkit-flex-basis var(--_animspeed-medium) var(--_animbezier),
@@ -11982,21 +11779,16 @@ form textarea:required:valid {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition:
-    -webkit-filter var(--_animspeed-medium),
+  -webkit-transition: -webkit-filter var(--_animspeed-medium),
     -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    -webkit-filter var(--_animspeed-medium),
+  transition: -webkit-filter var(--_animspeed-medium),
     -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    filter var(--_animspeed-medium),
+  -moz-transition: filter var(--_animspeed-medium),
     transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    filter var(--_animspeed-medium),
+  transition: filter var(--_animspeed-medium),
     transform var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    filter var(--_animspeed-medium),
+  transition: filter var(--_animspeed-medium),
     transform var(--_animspeed-medium) var(--_animbezier),
     -webkit-filter var(--_animspeed-medium),
     -webkit-transform var(--_animspeed-medium) var(--_animbezier),
@@ -12031,48 +11823,31 @@ form textarea:required:valid {
   display: inline;
   color: var(--t-bright);
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0))
+    ),
     -webkit-gradient(linear, left top, right top, from(var(--t-bright)), to(var(--t-bright)));
-  background:
-    -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     -moz-linear-gradient(left, var(--t-bright), var(--t-bright));
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     linear-gradient(to right, var(--t-bright), var(--t-bright));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.3s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
+  -webkit-transition: background-size 0.3s, color 0.3s;
+  -moz-transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
+  transition: background-size 0.3s, color 0.3s;
+  transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
 }
 .no-touch .recent-post__title a:hover {
   color: var(--t-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 .recent-post__meta {
   display: -webkit-box;
@@ -12176,21 +11951,16 @@ form textarea:required:valid {
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
-  -webkit-transition:
-    color var(--_animspeed-medium) var(--_animbezier),
+  -webkit-transition: color var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium);
-  transition:
-    color var(--_animspeed-medium) var(--_animbezier),
+  transition: color var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium);
-  -moz-transition:
-    transform var(--_animspeed-medium),
+  -moz-transition: transform var(--_animspeed-medium),
     color var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium);
-  transition:
-    transform var(--_animspeed-medium),
+  transition: transform var(--_animspeed-medium),
     color var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium),
+  transition: transform var(--_animspeed-medium),
     color var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium),
     -moz-transform var(--_animspeed-medium);
@@ -12206,14 +11976,13 @@ form textarea:required:valid {
   -moz-transform: translateX(0) rotate(0);
   -ms-transform: translateX(0) rotate(0);
   transform: translateX(0) rotate(0);
-  -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-medium)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
   transition: transform var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  transition: transform var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
 }
@@ -12367,107 +12136,75 @@ form textarea:required:valid {
   display: inline;
   color: var(--t-muted);
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0))
+    ),
     -webkit-gradient(linear, left top, right top, from(var(--t-muted)), to(var(--t-muted)));
-  background:
-    -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     -moz-linear-gradient(left, var(--t-muted), var(--t-muted));
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     linear-gradient(to right, var(--t-muted), var(--t-muted));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.4s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
-  transition:
-    background-size 0.4s,
-    color 0.3s;
-  transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
+  -webkit-transition: background-size 0.4s, color 0.3s;
+  -moz-transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
+  transition: background-size 0.4s, color 0.3s;
+  transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
 }
 .no-touch .mxd-article__breadcrumbs span a:hover {
   color: var(--t-medium);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 .mxd-article__breadcrumbs span.current-item {
   text-decoration: none;
-  background: -webkit-gradient(linear, left top, right top, from(var(--t-muted)), to(var(--t-muted)));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(var(--t-muted)),
+    to(var(--t-muted))
+  );
   background: -moz-linear-gradient(left, var(--t-muted), var(--t-muted));
   background: linear-gradient(to right, var(--t-muted), var(--t-muted));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
   background-position: 100% 100%;
   background-repeat: no-repeat;
 }
 .mxd-article__breadcrumbs span.current-item a {
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(var(--t-muted)), to(var(--t-muted))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--t-muted)),
+      to(var(--t-muted))
+    ),
     -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-  background:
-    -moz-linear-gradient(left, var(--t-muted), var(--t-muted)),
+  background: -moz-linear-gradient(left, var(--t-muted), var(--t-muted)),
     -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  background:
-    linear-gradient(to right, var(--t-muted), var(--t-muted)),
+  background: linear-gradient(to right, var(--t-muted), var(--t-muted)),
     linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.4s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
-  transition:
-    background-size 0.4s,
-    color 0.3s;
-  transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
+  -webkit-transition: background-size 0.4s, color 0.3s;
+  -moz-transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
+  transition: background-size 0.4s, color 0.3s;
+  transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
 }
 .no-touch .mxd-article__breadcrumbs span.current-item a:hover {
   color: var(--t-medium);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 .mxd-article__data {
   display: -webkit-box;
@@ -13034,48 +12771,31 @@ form textarea:required:valid {
 }
 .mxd-article-navigation__link span {
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0))
+    ),
     -webkit-gradient(linear, left top, right top, from(var(--t-bright)), to(var(--t-bright)));
-  background:
-    -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     -moz-linear-gradient(left, var(--t-bright), var(--t-bright));
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     linear-gradient(to right, var(--t-bright), var(--t-bright));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.3s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
+  -webkit-transition: background-size 0.3s, color 0.3s;
+  -moz-transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
+  transition: background-size 0.3s, color 0.3s;
+  transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
 }
 .no-touch .mxd-article-navigation__link span:hover {
   color: var(--t-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 .mxd-article-comments {
   position: relative;
@@ -13354,35 +13074,27 @@ form textarea:required:valid {
   -moz-border-radius: var(--_radius-m);
   border-radius: var(--_radius-m);
   border: 1px solid var(--st-muted);
-  -webkit-box-shadow:
-    0 6px 14px rgba(7, 1, 23, 0),
+  -webkit-box-shadow: 0 6px 14px rgba(7, 1, 23, 0),
     4px 10px 38px rgba(13, 2, 46, 0);
-  -moz-box-shadow:
-    0 6px 14px rgba(7, 1, 23, 0),
+  -moz-box-shadow: 0 6px 14px rgba(7, 1, 23, 0),
     4px 10px 38px rgba(13, 2, 46, 0);
-  box-shadow:
-    0 6px 14px rgba(7, 1, 23, 0),
-    4px 10px 38px rgba(13, 2, 46, 0);
-  -webkit-transition: -webkit-box-shadow var(--_animspeed-medium) var(--_animbezier);
+  box-shadow: 0 6px 14px rgba(7, 1, 23, 0), 4px 10px 38px rgba(13, 2, 46, 0);
+  -webkit-transition: -webkit-box-shadow var(--_animspeed-medium)
+    var(--_animbezier);
   transition: -webkit-box-shadow var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    box-shadow var(--_animspeed-medium) var(--_animbezier),
+  -moz-transition: box-shadow var(--_animspeed-medium) var(--_animbezier),
     -moz-box-shadow var(--_animspeed-medium) var(--_animbezier);
   transition: box-shadow var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    box-shadow var(--_animspeed-medium) var(--_animbezier),
+  transition: box-shadow var(--_animspeed-medium) var(--_animbezier),
     -webkit-box-shadow var(--_animspeed-medium) var(--_animbezier),
     -moz-box-shadow var(--_animspeed-medium) var(--_animbezier);
 }
 .no-touch .mxd-demo-list__item:hover {
-  -webkit-box-shadow:
-    0 14px 28px rgba(var(--accent-rgb), 0.25),
+  -webkit-box-shadow: 0 14px 28px rgba(var(--accent-rgb), 0.25),
     0 10px 10px rgba(var(--accent-rgb), 0.12);
-  -moz-box-shadow:
-    0 14px 28px rgba(var(--accent-rgb), 0.25),
+  -moz-box-shadow: 0 14px 28px rgba(var(--accent-rgb), 0.25),
     0 10px 10px rgba(var(--accent-rgb), 0.12);
-  box-shadow:
-    0 14px 28px rgba(var(--accent-rgb), 0.25),
+  box-shadow: 0 14px 28px rgba(var(--accent-rgb), 0.25),
     0 10px 10px rgba(var(--accent-rgb), 0.12);
 }
 .no-touch .mxd-demo-list__item:hover .mxd-demo-list__screen {
@@ -13530,14 +13242,13 @@ form textarea:required:valid {
   background-position: center;
   -moz-background-size: cover;
   background-size: cover;
-  -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-medium)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
   transition: transform var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  transition: transform var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
 }
@@ -14119,15 +13830,15 @@ form textarea:required:valid {
   height: auto;
   padding: 0;
 }
-.no-touch .mxd-demo-swiper .swiper-slide-active:hover .demo-swiper-slide__image {
-  -webkit-box-shadow:
-    0 14px 28px rgba(var(--accent-rgb), 0.25),
+.no-touch
+  .mxd-demo-swiper
+  .swiper-slide-active:hover
+  .demo-swiper-slide__image {
+  -webkit-box-shadow: 0 14px 28px rgba(var(--accent-rgb), 0.25),
     0 10px 10px rgba(var(--accent-rgb), 0.12);
-  -moz-box-shadow:
-    0 14px 28px rgba(var(--accent-rgb), 0.25),
+  -moz-box-shadow: 0 14px 28px rgba(var(--accent-rgb), 0.25),
     0 10px 10px rgba(var(--accent-rgb), 0.12);
-  box-shadow:
-    0 14px 28px rgba(var(--accent-rgb), 0.25),
+  box-shadow: 0 14px 28px rgba(var(--accent-rgb), 0.25),
     0 10px 10px rgba(var(--accent-rgb), 0.12);
 }
 .mxd-demo-swiper .swiper-slide-next,
@@ -14136,14 +13847,13 @@ form textarea:required:valid {
   -moz-transform: scale(0.96);
   -ms-transform: scale(0.96);
   transform: scale(0.96);
-  -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-medium)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
   transition: transform var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  transition: transform var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
 }
@@ -14179,23 +13889,18 @@ form textarea:required:valid {
   -moz-border-radius: var(--_radius-m);
   border-radius: var(--_radius-m);
   border: 1px solid var(--st-muted);
-  -webkit-box-shadow:
-    0 6px 14px rgba(7, 1, 23, 0),
+  -webkit-box-shadow: 0 6px 14px rgba(7, 1, 23, 0),
     4px 10px 38px rgba(13, 2, 46, 0);
-  -moz-box-shadow:
-    0 6px 14px rgba(7, 1, 23, 0),
+  -moz-box-shadow: 0 6px 14px rgba(7, 1, 23, 0),
     4px 10px 38px rgba(13, 2, 46, 0);
-  box-shadow:
-    0 6px 14px rgba(7, 1, 23, 0),
-    4px 10px 38px rgba(13, 2, 46, 0);
-  -webkit-transition: -webkit-box-shadow var(--_animspeed-medium) var(--_animbezier);
+  box-shadow: 0 6px 14px rgba(7, 1, 23, 0), 4px 10px 38px rgba(13, 2, 46, 0);
+  -webkit-transition: -webkit-box-shadow var(--_animspeed-medium)
+    var(--_animbezier);
   transition: -webkit-box-shadow var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    box-shadow var(--_animspeed-medium) var(--_animbezier),
+  -moz-transition: box-shadow var(--_animspeed-medium) var(--_animbezier),
     -moz-box-shadow var(--_animspeed-medium) var(--_animbezier);
   transition: box-shadow var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    box-shadow var(--_animspeed-medium) var(--_animbezier),
+  transition: box-shadow var(--_animspeed-medium) var(--_animbezier),
     -webkit-box-shadow var(--_animspeed-medium) var(--_animbezier),
     -moz-box-shadow var(--_animspeed-medium) var(--_animbezier);
 }
@@ -14233,48 +13938,31 @@ form textarea:required:valid {
 }
 .demo-swiper-slide__descr a span {
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0))
+    ),
     -webkit-gradient(linear, left top, right top, from(var(--t-bright)), to(var(--t-bright)));
-  background:
-    -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     -moz-linear-gradient(left, var(--t-bright), var(--t-bright));
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     linear-gradient(to right, var(--t-bright), var(--t-bright));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.3s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
+  -webkit-transition: background-size 0.3s, color 0.3s;
+  -moz-transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
+  transition: background-size 0.3s, color 0.3s;
+  transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
 }
 .no-touch .demo-swiper-slide__descr a span:hover {
   color: var(--t-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 @media only screen and (min-width: 768px) {
   .demo-swiper-slide__descr a {
@@ -15010,12 +14698,10 @@ form textarea:required:valid {
   gap: 1.6rem;
   -webkit-transition: -webkit-transform var(--_animspeed-medium);
   transition: -webkit-transform var(--_animspeed-medium);
-  -moz-transition:
-    transform var(--_animspeed-medium),
+  -moz-transition: transform var(--_animspeed-medium),
     -moz-transform var(--_animspeed-medium);
   transition: transform var(--_animspeed-medium);
-  transition:
-    transform var(--_animspeed-medium),
+  transition: transform var(--_animspeed-medium),
     -webkit-transform var(--_animspeed-medium),
     -moz-transform var(--_animspeed-medium);
 }
@@ -15136,21 +14822,16 @@ form textarea:required:valid {
   -moz-transform: translate(-80%, -50%);
   -ms-transform: translate(-80%, -50%);
   transform: translate(-80%, -50%);
-  -webkit-transition:
-    opacity var(--_animspeed-medium) var(--_animbezier),
+  -webkit-transition: opacity var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium);
-  transition:
-    opacity var(--_animspeed-medium) var(--_animbezier),
+  transition: opacity var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium);
-  -moz-transition:
-    transform var(--_animspeed-medium),
+  -moz-transition: transform var(--_animspeed-medium),
     opacity var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium);
-  transition:
-    transform var(--_animspeed-medium),
+  transition: transform var(--_animspeed-medium),
     opacity var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium),
+  transition: transform var(--_animspeed-medium),
     opacity var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium),
     -moz-transform var(--_animspeed-medium);
@@ -15198,12 +14879,10 @@ form textarea:required:valid {
   transform-origin: top left;
   -webkit-transition: -webkit-transform 0.5s var(--_animbezier);
   transition: -webkit-transform 0.5s var(--_animbezier);
-  -moz-transition:
-    transform 0.5s var(--_animbezier),
+  -moz-transition: transform 0.5s var(--_animbezier),
     -moz-transform 0.5s var(--_animbezier);
   transition: transform 0.5s var(--_animbezier);
-  transition:
-    transform 0.5s var(--_animbezier),
+  transition: transform 0.5s var(--_animbezier),
     -webkit-transform 0.5s var(--_animbezier),
     -moz-transform 0.5s var(--_animbezier);
 }
@@ -15691,8 +15370,10 @@ form textarea:required:valid {
     transform: translateX(0);
   }
   .no-touch .mxd-projects-list__item:hover .mxd-projects-list__icon i::before {
-    -webkit-animation: var(--_animspeed-slow) var(--_animbezier) 0.2s 1 both slideRight;
-    -moz-animation: var(--_animspeed-slow) var(--_animbezier) 0.2s 1 both slideRight;
+    -webkit-animation: var(--_animspeed-slow) var(--_animbezier) 0.2s 1 both
+      slideRight;
+    -moz-animation: var(--_animspeed-slow) var(--_animbezier) 0.2s 1 both
+      slideRight;
     animation: var(--_animspeed-slow) var(--_animbezier) 0.2s 1 both slideRight;
   }
   .no-touch .mxd-projects-list__item:hover .mxd-projects-list__product p {
@@ -15707,10 +15388,16 @@ form textarea:required:valid {
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
-  .no-touch .mxd-projects-list__item:hover .mxd-projects-list__icon-v2 i::before {
-    -webkit-animation: var(--_animspeed-slow) var(--_animbezier) 0.3s 1 both slideRightUp;
-    -moz-animation: var(--_animspeed-slow) var(--_animbezier) 0.3s 1 both slideRightUp;
-    animation: var(--_animspeed-slow) var(--_animbezier) 0.3s 1 both slideRightUp;
+  .no-touch
+    .mxd-projects-list__item:hover
+    .mxd-projects-list__icon-v2
+    i::before {
+    -webkit-animation: var(--_animspeed-slow) var(--_animbezier) 0.3s 1 both
+      slideRightUp;
+    -moz-animation: var(--_animspeed-slow) var(--_animbezier) 0.3s 1 both
+      slideRightUp;
+    animation: var(--_animspeed-slow) var(--_animbezier) 0.3s 1 both
+      slideRightUp;
   }
 }
 .mxd-projects-list__border {
@@ -15784,14 +15471,13 @@ form textarea:required:valid {
     -moz-transform: translateX(-5.4rem);
     -ms-transform: translateX(-5.4rem);
     transform: translateX(-5.4rem);
-    -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+    -webkit-transition: -webkit-transform var(--_animspeed-medium)
+      var(--_animbezier);
     transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-    -moz-transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
     transition: transform var(--_animspeed-medium) var(--_animbezier);
-    transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    transition: transform var(--_animspeed-medium) var(--_animbezier),
       -webkit-transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
   }
@@ -15878,14 +15564,13 @@ form textarea:required:valid {
     -moz-transform: translateX(-5.4rem);
     -ms-transform: translateX(-5.4rem);
     transform: translateX(-5.4rem);
-    -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+    -webkit-transition: -webkit-transform var(--_animspeed-medium)
+      var(--_animbezier);
     transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-    -moz-transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
     transition: transform var(--_animspeed-medium) var(--_animbezier);
-    transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    transition: transform var(--_animspeed-medium) var(--_animbezier),
       -webkit-transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
   }
@@ -15917,14 +15602,13 @@ form textarea:required:valid {
     -moz-transform: translateX(3.2rem);
     -ms-transform: translateX(3.2rem);
     transform: translateX(3.2rem);
-    -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+    -webkit-transition: -webkit-transform var(--_animspeed-medium)
+      var(--_animbezier);
     transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-    -moz-transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
     transition: transform var(--_animspeed-medium) var(--_animbezier);
-    transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    transition: transform var(--_animspeed-medium) var(--_animbezier),
       -webkit-transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
   }
@@ -16015,14 +15699,13 @@ form textarea:required:valid {
     height: 100%;
   }
   .mxd-projects-list__tagslist-v2 ul {
-    -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+    -webkit-transition: -webkit-transform var(--_animspeed-medium)
+      var(--_animbezier);
     transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-    -moz-transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
     transition: transform var(--_animspeed-medium) var(--_animbezier);
-    transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    transition: transform var(--_animspeed-medium) var(--_animbezier),
       -webkit-transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
   }
@@ -16091,14 +15774,13 @@ form textarea:required:valid {
     -moz-transform: translateX(3.2rem);
     -ms-transform: translateX(3.2rem);
     transform: translateX(3.2rem);
-    -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+    -webkit-transition: -webkit-transform var(--_animspeed-medium)
+      var(--_animbezier);
     transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-    -moz-transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
     transition: transform var(--_animspeed-medium) var(--_animbezier);
-    transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    transition: transform var(--_animspeed-medium) var(--_animbezier),
       -webkit-transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
   }
@@ -16266,8 +15948,10 @@ form textarea:required:valid {
     transform: translateX(0);
   }
   .no-touch .mxd-awards-list__item:hover .mxd-awards-list__icon i::before {
-    -webkit-animation: var(--_animspeed-slow) var(--_animbezier) 0.2s 1 both slideRight;
-    -moz-animation: var(--_animspeed-slow) var(--_animbezier) 0.2s 1 both slideRight;
+    -webkit-animation: var(--_animspeed-slow) var(--_animbezier) 0.2s 1 both
+      slideRight;
+    -moz-animation: var(--_animspeed-slow) var(--_animbezier) 0.2s 1 both
+      slideRight;
     animation: var(--_animspeed-slow) var(--_animbezier) 0.2s 1 both slideRight;
   }
 }
@@ -16348,14 +16032,13 @@ form textarea:required:valid {
     -moz-transform: translateX(-5.4rem);
     -ms-transform: translateX(-5.4rem);
     transform: translateX(-5.4rem);
-    -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+    -webkit-transition: -webkit-transform var(--_animspeed-medium)
+      var(--_animbezier);
     transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-    -moz-transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
     transition: transform var(--_animspeed-medium) var(--_animbezier);
-    transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    transition: transform var(--_animspeed-medium) var(--_animbezier),
       -webkit-transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
   }
@@ -16396,14 +16079,13 @@ form textarea:required:valid {
     -moz-transform: translateX(-5.4rem);
     -ms-transform: translateX(-5.4rem);
     transform: translateX(-5.4rem);
-    -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+    -webkit-transition: -webkit-transform var(--_animspeed-medium)
+      var(--_animbezier);
     transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-    -moz-transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
     transition: transform var(--_animspeed-medium) var(--_animbezier);
-    transition:
-      transform var(--_animspeed-medium) var(--_animbezier),
+    transition: transform var(--_animspeed-medium) var(--_animbezier),
       -webkit-transform var(--_animspeed-medium) var(--_animbezier),
       -moz-transform var(--_animspeed-medium) var(--_animbezier);
   }
@@ -17663,14 +17345,13 @@ form textarea:required:valid {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: -webkit-transform var(--_animspeed-slow) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-slow)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-slow) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-slow) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-slow) var(--_animbezier),
     -moz-transform var(--_animspeed-slow) var(--_animbezier);
   transition: transform var(--_animspeed-slow) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-slow) var(--_animbezier),
+  transition: transform var(--_animspeed-slow) var(--_animbezier),
     -webkit-transform var(--_animspeed-slow) var(--_animbezier),
     -moz-transform var(--_animspeed-slow) var(--_animbezier);
 }
@@ -18812,8 +18493,16 @@ form textarea:required:valid {
       from(rgba(var(--base-rgb), 0)),
       to(rgba(var(--base-rgb), 1))
     );
-    background: -moz-linear-gradient(left, rgba(var(--base-rgb), 0) 0, rgba(var(--base-rgb), 1) 100%);
-    background: linear-gradient(to right, rgba(var(--base-rgb), 0) 0, rgba(var(--base-rgb), 1) 100%);
+    background: -moz-linear-gradient(
+      left,
+      rgba(var(--base-rgb), 0) 0,
+      rgba(var(--base-rgb), 1) 100%
+    );
+    background: linear-gradient(
+      to right,
+      rgba(var(--base-rgb), 0) 0,
+      rgba(var(--base-rgb), 1) 100%
+    );
     z-index: 1;
   }
 }
@@ -18835,8 +18524,7 @@ form textarea:required:valid {
   transition: -webkit-filter var(--_animspeed-slow) var(--_animbezier);
   -moz-transition: filter var(--_animspeed-slow) var(--_animbezier);
   transition: filter var(--_animspeed-slow) var(--_animbezier);
-  transition:
-    filter var(--_animspeed-slow) var(--_animbezier),
+  transition: filter var(--_animspeed-slow) var(--_animbezier),
     -webkit-filter var(--_animspeed-slow) var(--_animbezier);
 }
 .swiper-slide.mxd-fullwidth-slide {
@@ -19136,14 +18824,13 @@ form textarea:required:valid {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: -webkit-transform var(--_animspeed-slow) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-slow)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-slow) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-slow) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-slow) var(--_animbezier),
     -moz-transform var(--_animspeed-slow) var(--_animbezier);
   transition: transform var(--_animspeed-slow) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-slow) var(--_animbezier),
+  transition: transform var(--_animspeed-slow) var(--_animbezier),
     -webkit-transform var(--_animspeed-slow) var(--_animbezier),
     -moz-transform var(--_animspeed-slow) var(--_animbezier);
 }
@@ -19221,14 +18908,13 @@ form textarea:required:valid {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: -webkit-transform var(--_animspeed-slow) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-slow)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-slow) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-slow) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-slow) var(--_animbezier),
     -moz-transform var(--_animspeed-slow) var(--_animbezier);
   transition: transform var(--_animspeed-slow) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-slow) var(--_animbezier),
+  transition: transform var(--_animspeed-slow) var(--_animbezier),
     -webkit-transform var(--_animspeed-slow) var(--_animbezier),
     -moz-transform var(--_animspeed-slow) var(--_animbezier);
 }
@@ -19275,14 +18961,13 @@ form textarea:required:valid {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: -webkit-transform var(--_animspeed-slow) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-slow)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-slow) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-slow) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-slow) var(--_animbezier),
     -moz-transform var(--_animspeed-slow) var(--_animbezier);
   transition: transform var(--_animspeed-slow) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-slow) var(--_animbezier),
+  transition: transform var(--_animspeed-slow) var(--_animbezier),
     -webkit-transform var(--_animspeed-slow) var(--_animbezier),
     -moz-transform var(--_animspeed-slow) var(--_animbezier);
 }
@@ -19513,48 +19198,31 @@ form textarea:required:valid {
   line-height: 1.2;
   color: var(--t-medium);
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0))
+    ),
     -webkit-gradient(linear, left top, right top, from(var(--t-bright)), to(var(--t-bright)));
-  background:
-    -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     -moz-linear-gradient(left, var(--t-bright), var(--t-bright));
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     linear-gradient(to right, var(--t-bright), var(--t-bright));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.3s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
+  -webkit-transition: background-size 0.3s, color 0.3s;
+  -moz-transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
+  transition: background-size 0.3s, color 0.3s;
+  transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
 }
 .no-touch .mxd-blog-preview__data a:hover {
   color: var(--t-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 .mxd-blog-preview__data a span {
   font-weight: var(--fw-medium);
@@ -19659,14 +19327,13 @@ form textarea:required:valid {
   -ms-transform: rotate(0);
   transform: rotate(0);
   will-change: transform;
-  -webkit-transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
+  -webkit-transition: -webkit-transform var(--_animspeed-medium)
+    var(--_animbezier);
   transition: -webkit-transform var(--_animspeed-medium) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  -moz-transition: transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
   transition: transform var(--_animspeed-medium) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-medium) var(--_animbezier),
+  transition: transform var(--_animspeed-medium) var(--_animbezier),
     -webkit-transform var(--_animspeed-medium) var(--_animbezier),
     -moz-transform var(--_animspeed-medium) var(--_animbezier);
 }
@@ -19705,26 +19372,22 @@ form textarea:required:valid {
   -moz-border-radius: var(--_radius-m);
   border-radius: var(--_radius-m);
   padding: 3rem;
-  -webkit-transition: -webkit-box-shadow var(--_animspeed-slow) var(--_animbezier);
+  -webkit-transition: -webkit-box-shadow var(--_animspeed-slow)
+    var(--_animbezier);
   transition: -webkit-box-shadow var(--_animspeed-slow) var(--_animbezier);
-  -moz-transition:
-    box-shadow var(--_animspeed-slow) var(--_animbezier),
+  -moz-transition: box-shadow var(--_animspeed-slow) var(--_animbezier),
     -moz-box-shadow var(--_animspeed-slow) var(--_animbezier);
   transition: box-shadow var(--_animspeed-slow) var(--_animbezier);
-  transition:
-    box-shadow var(--_animspeed-slow) var(--_animbezier),
+  transition: box-shadow var(--_animspeed-slow) var(--_animbezier),
     -webkit-box-shadow var(--_animspeed-slow) var(--_animbezier),
     -moz-box-shadow var(--_animspeed-slow) var(--_animbezier);
 }
 .no-touch .mxd-pricing-table__inner:hover {
-  -webkit-box-shadow:
-    0 14px 28px rgba(var(--accent-rgb), 0.25),
+  -webkit-box-shadow: 0 14px 28px rgba(var(--accent-rgb), 0.25),
     0 10px 10px rgba(var(--accent-rgb), 0.12);
-  -moz-box-shadow:
-    0 14px 28px rgba(var(--accent-rgb), 0.25),
+  -moz-box-shadow: 0 14px 28px rgba(var(--accent-rgb), 0.25),
     0 10px 10px rgba(var(--accent-rgb), 0.12);
-  box-shadow:
-    0 14px 28px rgba(var(--accent-rgb), 0.25),
+  box-shadow: 0 14px 28px rgba(var(--accent-rgb), 0.25),
     0 10px 10px rgba(var(--accent-rgb), 0.12);
 }
 @media only screen and (min-width: 1200px) {
@@ -19914,48 +19577,31 @@ form textarea:required:valid {
   font: normal var(--fw-regular) 1.8rem/1.2 var(--_font-accent);
   color: var(--t-bright);
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(var(--t-bright)), to(var(--t-bright))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--t-bright)),
+      to(var(--t-bright))
+    ),
     -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-  background:
-    -moz-linear-gradient(left, var(--t-bright), var(--t-bright)),
+  background: -moz-linear-gradient(left, var(--t-bright), var(--t-bright)),
     -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  background:
-    linear-gradient(to right, var(--t-bright), var(--t-bright)),
+  background: linear-gradient(to right, var(--t-bright), var(--t-bright)),
     linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.4s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
-  transition:
-    background-size 0.4s,
-    color 0.3s;
-  transition:
-    background-size 0.4s,
-    color 0.3s,
-    -moz-background-size 0.4s;
+  -webkit-transition: background-size 0.4s, color 0.3s;
+  -moz-transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
+  transition: background-size 0.4s, color 0.3s;
+  transition: background-size 0.4s, color 0.3s, -moz-background-size 0.4s;
 }
 .no-touch .mxd-pricing-table__link a:hover {
   color: var(--t-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 .mxd-team-cards {
   position: relative;
@@ -20071,22 +19717,17 @@ form textarea:required:valid {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition:
-    -webkit-transform var(--_animspeed-slow),
+  -webkit-transition: -webkit-transform var(--_animspeed-slow),
     -webkit-box-shadow var(--_animspeed-slow) var(--_animbezier);
-  transition:
-    -webkit-transform var(--_animspeed-slow),
+  transition: -webkit-transform var(--_animspeed-slow),
     -webkit-box-shadow var(--_animspeed-slow) var(--_animbezier);
-  -moz-transition:
-    transform var(--_animspeed-slow),
+  -moz-transition: transform var(--_animspeed-slow),
     box-shadow var(--_animspeed-slow) var(--_animbezier),
     -moz-transform var(--_animspeed-slow),
     -moz-box-shadow var(--_animspeed-slow) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-slow),
+  transition: transform var(--_animspeed-slow),
     box-shadow var(--_animspeed-slow) var(--_animbezier);
-  transition:
-    transform var(--_animspeed-slow),
+  transition: transform var(--_animspeed-slow),
     box-shadow var(--_animspeed-slow) var(--_animbezier),
     -webkit-transform var(--_animspeed-slow),
     -moz-transform var(--_animspeed-slow),
@@ -20098,14 +19739,11 @@ form textarea:required:valid {
   -moz-transform: scale(1.04);
   -ms-transform: scale(1.04);
   transform: scale(1.04);
-  -webkit-box-shadow:
-    0 14px 28px rgba(var(--accent-rgb), 0.25),
+  -webkit-box-shadow: 0 14px 28px rgba(var(--accent-rgb), 0.25),
     0 10px 10px rgba(var(--accent-rgb), 0.12);
-  -moz-box-shadow:
-    0 14px 28px rgba(var(--accent-rgb), 0.25),
+  -moz-box-shadow: 0 14px 28px rgba(var(--accent-rgb), 0.25),
     0 10px 10px rgba(var(--accent-rgb), 0.12);
-  box-shadow:
-    0 14px 28px rgba(var(--accent-rgb), 0.25),
+  box-shadow: 0 14px 28px rgba(var(--accent-rgb), 0.25),
     0 10px 10px rgba(var(--accent-rgb), 0.12);
 }
 .career__image {
@@ -20531,48 +20169,31 @@ form textarea:required:valid {
 }
 .mxd-project__link span {
   text-decoration: none;
-  background:
-    -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))),
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0))
+    ),
     -webkit-gradient(linear, left top, right top, from(var(--t-bright)), to(var(--t-bright)));
-  background:
-    -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     -moz-linear-gradient(left, var(--t-bright), var(--t-bright));
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     linear-gradient(to right, var(--t-bright), var(--t-bright));
-  -moz-background-size:
-    100% 1px,
-    0 1px;
-  background-size:
-    100% 1px,
-    0 1px;
-  background-position:
-    100% 100%,
-    0 100%;
+  -moz-background-size: 100% 1px, 0 1px;
+  background-size: 100% 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition:
-    background-size 0.3s,
-    color 0.3s;
-  -moz-transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s;
-  transition:
-    background-size 0.3s,
-    color 0.3s,
-    -moz-background-size 0.3s;
+  -webkit-transition: background-size 0.3s, color 0.3s;
+  -moz-transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
+  transition: background-size 0.3s, color 0.3s;
+  transition: background-size 0.3s, color 0.3s, -moz-background-size 0.3s;
 }
 .no-touch .mxd-project__link span:hover {
   color: var(--t-bright);
-  -moz-background-size:
-    0 1px,
-    100% 1px;
-  background-size:
-    0 1px,
-    100% 1px;
+  -moz-background-size: 0 1px, 100% 1px;
+  background-size: 0 1px, 100% 1px;
 }
 @media only screen and (min-width: 768px) {
   .mxd-project__link {

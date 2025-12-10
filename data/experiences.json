@@ -1,5 +1,12 @@
 [
   {
+    "role": "🥇 1er Lugar - Concurso Desarrollo Tecnológico",
+    "agency": "App Mascotas Perdidas (SIB/GAMO)",
+    "agencyUrl": "#",
+    "desc": "PRIMER GANADOR del concurso organizado por la Sociedad de Ingenieros de Bolivia y GAMO. Desarrollé plataforma web y móvil innovadora de alto impacto social. Implementé dos versiones: Angular + Firebase (Serverless) y Angular + Python Flask (API REST).",
+    "year": "Octubre 2025"
+  },
+  {
     "role": "Technical Lead & Solutions Architect",
     "agency": "Empresa Metalúrgica Vinto (ENAF)",
     "agencyUrl": "https://www.vinto.gob.bo",

@@ -5,6 +5,12 @@ import VelocityMarquee from "@/components/animation/VelocityMarquee";
 import AnimateRotation from "@/components/animation/AnimateRotation";
 import { projects6 } from "@/data/projects.json";
 
+type Project = {
+  src: string;
+  id?: string;
+  title?: string;
+};
+
 export default function ProjectsMarqueeSlider() {
   return (
     <div className="mxd-section padding-pre-title">
@@ -59,7 +65,7 @@ export default function ProjectsMarqueeSlider() {
         <div className="mxd-block loading__fade">
           {/* Marquee Divider Start */}
           <VelocityMarquee className="marquee marquee-right--gsap">
-            {projects6.map((item, idx) => {
+            {(projects6 as Project[]).map((item, idx) => {
               const src = item.src;
 
               const href = item.id ? `/project-details` : "/project-details";

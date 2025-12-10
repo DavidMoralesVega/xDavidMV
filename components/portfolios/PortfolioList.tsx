@@ -5,10 +5,23 @@ import { useState } from "react";
 import RevealText from "../animation/RevealText";
 import AnimatedButton from "../animation/AnimatedButton";
 import { projects8 } from "@/data/projects.json";
+
+type Project = {
+  id: string | number;
+  thumb: string;
+  title: string;
+  image: string;
+  tags: string[];
+  date: string;
+};
+
 type HoverState = {
   activeIndex: number | null;
   x: number;
 };
+
+const typedProjects8 = projects8 as Project[];
+
 export default function PortfolioList() {
   const [hoverState, setHoverState] = useState<HoverState>({
     activeIndex: null,
@@ -66,7 +79,7 @@ export default function PortfolioList() {
         {/* Block - Projects List #01 Start */}
         <div className="mxd-block">
           <div className="mxd-projects-list hover-reveal">
-            {projects8.map((item, idx) => (
+            {typedProjects8.map((item, idx) => (
               <Link
                 key={item.id}
                 className="mxd-projects-list__item hover-reveal__item"

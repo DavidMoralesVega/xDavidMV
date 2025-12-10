@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { blogs1 } from "@/data/blogs.json";
-import RevealText from "../animation/RevealText";
 import BackgroundParallax from "../animation/BackgroundParallax";
 import AnimatedButton from "../animation/AnimatedButton";
 const defaultDesc = `Inspiring ideas, creative insights, and the latest in design and tech. Fueling innovation for your digital journey.`;
@@ -20,9 +19,9 @@ export default function Blogs({
               <div className="row g-0">
                 <div className="col-12 col-xl-5 mxd-grid-item no-margin">
                   <div className="mxd-section-title__hrtitle">
-                    <RevealText as="h2" className="reveal-type anim-uni-in-up">
+                    <h2 className="anim-uni-in-up">
                       {title}
-                    </RevealText>
+                    </h2>
                   </div>
                 </div>
                 <div className="col-12 col-xl-4 mxd-grid-item no-margin">
@@ -58,7 +57,7 @@ export default function Blogs({
                   >
                     <Link
                       className="mxd-blog-preview__media"
-                      href={`/blog-article`}
+                      href={`/blog-article/${item.slug || ''}`}
                     >
                       <BackgroundParallax
                         className={`mxd-blog-preview__image ${item.imageClass} parallax-img-small`}
@@ -86,7 +85,7 @@ export default function Blogs({
                     </Link>
 
                     <div className="mxd-blog-preview__data">
-                      <Link className="anim-uni-in-up" href={`/blog-article`}>
+                      <Link className="anim-uni-in-up" href={`/blog-article/${item.slug || ''}`}>
                         {item.title.before ?? ""}{" "}
                         {item.title.highlight ? (
                           <span>{item.title.highlight}</span>

@@ -1,46 +1,28 @@
 {
   "blogs1": [
     {
-      "id": 17,
+      "id": 20,
       "imageClass": "blog-preview-image-1",
-      "tags": ["Concept", "Editorial"],
+      "tags": ["Educación", "SENAPI"],
       "imgSrc": "/img/blog/preview/1000x1250_prv-01.webp",
       "title": {
-        "before": "Frontend innovations",
-        "after": " and user journeys"
-      }
-    },
-    {
-      "id": 18,
-      "imageClass": "blog-preview-image-2",
-      "tags": ["UI/UX", "Development"],
-      "imgSrc": "/img/blog/preview/1000x1250_prv-02.webp",
-      "title": {
-        "before": "Branding in creating",
-        "highlight": "digital experiences"
-      }
-    },
-    {
-      "id": 19,
-      "imageClass": "blog-preview-image-3",
-      "imgSrc": "/img/blog/preview/1000x1250_prv-03.webp",
-      "tags": ["News", "AI"],
-      "title": {
-        "before": "Elevating ",
-        "highlight": "digital workshops",
-        "after": " with engaging design"
-      }
+        "before": "Bolivia ante el reto de la",
+        "highlight": "educación permanente",
+        "after": ""
+      },
+      "slug": "bolivia-ante-el-reto-de-la-educacion-permanente"
     }
   ],
   "blogs2": [
     {
       "id": 1,
-      "img": "/img/blog/1400x900_pf-01.webp",
-      "categories": ["Midjourney", "AI", "Editorial"],
-      "meta": ["Midjourney", "AI", "Editorial"],
-      "date": "January 22, 2025",
-      "title": "My journey into the future of art",
-      "excerpt": "Discover how artificial intelligence is transforming artistic processes, pushing boundaries, and inspiring new possibilities in digital design."
+      "img": "/img/blog/preview/1000x1250_prv-01.webp",
+      "categories": ["Educación", "SENAPI", "Revista Renacer"],
+      "meta": ["Educación", "Transformación Digital", "Bolivia"],
+      "date": "Mayo 2025",
+      "title": "Bolivia ante el reto de la educación permanente",
+      "excerpt": "En un mundo donde la tecnología evoluciona exponencialmente, Bolivia enfrenta el desafío de adaptarse a la era digital. Análisis sobre la necesidad de transición hacia un modelo de aprendizaje continuo.",
+      "slug": "bolivia-ante-el-reto-de-la-educacion-permanente"
     }
   ],
   "blogs3": [

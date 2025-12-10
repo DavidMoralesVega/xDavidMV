@@ -3,6 +3,27 @@ import Image from "next/image";
 import teamMembersData from "@/data/team-members.json";
 import AnimatedButton from "@/components/animation/AnimatedButton";
 
+type TeamMemberData = {
+  id: string | number;
+  layout: {
+    classes: string;
+  };
+  image: {
+    alt: string;
+    src: string;
+    width: number;
+    height: number;
+  };
+  socials: Array<{
+    name: string;
+    url: string;
+  }>;
+  name: string;
+  position: string;
+};
+
+const typedTeamMembersData = teamMembersData as TeamMemberData[];
+
 export default function Teammembers() {
   return (
     <div className="mxd-section padding-default">
@@ -55,7 +76,7 @@ export default function Teammembers() {
                 <div className="col-12 col-xl-8">
                   <div className="container-fluid p-0">
                     <div className="row g-0">
-                      {teamMembersData.slice(0, 2).map((member) => (
+                      {typedTeamMembersData.slice(0, 2).map((member) => (
                         <div key={member.id} className={member.layout.classes}>
                           <div className="mxd-team-cards__media anim-uni-in-up">
                             <div className="mxd-team-cards__photo">
@@ -96,7 +117,7 @@ export default function Teammembers() {
                 <div className="col-12 col-xl-8">
                   <div className="container-fluid p-0">
                     <div className="row g-0">
-                      {teamMembersData.slice(2, 4).map((member) => (
+                      {typedTeamMembersData.slice(2, 4).map((member) => (
                         <div key={member.id} className={member.layout.classes}>
                           <div className="mxd-team-cards__media anim-uni-in-up">
                             <div className="mxd-team-cards__photo">

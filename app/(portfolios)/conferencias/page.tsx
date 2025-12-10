@@ -13,10 +13,7 @@ export const metadata: Metadata = {
 export default function ConferenciasPage() {
   return (
     <>
-      <main
-        id="mxd-page-content"
-        className="mxd-page-content inner-page-content"
-      >
+      <main id="mxd-page-content" className="mxd-page-content">
         <PortfolioMasonry />
         <Cta />
       </main>

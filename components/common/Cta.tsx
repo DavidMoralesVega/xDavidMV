@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import RevealText from "../animation/RevealText";
 import AnimatedButton from "../animation/AnimatedButton";
 
 export default function Cta() {
@@ -25,12 +24,9 @@ export default function Cta() {
                       height={300}
                     />
                   </span>
-                  <RevealText
-                    as="span"
-                    className="mxd-promo__caption reveal-type"
-                  >
+                  <span className="mxd-promo__caption">
                     Hablemos de tu proyecto!
-                  </RevealText>
+                  </span>
                 </p>
                 <div className="mxd-promo__controls anim-uni-in-up">
                   <AnimatedButton

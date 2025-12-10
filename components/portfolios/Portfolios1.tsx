@@ -4,6 +4,15 @@ import Image from "next/image";
 import StackCards from "../animation/StackCards";
 import { projects10 } from "@/data/projects.json";
 
+type Project = {
+  id: string | number;
+  image: string;
+  tags: string[];
+  title: string;
+};
+
+const typedProjects10 = projects10 as Project[];
+
 export default function Portfolios1() {
   return (
     <>
@@ -73,7 +82,7 @@ export default function Portfolios1() {
           <div className="mxd-block mxd-grid-item no-margin">
             <div className="content__block loading__fade">
               <StackCards stackName="projects-stack" className="stack-wrapper">
-                {projects10.map((s) => (
+                {typedProjects10.map((s) => (
                   <Link
                     key={s.id}
                     className="mxd-projects-stack__inner justify-between"
