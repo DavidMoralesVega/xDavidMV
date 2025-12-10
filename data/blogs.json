@@ -23,6 +23,56 @@
       "title": "Bolivia ante el reto de la educación permanente",
       "excerpt": "En un mundo donde la tecnología evoluciona exponencialmente, Bolivia enfrenta el desafío de adaptarse a la era digital. Análisis sobre la necesidad de transición hacia un modelo de aprendizaje continuo.",
       "slug": "bolivia-ante-el-reto-de-la-educacion-permanente"
+    },
+    {
+      "id": 21,
+      "img": "/img/blog/article/salud-mental-dev.webp",
+      "categories": ["Opinión", "Carrera Profesional"],
+      "meta": ["Productividad", "Salud Mental", "Desarrollo"],
+      "date": "Diciembre 2025",
+      "title": "Programar 14 horas al día no es de \"Hacker\", es de Junior ineficiente",
+      "excerpt": "La calidad de un desarrollador no se mide por líneas de código ni por horas frente al IDE. Se mide por la complejidad de los problemas resueltos. La programación es un deporte de alto rendimiento cognitivo.",
+      "slug": "programar-14-horas-no-es-de-hacker"
+    },
+    {
+      "id": 22,
+      "img": "/img/blog/article/https-security.webp",
+      "categories": ["Seguridad Web", "Negocios"],
+      "meta": ["SSL/TLS", "SEO", "Seguridad"],
+      "date": "Diciembre 2025",
+      "title": "HTTPS no es opcional: Por qué el candadito verde define tus ventas",
+      "excerpt": "En 2025, si tu sitio web sigue en HTTP, eres invisible y sospechoso. Análisis técnico y comercial del impacto del HTTPS en tu negocio y posicionamiento.",
+      "slug": "https-no-es-opcional"
+    },
+    {
+      "id": 23,
+      "img": "/img/blog/article/seo-react-angular.webp",
+      "categories": ["Desarrollo Web", "SEO Técnico"],
+      "meta": ["React", "Angular", "Next.js"],
+      "date": "Diciembre 2025",
+      "title": "El problema del SEO en React y Angular: Por qué tu web sale en blanco en Google",
+      "excerpt": "Has creado una SPA increíble pero Google no indexa tu contenido. Explicación técnica del conflicto entre Client Side Rendering y las arañas de Google.",
+      "slug": "seo-en-react-angular-pagina-blanco-google"
+    },
+    {
+      "id": 24,
+      "img": "/img/blog/article/sitemap-robots.webp",
+      "categories": ["SEO Técnico", "Infraestructura"],
+      "meta": ["Sitemap", "Robots.txt", "Google"],
+      "date": "Diciembre 2025",
+      "title": "Sitemap.xml y Robots.txt: Si no configuras esto, no existes",
+      "excerpt": "Estos dos archivos son los porteros de tu sitio web. Controlan cómo interactúan los motores de búsqueda contigo. Guía práctica para configurarlos correctamente.",
+      "slug": "sitemap-robots-txt-no-existes"
+    },
+    {
+      "id": 25,
+      "img": "/img/blog/article/daily-scrum.webp",
+      "categories": ["Metodologías Ágiles", "Gestión de Equipos"],
+      "meta": ["Scrum", "Daily Stand-up", "Agilidad"],
+      "date": "Diciembre 2025",
+      "title": "La \"Daily\" de 15 minutos que dura una hora: Cómo arruinar Scrum",
+      "excerpt": "El Daily Stand-up es la ceremonia más sagrada de Scrum. Y también es la más maltratada. He estado en reuniones llamadas \"Daily\" que duran 50 minutos.",
+      "slug": "daily-15-minutos-dura-hora-arruinar-scrum"
     }
   ],
   "blogs3": [

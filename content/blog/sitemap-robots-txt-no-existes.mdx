@@ -1,0 +1,139 @@
+---
+title: "Sitemap.xml y Robots.txt: Si no configuras esto, no existes"
+description: "Guía práctica sobre los archivos fundamentales para el SEO técnico. Errores comunes con robots.txt y cómo configurar correctamente tu sitemap.xml."
+date: "2025-12-10"
+tags: ["SEO Técnico", "Infraestructura", "Web Development"]
+categories: ["SEO Técnico", "Infraestructura"]
+image: "/img/blog/article/1920x1280_img-01.webp"
+imageAlt: "Sitemap.xml y Robots.txt - SEO Técnico"
+published: true
+---
+
+Imagina que construyes una biblioteca inmensa, pero no le das un mapa al bibliotecario y, además, le pones un candado a la puerta de entrada. Eso es exactamente lo que pasa cuando ignoras el `sitemap.xml` y el `robots.txt`.
+
+Estos dos archivos son los porteros de tu sitio web. Controlan cómo interactúan los motores de búsqueda contigo.
+
+## 1. Robots.txt: El Cadenero del Club
+
+Este archivo de texto vive en la raíz de tu dominio (`tusitio.com/robots.txt`). Su trabajo es decirles a las arañas (crawlers) a dónde **NO** pueden entrar.
+
+### El error catastrófico
+
+He visto sitios webs de empresas en Bolivia que, tras una migración de un entorno de desarrollo a producción, olvidaron borrar esta línea:
+
+```text
+User-agent: *
+Disallow: /
+```
+
+Esa simple barra `/` le dice a Google: "Prohibido entrar a todo el sitio". Resultado: **Desapareces de Google en 24 horas.**
+
+### Configuración correcta
+
+```text
+# Robots.txt para sitio de producción
+User-agent: *
+Allow: /
+
+# Bloquear zonas administrativas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cuenta-usuario/
+Disallow: /wp-admin/
+
+# Bloquear archivos de desarrollo
+Disallow: /*.json$
+Disallow: /*?preview=
+
+# Indicar ubicación del sitemap
+Sitemap: https://tusitio.com/sitemap.xml
+```
+
+El uso correcto es bloquear zonas administrativas para no gastar el presupuesto de rastreo de Google en páginas que no aportan valor SEO.
+
+## 2. Sitemap.xml: El Mapa del Tesoro
+
+Google es listo, pero no adivino. El `sitemap.xml` es un archivo XML que lista todas las URLs que *tú quieres* que se indexen, junto con metadatos como la fecha de última modificación.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://tusitio.com/</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://tusitio.com/servicios</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+```
+
+Es vital para:
+
+- Sitios nuevos sin muchos enlaces entrantes (backlinks).
+- Sitios muy grandes con arquitecturas profundas.
+- Contenido que se actualiza frecuentemente.
+
+> Si tu sitemap incluye páginas de "Gracias por su compra" o URLs con contenido duplicado, estás confundiendo a Google. No envíes basura.
+>
+> — David Morales Vega
+
+## La trampa de la automatización
+
+Muchos plugins generan sitemaps automáticos, pero cuidado: **no envíes basura**. Si tu sitemap incluye páginas de "Gracias por su compra", "Resultados de búsqueda" o URLs con contenido duplicado, estás confundiendo a Google.
+
+### Qué incluir y qué excluir
+
+| Incluir | Excluir |
+|---------|---------|
+| Páginas principales | Páginas de agradecimiento |
+| Artículos del blog | Resultados de búsqueda |
+| Páginas de servicios | URLs con parámetros |
+| Landing pages | Páginas de login/registro |
+| Categorías importantes | Contenido duplicado |
+
+## Generación automática en Next.js
+
+En Next.js puedes generar el sitemap dinámicamente:
+
+```typescript
+// app/sitemap.ts
+import { MetadataRoute } from 'next'
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://tusitio.com'
+
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/servicios`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    // Agregar más URLs dinámicamente
+  ]
+}
+```
+
+## Acción recomendada
+
+Entra hoy mismo a `tusitio.com/robots.txt`. Si no entiendes lo que dice, o si no tienes una cuenta configurada en **Google Search Console** enviando tu sitemap, estás perdiendo tráfico orgánico cada minuto.
+
+### Checklist de verificación
+
+- [ ] Revisar que `robots.txt` no bloquee todo el sitio
+- [ ] Verificar que el sitemap existe y es accesible
+- [ ] Registrar el sitio en Google Search Console
+- [ ] Enviar el sitemap a Google Search Console
+- [ ] Monitorear errores de rastreo semanalmente

@@ -1,0 +1,108 @@
+---
+title: "La \"Daily\" de 15 minutos que dura una hora: Cómo arruinar Scrum"
+description: "Crítica constructiva sobre la mala implementación de las Daily Stand-ups. El propósito real de la ceremonia y la regla del Parking Lot."
+date: "2025-12-10"
+tags: ["Metodologías Ágiles", "Gestión de Equipos", "Scrum"]
+categories: ["Metodologías Ágiles", "Gestión de Equipos"]
+image: "/img/blog/article/1920x1280_img-01.webp"
+imageAlt: "La Daily de 15 minutos que dura una hora - Scrum"
+published: true
+---
+
+El "Daily Stand-up" es la ceremonia más sagrada de Scrum. Y también es la más maltratada. He estado en reuniones llamadas "Daily" que duran 50 minutos, donde la gente se sienta (primer error), saca sus cuadernos y empieza a narrar la historia de su vida.
+
+Eso no es agilidad, es burocracia disfrazada de modernidad.
+
+## El propósito real de la Daily
+
+No es un reporte de estatus para el jefe. Repito: **No es para controlar al personal.**
+
+Es una reunión de sincronización *para el equipo*. El objetivo es detectar bloqueos antes de que se conviertan en incendios.
+
+## Las 3 preguntas (y por qué fallan)
+
+La teoría dice que cada uno responde:
+
+1. ¿Qué hice ayer?
+2. ¿Qué haré hoy?
+3. ¿Tengo algún impedimento?
+
+El error común es transformar la pregunta 1 en una justificación técnica detallada:
+
+```text
+❌ Mal ejemplo:
+"Ayer estuve refactorizando la clase User porque la inyección
+de dependencias estaba fallando debido a un problema con el
+contenedor de IoC que no registraba correctamente el servicio
+de autenticación, entonces tuve que modificar el módulo de..."
+```
+
+**STOP.** A nadie le importa el detalle técnico en ese momento.
+
+```text
+✅ Buen ejemplo:
+"Ayer terminé el módulo de Login. Hoy empiezo con el registro."
+```
+
+> Si tu Daily dura más de 15 minutos, estás perdiendo dinero. Hazla de pie, enfócate en los bloqueos y respeta el tiempo de los ingenieros.
+>
+> — David Morales Vega
+
+## La regla de oro: "El Estacionamiento" (Parking Lot)
+
+Si surge un problema técnico ("La API de pagos no responde"), la tentación es ponerse a resolverlo ahí mismo entre dos personas mientras los otros 5 miran el techo.
+
+Un buen Scrum Master (o un equipo maduro) debe decir: **"Al estacionamiento"**.
+
+Esto significa: "Anotamos el tema. Terminamos la Daily en 5 minutos. Quienes estén involucrados en el problema se quedan después a resolverlo; los demás, a trabajar".
+
+### Implementación práctica
+
+```text
+📋 Parking Lot - Daily 10/12/2025
+--------------------------------
+1. [Juan + María] - Revisar error en API de pagos
+2. [Pedro + Ana] - Definir estructura de base de datos para reportes
+3. [Equipo] - Decisión sobre librería de gráficos (5 min máx)
+```
+
+## Síntomas de una Daily enferma
+
+| Síntoma | Causa | Solución |
+|---------|-------|----------|
+| Dura más de 15 min | Discusiones técnicas | Usar Parking Lot |
+| Todos sentados | Falta de urgencia | Hacerla de pie |
+| Solo habla el jefe | Miedo a participar | Rotar facilitador |
+| Gente llega tarde | No se respeta el horario | Empezar a tiempo siempre |
+| Monólogos extensos | No hay estructura | Timer por persona (2 min) |
+
+## El formato que funciona
+
+```typescript
+interface DailyResponse {
+  ayer: string;      // Máx 1-2 oraciones
+  hoy: string;       // Máx 1-2 oraciones
+  bloqueo?: string;  // Solo si existe
+}
+
+// Ejemplo real
+const miDaily: DailyResponse = {
+  ayer: "Completé el endpoint de usuarios",
+  hoy: "Integro con el frontend de registro",
+  bloqueo: "Necesito acceso al servidor de staging"
+}
+```
+
+## Conclusión
+
+Si tu Daily dura más de 15 minutos, estás perdiendo dinero. Hazla de pie (literalmente, para cansarse y ser breves), enfócate en los bloqueos y respeta el tiempo de los ingenieros. La agilidad se trata de velocidad y adaptación, no de reuniones eternas.
+
+### Checklist de una Daily saludable
+
+- [ ] Duración máxima: 15 minutos
+- [ ] Todos de pie
+- [ ] Empieza a la hora exacta
+- [ ] Cada persona habla máximo 2 minutos
+- [ ] Los temas técnicos van al Parking Lot
+- [ ] El Scrum Master facilita, no interroga
+- [ ] El Product Owner escucha, no dirige

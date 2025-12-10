@@ -1,0 +1,62 @@
+---
+title: "HTTPS no es opcional: Por qué el candadito verde define tus ventas"
+description: "Análisis técnico y comercial de por qué HTTPS es imprescindible en 2025. Impacto en SEO, confianza del usuario y seguridad real de SSL/TLS."
+date: "2025-12-10"
+tags: ["Seguridad Web", "Negocios", "SSL/TLS", "SEO"]
+categories: ["Seguridad Web", "Negocios"]
+image: "/img/blog/article/1920x1280_img-01.webp"
+imageAlt: "HTTPS no es opcional - Seguridad Web"
+published: true
+---
+
+Hace una década, tener HTTPS (el candadito verde en el navegador) era obligatorio solo para bancos y tiendas que procesaban tarjetas de crédito. Hoy, en 2025, si tu blog personal o la web institucional de tu empresa sigue en HTTP, **eres invisible y sospechoso.**
+
+No es una exageración. Te explico técnicamente y comercialmente por qué.
+
+## 1. El veredicto de Google: "No Seguro"
+
+Desde hace años, Chrome y otros navegadores marcan explícitamente los sitios HTTP como **"No Seguros"** en la barra de direcciones.
+
+Imagina esto: Un cliente potencial entra a tu web en Oruro para contratar tus servicios. Antes de leer tu primera línea, el navegador le grita en rojo que el sitio es peligroso. **¿Confianza? Cero. ¿Venta? Perdida.**
+
+## 2. SEO: Google te ignora si no eres seguro
+
+Google ha confirmado que el HTTPS es una **señal de ranking**. Entre dos sitios web con contenido similar, Google siempre posicionará primero al que tenga certificado SSL. Si estás invirtiendo tiempo en escribir contenido pero tu sitio es HTTP, estás conduciendo con el freno de mano puesto.
+
+## 3. La parte técnica: ¿Qué hace realmente el SSL/TLS?
+
+Sin entrar en criptografía avanzada: el protocolo HTTP envía datos en texto plano. Si un usuario llena un formulario de contacto en tu web desde una red Wi-Fi pública (un café, un aeropuerto), cualquier persona con un *sniffer* de red básico puede leer ese mensaje.
+
+HTTPS encripta esa comunicación entre el navegador del usuario y tu servidor. Incluso si interceptan los datos, solo verán basura ilegible.
+
+> En 2025, no hay excusa técnica ni económica para ser inseguro. Gracias a Let's Encrypt, los certificados SSL estándar son gratuitos y automatizables.
+>
+> — David Morales Vega
+
+## El mito del costo: Let's Encrypt
+
+Muchos clientes locales me dicen: *"Es que el certificado es caro"*.
+
+Falso.
+
+Gracias a la iniciativa **Let's Encrypt**, respaldada por gigantes como Mozilla y Cisco, hoy en día los certificados SSL estándar son **gratuitos y automatizables**.
+
+### Configuración básica con Certbot
+
+```bash
+# Instalar Certbot en Ubuntu/Debian
+sudo apt update
+sudo apt install certbot python3-certbot-nginx
+
+# Obtener certificado para tu dominio
+sudo certbot --nginx -d tudominio.com -d www.tudominio.com
+
+# Verificar renovación automática
+sudo certbot renew --dry-run
+```
+
+El proceso completo toma menos de 5 minutos y el certificado se renueva automáticamente cada 90 días.
+
+## Mi consejo
+
+Si tu proveedor de hosting te quiere cobrar $50 dólares extra por un certificado SSL básico, cámbiate de proveedor o contrata a un desarrollador (como yo) que sepa configurar *Certbot* en un servidor Linux. En 2025, no hay excusa técnica ni económica para ser inseguro.

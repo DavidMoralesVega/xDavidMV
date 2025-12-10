@@ -1,8 +1,16 @@
-import BlogEducacionPermanente from "@/components/blogs/BlogEducacionPermanente";
+import BlogArticle from "@/components/blogs/BlogArticle";
 import Cta from "@/components/common/Cta";
 import Footer2 from "@/components/footers/Footer2";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import {
+  generatePageMetadata,
+  generateArticleSchema,
+  generateBreadcrumbSchema,
+  JsonLd,
+  siteConfig,
+} from "@/lib/seo";
+import { getAllBlogSlugs, getBlogPostBySlug } from "@/lib/blog";
 
 interface PageProps {
   params: Promise<{
@@ -12,48 +20,76 @@ interface PageProps {
 
 // Generate static paths for all blog articles
 export async function generateStaticParams() {
-  return [
-    {
-      slug: "bolivia-ante-el-reto-de-la-educacion-permanente",
-    },
-  ];
+  const slugs = getAllBlogSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
+  const post = await getBlogPostBySlug(slug);
 
-  if (slug === "bolivia-ante-el-reto-de-la-educacion-permanente") {
-    return {
-      title: "Bolivia ante el reto de la educación permanente | David Morales Vega",
-      description:
-        "Artículo publicado en la Revista Educativa Renacer sobre la necesidad de transición hacia un modelo de aprendizaje continuo en Bolivia frente a la automatización laboral.",
-    };
+  if (post) {
+    return generatePageMetadata({
+      title: post.frontmatter.title,
+      description: post.frontmatter.description,
+      path: `/blog-article/${slug}`,
+      image: post.frontmatter.image,
+      type: "article",
+      publishedTime: post.frontmatter.date,
+      tags: post.frontmatter.tags,
+    });
   }
 
-  return {
-    title: "Artículo | David Morales Vega",
+  return generatePageMetadata({
+    title: "Artículo",
     description: "Publicaciones y artículos de David Morales Vega",
-  };
+    path: `/blog-article/${slug}`,
+  });
 }
 
 export default async function BlogArticlePage({ params }: PageProps) {
   const { slug } = await params;
+  const post = await getBlogPostBySlug(slug);
 
-  // Validar el slug y mostrar el componente correspondiente
-  if (slug === "bolivia-ante-el-reto-de-la-educacion-permanente") {
-    return (
-      <>
-        <main id="mxd-page-content" className="mxd-page-content">
-          <BlogEducacionPermanente />
-          <Cta />
-        </main>
-        <Footer2 text="davidmoralesvega" />
-      </>
-    );
+  if (!post) {
+    notFound();
   }
 
-  // Si el slug no coincide, mostrar 404
-  notFound();
+  const articleSchema = generateArticleSchema({
+    title: post.frontmatter.title,
+    description: post.frontmatter.description,
+    path: `/blog-article/${slug}`,
+    image: post.frontmatter.image,
+    publishedTime: post.frontmatter.date,
+    tags: post.frontmatter.tags,
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Inicio", path: "/" },
+    { name: "Blog", path: "/blog-standard" },
+    { name: post.frontmatter.title, path: `/blog-article/${slug}` },
+  ]);
+
+  // Person schema for author
+  const authorSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${siteConfig.url}/#person`,
+    name: siteConfig.author.name,
+    url: siteConfig.url,
+    jobTitle: siteConfig.author.jobTitle,
+  };
+
+  return (
+    <>
+      <JsonLd data={[articleSchema, breadcrumbSchema, authorSchema]} />
+      <main id="mxd-page-content" className="mxd-page-content">
+        <BlogArticle post={post} />
+        <Cta />
+      </main>
+      <Footer2 text="davidmoralesvega" />
+    </>
+  );
 }

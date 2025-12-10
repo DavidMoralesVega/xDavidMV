@@ -1,0 +1,25 @@
+/* TEAM */
+
+Developer & Designer: David Morales Vega
+Role: Solutions Architect & Tech Lead
+Location: Oruro, Bolivia
+Contact: contacto@moralesvegadavid.com
+Twitter: @moralesvegadavid
+LinkedIn: https://www.linkedin.com/in/morales-vega-david/
+GitHub: https://github.com/DavidMoralesVega
+
+/* SITE */
+
+Last update: 2025/12/10
+Language: Spanish (es-BO)
+Standards: HTML5, CSS3, ES6+
+Components: Next.js 16, React 19, TypeScript
+Hosting: Firebase Hosting
+IDE: VS Code, WebStorm
+
+/* THANKS */
+
+Next.js Team - https://nextjs.org
+React Team - https://react.dev
+Vercel - https://vercel.com
+Firebase - https://firebase.google.com

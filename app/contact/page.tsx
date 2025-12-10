@@ -6,12 +6,14 @@ import ContactForm from "@/components/other-pages/contact/ContactForm";
 import Locations from "@/components/other-pages/contact/Locations";
 import PageTitle from "@/components/other-pages/contact/PageTitle";
 import Socials from "@/components/other-pages/contact/Socials";
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Contacto | David Morales Vega - Solutions Architect & Tech Lead",
+import { generatePageMetadata } from "@/lib/seo";
+
+export const metadata = generatePageMetadata({
+  title: "Contacto",
   description:
     "Contáctame para proyectos de arquitectura de software, desarrollo web, consultoría tecnológica o conferencias. Oruro, Bolivia. +591 61816001",
-};
+  path: "/contact",
+});
 export default function ContactPage() {
   return (
     <>

@@ -7,7 +7,10 @@
       "Bash(npm run build:*)",
       "Bash(dir /s /b \"C:\\Users\\moral\\Desktop\\BeMoreX\\xCode\\xDmV\\app\\(blogs)\\blog-article\")",
       "Bash(ls:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(cat:*)",
+      "Bash(dir:*)",
+      "Bash(npm install:*)"
     ],
     "deny": [],
     "ask": []

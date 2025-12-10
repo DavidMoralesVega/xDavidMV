@@ -1,0 +1,112 @@
+---
+title: "El problema del SEO en React y Angular: Por qué tu web sale en blanco en Google"
+description: "Explicación técnica del conflicto entre SPAs y motores de búsqueda. Soluciones con SSR (Next.js, Angular Universal) y SSG para proyectos donde el SEO importa."
+date: "2025-12-10"
+tags: ["Desarrollo Web", "SEO Técnico", "React", "Angular", "Next.js"]
+categories: ["Desarrollo Web", "SEO Técnico"]
+image: "/img/blog/article/1920x1280_img-01.webp"
+imageAlt: "El problema del SEO en React y Angular"
+published: true
+---
+
+Has creado una *Single Page Application* (SPA) increíble con React o Angular. Es rápida, las transiciones son suaves y se siente como una app nativa. Pero cuando la lanzas, pasan las semanas y **Google no indexa tu contenido.**
+
+Entras a ver qué pasa y descubres que, para Google, tu web es una página en blanco. ¿Por qué?
+
+## El conflicto: CSR (Client Side Rendering) vs. Arañas
+
+Las webs tradicionales (PHP, WordPress) envían el HTML completo desde el servidor. La araña de Google (Googlebot) llega, lee el texto y se va feliz.
+
+En una SPA moderna, el servidor a menudo envía un HTML casi vacío:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi App</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="/bundle.js"></script>
+</body>
+</html>
+```
+
+Es el navegador del usuario el que debe descargar, leer y ejecutar ese JS para "pintar" el contenido.
+
+Aunque Googlebot ha mejorado mucho y *intenta* ejecutar JavaScript, no es perfecto:
+
+1. **Presupuesto de Rastreo (Crawl Budget):** Ejecutar JS consume recursos. Google puede decidir no esperar a que tu web cargue y se va sin indexar nada.
+2. **Latencia:** Si tu API tarda en responder, la araña verá un spinner de carga en lugar de tu texto clave.
+
+## La Solución: SSR (Server Side Rendering) y SSG
+
+Para proyectos serios donde el SEO importa, no podemos confiar solo en el navegador ("Hydration" pura). Tenemos dos caminos arquitectónicos:
+
+### 1. Server Side Rendering (SSR)
+
+Herramientas como **Next.js** (para React) o **Angular Universal**. El servidor ejecuta el JS y envía al navegador el HTML ya construido.
+
+```tsx
+// Next.js - Ejemplo de SSR
+export async function getServerSideProps() {
+  const res = await fetch('https://api.example.com/data')
+  const data = await res.json()
+
+  return {
+    props: { data }
+  }
+}
+
+export default function Page({ data }) {
+  return <div>{data.title}</div>
+}
+```
+
+El usuario ve el contenido al instante y Google también.
+
+### 2. Static Site Generation (SSG)
+
+Si tu contenido no cambia cada minuto (ej. un blog o portfolio), generamos todos los archivos HTML en el momento de la *compilación* (Build time).
+
+```tsx
+// Next.js - Ejemplo de SSG
+export async function getStaticProps() {
+  const posts = await getAllPosts()
+
+  return {
+    props: { posts }
+  }
+}
+
+export async function getStaticPaths() {
+  const slugs = await getAllSlugs()
+
+  return {
+    paths: slugs.map(slug => ({ params: { slug } })),
+    fallback: false
+  }
+}
+```
+
+Esto es lo más rápido que existe: archivos HTML estáticos servidos desde CDN.
+
+> Como ingenieros, es nuestra responsabilidad no solo hacer que la web funcione, sino que la web sea encontrada.
+>
+> — David Morales Vega
+
+## Análisis Final
+
+| Tipo de Proyecto | Renderizado Recomendado |
+|------------------|------------------------|
+| Dashboard privado | CSR (SPA normal) |
+| Blog / Portfolio | SSG |
+| E-commerce | SSR o ISR |
+| Landing page | SSG |
+| App con datos en tiempo real | SSR + CSR híbrido |
+
+Si estás haciendo un panel de administración privado (Dashboard), una SPA normal está perfecta.
+
+Pero si estás haciendo un e-commerce o una landing page pública y usas `create-react-app` o `Vite` sin configuración de pre-renderizado, estás cometiendo suicidio SEO.
+
+Como ingenieros, es nuestra responsabilidad no solo hacer que la web funcione, sino que la web **sea encontrada**.

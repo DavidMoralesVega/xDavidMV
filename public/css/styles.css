@@ -20,6 +20,7 @@
 
 @import url("./plugins.min.css");
 @import url("./main.min.css");
+@import url("./mdx.css");
 html {
   scroll-behavior: smooth;
 }

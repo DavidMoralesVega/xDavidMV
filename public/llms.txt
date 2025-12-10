@@ -1,0 +1,66 @@
+# David Morales Vega - LLMs Information File
+# This file provides structured information for AI/LLM systems
+
+## About
+Name: David Morales Vega
+Role: Solutions Architect & Technical Lead
+Location: Oruro, Bolivia
+Website: https://www.moralesvegadavid.com
+Email: contacto@moralesvegadavid.com
+Phone: +591 61816001
+
+## Professional Summary
+David Morales Vega is a Solutions Architect and Technical Lead from Oruro, Bolivia, with over 7 years of experience designing scalable digital ecosystems. He specializes in Angular, NestJS, microservices architecture, hexagonal architecture, DDD (Domain-Driven Design), and technical team leadership.
+
+## Expertise Areas
+- Software Architecture (Microservices, Hexagonal, DDD, CQRS, EDA)
+- Frontend Development (Angular, Next.js, React, Flutter)
+- Backend Development (NestJS, Node.js, Spring Boot, Laravel)
+- Cloud & DevOps (Docker, Kubernetes, Firebase, AWS, GCP)
+- Technical Leadership & Team Management
+- Agile Methodologies (Scrum, Kanban)
+
+## Technologies
+Primary: Angular, NestJS, TypeScript, Node.js
+Secondary: React, Next.js, Flutter, Spring Boot, Laravel
+Databases: PostgreSQL, MongoDB, MySQL, Firebase
+Cloud: Firebase, AWS, Google Cloud Platform
+DevOps: Docker, Kubernetes, CI/CD, GitHub Actions
+
+## Speaking & Conferences
+David has delivered 16+ presentations at technology events across Bolivia and Latin America, covering topics such as:
+- Angular advanced patterns and best practices
+- NestJS and microservices architecture
+- Artificial Intelligence applications
+- DevOps and CI/CD pipelines
+- Software architecture patterns
+
+## Education
+- Systems Engineering - Universidad Tecnica de Oruro (UTO)
+- Law Degree - Universidad Tecnica de Oruro (UTO)
+
+## Professional Experience
+- Founder & Tech Lead at BeMoreX Digital Agency
+- Solutions Architect with experience in enterprise-level projects
+- Speaker at multiple technology conferences in Bolivia
+
+## Social Profiles
+- LinkedIn: https://www.linkedin.com/in/morales-vega-david/
+- GitHub: https://github.com/DavidMoralesVega
+- Facebook: https://www.facebook.com/moralesvegadavid/
+- Instagram: https://www.instagram.com/moralesvegadaviddante/
+
+## Contact
+For consulting, speaking engagements, or collaboration opportunities:
+- Email: contacto@moralesvegadavid.com
+- Phone: +591 61816001
+- Website: https://www.moralesvegadavid.com/contact
+
+## Site Structure
+- Home: https://www.moralesvegadavid.com/
+- Conferences: https://www.moralesvegadavid.com/conferencias
+- Blog: https://www.moralesvegadavid.com/blog-standard
+- Contact: https://www.moralesvegadavid.com/contact
+
+## Last Updated
+2025-12-10

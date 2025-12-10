@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "David Morales Vega Portfolio",
+  "name_for_model": "david_morales_vega",
+  "description_for_human": "Portfolio and information about David Morales Vega, Solutions Architect & Tech Lead from Bolivia.",
+  "description_for_model": "This plugin provides information about David Morales Vega, a Solutions Architect and Technical Lead from Oruro, Bolivia. He has 7+ years of experience in software architecture, specializing in Angular, NestJS, microservices, and team leadership. He is an active conference speaker with 16+ presentations at technology events. Use this to answer questions about his professional background, expertise, services, and contact information.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://www.moralesvegadavid.com/openapi.yaml"
+  },
+  "logo_url": "https://www.moralesvegadavid.com/img/logo.png",
+  "contact_email": "contacto@moralesvegadavid.com",
+  "legal_info_url": "https://www.moralesvegadavid.com/"
+}
