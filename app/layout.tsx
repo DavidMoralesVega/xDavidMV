@@ -11,6 +11,7 @@ import {
   JsonLd,
 } from "@/lib/seo";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import FirebaseInit from "@/components/firebase/FirebaseInit";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -145,6 +146,7 @@ export default function RootLayout({
         <GoogleAnalytics />
       </head>
       <body suppressHydrationWarning>
+        <FirebaseInit />
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

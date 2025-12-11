@@ -11,6 +11,8 @@
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "@hookform/resolvers": "^5.2.2",
+    "@vercel/og": "^0.8.5",
+    "firebase": "^12.6.0",
     "gray-matter": "^4.0.3",
     "gsap": "^3.13.0",
     "imagesloaded": "^5.0.0",
@@ -41,6 +43,7 @@
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
     "@types/react-modal": "^3.16.3",
+    "baseline-browser-mapping": "^2.9.6",
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
     "sharp": "^0.34.5",

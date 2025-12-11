@@ -21,6 +21,7 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,
-    host: siteConfig.url,
+    // Host directive should NOT include protocol (https://)
+    host: "www.moralesvegadavid.com",
   };
 }

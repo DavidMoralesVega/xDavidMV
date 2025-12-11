@@ -17,7 +17,8 @@
       "Bash(node scripts/generate-favicons.mjs:*)",
       "Bash(node scripts/generate-android-icons.mjs:*)",
       "Bash(grep:*)",
-      "Bash(bun run build)"
+      "Bash(bun run build)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
