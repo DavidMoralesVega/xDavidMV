@@ -15,48 +15,185 @@ No es una exageración. Te explico técnicamente y comercialmente por qué.
 
 ## 1. El veredicto de Google: "No Seguro"
 
-Desde hace años, Chrome y otros navegadores marcan explícitamente los sitios HTTP como **"No Seguros"** en la barra de direcciones.
+Desde 2018, Chrome marca explícitamente los sitios HTTP como **"No Seguros"** en la barra de direcciones. Firefox y Safari siguieron el mismo camino.
 
-Imagina esto: Un cliente potencial entra a tu web en Oruro para contratar tus servicios. Antes de leer tu primera línea, el navegador le grita en rojo que el sitio es peligroso. **¿Confianza? Cero. ¿Venta? Perdida.**
+Imagina esto: Un cliente potencial en Santa Cruz entra a tu web para contratar tus servicios. Antes de leer tu primera línea, el navegador le grita en rojo que el sitio es peligroso. **¿Confianza? Cero. ¿Venta? Perdida.**
+
+El impacto psicológico es brutal. Estudios de Baymard Institute muestran que el 18% de los usuarios abandonan un checkout si ven advertencias de seguridad. En e-commerce, HTTPS no es una mejora técnica, es una condición de supervivencia.
 
 ## 2. SEO: Google te ignora si no eres seguro
 
-Google ha confirmado que el HTTPS es una **señal de ranking**. Entre dos sitios web con contenido similar, Google siempre posicionará primero al que tenga certificado SSL. Si estás invirtiendo tiempo en escribir contenido pero tu sitio es HTTP, estás conduciendo con el freno de mano puesto.
+Google ha confirmado que HTTPS es una **señal de ranking** desde 2014. Entre dos sitios con contenido similar, Google siempre posicionará primero al que tenga certificado SSL.
 
-## 3. La parte técnica: ¿Qué hace realmente el SSL/TLS?
+Pero aquí está la parte que no te cuentan: no es solo posicionamiento. Las métricas de **Core Web Vitals** (LCP, FID, CLS) que Google usa para rankear también se ven afectadas. HTTP/2, que mejora dramáticamente el rendimiento, **requiere HTTPS obligatoriamente.**
 
-Sin entrar en criptografía avanzada: el protocolo HTTP envía datos en texto plano. Si un usuario llena un formulario de contacto en tu web desde una red Wi-Fi pública (un café, un aeropuerto), cualquier persona con un *sniffer* de red básico puede leer ese mensaje.
+Si estás invirtiendo en SEO pero tu sitio es HTTP, estás conduciendo con el freno de mano puesto.
 
-HTTPS encripta esa comunicación entre el navegador del usuario y tu servidor. Incluso si interceptan los datos, solo verán basura ilegible.
+## 3. La parte técnica: ¿Qué hace realmente SSL/TLS?
+
+Aclaremos la terminología: **SSL está deprecado.** Hoy usamos TLS 1.2 o TLS 1.3. Pero por razones históricas, seguimos diciendo "certificado SSL".
+
+### El handshake TLS 1.3
+
+Sin entrar en criptografía avanzada: cuando un navegador se conecta a un servidor HTTPS, ocurre un "handshake" (apretón de manos) donde se:
+
+1. **Verifica la identidad del servidor** mediante el certificado firmado por una CA (Certificate Authority)
+2. **Negocia algoritmos de cifrado** (cipher suites)
+3. **Genera claves de sesión** para cifrado simétrico
+4. **Establece el canal seguro**
+
+TLS 1.3 (la versión más reciente) redujo este proceso de 2 round-trips a 1, mejorando la latencia inicial en un 30%.
+
+### Forward Secrecy
+
+Una característica crítica de TLS 1.3 es **Perfect Forward Secrecy (PFS)**. Incluso si alguien roba la clave privada del servidor en el futuro, no puede descifrar las sesiones anteriores grabadas. Cada sesión usa claves efímeras.
+
+En HTTP, todo viaja en texto plano. Si un usuario llena un formulario de contacto desde un café usando WiFi público, cualquiera con Wireshark puede leer ese mensaje palabra por palabra.
 
 > En 2025, no hay excusa técnica ni económica para ser inseguro. Gracias a Let's Encrypt, los certificados SSL estándar son gratuitos y automatizables.
 >
 > — David Morales Vega
 
-## El mito del costo: Let's Encrypt
+## 4. HSTS: Forzando HTTPS incluso antes de la primera petición
 
-Muchos clientes locales me dicen: *"Es que el certificado es caro"*.
+Configurar HTTPS no es suficiente. Necesitas **HSTS (HTTP Strict Transport Security)**.
+
+El problema: un usuario escribe `tudominio.com` en el navegador. Por defecto, el navegador intenta HTTP primero, luego el servidor redirige a HTTPS. Pero esa primera petición HTTP es vulnerable a **SSL stripping attacks**.
+
+HSTS resuelve esto con un header HTTP:
+
+```nginx
+# Nginx
+add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+```
+
+```apache
+# Apache
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+```
+
+- `max-age=31536000`: El navegador recordará por 1 año que este sitio SOLO usa HTTPS
+- `includeSubDomains`: Aplica también a todos los subdominios
+- `preload`: Permite incluir tu dominio en la lista HSTS Preload de Chrome (hardcodeado en el navegador)
+
+Una vez incluido en la lista preload, ni siquiera la primera visita puede ser interceptada.
+
+## 5. El mito del costo: Let's Encrypt
+
+Muchos clientes me dicen: *"Es que el certificado es caro"*.
 
 Falso.
 
-Gracias a la iniciativa **Let's Encrypt**, respaldada por gigantes como Mozilla y Cisco, hoy en día los certificados SSL estándar son **gratuitos y automatizables**.
+Gracias a **Let's Encrypt**, respaldado por Mozilla, Cisco y la Linux Foundation, los certificados SSL estándar son **gratuitos y se renuevan automáticamente**.
 
-### Configuración básica con Certbot
+### Configuración con Certbot (5 minutos)
 
 ```bash
-# Instalar Certbot en Ubuntu/Debian
+# Ubuntu/Debian con Nginx
 sudo apt update
 sudo apt install certbot python3-certbot-nginx
 
-# Obtener certificado para tu dominio
+# Obtener certificado automáticamente
 sudo certbot --nginx -d tudominio.com -d www.tudominio.com
 
-# Verificar renovación automática
+# Verificar renovación automática (cada 90 días)
 sudo certbot renew --dry-run
 ```
 
-El proceso completo toma menos de 5 minutos y el certificado se renueva automáticamente cada 90 días.
+Let's Encrypt genera certificados válidos por 90 días. Certbot configura un cronjob que los renueva automáticamente. **Set it and forget it.**
+
+### ¿Cuándo necesitas un certificado de pago?
+
+Solo en casos muy específicos:
+
+- **EV (Extended Validation):** Muestra el nombre de tu empresa en verde en la barra de direcciones (aunque muchos navegadores ya eliminaron esta funcionalidad visual)
+- **Wildcard para múltiples subdominios:** Let's Encrypt ahora soporta wildcards, pero con validación DNS
+- **Garantía financiera:** Algunos certificados de pago incluyen seguros de hasta $1M en caso de violación (más marketing que realidad)
+
+Para el 95% de los sitios web, Let's Encrypt es suficiente.
+
+## 6. Mixed Content: El error silencioso que rompe tu SPA
+
+Tienes HTTPS configurado, pero tu sitio carga recursos (imágenes, JS, CSS) desde URLs HTTP. Chrome bloquea esto por defecto mostrando un candado roto.
+
+```html
+<!-- ❌ Mal: Mixed Content -->
+<script src="http://cdn.example.com/library.js"></script>
+<img src="http://example.com/logo.png" />
+
+<!-- ✅ Bien: Todo HTTPS -->
+<script src="https://cdn.example.com/library.js"></script>
+<img src="https://example.com/logo.png" />
+
+<!-- ✅ Mejor: Protocol-relative (aunque ya en desuso) -->
+<script src="//cdn.example.com/library.js"></script>
+```
+
+En React/Next.js, verifica tu `.env`:
+
+```bash
+# ❌ Mal
+NEXT_PUBLIC_API_URL=http://api.midominio.com
+
+# ✅ Bien
+NEXT_PUBLIC_API_URL=https://api.midominio.com
+```
+
+## 7. APIs y Microservicios: HTTPS interno también
+
+Un error común en arquitecturas de microservicios: "Mi API es interna, solo la llama mi frontend, no necesita HTTPS".
+
+**Error.**
+
+Aunque tu API no sea pública, si está en una red compartida (AWS VPC, por ejemplo), el tráfico HTTP puede ser interceptado. En ambientes corporativos o cloud, **siempre HTTPS, incluso internamente.**
+
+### Certificados autofirmados para desarrollo
+
+Para desarrollo local, puedes usar `mkcert`:
+
+```bash
+# Instalar mkcert
+brew install mkcert  # macOS
+# o sudo apt install mkcert  # Linux
+
+# Crear CA local
+mkcert -install
+
+# Generar certificado para localhost
+mkcert localhost 127.0.0.1 ::1
+
+# Usar en tu servidor de desarrollo
+```
+
+Esto genera certificados válidos para tu máquina de desarrollo sin warnings del navegador.
+
+## 8. Certificate Transparency: El blockchain del SSL
+
+Desde 2018, Google Chrome requiere que todos los certificados SSL sean registrados en **CT Logs** (Certificate Transparency).
+
+Es un sistema de logs públicos donde todas las CAs deben registrar los certificados que emiten. Esto previene:
+
+- Certificados emitidos por error
+- Ataques de CAs comprometidas (como el caso DigiNotar en 2011)
+- Certificados fraudulentos
+
+Puedes verificar los certificados de cualquier dominio en [crt.sh](https://crt.sh)
 
 ## Mi consejo
 
-Si tu proveedor de hosting te quiere cobrar $50 dólares extra por un certificado SSL básico, cámbiate de proveedor o contrata a un desarrollador (como yo) que sepa configurar *Certbot* en un servidor Linux. En 2025, no hay excusa técnica ni económica para ser inseguro.
+Si tu proveedor de hosting te quiere cobrar $50 extra por un certificado SSL básico, **cámbiate de proveedor.**
+
+Aprende a configurar Certbot en un servidor Linux. Es una habilidad de 15 minutos que te ahorrará cientos de dólares y te dará control total sobre tu infraestructura.
+
+En 2025, no configurar HTTPS es negligencia técnica. No es una mejora, es un **requisito mínimo de higiene web.**
+
+### Checklist de implementación
+
+- [ ] Certificado SSL instalado y válido
+- [ ] Redirección automática de HTTP a HTTPS
+- [ ] HSTS header configurado
+- [ ] Renovación automática configurada (Let's Encrypt)
+- [ ] Sin Mixed Content (verificar con Chrome DevTools)
+- [ ] APIs internas también en HTTPS
+- [ ] HTTP/2 habilitado (gratis con HTTPS)
+- [ ] Verificado en SSL Labs: [ssllabs.com/ssltest](https://www.ssllabs.com/ssltest/)

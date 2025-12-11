@@ -19,6 +19,10 @@ No es un reporte de estatus para el jefe. Repito: **No es para controlar al pers
 
 Es una reunión de sincronización *para el equipo*. El objetivo es detectar bloqueos antes de que se conviertan en incendios.
 
+La Scrum Guide lo dice claramente: *"El propósito del Daily Scrum es inspeccionar el progreso hacia el Sprint Goal y adaptar el Sprint Backlog según sea necesario."*
+
+No dice: "Para que el jefe verifique si trabajaste 8 horas ayer."
+
 ## Las 3 preguntas (y por qué fallan)
 
 La teoría dice que cada uno responde:
@@ -41,12 +45,31 @@ de autenticación, entonces tuve que modificar el módulo de..."
 
 ```text
 ✅ Buen ejemplo:
-"Ayer terminé el módulo de Login. Hoy empiezo con el registro."
+"Ayer terminé el módulo de Login. Hoy empiezo con el registro.
+Bloqueado: Necesito acceso al servidor de staging."
 ```
+
+Nota la diferencia: 3 oraciones. 15 segundos. Información útil.
 
 > Si tu Daily dura más de 15 minutos, estás perdiendo dinero. Hazla de pie, enfócate en los bloqueos y respeta el tiempo de los ingenieros.
 >
 > — David Morales Vega
+
+## El costo real de una Daily mal hecha
+
+Hagamos las cuentas. Equipo de 7 personas (5 devs, 1 Scrum Master, 1 Product Owner):
+
+```text
+Daily de 1 hora diaria (en vez de 15 min):
+- Tiempo desperdiciado por día: 45 min × 7 personas = 5.25 horas
+- Tiempo desperdiciado por sprint (10 días): 52.5 horas
+- Costo mensual (2 sprints): 105 horas
+
+Si el costo promedio por hora de tu equipo es $30:
+105 horas × $30 = $3,150 USD mensuales quemados en reunión
+```
+
+Eso es **$37,800 USD al año** que tu empresa está pagando para que la gente se cuente historias. Con ese dinero podrías contratar otro desarrollador.
 
 ## La regla de oro: "El Estacionamiento" (Parking Lot)
 
@@ -61,20 +84,58 @@ Esto significa: "Anotamos el tema. Terminamos la Daily en 5 minutos. Quienes est
 ```text
 📋 Parking Lot - Daily 10/12/2025
 --------------------------------
-1. [Juan + María] - Revisar error en API de pagos
-2. [Pedro + Ana] - Definir estructura de base de datos para reportes
+1. [Juan + María] - Revisar error en API de pagos (15 min)
+2. [Pedro + Ana] - Definir estructura BD reportes (20 min)
 3. [Equipo] - Decisión sobre librería de gráficos (5 min máx)
 ```
 
+Después de la Daily, solo los involucrados se quedan. Los demás vuelven a programar.
+
+## Anti-patterns: Cómo arruinar tu Daily
+
+### 1. La Daily como reporte de status al manager
+
+**Síntoma:** El manager pregunta: "¿Y por qué solo hiciste eso ayer?"
+
+**Por qué es terrible:** Genera miedo. La gente infla sus logros. Se pierde honestidad sobre bloqueos reales.
+
+**Solución:** El manager observa en silencio, o mejor aún, no asiste. La Daily es **para el equipo**, no para gerencia.
+
+### 2. El "Round Robin" mecánico
+
+**Síntoma:** Cada persona habla en orden sin escuchar a los demás. Parece oración de rosario.
+
+**Por qué es terrible:** No hay sincronización real. Dos personas podrían estar trabajando en lo mismo sin darse cuenta.
+
+**Solución:** Hablar por User Story o tarea del board, no por persona. "¿Qué necesita la US-123 para completarse?"
+
+### 3. La Daily sentados en sala de juntas
+
+**Síntoma:** Equipo cómodo en sillas ergonómicas, café en mano, prontos para una sesión larga.
+
+**Por qué es terrible:** La comodidad invita a extenderse. Es psicología básica.
+
+**Solución:** De pie, en un lugar incómodo (pasillo, sala sin sillas). La incomodidad física fuerza brevedad.
+
+### 4. La Daily asíncrona mal hecha
+
+**Síntoma:** En Slack: "Daily del día:" y cada uno escribe 3 párrafos. Nadie lee lo de los demás.
+
+**Por qué es terrible:** Pierde el objetivo de sincronización en tiempo real.
+
+**Solución:** Si es remoto, hacerla por video. Si el equipo está muy distribuido (5+ zonas horarias), reconoce que no eres Scrum puro y usa otro formato.
+
 ## Síntomas de una Daily enferma
 
-| Síntoma | Causa | Solución |
-|---------|-------|----------|
-| Dura más de 15 min | Discusiones técnicas | Usar Parking Lot |
-| Todos sentados | Falta de urgencia | Hacerla de pie |
-| Solo habla el jefe | Miedo a participar | Rotar facilitador |
-| Gente llega tarde | No se respeta el horario | Empezar a tiempo siempre |
-| Monólogos extensos | No hay estructura | Timer por persona (2 min) |
+| Síntoma | Causa raíz | Solución |
+|---------|-----------|----------|
+| Dura más de 15 min | Discusiones técnicas o decisiones arquitectónicas | Usar Parking Lot sistemáticamente |
+| Todos sentados cómodamente | Falta de urgencia, cultura de "reunionitis" | Hacerla de pie, eliminar sillas |
+| Solo habla el jefe/líder | Miedo a participar, cultura de comando-control | Rotar facilitador, silenciar al manager |
+| Gente llega 10-15 min tarde | No se respeta el horario, no hay consecuencias | Empezar a tiempo siempre, aunque falten personas |
+| Monólogos de 5+ minutos | No hay timeboxing ni timer | Timer visible de 2 min por persona |
+| Gente en el celular | Es aburrida y sin valor | Reducir duración, enfocarse en bloqueos reales |
+| Nadie reporta impedimentos | Cultura de "no pedir ayuda" o miedo | Celebrar cuando alguien pide ayuda |
 
 ## El formato que funciona
 
@@ -87,22 +148,82 @@ interface DailyResponse {
 
 // Ejemplo real
 const miDaily: DailyResponse = {
-  ayer: "Completé el endpoint de usuarios",
+  ayer: "Completé el endpoint de usuarios. PR enviado, esperando review",
   hoy: "Integro con el frontend de registro",
-  bloqueo: "Necesito acceso al servidor de staging"
+  bloqueo: "Necesito acceso al servidor de staging (ya pedí a DevOps)"
 }
 ```
 
+**Tiempo total:** 20 segundos.
+
+Si tienes 7 personas × 30 segundos c/u = 3.5 minutos. Más 2 minutos de buffer para el Parking Lot = **5.5 minutos total.**
+
+Sí, leíste bien: una Daily efectiva dura 5-10 minutos, no 15. Los 15 minutos son el techo máximo, no el promedio.
+
+## Daily remota vs presencial
+
+### Presencial:
+- **Ventaja:** Lectura de lenguaje corporal, energía de grupo
+- **Desventaja:** Requiere espacio físico, difícil si hay remoto parcial
+- **Best practice:** Frente al board físico o TV con el board digital
+
+### Remoto (video):
+- **Ventaja:** Flexible, funciona multi-zona horaria (con límites)
+- **Desventaja:** Latencia, distracciones del entorno, cámaras apagadas
+- **Best practice:** Todos con cámara ON, compartir pantalla del board
+
+### Asíncrona (Slack/Discord):
+- **Ventaja:** Múltiples zonas horarias, equipo muy distribuido
+- **Desventaja:** Pierde el espíritu de sincronización en tiempo real
+- **Best practice:** Solo si es imposible coincidir. No es Scrum puro, y está bien admitirlo.
+
+## Comparación con otras ceremonias Scrum
+
+| Ceremonia | Duración recomendada | Propósito | Común error |
+|-----------|---------------------|-----------|-------------|
+| **Daily Scrum** | 15 min MAX | Sincronizar equipo, detectar bloqueos | Convertirla en reporte de status |
+| **Sprint Planning** | 4-8 horas (Sprint de 2 semanas) | Planificar el sprint, descomponer historias | No involucrar al equipo, solo PO habla |
+| **Sprint Review** | 2-4 horas | Demostrar incremento a stakeholders | Convertirla en "training" del producto |
+| **Sprint Retrospective** | 1.5-3 horas | Mejorar el proceso del equipo | Solo hablar, nunca implementar mejoras |
+
+La Daily es la más corta porque es la más frecuente. Si fuera larga, sería insostenible.
+
+## Herramientas que ayudan
+
+No necesitas herramientas sofisticadas, pero estas ayudan:
+
+1. **Timer visible:** [cuckoo.team](https://cuckoo.team) o cualquier timer Pomodoro
+2. **Board digital:** Jira, Linear, Trello - compartir pantalla
+3. **Async Daily:** Geekbot (Slack bot), Standuply
+4. **Parking Lot digital:** Google Doc compartido o Notion
+
 ## Conclusión
 
-Si tu Daily dura más de 15 minutos, estás perdiendo dinero. Hazla de pie (literalmente, para cansarse y ser breves), enfócate en los bloqueos y respeta el tiempo de los ingenieros. La agilidad se trata de velocidad y adaptación, no de reuniones eternas.
+Si tu Daily dura más de 15 minutos, estás perdiendo dinero. Si la gente está sentada cómodamente, estás invitando a que se extienda. Si el manager interroga en lugar de facilitar, estás destruyendo la confianza.
+
+**La Daily no es para controlar, es para sincronizar.**
+
+Hazla de pie (literalmente, para cansarse y ser breves), enfócate en los bloqueos, usa el Parking Lot religiosamente y respeta el tiempo de los ingenieros.
+
+La agilidad se trata de velocidad y adaptación, no de reuniones eternas.
 
 ### Checklist de una Daily saludable
 
-- [ ] Duración máxima: 15 minutos
-- [ ] Todos de pie
-- [ ] Empieza a la hora exacta
+- [ ] Duración máxima: 15 minutos (ideal: 5-10 min)
+- [ ] Todos de pie (o cámaras ON si es remoto)
+- [ ] Empieza a la hora exacta siempre
 - [ ] Cada persona habla máximo 2 minutos
-- [ ] Los temas técnicos van al Parking Lot
+- [ ] Discusiones técnicas van al Parking Lot
 - [ ] El Scrum Master facilita, no interroga
 - [ ] El Product Owner escucha, no dirige
+- [ ] Los managers observan en silencio o no asisten
+- [ ] Se habla de User Stories, no de tareas administrativas
+- [ ] Termina con lista clara del Parking Lot
+
+Si cumples estos puntos, tu Daily será eficiente y el equipo la valorará. Si no, será "otra reunión más" que todos odian.
+
+### Recursos para profundizar
+
+- [Scrum Guide oficial](https://scrumguides.org/) - La biblia de Scrum
+- *"Scrum: The Art of Doing Twice the Work in Half the Time"* - Jeff Sutherland
+- [Mountain Goat Software: Daily Scrum](https://www.mountaingoatsoftware.com/agile/scrum/meetings/daily-scrum)

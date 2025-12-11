@@ -29,7 +29,7 @@
       "img": "/img/blog/article/salud-mental-dev.webp",
       "categories": ["Opinión", "Carrera Profesional"],
       "meta": ["Productividad", "Salud Mental", "Desarrollo"],
-      "date": "Diciembre 2025",
+      "date": "Noviembre 2024",
       "title": "Programar 14 horas al día no es de \"Hacker\", es de Junior ineficiente",
       "excerpt": "La calidad de un desarrollador no se mide por líneas de código ni por horas frente al IDE. Se mide por la complejidad de los problemas resueltos. La programación es un deporte de alto rendimiento cognitivo.",
       "slug": "programar-14-horas-no-es-de-hacker"
@@ -39,7 +39,7 @@
       "img": "/img/blog/article/https-security.webp",
       "categories": ["Seguridad Web", "Negocios"],
       "meta": ["SSL/TLS", "SEO", "Seguridad"],
-      "date": "Diciembre 2025",
+      "date": "Octubre 2024",
       "title": "HTTPS no es opcional: Por qué el candadito verde define tus ventas",
       "excerpt": "En 2025, si tu sitio web sigue en HTTP, eres invisible y sospechoso. Análisis técnico y comercial del impacto del HTTPS en tu negocio y posicionamiento.",
       "slug": "https-no-es-opcional"
@@ -49,7 +49,7 @@
       "img": "/img/blog/article/seo-react-angular.webp",
       "categories": ["Desarrollo Web", "SEO Técnico"],
       "meta": ["React", "Angular", "Next.js"],
-      "date": "Diciembre 2025",
+      "date": "Septiembre 2024",
       "title": "El problema del SEO en React y Angular: Por qué tu web sale en blanco en Google",
       "excerpt": "Has creado una SPA increíble pero Google no indexa tu contenido. Explicación técnica del conflicto entre Client Side Rendering y las arañas de Google.",
       "slug": "seo-en-react-angular-pagina-blanco-google"
@@ -59,7 +59,7 @@
       "img": "/img/blog/article/sitemap-robots.webp",
       "categories": ["SEO Técnico", "Infraestructura"],
       "meta": ["Sitemap", "Robots.txt", "Google"],
-      "date": "Diciembre 2025",
+      "date": "Agosto 2024",
       "title": "Sitemap.xml y Robots.txt: Si no configuras esto, no existes",
       "excerpt": "Estos dos archivos son los porteros de tu sitio web. Controlan cómo interactúan los motores de búsqueda contigo. Guía práctica para configurarlos correctamente.",
       "slug": "sitemap-robots-txt-no-existes"
@@ -69,7 +69,7 @@
       "img": "/img/blog/article/daily-scrum.webp",
       "categories": ["Metodologías Ágiles", "Gestión de Equipos"],
       "meta": ["Scrum", "Daily Stand-up", "Agilidad"],
-      "date": "Diciembre 2025",
+      "date": "Julio 2024",
       "title": "La \"Daily\" de 15 minutos que dura una hora: Cómo arruinar Scrum",
       "excerpt": "El Daily Stand-up es la ceremonia más sagrada de Scrum. Y también es la más maltratada. He estado en reuniones llamadas \"Daily\" que duran 50 minutos.",
       "slug": "daily-15-minutos-dura-hora-arruinar-scrum"

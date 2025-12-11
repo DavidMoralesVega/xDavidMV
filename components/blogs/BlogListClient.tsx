@@ -259,55 +259,6 @@ export default function BlogListClient({
                 <div className="col-12" />
               </div>
 
-              {/* Search Bar */}
-              <div className="row g-0">
-                <div className="col-12" />
-                <div className="col-12 col-xl-8 mxd-grid-item no-margin">
-                  <div className="inner-headline__search loading__item">
-                    <form
-                      className="blog-search-form"
-                      onSubmit={handleSearch}
-                      role="search"
-                    >
-                      <div className="blog-search-wrapper">
-                        <i
-                          className="ph ph-magnifying-glass blog-search-icon"
-                          aria-hidden="true"
-                        />
-                        <input
-                          type="search"
-                          name="q"
-                          value={searchInput}
-                          onChange={(e) => setSearchInput(e.target.value)}
-                          placeholder="Buscar artículos..."
-                          className="blog-search-input"
-                          aria-label="Buscar artículos"
-                          autoComplete="off"
-                        />
-                        {searchInput && (
-                          <button
-                            type="button"
-                            className="blog-search-clear"
-                            onClick={handleClearSearch}
-                            aria-label="Limpiar búsqueda"
-                          >
-                            <i className="ph ph-x" aria-hidden="true" />
-                          </button>
-                        )}
-                        <button
-                          type="submit"
-                          className="blog-search-submit"
-                          aria-label="Buscar"
-                        >
-                          <i className="ph ph-arrow-right" aria-hidden="true" />
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="col-12 col-xl-4 mxd-grid-item no-margin" />
-              </div>
-
               <div className="row g-0">
                 <div className="col-12" />
                 {/* Headline tags */}
@@ -353,90 +304,23 @@ export default function BlogListClient({
           <div className="mxd-posts-area loading__fade">
             {/* Posts Container Start */}
             <div className="mxd-posts-container mxd-grid-item">
-              {/* Active Filters */}
-              {hasActiveFilters && (
-                <div className="blog-active-filters">
-                  <div className="blog-active-filters__info">
-                    <span className="blog-active-filters__count">
-                      {filteredPosts.length}{" "}
-                      {filteredPosts.length === 1 ? "resultado" : "resultados"}
-                    </span>
-                    {search && (
-                      <span className="blog-active-filters__query">
-                        para &ldquo;{search}&rdquo;
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="blog-active-filters__tags">
-                    {category && (
-                      <button
-                        type="button"
-                        onClick={() => handleCategoryClick(category)}
-                        className="tag tag-default tag-outline blog-filter-tag"
-                        title={`Quitar filtro: ${category}`}
-                      >
-                        <span>Categoría: {category}</span>
-                        <i className="ph ph-x" aria-hidden="true" />
-                      </button>
-                    )}
-
-                    {tag && (
-                      <button
-                        type="button"
-                        onClick={() => handleTagClick(tag)}
-                        className="tag tag-default tag-outline blog-filter-tag"
-                        title={`Quitar filtro: ${tag}`}
-                      >
-                        <span>Tag: {tag}</span>
-                        <i className="ph ph-x" aria-hidden="true" />
-                      </button>
-                    )}
-
-                    {search && (
-                      <button
-                        type="button"
-                        onClick={handleClearSearch}
-                        className="tag tag-default tag-outline blog-filter-tag"
-                        title="Quitar búsqueda"
-                      >
-                        <span>Búsqueda: {search}</span>
-                        <i className="ph ph-x" aria-hidden="true" />
-                      </button>
-                    )}
-
+              {/* No results message */}
+              {filteredPosts.length === 0 && (
+                <div style={{ textAlign: "center", padding: "3rem 0" }}>
+                  <h3>No se encontraron artículos</h3>
+                  <p style={{ opacity: 0.7, marginTop: "1rem" }}>
+                    Intenta con otra búsqueda o categoría
+                  </p>
+                  {hasActiveFilters && (
                     <button
                       type="button"
                       onClick={handleClearFilters}
-                      className="blog-active-filters__clear"
-                      title="Limpiar todos los filtros"
+                      className="btn btn-line-small btn-muted"
+                      style={{ marginTop: "1rem" }}
                     >
                       Limpiar filtros
                     </button>
-                  </div>
-                </div>
-              )}
-
-              {/* No results message */}
-              {filteredPosts.length === 0 && (
-                <div className="blog-no-results">
-                  <i className="ph ph-magnifying-glass blog-no-results__icon" />
-                  <h3 className="blog-no-results__title">
-                    No se encontraron artículos
-                  </h3>
-                  <p className="blog-no-results__text">
-                    {search
-                      ? `No hay resultados para "${search}"`
-                      : "No hay artículos con los filtros seleccionados"}
-                  </p>
-                  <button
-                    type="button"
-                    onClick={handleClearFilters}
-                    className="btn btn-anim btn-default btn-outline slide-right-up"
-                  >
-                    <span className="btn-caption">Ver todos los artículos</span>
-                    <i className="ph ph-arrow-right" />
-                  </button>
+                  )}
                 </div>
               )}
 
@@ -622,53 +506,27 @@ export default function BlogListClient({
             {/* Posts Container End */}
 
             {/* Sidebar Start */}
-            <aside
-              className="mxd-sidebar mxd-grid-item"
-              aria-label="Sidebar del blog"
-            >
-              {/* Search Widget */}
+            <aside className="mxd-sidebar mxd-grid-item">
+              {/* Search widget */}
               <div className="mxd-sidebar__widget bg-base-tint radius-m widget-search">
-                <div className="widget__title">
-                  <p>Buscar</p>
-                </div>
-                <form
-                  className="blog-search-form"
-                  onSubmit={handleSearch}
-                  role="search"
-                >
-                  <div className="blog-search-wrapper">
-                    <i
-                      className="ph ph-magnifying-glass blog-search-icon"
-                      aria-hidden="true"
-                    />
+                <div className="widget-search__form">
+                  <form className="form search-form" onSubmit={handleSearch}>
                     <input
+                      id="search"
                       type="search"
+                      name="search"
+                      placeholder="Buscar artículos..."
                       value={searchInput}
                       onChange={(e) => setSearchInput(e.target.value)}
-                      placeholder="Buscar artículos..."
-                      className="blog-search-input"
-                      aria-label="Buscar artículos"
-                      autoComplete="off"
                     />
-                    {searchInput && (
-                      <button
-                        type="button"
-                        className="blog-search-clear"
-                        onClick={handleClearSearch}
-                        aria-label="Limpiar búsqueda"
-                      >
-                        <i className="ph ph-x" aria-hidden="true" />
-                      </button>
-                    )}
                     <button
+                      className="btn btn-form no-scale btn-absolute-right btn-muted"
                       type="submit"
-                      className="blog-search-submit"
-                      aria-label="Buscar"
                     >
-                      <i className="ph ph-arrow-right" aria-hidden="true" />
+                      <i className="ph ph-magnifying-glass" />
                     </button>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
 
               {/* Categories widget */}

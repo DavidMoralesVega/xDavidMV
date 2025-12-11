@@ -5,7 +5,7 @@
   "start_url": "/",
   "scope": "/",
   "icons": [
-    { "src": "/img/favicon/android-icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any maskable" },
+    { "src": "/img/favicon/icon-192x192.png", "type": "image/png", "sizes": "192x192", "purpose": "any maskable" },
     { "src": "/img/favicon/android-icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
   ],
   "theme_color": "#efefef",

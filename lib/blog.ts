@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import readingTime from "reading-time";
 import { compileMDX } from "next-mdx-remote/rsc";
 import rehypePrettyCode from "rehype-pretty-code";
+import remarkGfm from "remark-gfm";
 import { mdxComponents } from "@/components/mdx/MDXComponents";
 
 // ============================================
@@ -139,6 +140,7 @@ export async function getBlogPostBySlug(
     options: {
       parseFrontmatter: false,
       mdxOptions: {
+        remarkPlugins: [remarkGfm],
         rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions]],
       },
     },

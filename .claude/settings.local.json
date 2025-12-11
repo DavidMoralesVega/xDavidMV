@@ -10,7 +10,13 @@
       "Bash(find:*)",
       "Bash(cat:*)",
       "Bash(dir:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(findstr:*)",
+      "Bash(npm run dev:*)",
+      "Bash(where /r \"C:\\Users\\moral\\Desktop\\BeMoreX\\xCode\\xDmV\" logo.png)",
+      "Bash(node scripts/generate-favicons.mjs:*)",
+      "Bash(node scripts/generate-android-icons.mjs:*)",
+      "Bash(grep:*)"
     ],
     "deny": [],
     "ask": []
