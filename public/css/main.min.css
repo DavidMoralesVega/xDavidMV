@@ -364,7 +364,7 @@
   background-image: url(/img/illustrations/1920x1080_divider-02.webp);
 }
 .divider-image-3 {
-  background-image: url(/img/illustrations/1920x1080_divider-03.webp);
+  background-image: url(/img/brand/contact.webp);
 }
 .divider-image-4 {
   background-image: url(/img/services/material-you.jpg);
@@ -433,7 +433,7 @@
   background-image: url(/img/illustrations/400x200_hdl-05.webp);
 }
 .headline-img-06::before {
-  background-image: url(/img/illustrations/400x200_hdl-06.webp);
+  background-image: url(/img/brand/astronauta.jpg);
 }
 .headline-img-07::before {
   background-image: url(/img/illustrations/400x200_hdl-07.webp);
@@ -6045,7 +6045,7 @@ form textarea:required:valid {
   background-position: left center;
   -moz-background-size: cover;
   background-size: cover;
-  background-image: url(/img/backgrounds/1440x900_cta-01.webp);
+  background-image: url(/img/brand/cta.jpg);
 }
 @media only screen and (min-width: 1200px) {
   .mxd-promo__bg {

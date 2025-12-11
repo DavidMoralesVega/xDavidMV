@@ -34,7 +34,7 @@ export default function ConferenciasPage() {
         <PortfolioMasonry />
         <Cta />
       </main>
-      <Footer2 text="davidmoralesvega" />
+      <Footer2 text="David Morales Vega" />
     </>
   );
 }

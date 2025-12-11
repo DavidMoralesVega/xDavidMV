@@ -21,7 +21,7 @@ export const siteConfig = {
     name: "David Morales Vega",
     email: "contacto@moralesvegadavid.com",
     jobTitle: "Solutions Architect & Tech Lead",
-    image: "/img/about/david-morales-vega.webp",
+    image: "/img/brand/DavidMV.png",
     location: "Oruro, Bolivia",
   },
   social: {
@@ -73,7 +73,7 @@ export function generatePageMetadata({
   title,
   description,
   path = "",
-  image = "/img/og/og-default.webp",
+  image = "/img/hero/01_hero-img.webp",
   type = "website",
   publishedTime,
   modifiedTime,
@@ -427,7 +427,7 @@ export function generateFAQSchema() {
         name: "¿Cómo puedo contactar a David Morales Vega?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Puedes contactarlo a través de su sitio web ${siteConfig.url}/contact, por email a ${siteConfig.author.email}, o por teléfono al ${siteConfig.phone}.`,
+          text: `Puedes contactarlo a través de su sitio web ${siteConfig.url}/contacto, por email a ${siteConfig.author.email}, o por teléfono al ${siteConfig.phone}.`,
         },
       },
     ],
@@ -608,10 +608,9 @@ export interface RouteConfig {
 
 export const staticRoutes: RouteConfig[] = [
   { path: "/", changeFrequency: "weekly", priority: 1.0 },
-  { path: "/preview", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/contact", changeFrequency: "monthly", priority: 0.8 },
-  { path: "/conferencias", changeFrequency: "weekly", priority: 0.8 },
-  { path: "/blog-standard", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/conferencias", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/blog", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/contacto", changeFrequency: "monthly", priority: 0.8 },
 ];
 
 // Blog articles - dynamically generated from MDX files
@@ -658,7 +657,7 @@ export const blogArticles = getBlogArticles();
 export function getBlogRoutes(): RouteConfig[] {
   const articles = getBlogArticles();
   return articles.map((article: { slug: string; publishedTime: string }) => ({
-    path: `/blog-article/${article.slug}`,
+    path: `/blog/${article.slug}`,
     changeFrequency: "monthly" as const,
     priority: 0.6,
     lastModified: new Date(article.publishedTime),

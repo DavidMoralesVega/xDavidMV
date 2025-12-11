@@ -73,7 +73,7 @@ export default function Hero() {
           <div className="mxd-container__circle loading__fade">
             <Link
               className="btn-rotating btn-rotating-blur-outline ver-02"
-              href={`/contact`}
+              href={`/contacto`}
             >
               {/* SVG rotating text */}
               <AnimateRotation

@@ -423,5 +423,5 @@ export function buildBlogUrl(params: BlogFilterParams): string {
   }
 
   const queryString = searchParams.toString();
-  return `/blog-standard${queryString ? `?${queryString}` : ""}`;
+  return `/blog${queryString ? `?${queryString}` : ""}`;
 }

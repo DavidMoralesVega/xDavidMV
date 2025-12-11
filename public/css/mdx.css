@@ -11,8 +11,8 @@
   margin: 1.5rem 0;
   border-radius: 8px;
   overflow: hidden;
-  background: rgba(var(--base-tint-rgb), 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0d1117 !important;
+  border: 1px solid #30363d;
 }
 
 .code-block-header {
@@ -41,20 +41,37 @@
   padding: 2rem;
   overflow-x: auto;
   background: transparent !important;
-  font-size: 1.8rem !important;
-  line-height: 1.9;
+  font-size: 1.4rem !important;
+  line-height: 1.8;
 }
 
 .code-block-container pre code {
   display: block;
   font-family: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
-  font-size: 1.8rem !important;
-  color: #e6edf3 !important;
+  font-size: 1.4rem !important;
+  color: #e6edf3;
   background: transparent !important;
 }
 
 .code-block-container pre code * {
-  color: inherit !important;
+  color: inherit;
+}
+
+/* Para bloques de texto sin syntax highlighting */
+.code-block-container pre code:not([class*="language-"]),
+.code-block-container pre[class*="language-text"] code,
+.code-block-container pre[class*="language-txt"] code,
+pre[data-language="text"] code,
+pre[data-language="txt"] code,
+code[data-language="text"],
+code[data-language="txt"] {
+  color: #e6edf3 !important;
+}
+
+/* Fallback para cualquier código sin highlighting */
+pre:not([class]) code,
+pre code:not([class]) {
+  color: #e6edf3 !important;
 }
 
 /* Copy Button */
@@ -126,10 +143,10 @@ code[data-line-numbers] > [data-line]::before {
 /* Inline code */
 .inline-code {
   padding: 0.25rem 0.5rem;
-  font-size: 1.6rem !important;
+  font-size: 1.4rem !important;
   font-family: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
   background: rgba(110, 118, 129, 0.3);
-  border: 1px solid rgba(110, 118, 129, 0.4);
+  border: none;
   border-radius: 4px;
   color: var(--t-bright) !important;
 }
@@ -138,8 +155,8 @@ code[data-line-numbers] > [data-line]::before {
 .article-code {
   margin: 1.5rem 0;
   padding: 2rem;
-  background: rgba(var(--base-tint-rgb), 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0d1117 !important;
+  border: 1px solid #30363d;
   border-radius: 8px;
   overflow-x: auto;
 }
@@ -147,14 +164,21 @@ code[data-line-numbers] > [data-line]::before {
 .article-code code {
   display: block;
   font-family: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
-  font-size: 1.8rem !important;
-  line-height: 1.9;
-  color: #e6edf3 !important;
+  font-size: 1.4rem !important;
+  line-height: 1.8;
+  color: #e6edf3;
   white-space: pre;
 }
 
 .article-code code * {
-  color: inherit !important;
+  color: inherit;
+}
+
+/* Para bloques de texto sin syntax highlighting */
+.article-code code:not([class*="language-"]),
+.article-code[class*="language-text"] code,
+.article-code[class*="language-txt"] code {
+  color: #e6edf3 !important;
 }
 
 /* ============================================
@@ -742,17 +766,28 @@ code[data-line-numbers] > [data-line]::before {
   padding: 2rem;
   overflow-x: auto;
   background: transparent !important;
-  font-size: 1.8rem !important;
-  line-height: 1.9;
+  font-size: 1.4rem !important;
+  line-height: 1.8;
 }
 
 .code-tab-panel pre code {
   display: block;
   font-family: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
-  font-size: 1.8rem !important;
-  color: var(--t-bright) !important;
+  font-size: 1.4rem !important;
+  color: #e6edf3;
   background: transparent !important;
   white-space: pre;
+}
+
+.code-tab-panel pre code * {
+  color: inherit;
+}
+
+/* Para bloques de texto sin syntax highlighting */
+.code-tab-panel pre code:not([class*="language-"]),
+.code-tab-panel pre[class*="language-text"] code,
+.code-tab-panel pre[class*="language-txt"] code {
+  color: #e6edf3 !important;
 }
 
 /* ============================================
@@ -821,17 +856,28 @@ code[data-line-numbers] > [data-line]::before {
   padding: 2rem;
   overflow-x: auto;
   background: transparent !important;
-  font-size: 1.8rem !important;
-  line-height: 1.9;
+  font-size: 1.4rem !important;
+  line-height: 1.8;
 }
 
 .code-block-body pre code {
   display: block;
   font-family: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
-  font-size: 1.8rem !important;
-  color: var(--t-bright) !important;
+  font-size: 1.4rem !important;
+  color: #e6edf3;
   background: transparent !important;
   white-space: pre;
+}
+
+.code-block-body pre code * {
+  color: inherit;
+}
+
+/* Para bloques de texto sin syntax highlighting */
+.code-block-body pre code:not([class*="language-"]),
+.code-block-body pre[class*="language-text"] code,
+.code-block-body pre[class*="language-txt"] code {
+  color: #e6edf3 !important;
 }
 
 /* Line numbers for enhanced code block */
@@ -871,7 +917,7 @@ code[data-line-numbers] > [data-line]::before {
   .code-tab-panel pre code,
   .code-block-body pre,
   .code-block-body pre code {
-    font-size: 2.2rem !important;
+    font-size: 1.6rem !important;
   }
 
   .mxd-article__content ul li,
@@ -893,7 +939,7 @@ code[data-line-numbers] > [data-line]::before {
   }
 
   .inline-code {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
   }
 }
 

@@ -8,8 +8,11 @@ export default function ParallaxDivider2() {
           <div className="mxd-divider__video">
             <VideoParallax
               className="video parallax-video"
-              src={"video/hero-video.webm"}
-              poster="video/1920x1080_video-05.webp"
+              sources={[
+                { src: "video/hero-video.webm", type: "video/webm" },
+                { src: "video/hero-video.mp4", type: "video/mp4" },
+              ]}
+              poster="video/hero-video.webp"
             />
           </div>
         </div>

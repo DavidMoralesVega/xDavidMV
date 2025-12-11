@@ -58,7 +58,7 @@ export default function Services() {
                     <AnimatedButton
                       text="Hablemos"
                       className="btn btn-anim btn-default btn-outline slide-right-up"
-                      href="/contact"
+                      href="/contacto"
                     >
                       <i className="ph-bold ph-arrow-up-right" />
                     </AnimatedButton>

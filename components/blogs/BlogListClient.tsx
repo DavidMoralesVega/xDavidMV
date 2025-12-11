@@ -106,7 +106,7 @@ export default function BlogListClient({
       if (newPage > 1) params.set("page", String(newPage));
 
       const queryString = params.toString();
-      const newUrl = `/blog-standard${queryString ? `?${queryString}` : ""}`;
+      const newUrl = `/blog${queryString ? `?${queryString}` : ""}`;
       router.push(newUrl, { scroll: false });
     },
     [router]
@@ -207,7 +207,7 @@ export default function BlogListClient({
     setSearch("");
     setSearchInput("");
     setCurrentPage(1);
-    router.push("/blog-standard", { scroll: false });
+    router.push("/blog", { scroll: false });
   };
 
   const handlePageChange = (page: number) => {
@@ -329,7 +329,7 @@ export default function BlogListClient({
                 <article className="mxd-post post-featured radius-m">
                   <Link
                     className="post-featured__thumb"
-                    href={`/blog-article/${featuredPost.slug}`}
+                    href={`/blog/${featuredPost.slug}`}
                   >
                     <Image
                       alt={featuredPost.imgAlt}
@@ -366,7 +366,7 @@ export default function BlogListClient({
                     </div>
 
                     <h2 className="post-featured__title">
-                      <Link href={`/blog-article/${featuredPost.slug}`}>
+                      <Link href={`/blog/${featuredPost.slug}`}>
                         {featuredPost.title}
                       </Link>
                     </h2>
@@ -383,7 +383,7 @@ export default function BlogListClient({
                 <article className="mxd-post post-simple" key={p.id}>
                   <Link
                     className="post-simple__thumb radius-m"
-                    href={`/blog-article/${p.slug}`}
+                    href={`/blog/${p.slug}`}
                   >
                     <Image
                       alt={p.imgAlt}
@@ -418,7 +418,7 @@ export default function BlogListClient({
 
                       <div className="post-simple__title">
                         <h3>
-                          <Link href={`/blog-article/${p.slug}`}>{p.title}</Link>
+                          <Link href={`/blog/${p.slug}`}>{p.title}</Link>
                         </h3>
                       </div>
                     </div>
@@ -427,7 +427,7 @@ export default function BlogListClient({
                       <AnimatedButton
                         className="btn btn-anim btn-default btn-outline slide-right-up"
                         text="Leer más"
-                        href={`/blog-article/${p.slug}`}
+                        href={`/blog/${p.slug}`}
                       >
                         <i className="ph ph-arrow-up-right" />
                       </AnimatedButton>
@@ -561,7 +561,7 @@ export default function BlogListClient({
                   {recentPosts.map((rp) => (
                     <li className="recent-post__item" key={rp.slug}>
                       <div className="recent-post__thumb">
-                        <Link href={`/blog-article/${rp.slug}`}>
+                        <Link href={`/blog/${rp.slug}`}>
                           <Image
                             alt={rp.imgAlt}
                             src={rp.img}
@@ -584,7 +584,7 @@ export default function BlogListClient({
                           </span>
                         </div>
                         <div className="recent-post__title">
-                          <Link href={`/blog-article/${rp.slug}`}>
+                          <Link href={`/blog/${rp.slug}`}>
                             {rp.title.length > 60
                               ? `${rp.title.substring(0, 60)}...`
                               : rp.title}

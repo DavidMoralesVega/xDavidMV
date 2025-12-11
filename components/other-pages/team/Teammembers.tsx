@@ -157,7 +157,7 @@ export default function Teammembers() {
                 {/* item career */}
                 <div className="col-12 col-xl-4 mxd-team-cards__item mxd-grid-item animate-card-3">
                   <div className="mxd-team-cards__media no-margin overflow-visible anim-uni-in-up">
-                    <Link className="mxd-team-cards__career" href={`/contact`}>
+                    <Link className="mxd-team-cards__career" href={`/contacto`}>
                       <div className="career__image">
                         <Image
                           alt="Image"

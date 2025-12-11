@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 import type { BlogPostWithMDX } from "@/lib/blog";
 
 interface BlogArticleProps {
@@ -24,6 +27,18 @@ function formatDate(dateString: string): string {
 export default function BlogArticle({ post }: BlogArticleProps) {
   const { frontmatter, readingTime, content } = post;
 
+  // Force ScrollTrigger refresh after content loads
+  useEffect(() => {
+    const refreshScroll = async () => {
+      const { ScrollTrigger } = await import("gsap/ScrollTrigger");
+      // Small delay to ensure content is rendered
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 200);
+    };
+    refreshScroll();
+  }, []);
+
   return (
     <div className="mxd-section padding-pre-title">
       <div className="mxd-container grid-container">
@@ -40,7 +55,7 @@ export default function BlogArticle({ post }: BlogArticleProps) {
                       <Link href="/">Inicio</Link>
                     </span>
                     <span>
-                      <Link href="/blog-standard">Publicaciones</Link>
+                      <Link href="/blog">Publicaciones</Link>
                     </span>
                     <span className="current-item">
                       {frontmatter.title.length > 50

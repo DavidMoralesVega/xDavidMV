@@ -13,7 +13,7 @@ export default function BlogPages() {
               <div className="mxd-demo-cards__content">
                 <div className="mxd-demo-cards__descr">
                   <h2 className="mxd-demo-cards__title h2-small">
-                    <Link href={`/blog-standard`} target="_blank">
+                    <Link href={`/blog`} target="_blank">
                       Blog Pages
                     </Link>
                   </h2>

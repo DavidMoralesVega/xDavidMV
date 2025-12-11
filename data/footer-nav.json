@@ -9,7 +9,11 @@
     "counter": 16
   },
   {
+    "label": "Blog",
+    "href": "/blog"
+  },
+  {
     "label": "Contacto",
-    "href": "/contact"
+    "href": "/contacto"
   }
 ]

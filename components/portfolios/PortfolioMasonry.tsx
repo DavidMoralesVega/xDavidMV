@@ -190,7 +190,7 @@ export default function PortfolioMasonry() {
               <div className="mxd-projects-masonry__btngroup anim-uni-in-up">
                 <Link
                   className="btn-rotating btn-rotating-180 ver-02"
-                  href={`/contact`}
+                  href={`/contacto`}
                 >
                   <AnimateRotation
                     as="svg"

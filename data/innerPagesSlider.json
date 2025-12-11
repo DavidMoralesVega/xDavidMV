@@ -56,11 +56,11 @@
     "title": "FAQ Page"
   },
   {
-    "href": "/contact",
+    "href": "/contacto",
     "target": "_blank",
     "img": "/img/demo/inner/07_contact.webp",
     "imgWidth": 1000,
     "imgHeight": 1413,
-    "title": "Contact"
+    "title": "Contacto"
   }
 ]

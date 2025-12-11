@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: "/img/og/og-default.webp",
+        url: "/img/hero/01_hero-img.webp",
         width: 1200,
         height: 630,
         alt: siteConfig.title,
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     creator: siteConfig.social.twitter,
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/img/og/og-default.webp"],
+    images: ["/img/hero/01_hero-img.webp"],
   },
   icons: {
     icon: [
@@ -104,7 +104,7 @@ export const metadata: Metadata = {
   other: {
     // Microsoft Tile
     "msapplication-TileColor": "#efefef",
-    "msapplication-TileImage": "/img/favicon/icon-144x144.png",
+    "msapplication-TileImage": "/img/favicon/icon-192x192.png",
     // Apple Web App
     "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-capable": "yes",

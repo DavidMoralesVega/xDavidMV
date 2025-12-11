@@ -19,9 +19,9 @@ export default function Cta() {
                   <span className="mxd-promo__icon">
                     <Image
                       alt="Icon"
-                      src="/img/icons/300x300_obj-cta-01.webp"
-                      width={300}
-                      height={300}
+                      src="/img/brand/bemorex.png"
+                      width={400}
+                      height={400}
                     />
                   </span>
                   <span className="mxd-promo__caption">
@@ -32,7 +32,7 @@ export default function Cta() {
                   <AnimatedButton
                     text="Contáctame"
                     className="btn btn-anim btn-default btn-large btn-additional slide-right-up"
-                    href={`/contact`}
+                    href={`/contacto`}
                   >
                     <i className="ph-bold ph-arrow-up-right" />
                   </AnimatedButton>
@@ -40,10 +40,10 @@ export default function Cta() {
               </div>
               {/* parallax images */}
               <div className="mxd-promo__images">
-                <Image
+                {/* <Image
                   className="promo-image promo-image-1"
                   alt="Image"
-                  src="/img/illustrations/cta-img-01.webp"
+                  src="/img/brand/cta.jpg"
                   width={800}
                   height={912}
                 />
@@ -53,7 +53,7 @@ export default function Cta() {
                   src="/img/illustrations/cta-img-02.webp"
                   width={600}
                   height={601}
-                />
+                /> */}
               </div>
             </div>
           </div>

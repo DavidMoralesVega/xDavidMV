@@ -3,10 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title:
-    "Page Not Found || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+  title: "Página no encontrada | David Morales Vega",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "La página que buscas no existe o ha sido movida. Vuelve al inicio para continuar navegando.",
 };
 export default function NotFoundPage() {
   return (
@@ -16,7 +15,7 @@ export default function NotFoundPage() {
         <div className="mxd-floating-img__item mxd-move">
           <Image
             alt="Image"
-            src="/img/backgrounds/900x900_err-01.webp"
+            src="/img/brand/404.webp"
             width={900}
             height={900}
           />
@@ -37,10 +36,10 @@ export default function NotFoundPage() {
                       <div className="col-12 col-xl-6 mxd-grid-item no-margin">
                         <div className="mxd-error__caption loading__fade">
                           <p className="t-large t-medium t-120 t-bright">
-                            This page doesn&apos;t exist
+                            Esta página no existe
                           </p>
                           <p className="t-large t-medium t-120 t-muted">
-                            Sorry.
+                            Lo sentimos.
                           </p>
                         </div>
                       </div>
@@ -53,11 +52,9 @@ export default function NotFoundPage() {
                       <div className="col-12 col-xl-6 mxd-grid-item no-margin">
                         <Link
                           className="btn btn-anim btn-default btn-accent slide-right-up"
-                          href={`/index-main`}
+                          href={`/`}
                         >
-                          <span className="btn-caption">
-                            Let&apos;s Go Home
-                          </span>
+                          <span className="btn-caption">Volver al inicio</span>
                           <i className="ph-bold ph-arrow-up-right" />
                         </Link>
                       </div>

@@ -16,7 +16,8 @@
   "blogs2": [
     {
       "id": 1,
-      "img": "/img/blog/preview/1000x1250_prv-01.webp",
+      "img": "/img/blog/article/education.webp",
+      "imgAlt": "Educación digital en Bolivia: transformación tecnológica y aprendizaje continuo en la era de la inteligencia artificial",
       "categories": ["Educación", "SENAPI", "Revista Renacer"],
       "meta": ["Educación", "Transformación Digital", "Bolivia"],
       "date": "Mayo 2025",
@@ -26,7 +27,8 @@
     },
     {
       "id": 21,
-      "img": "/img/blog/article/salud-mental-dev.webp",
+      "img": "/img/blog/article/programar-horas.webp",
+      "imgAlt": "Programador agotado trabajando largas horas: productividad vs burnout en desarrollo de software",
       "categories": ["Opinión", "Carrera Profesional"],
       "meta": ["Productividad", "Salud Mental", "Desarrollo"],
       "date": "Noviembre 2024",
@@ -36,7 +38,8 @@
     },
     {
       "id": 22,
-      "img": "/img/blog/article/https-security.webp",
+      "img": "/img/blog/article/https-seguridad.webp",
+      "imgAlt": "Certificado SSL HTTPS y candado de seguridad web: protección de datos y confianza del usuario en sitios web",
       "categories": ["Seguridad Web", "Negocios"],
       "meta": ["SSL/TLS", "SEO", "Seguridad"],
       "date": "Octubre 2024",
@@ -46,7 +49,8 @@
     },
     {
       "id": 23,
-      "img": "/img/blog/article/seo-react-angular.webp",
+      "img": "/img/blog/article/problema-seo.webp",
+      "imgAlt": "Problema de SEO en React y Angular: página en blanco en Google y soluciones con SSR y Next.js",
       "categories": ["Desarrollo Web", "SEO Técnico"],
       "meta": ["React", "Angular", "Next.js"],
       "date": "Septiembre 2024",
@@ -56,7 +60,8 @@
     },
     {
       "id": 24,
-      "img": "/img/blog/article/sitemap-robots.webp",
+      "img": "/img/blog/article/robots-sitemaps.webp",
+      "imgAlt": "Configuración de sitemap.xml y robots.txt para SEO: archivos esenciales para indexación en Google",
       "categories": ["SEO Técnico", "Infraestructura"],
       "meta": ["Sitemap", "Robots.txt", "Google"],
       "date": "Agosto 2024",
@@ -66,7 +71,8 @@
     },
     {
       "id": 25,
-      "img": "/img/blog/article/daily-scrum.webp",
+      "img": "/img/blog/article/dayli-sprint.webp",
+      "imgAlt": "Daily Stand-up meeting en Scrum: equipo de desarrollo en reunión ágil de 15 minutos",
       "categories": ["Metodologías Ágiles", "Gestión de Equipos"],
       "meta": ["Scrum", "Daily Stand-up", "Agilidad"],
       "date": "Julio 2024",
