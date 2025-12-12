@@ -21,7 +21,14 @@
       "Bash(curl:*)",
       "Bash(tree:*)",
       "Bash(rm:*)",
-      "Bash(xargs:*)"
+      "Bash(xargs:*)",
+      "Bash(bun add:*)",
+      "Bash(bun pm:*)",
+      "Bash(node scripts/optimize-images.mjs:*)",
+      "Bash(node scripts/optimize-logo.mjs:*)",
+      "Bash(node -e:*)",
+      "Bash(timeout 15 bun run dev:*)",
+      "Bash(firebase deploy:*)"
     ],
     "deny": [],
     "ask": []

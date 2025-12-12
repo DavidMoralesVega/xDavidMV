@@ -597,7 +597,7 @@ export default function BlogListClient({
               </div>
 
               {/* Tags Widget */}
-              <div className="mxd-sidebar__widget bg-base-tint radius-m">
+              {/* <div className="mxd-sidebar__widget bg-base-tint radius-m">
                 <div className="widget__title">
                   <p>Tags</p>
                 </div>
@@ -615,7 +615,7 @@ export default function BlogListClient({
                     </button>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               {/* About widget */}
               <div className="mxd-sidebar__widget bg-base-tint radius-m widget-about">

@@ -7,7 +7,7 @@ import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 
 import AnimateRotation from "../animation/AnimateRotation";
 import MasonryGrid from "../animation/MasonryGrid";
-import ImageLightbox from "../common/ImageLightbox";
+import ImageLightbox from "@/components/ui/ImageLightbox";
 import { conferences } from "@/data/conferences.json";
 
 interface Conference {

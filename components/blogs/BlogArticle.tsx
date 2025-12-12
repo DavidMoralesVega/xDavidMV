@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 import type { BlogPostWithMDX } from "@/lib/blog";
 
 interface BlogArticleProps {
@@ -26,18 +23,6 @@ function formatDate(dateString: string): string {
 
 export default function BlogArticle({ post }: BlogArticleProps) {
   const { frontmatter, readingTime, content } = post;
-
-  // Force ScrollTrigger refresh after content loads
-  useEffect(() => {
-    const refreshScroll = async () => {
-      const { ScrollTrigger } = await import("gsap/ScrollTrigger");
-      // Small delay to ensure content is rendered
-      setTimeout(() => {
-        ScrollTrigger.refresh();
-      }, 200);
-    };
-    refreshScroll();
-  }, []);
 
   return (
     <div className="mxd-section padding-pre-title">
@@ -115,7 +100,7 @@ export default function BlogArticle({ post }: BlogArticleProps) {
                 <Link className="mxd-article-author__avatar" href="/">
                   <Image
                     alt="David Morales Vega"
-                    src="/img/brand/DavidMV.png"
+                    src="/img/brand/DavidMV.webp"
                     width={300}
                     height={300}
                   />

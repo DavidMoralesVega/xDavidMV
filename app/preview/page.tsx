@@ -1,17 +1,17 @@
-import Blogs from "@/components/common/Blogs";
-import Conferences from "@/components/common/Conferences";
-import Cta from "@/components/common/Cta";
-import Education from "@/components/common/Education";
-import Footer2 from "@/components/footers/Footer2";
+import BlogSection from "@/components/sections/BlogSection";
+import ConferencesSection from "@/components/sections/ConferencesSection";
+import CtaSection from "@/components/sections/CtaSection";
+import EducationSection from "@/components/sections/EducationSection";
+import Footer from "@/components/footers/Footer";
 
-import About from "@/components/homes/home-freelancer-portfolio/About";
-import Experiences from "@/components/homes/home-freelancer-portfolio/Experiences";
-import Services from "@/components/other-pages/services/Services";
-import Hero from "@/components/homes/home-creative-developer/Hero";
-import MarqueeSlider from "@/components/homes/home-freelancer-portfolio/MarqueeSlider";
-import ParallaxDivider from "@/components/homes/home-freelancer-portfolio/ParallaxDivider";
-import ParallaxDivider2 from "@/components/homes/home-freelancer-portfolio/ParallaxDivider2";
-import TechStack from "@/components/homes/home-freelancer-portfolio/TechStack";
+import AboutSection from "@/components/sections/AboutSection";
+import ExperiencesSection from "@/components/sections/ExperiencesSection";
+import ServicesSection from "@/components/pages/services/Services";
+import HeroSection from "@/components/sections/hero/HeroSection";
+import MarqueeSection from "@/components/sections/MarqueeSection";
+import ParallaxImageDivider from "@/components/sections/dividers/ParallaxImageDivider";
+import ParallaxVideoDivider from "@/components/sections/dividers/ParallaxVideoDivider";
+import TechStackSection from "@/components/sections/TechStackSection";
 
 import { Metadata } from "next";
 
@@ -26,45 +26,45 @@ export default function PreviewPage() {
     <>
       <main id="mxd-page-content" className="mxd-page-content">
         {/* 1. Presentación - Hero impactante */}
-        <Hero />
+        <HeroSection />
 
         {/* 2. Filosofía y enfoque - Quién soy */}
-        <About />
+        <AboutSection />
 
-        {/* 11. Visual divider */}
-        <ParallaxDivider2 />
+        {/* 3. Visual divider - Video */}
+        <ParallaxVideoDivider />
 
         {/* 3. CONFERENCIAS - Credibilidad y autoridad (16+ eventos) */}
-        <Conferences />
+        <ConferencesSection />
 
         {/* 4. Servicios/Expertise - Qué ofrezco */}
-        <Services />
+        <ServicesSection />
 
-        {/* 5. Visual divider */}
-        <ParallaxDivider />
+        {/* 5. Visual divider - Image */}
+        <ParallaxImageDivider />
 
         {/* 6. Experiencia profesional - Trayectoria */}
-        <Experiences />
+        <ExperiencesSection />
 
         {/* 7. Stack tecnológico - Herramientas */}
-        <TechStack />
+        <TechStackSection />
 
         {/* 8. Visual marquee */}
-        <MarqueeSlider />
+        <MarqueeSection />
 
         {/* 9. Formación académica */}
-        <Education />
+        <EducationSection />
 
         {/* 10. Blog - Publicaciones y artículos */}
-        <Blogs
+        <BlogSection
           title="Publicaciones recientes"
           desc="Artículos sobre educación, tecnología e innovación. Contribuyendo al conocimiento de la comunidad tecnológica boliviana."
         />
 
         {/* 11. Call to action final - Contacto */}
-        <Cta />
+        <CtaSection />
       </main>
-      <Footer2 text="David Morales Vega" />
+      <Footer text="David Morales Vega" />
     </>
   );
 }

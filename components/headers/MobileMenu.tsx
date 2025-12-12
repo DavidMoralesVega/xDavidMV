@@ -26,7 +26,7 @@ export default function MobileMenu() {
   const [activeSubmenu, setActiveSubmenu] = useState(-1);
   const submenuRefs = useRef<(HTMLUListElement | null)[]>([]);
   // refs for the two *containers* the element will move between
-  const hamburgerBtnRef = useRef<HTMLAnchorElement | null>(null); // .mxd-nav__hamburger
+  const hamburgerBtnRef = useRef<HTMLButtonElement | null>(null); // .mxd-nav__hamburger
   const menuContainRef = useRef<HTMLDivElement | null>(null); // .mxd-menu__contain
 
   // the single element that flips between the two containers
@@ -104,20 +104,26 @@ export default function MobileMenu() {
     >
       {/* Hamburger Start */}
       <div className="mxd-nav__contain loading__fade">
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            handleToggle();
-          }}
+        <button
+          type="button"
+          onClick={handleToggle}
           className={`mxd-nav__hamburger ${isMenuOpen ? "nav-open" : ""}`}
           ref={hamburgerBtnRef}
+          aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={isMenuOpen}
+          style={{
+            background: "none",
+            border: "none",
+            padding: 0,
+            cursor: "pointer",
+            appearance: "none",
+          }}
         >
           {/* flip element */}
           <div className="hamburger__base" ref={flipBaseRef} />
           <div className="hamburger__line" />
           <div className="hamburger__line" />
-        </a>
+        </button>
       </div>
       {/* Hamburger End */}
       {/* Main Navigation Start */}
@@ -238,20 +244,19 @@ export default function MobileMenu() {
                       autoPlay
                       loop
                       muted
-                      poster="video/540x310_video-01.webp"
+                      playsInline
+                      poster="/video/hero-video.webp"
+                      aria-label="Video decorativo"
                     >
                       <source
-                        type="video/mp4"
-                        src="video/540x310_video-01.mp4"
-                      />
-                      <source
                         type="video/webm"
-                        src="video/540x310_video-01.webm"
+                        src="/video/hero-video.webm"
                       />
                       <source
-                        type="video/ogv"
-                        src="video/540x310_video-01.ogv"
+                        type="video/mp4"
+                        src="/video/hero-video.mp4"
                       />
+                      <track kind="captions" src="/video/captions.vtt" srcLang="es" label="Español" default />
                     </video>
                   </div>
                 </div>

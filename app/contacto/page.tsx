@@ -1,11 +1,11 @@
 import BackgroundParallax from "@/components/animation/BackgroundParallax";
 import VelocityMarquee from "@/components/animation/VelocityMarquee";
-import Cta from "@/components/common/Cta";
-import Footer2 from "@/components/footers/Footer2";
-import ContactForm from "@/components/other-pages/contact/ContactForm";
-import Locations from "@/components/other-pages/contact/Locations";
-import PageTitle from "@/components/other-pages/contact/PageTitle";
-import Socials from "@/components/other-pages/contact/Socials";
+import CtaSection from "@/components/sections/CtaSection";
+import Footer from "@/components/footers/Footer";
+import ContactForm from "@/components/pages/contact/ContactForm";
+import Locations from "@/components/pages/contact/Locations";
+import PageTitle from "@/components/pages/contact/PageTitle";
+import Socials from "@/components/pages/contact/Socials";
 import { generatePageMetadata } from "@/lib/seo";
 
 export const metadata = generatePageMetadata({
@@ -73,9 +73,9 @@ export default function ContactPage() {
         </div>
         <Socials />
         <Locations />
-        <Cta />
+        <CtaSection />
       </main>
-      <Footer2 text="David Morales Vega" />
+      <Footer text="David Morales Vega" />
     </>
   );
 }

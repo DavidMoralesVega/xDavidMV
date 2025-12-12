@@ -1,6 +1,6 @@
 import BlogArticle from "@/components/blogs/BlogArticle";
-import Cta from "@/components/common/Cta";
-import Footer2 from "@/components/footers/Footer2";
+import CtaSection from "@/components/sections/CtaSection";
+import Footer from "@/components/footers/Footer";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
@@ -87,9 +87,9 @@ export default async function BlogArticlePage({ params }: PageProps) {
       <JsonLd data={[articleSchema, breadcrumbSchema, authorSchema]} />
       <main id="mxd-page-content" className="mxd-page-content">
         <BlogArticle post={post} />
-        <Cta />
+        <CtaSection />
       </main>
-      <Footer2 text="David Morales Vega" />
+      <Footer text="David Morales Vega" />
     </>
   );
 }

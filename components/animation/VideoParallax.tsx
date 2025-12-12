@@ -26,6 +26,7 @@ export default function VideoParallax({
       loop
       muted
       playsInline
+      aria-label="Video decorativo de fondo"
     >
       {sources ? (
         sources.map((source, index) => (
@@ -38,6 +39,7 @@ export default function VideoParallax({
       ) : src ? (
         <source src={`/${src}`} type="video/webm" />
       ) : null}
+      <track kind="captions" src="/video/captions.vtt" srcLang="es" label="Español" default />
       Tu navegador no soporta el elemento de video.
     </video>
   );

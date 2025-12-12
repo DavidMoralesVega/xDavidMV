@@ -5,7 +5,8 @@ export interface Experience {
   desc: string;
   year: string;
 }
-export interface Experience2 {
+
+export interface Education {
   title: string;
   institution: string;
   institutionUrl: string;

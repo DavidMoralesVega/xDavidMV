@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import BlogList from "@/components/blogs/BlogList";
-import Cta from "@/components/common/Cta";
-import Footer2 from "@/components/footers/Footer2";
+import CtaSection from "@/components/sections/CtaSection";
+import Footer from "@/components/footers/Footer";
 import { generatePageMetadata } from "@/lib/seo";
 
 // ============================================
@@ -54,9 +54,9 @@ export default function BlogPage() {
         <Suspense fallback={<BlogListSkeleton />}>
           <BlogList />
         </Suspense>
-        <Cta />
+        <CtaSection />
       </main>
-      <Footer2 text="David Morales Vega" />
+      <Footer text="David Morales Vega" />
     </>
   );
 }
