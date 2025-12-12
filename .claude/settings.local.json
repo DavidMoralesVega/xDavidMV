@@ -18,7 +18,10 @@
       "Bash(node scripts/generate-android-icons.mjs:*)",
       "Bash(grep:*)",
       "Bash(bun run build)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(tree:*)",
+      "Bash(rm:*)",
+      "Bash(xargs:*)"
     ],
     "deny": [],
     "ask": []
