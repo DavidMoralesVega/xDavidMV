@@ -10,7 +10,7 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   {
     ignores: [
       "node_modules/**",
@@ -19,6 +19,27 @@ const eslintConfig = [
       "build/**",
       "next-env.d.ts",
     ],
+  },
+  {
+    rules: {
+      // TypeScript
+      "@typescript-eslint/no-unused-vars": ["warn", {
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_"
+      }],
+      "@typescript-eslint/no-explicit-any": "warn",
+
+      // React
+      "react-hooks/exhaustive-deps": "warn",
+      "react/no-unescaped-entities": "off",
+
+      // Next.js
+      "@next/next/no-img-element": "off", // Permitir <img> nativo para SSG
+      "@next/next/no-html-link-for-pages": "off",
+
+      // Prettier (manejado por eslint-config-prettier)
+      "prettier/prettier": ["warn", {}, { usePrettierrc: true }],
+    },
   },
 ];
 

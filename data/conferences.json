@@ -5,8 +5,8 @@
       "title": "El Viaje del Arquitecto:",
       "description": "Sistemas Empresariales - CCBOL 2025",
       "images": [
-        "/img/works/preview/1400x1400_prv-01.webp",
-        "/img/works/preview/1400x1400_prv-02.webp"
+        "/images/works/preview/1400x1400_prv-01.webp",
+        "/images/works/preview/1400x1400_prv-02.webp"
       ],
       "tags": ["Arquitectura", "ERP", "CCBOL"],
       "anim": "anim-uni-in-up",
@@ -20,9 +20,9 @@
       "title": "Decisiones Inteligentes:",
       "description": "App de IA con Python y OpenAI - CCBOL 2025",
       "images": [
-        "/img/works/preview/1400x1400_prv-02.webp",
-        "/img/works/preview/1400x1400_prv-03.webp",
-        "/img/works/preview/1400x1400_prv-04.webp"
+        "/images/works/preview/1400x1400_prv-02.webp",
+        "/images/works/preview/1400x1400_prv-03.webp",
+        "/images/works/preview/1400x1400_prv-04.webp"
       ],
       "tags": ["Python", "FastAPI", "OpenAI"],
       "anim": "anim-uni-in-up",
@@ -36,8 +36,8 @@
       "title": "Tu Carrera Global:",
       "description": "De Bolivia al Mundo - AIESEC 2025",
       "images": [
-        "/img/works/preview/1400x1400_prv-03.webp",
-        "/img/works/preview/1400x1400_prv-01.webp"
+        "/images/works/preview/1400x1400_prv-03.webp",
+        "/images/works/preview/1400x1400_prv-01.webp"
       ],
       "tags": ["IA Generativa", "Branding", "Marketing"],
       "anim": "anim-uni-in-up",
@@ -51,9 +51,9 @@
       "title": "FNI Go:",
       "description": "Laboratorio de Innovación Tecnológica - UTO 2025",
       "images": [
-        "/img/works/preview/1400x1400_prv-04.webp",
-        "/img/works/preview/1400x1400_prv-05.webp",
-        "/img/works/preview/1400x1400_prv-06.webp"
+        "/images/works/preview/1400x1400_prv-04.webp",
+        "/images/works/preview/1400x1400_prv-05.webp",
+        "/images/works/preview/1400x1400_prv-06.webp"
       ],
       "tags": ["Angular", "NGRX", "Firebase"],
       "anim": "anim-uni-in-up",
@@ -67,8 +67,8 @@
       "title": "NgWorkshop Oruro:",
       "description": "Evento oficial Angular Bolivia 2024",
       "images": [
-        "/img/works/preview/1400x1400_prv-05.webp",
-        "/img/works/preview/1400x1400_prv-07.webp"
+        "/images/works/preview/1400x1400_prv-05.webp",
+        "/images/works/preview/1400x1400_prv-07.webp"
       ],
       "tags": ["Angular", "Workshop", "Organizador"],
       "anim": "anim-uni-in-up",
@@ -82,8 +82,8 @@
       "title": "NgShe Cochabamba:",
       "description": "Mentoría Angular para mujeres en tech",
       "images": [
-        "/img/works/preview/1400x1400_prv-06.webp",
-        "/img/works/preview/1400x1400_prv-01.webp"
+        "/images/works/preview/1400x1400_prv-06.webp",
+        "/images/works/preview/1400x1400_prv-01.webp"
       ],
       "tags": ["Angular", "Mentoría", "Comunidad"],
       "anim": "anim-uni-in-up",
@@ -97,9 +97,9 @@
       "title": "Chatbots con Python:",
       "description": "ChatGPT + WhatsApp Business - PyDay 2023",
       "images": [
-        "/img/works/preview/1400x1400_prv-07.webp",
-        "/img/works/preview/1400x1400_prv-02.webp",
-        "/img/works/preview/1400x1400_prv-03.webp"
+        "/images/works/preview/1400x1400_prv-07.webp",
+        "/images/works/preview/1400x1400_prv-02.webp",
+        "/images/works/preview/1400x1400_prv-03.webp"
       ],
       "tags": ["Python", "ChatGPT", "WhatsApp"],
       "anim": "anim-uni-in-up",
@@ -113,8 +113,8 @@
       "title": "Warmi Científica:",
       "description": "Educación STEAM para mujeres - Elemental 2023",
       "images": [
-        "/img/works/preview/1400x1400_prv-01.webp",
-        "/img/works/preview/1400x1400_prv-04.webp"
+        "/images/works/preview/1400x1400_prv-01.webp",
+        "/images/works/preview/1400x1400_prv-04.webp"
       ],
       "tags": ["Python", "STEAM", "Educación"],
       "anim": "anim-uni-in-up",
@@ -128,9 +128,9 @@
       "title": "Bootcamp FullStack:",
       "description": "Nivel Avanzado - UTO FNI 2022",
       "images": [
-        "/img/works/preview/1400x1400_prv-02.webp",
-        "/img/works/preview/1400x1400_prv-05.webp",
-        "/img/works/preview/1400x1400_prv-06.webp"
+        "/images/works/preview/1400x1400_prv-02.webp",
+        "/images/works/preview/1400x1400_prv-05.webp",
+        "/images/works/preview/1400x1400_prv-06.webp"
       ],
       "tags": ["NestJS", "Angular", "PostgreSQL"],
       "anim": "anim-uni-in-up",
@@ -144,8 +144,8 @@
       "title": "Desarrollo Software V2:",
       "description": "Tecnologías asíncronas - Instituto JM 2021",
       "images": [
-        "/img/works/preview/1400x1400_prv-03.webp",
-        "/img/works/preview/1400x1400_prv-07.webp"
+        "/images/works/preview/1400x1400_prv-03.webp",
+        "/images/works/preview/1400x1400_prv-07.webp"
       ],
       "tags": ["JavaScript", "PHP", "GitHub"],
       "anim": "anim-uni-in-up",
@@ -159,8 +159,8 @@
       "title": "Excel BI:",
       "description": "Business Intelligence - UTO Técnica 2021",
       "images": [
-        "/img/works/preview/1400x1400_prv-04.webp",
-        "/img/works/preview/1400x1400_prv-01.webp"
+        "/images/works/preview/1400x1400_prv-04.webp",
+        "/images/works/preview/1400x1400_prv-01.webp"
       ],
       "tags": ["Excel", "BigQuery", "Analytics"],
       "anim": "anim-uni-in-up",
@@ -174,9 +174,9 @@
       "title": "PWA con Angular:",
       "description": "Apps real-time + Firebase - UTO 2021",
       "images": [
-        "/img/works/preview/1400x1400_prv-05.webp",
-        "/img/works/preview/1400x1400_prv-02.webp",
-        "/img/works/preview/1400x1400_prv-03.webp"
+        "/images/works/preview/1400x1400_prv-05.webp",
+        "/images/works/preview/1400x1400_prv-02.webp",
+        "/images/works/preview/1400x1400_prv-03.webp"
       ],
       "tags": ["Angular", "Firebase", "PWA"],
       "anim": "anim-uni-in-up",
@@ -190,8 +190,8 @@
       "title": "PHP 7 Intensivo:",
       "description": "Backend seguro y patrones - UTO 2019",
       "images": [
-        "/img/works/preview/1400x1400_prv-06.webp",
-        "/img/works/preview/1400x1400_prv-04.webp"
+        "/images/works/preview/1400x1400_prv-06.webp",
+        "/images/works/preview/1400x1400_prv-04.webp"
       ],
       "tags": ["PHP", "MySQL", "MVC"],
       "anim": "anim-uni-in-up",
@@ -205,8 +205,8 @@
       "title": "Desarrollo Software:",
       "description": "Fundamentos y CRUD - Instituto JM 2019",
       "images": [
-        "/img/works/preview/1400x1400_prv-07.webp",
-        "/img/works/preview/1400x1400_prv-05.webp"
+        "/images/works/preview/1400x1400_prv-07.webp",
+        "/images/works/preview/1400x1400_prv-05.webp"
       ],
       "tags": ["PHP", "jQuery", "AJAX"],
       "anim": "anim-uni-in-up",
@@ -220,9 +220,9 @@
       "title": "Framework Angular:",
       "description": "Maquetación componentes - Instituto JM 2019",
       "images": [
-        "/img/works/preview/1400x1400_prv-01.webp",
-        "/img/works/preview/1400x1400_prv-06.webp",
-        "/img/works/preview/1400x1400_prv-07.webp"
+        "/images/works/preview/1400x1400_prv-01.webp",
+        "/images/works/preview/1400x1400_prv-06.webp",
+        "/images/works/preview/1400x1400_prv-07.webp"
       ],
       "tags": ["Angular", "TypeScript", "Componentes"],
       "anim": "anim-uni-in-up",
@@ -236,8 +236,8 @@
       "title": "Desarrollo Web:",
       "description": "Nivel Inicial - UTO Técnica 2019",
       "images": [
-        "/img/works/preview/1400x1400_prv-02.webp",
-        "/img/works/preview/1400x1400_prv-03.webp"
+        "/images/works/preview/1400x1400_prv-02.webp",
+        "/images/works/preview/1400x1400_prv-03.webp"
       ],
       "tags": ["HTML", "CSS", "JavaScript"],
       "anim": "anim-uni-in-up",

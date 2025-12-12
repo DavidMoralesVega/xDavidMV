@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
+
 import VelocityMarquee from "@/components/animation/VelocityMarquee";
 import Counter from "@/components/ui/Counter";
 
@@ -188,14 +188,14 @@ export default function HeroSection() {
           <div className="mxd-hero-07__bottom">
             <div className="mxd-hero-07__circle">
               <div className="hero-07-circle__image hero-07-slide-out-scroll loading__item">
-                <Image
-                  alt="David Morales Vega - Solutions Architect"
-                  src="/img/brand/DavidMV.webp"
-                  width={600}
-                  height={600}
-                  priority
-                  fetchPriority="high"
-                />
+                <img
+  src="/images/brand/DavidMV.webp"
+  alt="David Morales Vega - Solutions Architect"
+  width="600"
+  height="600"
+  fetchPriority="high"
+  loading="eager"
+/>
               </div>
               <div className="hero-07-circle__container hero-07-fade-out-scroll">
                 <div className="hero-07-circle__item item-01 loading__item">

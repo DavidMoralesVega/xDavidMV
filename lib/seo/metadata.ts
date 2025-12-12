@@ -22,7 +22,7 @@ export function generatePageMetadata({
   title,
   description,
   path = "",
-  image = "/img/hero/01_hero-img.webp",
+  image = "/images/hero/01_hero-img.webp",
   type = "website",
   publishedTime,
   modifiedTime,

@@ -9,10 +9,10 @@ export default function ParallaxVideoDivider() {
             <VideoParallax
               className="video parallax-video"
               sources={[
-                { src: "video/hero-video.webm", type: "video/webm" },
-                { src: "video/hero-video.mp4", type: "video/mp4" },
+                { src: "videos/hero-video.webm", type: "video/webm" },
+                { src: "videos/hero-video.mp4", type: "video/mp4" },
               ]}
-              poster="video/hero-video.webp"
+              poster="videos/hero-video.webp"
             />
           </div>
         </div>

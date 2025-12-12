@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import Modal from "react-modal";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Keyboard } from "swiper/modules";
@@ -61,14 +61,12 @@ export default function ImageLightbox({ images, title, initialSlide = 0, open, s
           {images.map((img, idx) => (
             <SwiperSlide key={idx}>
               <div className="imageLightbox__slide">
-                <Image
-                  src={img}
-                  alt={`${title} - Foto ${idx + 1}`}
-                  fill
-                  style={{ objectFit: "contain" }}
-                  sizes="100vw"
-                  priority
-                />
+                <img
+                src="img"
+                alt="`${title"
+                fetchPriority="high"
+                loading="eager"
+              />
               </div>
             </SwiperSlide>
           ))}

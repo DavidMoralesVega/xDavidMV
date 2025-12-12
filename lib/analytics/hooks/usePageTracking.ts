@@ -7,6 +7,25 @@
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { useAnalytics } from "./useAnalytics";
+import { analyticsConfig } from "../config";
+
+/**
+ * Check if a path should be excluded from tracking
+ */
+function isPathExcluded(pathname: string): boolean {
+  return analyticsConfig.excludePaths.some((excludePath) => {
+    // Check if exact match
+    if (excludePath === pathname) return true;
+
+    // Check if wildcard match (e.g., "/admin/*")
+    if (excludePath.endsWith("/*")) {
+      const basePath = excludePath.slice(0, -2);
+      return pathname.startsWith(basePath);
+    }
+
+    return false;
+  });
+}
 
 /**
  * Hook to automatically track page views
@@ -19,6 +38,14 @@ export function usePageTracking() {
 
   useEffect(() => {
     if (!initialized) return;
+
+    // Check if path should be excluded
+    if (isPathExcluded(pathname)) {
+      if (analyticsConfig.debug) {
+        console.log(`[Analytics] Path excluded from tracking: ${pathname}`);
+      }
+      return;
+    }
 
     // Avoid tracking the same page twice
     if (lastTrackedPath.current === pathname) return;

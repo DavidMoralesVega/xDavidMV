@@ -1,5 +1,5 @@
 import VelocityMarquee from "@/components/animation/VelocityMarquee";
-import Image from "next/image";
+
 import Link from "next/link";
 import { Metadata } from "next";
 export const metadata: Metadata = {
@@ -13,12 +13,13 @@ export default function NotFoundPage() {
       {/* Floating Image Background Start */}
       <div className="mxd-floating-img floating-bg">
         <div className="mxd-floating-img__item mxd-move">
-          <Image
-            alt="Image"
-            src="/img/brand/404.webp"
-            width={900}
-            height={900}
-          />
+          <img
+  src="/images/brand/404.webp"
+  alt="Image"
+  width="900"
+  height="900"
+  loading="lazy"
+/>
         </div>
       </div>
       {/* Floating Image Background End */}

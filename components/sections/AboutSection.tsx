@@ -35,7 +35,7 @@ export default function AboutSection() {
                           text="Descargar CV"
                           as={"a"}
                           className="btn btn-anim btn-default btn-outline slide-down"
-                          href="/img/brand/DavidMoralesVega-CV.pdf"
+                          href="/images/brand/DavidMoralesVega-CV.pdf"
                         >
                           <i className="ph-bold ph-arrow-down" />
                         </AnimatedButton>

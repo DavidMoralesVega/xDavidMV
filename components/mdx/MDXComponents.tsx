@@ -1,5 +1,5 @@
 import type { MDXComponents } from "mdx/types";
-import Image from "next/image";
+
 import Link from "next/link";
 import { CodeBlock } from "./CodeBlock";
 import { CodeTabs, CodeBlockEnhanced } from "./CodeTabs";
@@ -74,13 +74,12 @@ export const mdxComponents: MDXComponents = {
 
     return (
       <span className="article-image">
-        <Image
-          src={imageSrc}
-          alt={alt || ""}
-          width={Number(width) || 800}
-          height={Number(height) || 450}
-          className="rounded-lg"
-        />
+        <img
+                src="imageSrc"
+                alt={alt || ""}
+                className="rounded-lg"
+                loading="lazy"
+              />
         {alt && <span className="article-image-caption">{alt}</span>}
       </span>
     );
@@ -121,13 +120,12 @@ export const mdxComponents: MDXComponents = {
     height?: number;
   }) => (
     <span className="article-image">
-      <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        className="rounded-lg"
-      />
+      <img
+                src="src"
+                alt="alt"
+                className="rounded-lg"
+                loading="lazy"
+              />
     </span>
   ),
 };

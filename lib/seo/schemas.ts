@@ -378,3 +378,157 @@ export function generateCollectionPageSchema() {
     about: { "@type": "Person", "@id": `${siteConfig.url}/#person` },
   };
 }
+
+export function generateBlogPostingSchema({
+  title,
+  description,
+  path,
+  image,
+  publishedTime,
+  modifiedTime,
+  tags = [],
+  readingTime,
+}: ArticleSchemaProps & { readingTime?: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${siteConfig.url}${path}/#blogposting`,
+    headline: title,
+    description,
+    image: {
+      "@type": "ImageObject",
+      url: image.startsWith("http") ? image : `${siteConfig.url}${image}`,
+      width: 1200,
+      height: 630,
+    },
+    datePublished: publishedTime,
+    dateModified: modifiedTime || publishedTime,
+    author: {
+      "@type": "Person",
+      "@id": `${siteConfig.url}/#person`,
+      name: siteConfig.author.name,
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@type": "Person",
+      "@id": `${siteConfig.url}/#person`,
+      name: siteConfig.author.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}${siteConfig.author.image}`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteConfig.url}${path}`,
+    },
+    keywords: tags.join(", "),
+    articleSection: tags[0] || "Technology",
+    wordCount: readingTime ? parseInt(readingTime) * 200 : undefined, // Estimación: 200 palabras/minuto
+    inLanguage: siteConfig.language,
+    isPartOf: {
+      "@type": "Blog",
+      "@id": `${siteConfig.url}/blog/#blog`,
+      name: `Blog de ${siteConfig.author.name}`,
+    },
+  };
+}
+
+export function generateVideoObjectSchema({
+  name,
+  description,
+  thumbnailUrl,
+  uploadDate,
+  contentUrl,
+  embedUrl,
+  duration,
+}: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  contentUrl?: string;
+  embedUrl?: string;
+  duration?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name,
+    description,
+    thumbnailUrl: thumbnailUrl.startsWith("http")
+      ? thumbnailUrl
+      : `${siteConfig.url}${thumbnailUrl}`,
+    uploadDate,
+    contentUrl,
+    embedUrl,
+    duration, // Format: PT1M30S (1 minuto 30 segundos)
+    publisher: { "@id": `${siteConfig.url}/#person` },
+    creator: { "@id": `${siteConfig.url}/#person` },
+  };
+}
+
+export function generateOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${siteConfig.url}/#organization`,
+    name: siteConfig.name,
+    url: siteConfig.url,
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteConfig.url}${siteConfig.author.image}`,
+    },
+    founder: { "@id": `${siteConfig.url}/#person` },
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: siteConfig.author.email,
+      telephone: siteConfig.phone,
+      contactType: "Customer Service",
+      availableLanguage: ["Spanish", "English"],
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: siteConfig.city,
+      addressRegion: siteConfig.region,
+      addressCountry: siteConfig.country,
+    },
+    sameAs: [
+      siteConfig.social.linkedin,
+      siteConfig.social.github,
+      siteConfig.social.facebook,
+      siteConfig.social.instagram,
+    ],
+  };
+}
+
+export function generateHowToSchema({
+  name,
+  description,
+  steps,
+  totalTime,
+  image,
+}: {
+  name: string;
+  description: string;
+  steps: Array<{ name: string; text: string; image?: string }>;
+  totalTime?: string;
+  image?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    image: image ? `${siteConfig.url}${image}` : undefined,
+    totalTime, // Format: PT30M (30 minutos)
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+      image: step.image ? `${siteConfig.url}${step.image}` : undefined,
+    })),
+    author: { "@id": `${siteConfig.url}/#person` },
+  };
+}

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 
@@ -122,12 +122,10 @@ export default function PortfolioMasonry() {
                         {item.images.map((img, idx) => (
                           <SwiperSlide key={idx}>
                             <div className="mxd-project-item__preview masonry-preview radius-l">
-                              <Image
+                              <img
                                 src={img}
-                                alt={`${item.title} - Foto ${idx + 1}`}
-                                fill
-                                style={{ objectFit: "cover" }}
-                                sizes="(max-width: 768px) 100vw, 50vw"
+                                alt={`${item.title} ${idx + 1}`}
+                                loading="lazy"
                               />
                             </div>
                           </SwiperSlide>
@@ -221,13 +219,14 @@ export default function PortfolioMasonry() {
                       </text>
                     </g>
                   </AnimateRotation>
-                  <Image
-                    className="btn-rotating__image"
-                    alt="Object"
-                    src="/img/icons/300x300_obj-btn-03.webp"
-                    width={300}
-                    height={300}
-                  />
+                  <img
+  src="/images/icons/300x300_obj-btn-03.webp"
+  alt="Object"
+  width="300"
+  height="300"
+  className="btn-rotating__image"
+  loading="lazy"
+/>
                 </Link>
               </div>
               {/* Portfolio Link End */}

@@ -19,7 +19,7 @@ export const siteConfig = {
     name: "David Morales Vega",
     email: "contacto@moralesvegadavid.com",
     jobTitle: "Solutions Architect & Tech Lead",
-    image: "/img/brand/DavidMV.webp",
+    image: "/images/brand/DavidMV.webp",
     location: "Oruro, Bolivia",
   },
   social: {

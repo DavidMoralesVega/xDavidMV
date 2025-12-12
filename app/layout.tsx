@@ -12,6 +12,8 @@ import {
 } from "@/lib/seo";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import FirebaseInit from "@/components/firebase/FirebaseInit";
+import { PWARegister } from "@/components/PWARegister";
+import ImagePreloadManager from "@/components/ImagePreloadManager";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -62,7 +64,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: "/img/hero/01_hero-img.webp",
+        url: "/images/hero/01_hero-img.webp",
         width: 1200,
         height: 630,
         alt: siteConfig.title,
@@ -76,24 +78,24 @@ export const metadata: Metadata = {
     creator: siteConfig.social.twitter,
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/img/hero/01_hero-img.webp"],
+    images: ["/images/hero/01_hero-img.webp"],
   },
   icons: {
     icon: [
-      { url: "/img/favicon/favicon.ico", sizes: "any" },
-      { url: "/img/favicon/icon.svg", type: "image/svg+xml" },
-      { url: "/img/favicon/icon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/img/favicon/icon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/img/favicon/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon/favicon.ico", sizes: "any" },
+      { url: "/favicon/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon/icon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon/icon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon/icon-192x192.png", sizes: "192x192", type: "image/png" },
     ],
     apple: [
-      { url: "/img/favicon/apple-touch-icon.png", sizes: "180x180" },
+      { url: "/favicon/apple-touch-icon.png", sizes: "180x180" },
     ],
     other: [
-      { rel: "mask-icon", url: "/img/favicon/icon.svg", color: "#efefef" },
+      { rel: "mask-icon", url: "/favicon/icon.svg", color: "#efefef" },
     ],
   },
-  manifest: "/img/favicon/manifest.webmanifest",
+  manifest: "/favicon/manifest.webmanifest",
   verification: {
     // Google Search Console - reemplazar con tu código real
     google: "GOOGLE_SITE_VERIFICATION_CODE",
@@ -105,7 +107,7 @@ export const metadata: Metadata = {
   other: {
     // Microsoft Tile
     "msapplication-TileColor": "#efefef",
-    "msapplication-TileImage": "/img/favicon/icon-192x192.png",
+    "msapplication-TileImage": "/favicon/icon-192x192.png",
     // Apple Web App
     "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-capable": "yes",
@@ -147,6 +149,8 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning>
         <FirebaseInit />
+        <PWARegister />
+        <ImagePreloadManager />
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

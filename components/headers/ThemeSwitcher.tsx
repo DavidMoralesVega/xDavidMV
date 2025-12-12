@@ -5,18 +5,24 @@ export default function ThemeSwitcher() {
   const [showSwitcher, setShowSwitcher] = useState(false);
   const [colorScheme, setColorScheme] = useState<"light" | "dark">(() => {
     if (typeof window !== "undefined") {
-      return (
-        (localStorage.getItem("color-scheme") as "light" | "dark") || "light"
-      );
+      // Primero checar localStorage
+      const stored = localStorage.getItem("color-scheme") as "light" | "dark" | null;
+      if (stored) return stored;
+
+      // Si no hay preferencia guardada, usar preferencia del sistema
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
     }
     return "light";
   });
+
   useEffect(() => {
     setShowSwitcher(true);
   }, []);
 
   useEffect(() => {
-    // Only set if not already set to the same value
+    // Aplicar color scheme
     const currentScheme = document.documentElement.getAttribute("color-scheme");
     if (currentScheme !== colorScheme) {
       document.documentElement.setAttribute("color-scheme", colorScheme);
@@ -25,6 +31,40 @@ export default function ThemeSwitcher() {
       localStorage.setItem("color-scheme", colorScheme);
     }
   }, [colorScheme]);
+
+  // Sincronización entre tabs
+  useEffect(() => {
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === "color-scheme" && e.newValue) {
+        setColorScheme(e.newValue as "light" | "dark");
+      }
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, []);
+
+  // Detectar cambios en preferencia del sistema
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      // Solo cambiar si no hay preferencia guardada
+      if (!localStorage.getItem("color-scheme")) {
+        setColorScheme(e.matches ? "dark" : "light");
+      }
+    };
+
+    // Navegadores modernos
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
 
   const handleColorSwitch = () => {
     setColorScheme((prev) => (prev === "light" ? "dark" : "light"));

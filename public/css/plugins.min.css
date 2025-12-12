@@ -10888,14 +10888,10 @@ table {
 }
 @font-face {
   font-family: Phosphor-Bold;
-  src:
-    url(../fonts/Phosphor/Phosphor-Bold.woff2) format("woff2"),
-    url(../fonts/Phosphor/Phosphor-Bold.woff) format("woff"),
-    url(../fonts/Phosphor/Phosphor-Bold.ttf) format("truetype"),
-    url(../fonts/Phosphor/Phosphor-Bold.svg#Phosphor-Bold) format("svg");
-  font-weight: 400;
+  src: url(../fonts/Phosphor/Phosphor-Bold.woff2) format("woff2");
+  font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 .ph-bold {
   font-family: Phosphor-Bold !important;
@@ -15509,14 +15505,10 @@ table {
 }
 @font-face {
   font-family: Phosphor-Duotone;
-  src:
-    url(../fonts/Phosphor/Phosphor-Duotone.woff2) format("woff2"),
-    url(../fonts/Phosphor/Phosphor-Duotone.woff) format("woff"),
-    url(../fonts/Phosphor/Phosphor-Duotone.ttf) format("truetype"),
-    url(../fonts/Phosphor/Phosphor-Duotone.svg#Phosphor-Duotone) format("svg");
-  font-weight: 400;
+  src: url(../fonts/Phosphor/Phosphor-Duotone.woff2) format("woff2");
+  font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 .ph-duotone {
   font-family: Phosphor-Duotone !important;
@@ -27619,14 +27611,10 @@ table {
 }
 @font-face {
   font-family: Phosphor-Fill;
-  src:
-    url(../fonts/Phosphor/Phosphor-Fill.woff2) format("woff2"),
-    url(../fonts/Phosphor/Phosphor-Fill.woff) format("woff"),
-    url(../fonts/Phosphor/Phosphor-Fill.ttf) format("truetype"),
-    url(../fonts/Phosphor/Phosphor-Fill.svg#Phosphor-Fill) format("svg");
-  font-weight: 400;
+  src: url(../fonts/Phosphor/Phosphor-Fill.woff2) format("woff2");
+  font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 .ph-fill {
   font-family: Phosphor-Fill !important;
@@ -32240,14 +32228,10 @@ table {
 }
 @font-face {
   font-family: Phosphor-Light;
-  src:
-    url(../fonts/Phosphor/Phosphor-Light.woff2) format("woff2"),
-    url(../fonts/Phosphor/Phosphor-Light.woff) format("woff"),
-    url(../fonts/Phosphor/Phosphor-Light.ttf) format("truetype"),
-    url(../fonts/Phosphor/Phosphor-Light.svg#Phosphor-Light) format("svg");
-  font-weight: 400;
+  src: url(../fonts/Phosphor/Phosphor-Light.woff2) format("woff2");
+  font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 .ph-light {
   font-family: Phosphor-Light !important;
@@ -36861,14 +36845,10 @@ table {
 }
 @font-face {
   font-family: Phosphor;
-  src:
-    url(../fonts/Phosphor/Phosphor.woff2) format("woff2"),
-    url(../fonts/Phosphor/Phosphor.woff) format("woff"),
-    url(../fonts/Phosphor/Phosphor.ttf) format("truetype"),
-    url(../fonts/Phosphor/Phosphor.svg#Phosphor) format("svg");
-  font-weight: 400;
+  src: url(../fonts/Phosphor/Phosphor.woff2) format("woff2");
+  font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 .ph {
   font-family: Phosphor !important;
@@ -41482,14 +41462,10 @@ table {
 }
 @font-face {
   font-family: Phosphor-Thin;
-  src:
-    url(../fonts/Phosphor/Phosphor-Thin.woff2) format("woff2"),
-    url(../fonts/Phosphor/Phosphor-Thin.woff) format("woff"),
-    url(../fonts/Phosphor/Phosphor-Thin.ttf) format("truetype"),
-    url(../fonts/Phosphor/Phosphor-Thin.svg#Phosphor-Thin) format("svg");
-  font-weight: 400;
+  src: url(../fonts/Phosphor/Phosphor-Thin.woff2) format("woff2");
+  font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 .ph-thin {
   font-family: Phosphor-Thin !important;
@@ -47248,7 +47224,7 @@ button.swiper-pagination-bullet {
 .pswp__button,
 .pswp__button--arrow--left:before,
 .pswp__button--arrow--right:before {
-  background: url(/img/default-skin.html) 0 0 no-repeat;
+  background: url(/images/default-skin.html) 0 0 no-repeat;
   -moz-background-size: 264px 88px;
   background-size: 264px 88px;
   width: 44px;
@@ -47263,7 +47239,7 @@ button.swiper-pagination-bullet {
   .pswp--svg .pswp__button,
   .pswp--svg .pswp__button--arrow--left:before,
   .pswp--svg .pswp__button--arrow--right:before {
-    background-image: url(/img/default-skin-2.html);
+    background-image: url(/images/default-skin-2.html);
   }
   .pswp--svg .pswp__button--arrow--left,
   .pswp--svg .pswp__button--arrow--right {
@@ -47512,7 +47488,7 @@ a.pswp__share--download:hover {
   opacity: 1;
 }
 .pswp__preloader--active .pswp__preloader__icn {
-  background: url(/img/preloader.html) 0 0 no-repeat;
+  background: url(/images/preloader.html) 0 0 no-repeat;
 }
 .pswp--css_animation .pswp__preloader--active {
   opacity: 1;

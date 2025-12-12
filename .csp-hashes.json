@@ -1,0 +1,6 @@
+{
+  "hashes": {
+    "colorScheme": "sha256-mDLClJfQZGN7vFs6ooSG4lfDonk43CDKGWvoL+UI0EU="
+  },
+  "csp": "default-src 'self'; script-src 'self' sha256-mDLClJfQZGN7vFs6ooSG4lfDonk43CDKGWvoL+UI0EU= https://www.googletagmanager.com https://www.google-analytics.com https://*.firebase.com https://*.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://firestore.googleapis.com https://*.firebase.com https://*.googleapis.com https://www.google-analytics.com https://api.ipify.org https://ipapi.co; frame-src 'self' https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+}

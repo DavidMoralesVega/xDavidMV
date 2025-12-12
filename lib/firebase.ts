@@ -1,6 +1,6 @@
 import { initializeApp, getApps, FirebaseApp } from 'firebase/app';
 import { getFirestore, Firestore } from 'firebase/firestore';
-import { getAnalytics, Analytics } from 'firebase/analytics';
+import { getAnalytics, Analytics, logEvent } from 'firebase/analytics';
 import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
 
 // Firebase configuration
@@ -43,15 +43,31 @@ if (typeof window !== 'undefined') {
 
   // Inicializar Analytics (solo en producción)
   if (process.env.NODE_ENV === 'production' && firebaseConfig.measurementId) {
-    analytics = getAnalytics(app);
+    try {
+      analytics = getAnalytics(app);
+      console.log('✅ Firebase Analytics inicializado correctamente');
+    } catch (error) {
+      console.error('❌ Error al inicializar Firebase Analytics:', error);
+      analytics = null;
+    }
+  } else {
+    console.log('ℹ️ Firebase Analytics no se inicializa en modo desarrollo');
   }
 }
 
 // Helper para trackear eventos en Analytics
 export const trackEvent = (eventName: string, params?: Record<string, unknown>) => {
-  if (analytics) {
-    const { logEvent } = require('firebase/analytics');
+  if (!analytics) {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('[Firebase Analytics - Dev Mode]', eventName, params);
+    }
+    return;
+  }
+
+  try {
     logEvent(analytics, eventName, params);
+  } catch (error) {
+    console.error('[Firebase Analytics] Error logging event:', error);
   }
 };
 

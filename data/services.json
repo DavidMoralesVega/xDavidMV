@@ -1,7 +1,7 @@
 [
   {
     "title": "Arquitectura de Software",
-    "image": "/img/services/architecture-software.webp",
+    "image": "/images/services/architecture-software.webp",
     "desc": "Diseño ecosistemas digitales escalables aplicando Microservicios, DDD, Arquitectura Hexagonal, EDA y CQRS para garantizar alto rendimiento y mantenibilidad.",
     "tags": [
       "Microservicios",
@@ -14,7 +14,7 @@
   },
   {
     "title": "Desarrollo Frontend & Mobile",
-    "image": "/img/services/development-frontend-apps.webp",
+    "image": "/images/services/development-frontend-apps.webp",
     "desc": "Implemento aplicaciones modernas con Angular, Next.js y Flutter. Especializado en PWA, componentes Standalone, Signals y sistemas de diseño UI/UX.",
     "tags": [
       "Angular",
@@ -28,7 +28,7 @@
   },
   {
     "title": "Desarrollo Backend & APIs",
-    "image": "/img/services/development-backend-apis.webp",
+    "image": "/images/services/development-backend-apis.webp",
     "desc": "Construyo soluciones robustas con NestJS, Node.js, Spring Boot y Laravel. APIs GraphQL y RESTful con ORMs como TypeORM, Prisma y Eloquent.",
     "tags": [
       "NestJS",
@@ -42,7 +42,7 @@
   },
   {
     "title": "DevOps & Cloud",
-    "image": "/img/services/devops-cloud.webp",
+    "image": "/images/services/devops-cloud.webp",
     "desc": "Implemento pipelines CI/CD con GitHub Actions, orquestación de contenedores con Docker y Podman, y soluciones cloud con Firebase y Cloudflare.",
     "tags": [
       "Docker",
@@ -55,7 +55,7 @@
   },
   {
     "title": "Liderazgo",
-    "image": "/img/services/leadership.webp",
+    "image": "/images/services/leadership.webp",
     "desc": "Dirijo equipos de alto rendimiento, gestión de stakeholders, roadmaps de producto y mentoría técnica. Metodologías ágiles Scrum, Kanban y XP.",
     "tags": [
       "Tech Lead",
@@ -68,7 +68,7 @@
   },
   {
     "title": "Consultoría Legal-Tech",
-    "image": "/img/services/tech-legal.webp",
+    "image": "/images/services/tech-legal.webp",
     "desc": "Perfil híbrido único con doble titulación (Ingeniería + Derecho). Especializado en alinear estrategia de negocio, cumplimiento normativo y tecnología.",
     "tags": [
       "Cumplimiento Normativo",

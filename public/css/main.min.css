@@ -125,15 +125,15 @@
   --t-opp-bright--light: #ffffff;
   --t-opp-medium--light: #acacac;
   --t-opp-muted--light: #838383;
-  --bg-demo-screen-01--light: url(/img/demo/screens/01.webp);
-  --bg-demo-screen-02--light: url(/img/demo/screens/02.webp);
-  --bg-demo-screen-03--light: url(/img/demo/screens/03.webp);
-  --bg-demo-screen-04--light: url(/img/demo/screens/04.webp);
-  --bg-demo-screen-05--light: url(/img/demo/screens/05.webp);
-  --bg-demo-screen-06--light: url(/img/demo/screens/06.webp);
-  --bg-demo-screen-07--light: url(/img/demo/screens/07.webp);
-  --bg-demo-screen-08--light: url(/img/demo/screens/08.webp);
-  --bg-demo-screen-09--light: url(/img/demo/screens/09.webp);
+  --bg-demo-screen-01--light: url(/images/demo/screens/01.webp);
+  --bg-demo-screen-02--light: url(/images/demo/screens/02.webp);
+  --bg-demo-screen-03--light: url(/images/demo/screens/03.webp);
+  --bg-demo-screen-04--light: url(/images/demo/screens/04.webp);
+  --bg-demo-screen-05--light: url(/images/demo/screens/05.webp);
+  --bg-demo-screen-06--light: url(/images/demo/screens/06.webp);
+  --bg-demo-screen-07--light: url(/images/demo/screens/07.webp);
+  --bg-demo-screen-08--light: url(/images/demo/screens/08.webp);
+  --bg-demo-screen-09--light: url(/images/demo/screens/09.webp);
   --base--dark: #161616;
   --base-rgb--dark: 22, 22, 22;
   --base-tint--dark: #1c1c1c;
@@ -162,15 +162,15 @@
   --t-opp-bright--dark: #161616;
   --t-opp-medium--dark: #303030;
   --t-opp-muted--dark: #969696;
-  --bg-demo-screen-01--dark: url(/img/demo/screens/01-d.webp);
-  --bg-demo-screen-02--dark: url(/img/demo/screens/02-d.webp);
-  --bg-demo-screen-03--dark: url(/img/demo/screens/03-d.webp);
-  --bg-demo-screen-04--dark: url(/img/demo/screens/04-d.webp);
-  --bg-demo-screen-05--dark: url(/img/demo/screens/05-d.webp);
-  --bg-demo-screen-06--dark: url(/img/demo/screens/06-d.webp);
-  --bg-demo-screen-07--dark: url(/img/demo/screens/07-d.webp);
-  --bg-demo-screen-08--dark: url(/img/demo/screens/08-d.webp);
-  --bg-demo-screen-09--dark: url(/img/demo/screens/09-d.webp);
+  --bg-demo-screen-01--dark: url(/images/demo/screens/01-d.webp);
+  --bg-demo-screen-02--dark: url(/images/demo/screens/02-d.webp);
+  --bg-demo-screen-03--dark: url(/images/demo/screens/03-d.webp);
+  --bg-demo-screen-04--dark: url(/images/demo/screens/04-d.webp);
+  --bg-demo-screen-05--dark: url(/images/demo/screens/05-d.webp);
+  --bg-demo-screen-06--dark: url(/images/demo/screens/06-d.webp);
+  --bg-demo-screen-07--dark: url(/images/demo/screens/07-d.webp);
+  --bg-demo-screen-08--dark: url(/images/demo/screens/08-d.webp);
+  --bg-demo-screen-09--dark: url(/images/demo/screens/09-d.webp);
   --pt-base: #ffffff;
   --pt-base-dark: #161616;
   --pt-t-light-bright: #ffffff;
@@ -355,100 +355,100 @@
   --bg-demo-screen-09: var(--bg-demo-screen-09--dark);
 }
 .about-image-1 {
-  background-image: url(/img/avatars/1400x1400_ava-01.webp);
+  background-image: url(/images/avatars/1400x1400_ava-01.webp);
 }
 .divider-image-1 {
-  background-image: url(/img/illustrations/1920x1080_divider-01.webp);
+  background-image: url(/images/illustrations/1920x1080_divider-01.webp);
 }
 .divider-image-2 {
-  background-image: url(/img/illustrations/1920x1080_divider-02.webp);
+  background-image: url(/images/illustrations/1920x1080_divider-02.webp);
 }
 .divider-image-3 {
-  background-image: url(/img/brand/contact.webp);
+  background-image: url(/images/brand/contact.webp);
 }
 .divider-image-4 {
-  background-image: url(/img/services/material-you.webp);
+  background-image: url(/images/services/material-you.webp);
 }
 .divider-image-5 {
-  background-image: url(/img/illustrations/2400x1350_divider-05.webp);
+  background-image: url(/images/illustrations/2400x1350_divider-05.webp);
 }
 .divider-image-6 {
-  background-image: url(/img/illustrations/1920x1080_divider-06.webp);
+  background-image: url(/images/illustrations/1920x1080_divider-06.webp);
 }
 .divider-image-7 {
-  background-image: url(/img/illustrations/2400x1600_divider-07.webp);
+  background-image: url(/images/illustrations/2400x1600_divider-07.webp);
 }
 .divider-image-8 {
-  background-image: url(/img/illustrations/2400x1600_divider-08.webp);
+  background-image: url(/images/illustrations/2400x1600_divider-08.webp);
 }
 .divider-image-9 {
-  background-image: url(/img/illustrations/2400x1600_divider-09.webp);
+  background-image: url(/images/illustrations/2400x1600_divider-09.webp);
 }
 .divider-image-10 {
-  background-image: url(/img/illustrations/2400x1600_divider-10.webp);
+  background-image: url(/images/illustrations/2400x1600_divider-10.webp);
 }
 .preview-image-1 {
-  background-image: url(/img/works/preview/1400x1400_prv-01.webp);
+  background-image: url(/images/works/preview/1400x1400_prv-01.webp);
 }
 .preview-image-2 {
-  background-image: url(/img/works/preview/1400x1400_prv-02.webp);
+  background-image: url(/images/works/preview/1400x1400_prv-02.webp);
 }
 .preview-image-3 {
-  background-image: url(/img/works/preview/1400x1400_prv-03.webp);
+  background-image: url(/images/works/preview/1400x1400_prv-03.webp);
 }
 .preview-image-4 {
-  background-image: url(/img/works/preview/1400x1400_prv-04.webp);
+  background-image: url(/images/works/preview/1400x1400_prv-04.webp);
 }
 .preview-image-5 {
-  background-image: url(/img/works/preview/1400x1400_prv-05.webp);
+  background-image: url(/images/works/preview/1400x1400_prv-05.webp);
 }
 .preview-image-6 {
-  background-image: url(/img/works/preview/1400x1400_prv-06.webp);
+  background-image: url(/images/works/preview/1400x1400_prv-06.webp);
 }
 .preview-image-7 {
-  background-image: url(/img/works/preview/1400x1400_prv-07.webp);
+  background-image: url(/images/works/preview/1400x1400_prv-07.webp);
 }
 .blog-preview-image-1 {
-  background-image: url(/img/blog/preview/1000x1250_prv-01.webp);
+  background-image: url(/images/blog/preview/1000x1250_prv-01.webp);
 }
 .blog-preview-image-2 {
-  background-image: url(/img/blog/preview/1000x1250_prv-02.webp);
+  background-image: url(/images/blog/preview/1000x1250_prv-02.webp);
 }
 .blog-preview-image-3 {
-  background-image: url(/img/blog/preview/1000x1250_prv-03.webp);
+  background-image: url(/images/blog/preview/1000x1250_prv-03.webp);
 }
 .headline-img-01::before {
-  background-image: url(/img/illustrations/400x200_hdl-01.webp);
+  background-image: url(/images/brand/astronauta.webp);
 }
 .headline-img-02::before {
-  background-image: url(/img/illustrations/400x200_hdl-02.webp);
+  background-image: url(/images/brand/astronauta.webp);
 }
 .headline-img-03::after {
-  background-image: url(/img/illustrations/400x200_hdl-03.webp);
+  background-image: url(/images/brand/astronauta.webp);
 }
 .headline-img-04::before {
-  background-image: url(/img/illustrations/400x200_hdl-04.webp);
+  background-image: url(/images/brand/astronauta.webp);
 }
 .headline-img-05::before {
-  background-image: url(/img/illustrations/400x200_hdl-05.webp);
+  background-image: url(/images/brand/astronauta.webp);
 }
 .headline-img-06::before {
-  background-image: url(/img/brand/astronauta.webp);
+  background-image: url(/images/brand/astronauta.webp);
 }
 .headline-img-07::before {
-  background-image: url(/img/illustrations/400x200_hdl-07.webp);
+  background-image: url(/images/brand/astronauta.webp);
 }
 .image-values-1 {
-  background-image: url(/img/team/1200x1600_team-01.webp);
+  background-image: url(/images/team/1200x1600_team-01.webp);
 }
 .image-values-2 {
-  background-image: url(/img/team/1600x1200_team-01.webp);
+  background-image: url(/images/team/1600x1200_team-01.webp);
 }
 .prj-details-img-01 {
-  background-image: url(/img/works/2200x1650_prj-details-01.webp);
+  background-image: url(/images/works/2200x1650_prj-details-01.webp);
 }
 .prj-details-img-02 {
-  background-image: url(/img/works/2200x1650_prj-details-02.webp);
+  background-image: url(/images/works/2200x1650_prj-details-02.webp);
 }
 *,
 ::after,
@@ -6045,7 +6045,7 @@ form textarea:required:valid {
   background-position: left center;
   -moz-background-size: cover;
   background-size: cover;
-  background-image: url(/img/brand/cta.jpg);
+  background-image: url(/images/brand/cta.webp);
 }
 @media only screen and (min-width: 1200px) {
   .mxd-promo__bg {

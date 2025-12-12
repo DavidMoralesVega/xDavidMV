@@ -12,6 +12,10 @@ export {
   generateEventSchema,
   generateSpeakingEventsSchema,
   generateCollectionPageSchema,
+  generateBlogPostingSchema,
+  generateVideoObjectSchema,
+  generateOrganizationSchema,
+  generateHowToSchema,
 } from "./schemas";
 export {
   staticRoutes,

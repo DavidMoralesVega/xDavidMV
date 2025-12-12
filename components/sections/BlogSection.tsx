@@ -76,7 +76,7 @@ export default function BlogSection({
                         <i className="mxd-preview-hover__icon">
                           <Image
                             alt="Eye Icon"
-                            src="/img/icons/icon-eye.svg"
+                            src="/images/icons/icon-eye.svg"
                             width={38}
                             height={21}
                           />

@@ -39,7 +39,7 @@ export default function VideoParallax({
       ) : src ? (
         <source src={`/${src}`} type="video/webm" />
       ) : null}
-      <track kind="captions" src="/video/captions.vtt" srcLang="es" label="Español" default />
+      <track kind="captions" src="/videos/captions.vtt" srcLang="es" label="Español" default />
       Tu navegador no soporta el elemento de video.
     </video>
   );

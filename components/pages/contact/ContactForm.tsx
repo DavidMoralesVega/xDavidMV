@@ -21,12 +21,22 @@ export default function ContactForm() {
   const [fsState, fsSubmit] = useForm<ContactForm>("meoljlry");
 
   const onSubmit = async (data: ContactForm) => {
+    // Verificar honeypot - si está lleno, es spam
+    if (data.website && data.website.length > 0) {
+      console.warn('Spam detected via honeypot');
+      // No mostrar error al spammer, simular éxito
+      reset();
+      toast.success("Mensaje enviado — gracias!");
+      return;
+    }
+
     try {
       await fsSubmit(data); // submit to Formspree
       reset(); // reset form fields
-      toast.success("Mensaje enviado — gracias!");
-    } catch {
-      toast.error("Error al enviar — intenta de nuevo más tarde.");
+      toast.success("¡Mensaje enviado exitosamente! Te responderé pronto.");
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error("Error al enviar el mensaje. Por favor intenta de nuevo más tarde.");
     }
   };
 
@@ -71,6 +81,22 @@ export default function ContactForm() {
                             type="hidden"
                             name="form_subject"
                             defaultValue="Mensaje de Contacto - Portfolio"
+                          />
+                          {/* Honeypot anti-spam (debe estar vacío) */}
+                          <input
+                            type="text"
+                            {...register("website")}
+                            tabIndex={-1}
+                            autoComplete="off"
+                            style={{
+                              position: 'absolute',
+                              left: '-9999px',
+                              width: '1px',
+                              height: '1px',
+                              opacity: 0,
+                              pointerEvents: 'none'
+                            }}
+                            aria-hidden="true"
                           />
                           {/* Visible Fields */}
                           <div className="container-fluid p-0">

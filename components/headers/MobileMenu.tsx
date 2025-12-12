@@ -245,18 +245,18 @@ export default function MobileMenu() {
                       loop
                       muted
                       playsInline
-                      poster="/video/hero-video.webp"
+                      poster="/videos/hero-video.webp"
                       aria-label="Video decorativo"
                     >
                       <source
                         type="video/webm"
-                        src="/video/hero-video.webm"
+                        src="/videos/hero-video.webm"
                       />
                       <source
                         type="video/mp4"
-                        src="/video/hero-video.mp4"
+                        src="/videos/hero-video.mp4"
                       />
-                      <track kind="captions" src="/video/captions.vtt" srcLang="es" label="Español" default />
+                      <track kind="captions" src="/videos/captions.vtt" srcLang="es" label="Español" default />
                     </video>
                   </div>
                 </div>

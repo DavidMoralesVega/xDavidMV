@@ -1,5 +1,5 @@
 import VelocityMarquee from "@/components/animation/VelocityMarquee";
-import Image from "next/image";
+
 import Link from "next/link";
 import { Metadata } from "next";
 import AnimatedButton from "@/components/animation/AnimatedButton";
@@ -15,12 +15,13 @@ export default function NotFoundPage() {
       {/* Floating Image Background Start */}
       <div className="mxd-floating-img floating-bg">
         <div className="mxd-floating-img__item mxd-move">
-          <Image
-            alt="Image"
-            src="/img/backgrounds/900x900_err-01.webp"
-            width={900}
-            height={900}
-          />
+          <img
+  src="/images/backgrounds/900x900_err-01.webp"
+  alt="Image"
+  width="900"
+  height="900"
+  loading="lazy"
+/>
         </div>
       </div>
       {/* Floating Image Background End */}

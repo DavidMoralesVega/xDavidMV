@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import { useState } from "react";
 import services from "@/data/services.json";
 import { Service } from "@/types/services";
@@ -91,7 +91,7 @@ export default function Services() {
                   }}
                   className="hover-reveal__content hover-reveal-360x440"
                 >
-                  <Image
+                  <img
                     style={{
                       transform:
                         hoverState.activeIndex === idx
@@ -102,8 +102,8 @@ export default function Services() {
                     className="hover-reveal__image"
                     alt=""
                     src={s.image}
-                    width={360}
-                    height={440}
+                    width="360"
+                    height="440"
                   />
                 </div>
                 <div className="mxd-services-list__inner">

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
+
 import { useEffect, useState } from "react";
 import AnimatedButton from "../animation/AnimatedButton";
 import { usePathname } from "next/navigation";
@@ -25,14 +25,15 @@ export default function Header() {
       <div className="mxd-header__logo loading__fade">
         <Link href={`/`} className="mxd-logo">
           {/* logo image */}
-          <Image
-            src="/img/logo-small.png"
-            alt="David Morales Vega"
-            width={56}
-            height={56}
-            className="mxd-logo__image"
-            priority
-          />
+          <img
+  src="/images/brand/logo-small.png"
+  alt="David Morales Vega"
+  width="56"
+  height="56"
+  className="mxd-logo__image"
+  fetchPriority="high"
+  loading="eager"
+/>
           {/* logo text */}
           <span className="mxd-logo__text">
             David

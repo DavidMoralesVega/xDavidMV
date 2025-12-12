@@ -28,7 +28,14 @@
       "Bash(node scripts/optimize-logo.mjs:*)",
       "Bash(node -e:*)",
       "Bash(timeout 15 bun run dev:*)",
-      "Bash(firebase deploy:*)"
+      "Bash(firebase deploy:*)",
+      "Bash(test:*)",
+      "Bash(node:*)",
+      "Bash(npm run type-check:*)",
+      "Bash(git checkout:*)",
+      "Bash(npm run test:run:*)",
+      "Bash(npx playwright install chromium)",
+      "Bash(npx playwright --version)"
     ],
     "deny": [],
     "ask": []

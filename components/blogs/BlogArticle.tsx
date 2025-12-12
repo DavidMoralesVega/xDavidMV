@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Link from "next/link";
 import type { BlogPostWithMDX } from "@/lib/blog";
 
@@ -74,12 +74,13 @@ export default function BlogArticle({ post }: BlogArticleProps) {
 
               {/* Article Thumb Start */}
               <div className="mxd-article__thumb loading__fade">
-                <Image
+                <img
                   alt={frontmatter.imageAlt || frontmatter.title}
                   src={frontmatter.image}
-                  width={1920}
-                  height={1280}
-                  priority
+                  width="1920"
+                  height="1280"
+                  fetchPriority="high"
+                  loading="eager"
                 />
               </div>
               {/* Article Thumb End */}
@@ -98,12 +99,13 @@ export default function BlogArticle({ post }: BlogArticleProps) {
             <div className="mxd-article-author">
               <div className="mxd-article-author__data">
                 <Link className="mxd-article-author__avatar" href="/">
-                  <Image
-                    alt="David Morales Vega"
-                    src="/img/brand/DavidMV.webp"
-                    width={300}
-                    height={300}
-                  />
+                  <img
+  src="/images/brand/DavidMV.webp"
+  alt="David Morales Vega"
+  width="300"
+  height="300"
+  loading="lazy"
+/>
                 </Link>
                 <div className="mxd-article-author__info">
                   <h5 className="mxd-article-author__name">

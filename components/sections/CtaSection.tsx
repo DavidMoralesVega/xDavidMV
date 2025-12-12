@@ -19,7 +19,7 @@ export default function CtaSection() {
                   <span className="mxd-promo__icon">
                     <Image
                       alt="Icon"
-                      src="/img/brand/bemorex.png"
+                      src="/images/brand/bemorex.png"
                       width={400}
                       height={400}
                     />
@@ -43,14 +43,14 @@ export default function CtaSection() {
                 {/* <Image
                   className="promo-image promo-image-1"
                   alt="Image"
-                  src="/img/brand/cta.jpg"
+                  src="/images/brand/cta.webp"
                   width={800}
                   height={912}
                 />
                 <Image
                   className="promo-image promo-image-2"
                   alt="Image"
-                  src="/img/illustrations/cta-img-02.webp"
+                  src="/images/illustrations/cta-img-02.webp"
                   width={600}
                   height={601}
                 /> */}

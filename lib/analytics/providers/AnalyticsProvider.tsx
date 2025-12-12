@@ -12,6 +12,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { usePathname } from "next/navigation";
 import { analyticsConfig } from "../config";
 import type {
   Session,
@@ -110,9 +111,30 @@ interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
+// ---------- Helper Functions ----------
+
+/**
+ * Check if a path should be excluded from tracking
+ */
+function isPathExcluded(pathname: string): boolean {
+  return analyticsConfig.excludePaths.some((excludePath) => {
+    // Check if exact match
+    if (excludePath === pathname) return true;
+
+    // Check if wildcard match (e.g., "/admin/*")
+    if (excludePath.endsWith("/*")) {
+      const basePath = excludePath.slice(0, -2);
+      return pathname.startsWith(basePath);
+    }
+
+    return false;
+  });
+}
+
 // ---------- Provider Component ----------
 
 export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+  const pathname = usePathname();
   const [initialized, setInitialized] = useState(false);
   const [state, setState] = useState<AnalyticsState>({
     initialized: false,
@@ -136,6 +158,14 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
 
   useEffect(() => {
     if (!analyticsConfig.enabled || typeof window === "undefined") {
+      return;
+    }
+
+    // Check if current path is excluded
+    if (isPathExcluded(pathname)) {
+      if (analyticsConfig.debug) {
+        console.log(`[Analytics] Path excluded from tracking: ${pathname}`);
+      }
       return;
     }
 
@@ -262,7 +292,7 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
         });
       }
     };
-  }, []);
+  }, [pathname]);
 
   // ---------- Handle page unload ----------
 
@@ -303,10 +333,14 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
       // End previous pageview
       const prevPageview = getCurrentPageview();
       if (prevPageview) {
-        await updatePageview(prevPageview.id, {
-          timeOnPage: prevPageview.timeOnPage,
-          scrollDepth: prevPageview.scrollDepth,
-        });
+        try {
+          await updatePageview(prevPageview.id, {
+            timeOnPage: prevPageview.timeOnPage,
+            scrollDepth: prevPageview.scrollDepth,
+          });
+        } catch (error) {
+          console.error("[Analytics] Error updating previous pageview:", error);
+        }
       }
 
       // Reset scroll tracking for new page
@@ -316,18 +350,28 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
       const pageview = await trackPageviewCore(path, title);
       if (pageview) {
         setCurrentPageview(pageview);
-        await savePageview(pageview);
+
+        // Save to Firestore (custom analytics)
+        try {
+          await savePageview(pageview);
+        } catch (error) {
+          console.error("[Analytics] Error saving pageview to Firestore:", error);
+        }
 
         setState((prev) => ({
           ...prev,
           currentPageviewId: pageview.id,
         }));
 
-        // Also send to Firebase Analytics (Google Analytics)
-        trackFirebaseEvent("page_view", {
-          page_path: pageview.path,
-          page_title: pageview.title,
-        });
+        // Also send to Firebase Analytics (Google Analytics) - independent try-catch
+        try {
+          trackFirebaseEvent("page_view", {
+            page_path: pageview.path,
+            page_title: pageview.title,
+          });
+        } catch (error) {
+          console.error("[Analytics] Error sending pageview to Firebase Analytics:", error);
+        }
       }
     },
     [initialized]
@@ -345,17 +389,25 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
     ) => {
       if (!initialized) return;
 
-      // Track in custom system (Firestore)
-      await trackEventCore(name, category, options);
-      updateSessionActivity();
+      // Track in custom system (Firestore) - independent try-catch
+      try {
+        await trackEventCore(name, category, options);
+        updateSessionActivity();
+      } catch (error) {
+        console.error("[Analytics] Error tracking event to Firestore:", error);
+      }
 
-      // Also send to Firebase Analytics (Google Analytics)
-      trackFirebaseEvent(name, {
-        event_category: category,
-        event_label: options?.label,
-        value: options?.value,
-        ...options?.properties,
-      });
+      // Also send to Firebase Analytics (Google Analytics) - independent try-catch
+      try {
+        trackFirebaseEvent(name, {
+          event_category: category,
+          event_label: options?.label,
+          value: options?.value,
+          ...options?.properties,
+        });
+      } catch (error) {
+        console.error("[Analytics] Error sending event to Firebase Analytics:", error);
+      }
     },
     [initialized]
   );

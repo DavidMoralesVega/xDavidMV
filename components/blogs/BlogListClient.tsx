@@ -395,7 +395,7 @@ export default function BlogListClient({
                       <i className="mxd-preview-hover__icon icon-small">
                         <Image
                           alt="Eye Icon"
-                          src="/img/icons/icon-eye.svg"
+                          src="/images/icons/icon-eye.svg"
                           width={38}
                           height={21}
                         />
