@@ -21,7 +21,6 @@
     "e2e:headed": "playwright test --headed",
     "optimize:fonts": "node scripts/optimize-fonts.js",
     "optimize:images": "node scripts/migrate-images.js",
-    "csp:generate": "node scripts/generate-csp-hashes.mjs",
     "deploy": "npm run build && firebase deploy",
     "ci": "npm run lint && npm run type-check && npm run test:run"
   },

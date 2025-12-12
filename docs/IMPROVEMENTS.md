@@ -9,33 +9,53 @@ This document outlines the comprehensive improvements made to the David Morales 
 ## 1. Enhanced Content Security Policy (CSP) Headers
 
 ### What Changed
-Replaced permissive `'unsafe-inline'` and `'unsafe-eval'` directives with SHA-256 hashes for inline scripts, significantly improving security while maintaining SSG compatibility.
+Implemented a **pragmatic CSP** that balances security with Next.js SSG compatibility. Uses `'unsafe-inline'` for scripts (required by Next.js) but maintains strong restrictions on script sources.
+
+### Why 'unsafe-inline'? ⚠️
+
+**Initial Attempt**: SHA-256 hashes for each inline script
+**Result**: ❌ Broken in production
+
+Next.js SSG generates **30+ dynamic inline scripts** during build with unique hashes that change per build:
+- ❌ Not maintainable (different hashes every build)
+- ❌ Cloudflare injects own scripts
+- ❌ SSG can't generate dynamic nonces
+
+**See `docs/CSP-EXPLANATION.md` for detailed technical analysis**
 
 ### Implementation
 
-#### Generated CSP Hash
-- **Script**: `scripts/generate-csp-hashes.mjs`
-- **Hash Generated**: `sha256-mDLClJfQZGN7vFs6ooSG4lfDonk43CDKGWvoL+UI0EU=`
-- **Applied to**: Color scheme initialization script
-
-#### Files Modified
-- `firebase.json`: Updated CSP header with specific hash
-- `.csp-hashes.json`: Stores generated hashes for reference
-
-#### Usage
-```bash
-npm run csp:generate  # Regenerate hashes after changing inline scripts
+#### Current CSP
+```
+script-src 'self' 'unsafe-inline'
+  https://www.googletagmanager.com
+  https://www.google-analytics.com
+  https://*.firebase.com
+  https://*.googleapis.com
+  https://static.cloudflareinsights.com
 ```
 
-### Benefits
-- ✅ Prevents XSS attacks from inline script injection
-- ✅ Maintains fast SSG performance
-- ✅ No runtime overhead
-- ✅ Compatible with Firebase Hosting
+**Only these domains** can load external scripts. Random domains are blocked.
 
-### Security Improvement
-**Before**: CSP allowed any inline script (`'unsafe-inline'`)
-**After**: Only whitelisted scripts with matching SHA-256 hashes can execute
+#### Files Modified
+- `firebase.json`: Production-ready CSP
+- `docs/CSP-EXPLANATION.md`: Security analysis
+
+### Benefits
+- ✅ **Blocks untrusted external scripts**
+- ✅ **Prevents clickjacking** (frame-ancestors)
+- ✅ **Forces HTTPS** (upgrade-insecure-requests)
+- ✅ **Works in production** (unlike hash approach)
+- ✅ **Protects forms** (form-action 'self')
+
+### Security Level
+| Approach | Security | Production |
+|----------|----------|------------|
+| No CSP | 3/10 | ✅ Works |
+| SHA-256 Hashes | 10/10 | ❌ Broken |
+| **Pragmatic CSP** | **7.5/10** | **✅ Works** |
+
+**Low XSS Risk**: Static portfolio, Zod validation, no user content, no admin area
 
 ---
 
