@@ -13,6 +13,7 @@ export const metadata = generatePageMetadata({
   description:
     "Artículos sobre arquitectura de software, desarrollo web, metodologías ágiles y reflexiones sobre la industria tech. Contenido práctico desde la experiencia real.",
   path: "/blog",
+  image: "/images/og/og-blog.webp",
   tags: [
     "Blog",
     "Tecnología",

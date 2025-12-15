@@ -34,27 +34,30 @@ export default function MobileMenu() {
 
   // Store scrollHeight values
   const [submenuHeights, setSubmenuHeights] = useState<number[]>([]);
+
+  const closeMenu = () => {
+    setIsActive(false);
+    setTimeout(() => {
+      setIsMenuOpen(false);
+      hamburgerBtnRef.current?.focus();
+    }, 800);
+  };
+
+  const openMenu = () => {
+    setIsMenuOpen(true);
+    setTimeout(() => {
+      setIsActive(true);
+    }, 600);
+  };
+
   const handleToggle = () => {
     if (isActive) {
-      setIsActive(false);
-      setTimeout(
-        () => {
-          setIsMenuOpen(false);
-        },
-
-        800
-      );
+      closeMenu();
     } else {
-      setIsMenuOpen(true);
-      setTimeout(
-        () => {
-          setIsActive(true);
-        },
-
-        600
-      );
+      openMenu();
     }
   };
+
   const isMenuActive = (link?: string) =>
     link?.split("/")[1] == pathname.split("/")[1];
 
@@ -66,13 +69,31 @@ export default function MobileMenu() {
     setSubmenuHeights(heights);
   }, []);
 
+  // Close menu when pathname changes
   useEffect(() => {
     setActiveSubmenu(-1);
     if (isActive) {
-      handleToggle();
+      closeMenu();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
+
+  // Handle Escape key to close menu
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isMenuOpen) {
+        closeMenu();
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMenuOpen]);
 
   // === FLIP ONLY on state change ===
   useLayoutEffect(() => {
@@ -237,27 +258,29 @@ export default function MobileMenu() {
                     className="menu-promo__video fade-in-up-elm"
                     style={{ transitionDelay: "0.3s" }}
                   >
-                    <video
-                      className="menu-video"
-                      id="inner-video"
-                      preload="auto"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      poster="/videos/hero-video.webp"
-                      aria-label="Video decorativo"
-                    >
-                      <source
-                        type="video/webm"
-                        src="/videos/hero-video.webm"
-                      />
-                      <source
-                        type="video/mp4"
-                        src="/videos/hero-video.mp4"
-                      />
-                      <track kind="captions" src="/videos/captions.vtt" srcLang="es" label="Español" default />
-                    </video>
+                    {isMenuOpen && (
+                      <video
+                        className="menu-video"
+                        id="inner-video"
+                        preload="none"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        poster="/videos/hero-video.webp"
+                        aria-label="Video decorativo"
+                      >
+                        <source
+                          type="video/webm"
+                          src="/videos/hero-video.webm"
+                        />
+                        <source
+                          type="video/mp4"
+                          src="/videos/hero-video.mp4"
+                        />
+                        <track kind="captions" src="/videos/captions.vtt" srcLang="es" label="Español" default />
+                      </video>
+                    )}
                   </div>
                 </div>
               </div>

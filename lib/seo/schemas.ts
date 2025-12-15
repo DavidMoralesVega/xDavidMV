@@ -68,9 +68,32 @@ export function generatePersonSchema() {
         "@type": "CollegeOrUniversity",
         name: "Universidad Técnica de Oruro",
         alternateName: "UTO",
+        description: "Licenciatura en Derecho - Abogado",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Oruro",
+          addressCountry: "Bolivia",
+        },
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Universidad Adventista de Bolivia",
+        alternateName: "UAB",
+        description: "Ingeniería de Sistemas",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Cochabamba",
+          addressCountry: "Bolivia",
+        },
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Universidad Mayor de San Andrés",
+        alternateName: "UMSA",
+        description: "Maestría en Transformación Digital y Gestión de Proyectos Tecnológicos (en curso)",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "La Paz",
           addressCountry: "Bolivia",
         },
       },
@@ -222,7 +245,7 @@ export function generateFAQSchema() {
         name: "¿Quién es David Morales Vega?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "David Morales Vega es un Arquitecto de Soluciones y Technical Lead boliviano con más de 7 años de experiencia en desarrollo de software. Se especializa en Angular, NestJS, microservicios y liderazgo de equipos técnicos. Es fundador de BeMoreX y conferencista activo con más de 16 presentaciones en eventos tecnológicos.",
+          text: "David Morales Vega es un Arquitecto de Soluciones y Technical Lead boliviano con más de 7 años de experiencia en desarrollo de software. Posee un perfil único: es Ingeniero de Sistemas y Abogado, lo que lo posiciona como experto en Legal-Tech en Bolivia. Se especializa en Angular, NestJS, microservicios y liderazgo de equipos técnicos. Es fundador de BeMoreX y conferencista activo con más de 16 presentaciones en eventos tecnológicos.",
         },
       },
       {
@@ -230,7 +253,7 @@ export function generateFAQSchema() {
         name: "¿Qué servicios ofrece David Morales Vega?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Ofrece servicios de arquitectura de software, desarrollo web full-stack, consultoría tecnológica, conferencias y talleres especializados, y liderazgo técnico para equipos de desarrollo.",
+          text: "Ofrece servicios de arquitectura de software, desarrollo web full-stack, consultoría tecnológica, conferencias y talleres especializados, liderazgo técnico para equipos de desarrollo, y consultoría Legal-Tech (intersección entre derecho y tecnología).",
         },
       },
       {
@@ -238,7 +261,7 @@ export function generateFAQSchema() {
         name: "¿En qué tecnologías se especializa?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Se especializa en Angular, NestJS, TypeScript, Node.js, microservicios, arquitectura hexagonal, DDD (Domain-Driven Design), React, Next.js, Flutter, Docker, y metodologías ágiles como Scrum.",
+          text: "Se especializa en Angular, NestJS, TypeScript, Node.js, microservicios, arquitectura hexagonal, DDD (Domain-Driven Design), React, Next.js, Flutter, Python, Docker, y metodologías ágiles como Scrum.",
         },
       },
       {
@@ -246,7 +269,7 @@ export function generateFAQSchema() {
         name: "¿Dónde está ubicado David Morales Vega?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Está ubicado en Oruro, Bolivia. Ofrece servicios tanto presenciales en Bolivia como remotos para clientes en toda Latinoamérica.",
+          text: "Está ubicado en Oruro, Bolivia. Ofrece servicios tanto presenciales en Bolivia como remotos para clientes en toda Latinoamérica y el mundo.",
         },
       },
       {
@@ -257,7 +280,190 @@ export function generateFAQSchema() {
           text: `Puedes contactarlo a través de su sitio web ${siteConfig.url}/contacto, por email a ${siteConfig.author.email}, o por teléfono al ${siteConfig.phone}.`,
         },
       },
+      {
+        "@type": "Question",
+        name: "¿Qué es Legal-Tech y cómo puede ayudar David Morales Vega?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Legal-Tech es la aplicación de tecnología a servicios jurídicos. David Morales Vega, con títulos en Ingeniería de Sistemas y Derecho, ofrece consultoría única en automatización de procesos legales, desarrollo de software para despachos de abogados, cumplimiento normativo digital y contratos inteligentes.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "¿Cuánto cuesta contratar un desarrollador en Oruro, Bolivia?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Los salarios de desarrolladores en Oruro varían según experiencia: Junior ($400-800/mes), Semi-senior ($800-1,500/mes), Senior ($1,500-2,500/mes), Lead/Arquitecto ($2,000-4,000/mes). Los costos son 20-30% menores que en La Paz o Cochabamba.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "¿Cómo está la industria del software en Bolivia?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Bolivia tiene 152 startups activas, más de 1,149 empresas de software, y exporta aproximadamente $57 millones anuales en servicios de software. Cochabamba es el principal hub, produciendo el 80% del software de exportación. El mercado está en crecimiento con proyección a $225 millones para 2029.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "¿David Morales Vega ofrece capacitaciones y conferencias?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Sí, David Morales Vega es conferencista activo con más de 16 presentaciones en eventos tecnológicos de Bolivia y Latinoamérica. Ofrece bootcamps, workshops y talleres sobre Angular, NestJS, Python, IA, arquitectura de software y desarrollo web.",
+        },
+      },
     ],
+  };
+}
+
+export function generateLocalBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${siteConfig.url}/#localbusiness`,
+    name: "David Morales Vega - Consultoría en Tecnología y Legal-Tech",
+    alternateName: "BeMoreX Digital Agency",
+    description:
+      "Servicios de arquitectura de software, desarrollo web, consultoría tecnológica y Legal-Tech en Oruro, Bolivia. Especializado en Angular, NestJS, microservicios y transformación digital para empresas.",
+    url: siteConfig.url,
+    telephone: siteConfig.phone,
+    email: siteConfig.author.email,
+    image: `${siteConfig.url}${siteConfig.author.image}`,
+    logo: `${siteConfig.url}${siteConfig.author.image}`,
+    priceRange: "$$",
+    currenciesAccepted: "BOB, USD",
+    paymentAccepted: "Transferencia bancaria, PayPal, Efectivo",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Oruro",
+      addressLocality: "Oruro",
+      addressRegion: "Oruro",
+      postalCode: "0000",
+      addressCountry: {
+        "@type": "Country",
+        name: "Bolivia",
+        identifier: "BO",
+      },
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -17.9647,
+      longitude: -67.1064,
+    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Oruro",
+        containedIn: {
+          "@type": "Country",
+          name: "Bolivia",
+        },
+      },
+      {
+        "@type": "City",
+        name: "La Paz",
+        containedIn: {
+          "@type": "Country",
+          name: "Bolivia",
+        },
+      },
+      {
+        "@type": "City",
+        name: "Cochabamba",
+        containedIn: {
+          "@type": "Country",
+          name: "Bolivia",
+        },
+      },
+      {
+        "@type": "City",
+        name: "Santa Cruz",
+        containedIn: {
+          "@type": "Country",
+          name: "Bolivia",
+        },
+      },
+      {
+        "@type": "Country",
+        name: "Bolivia",
+      },
+      {
+        "@type": "Continent",
+        name: "América Latina",
+      },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Servicios de Consultoría Tecnológica",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Arquitectura de Software",
+            description:
+              "Diseño de ecosistemas digitales escalables con microservicios, arquitectura hexagonal, DDD y CQRS.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Desarrollo Frontend y Mobile",
+            description:
+              "Desarrollo de aplicaciones web y móviles con Angular, Next.js, Flutter y PWA.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Desarrollo Backend y APIs",
+            description:
+              "Desarrollo de APIs y servicios backend con NestJS, Node.js, Spring Boot y GraphQL.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Consultoría Legal-Tech",
+            description:
+              "Automatización de procesos legales, software para despachos de abogados, cumplimiento normativo digital.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Conferencias y Capacitaciones",
+            description:
+              "Bootcamps, workshops y conferencias sobre desarrollo de software, arquitectura y tecnología.",
+          },
+        },
+      ],
+    },
+    founder: {
+      "@id": `${siteConfig.url}/#person`,
+    },
+    sameAs: [
+      siteConfig.social.linkedin,
+      siteConfig.social.github,
+      siteConfig.social.facebook,
+      siteConfig.social.instagram,
+      "https://www.bemorex.com",
+    ],
+    knowsAbout: [
+      "Desarrollo de Software",
+      "Arquitectura de Software",
+      "Angular",
+      "NestJS",
+      "Microservicios",
+      "Legal-Tech",
+      "Transformación Digital",
+      "Consultoría Tecnológica",
+    ],
+    knowsLanguage: ["Spanish", "English"],
   };
 }
 
@@ -290,64 +496,47 @@ export function generateEventSchema(event: {
 }
 
 export function generateSpeakingEventsSchema() {
-  const speakingEvents = [
-    {
-      name: "El Viaje del Arquitecto: Sistemas Empresariales",
-      description: "Conferencia sobre arquitectura de software y migración de sistemas ERP",
-      date: "2025-11",
-      location: "CCBOL, Bolivia",
-      type: "Speaker",
-    },
-    {
-      name: "Decisiones Inteligentes: App de IA con Python y OpenAI",
-      description: "Workshop práctico de desarrollo de aplicaciones con IA usando Python, FastAPI y OpenAI",
-      date: "2025-11",
-      location: "CCBOL, Bolivia",
-      type: "Workshop Instructor",
-    },
-    {
-      name: "NgWorkshop Oruro - Angular Bolivia 2024",
-      description: "Evento oficial de Angular Bolivia como organizador y director técnico",
-      date: "2024-05",
-      location: "Oruro, Bolivia",
-      type: "Organizer & Technical Director",
-    },
-    {
-      name: "Chatbots con Python: ChatGPT + WhatsApp Business",
-      description: "Workshop de integración de ChatGPT API con WhatsApp Business en PyDay La Paz",
-      date: "2023-06",
-      location: "UMSA, La Paz, Bolivia",
-      type: "Speaker & Workshop",
-    },
-    {
-      name: "Bootcamp FullStack: NestJS + Angular",
-      description: "Curso intensivo de desarrollo fullstack con NestJS, Angular y PostgreSQL",
-      date: "2022-11",
-      location: "UTO FNI, Oruro, Bolivia",
-      type: "Lead Instructor",
-    },
-  ];
+  // Import conferences data dynamically to avoid circular dependencies
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { conferences } = require("@/data/conferences.json");
+
+  // Map date strings to ISO format (approximate)
+  const dateMap: Record<string, string> = {
+    "Noviembre 2025": "2025-11",
+    "Septiembre 2025": "2025-09",
+    "Mayo - Junio 2025": "2025-05",
+    "Mayo 2024": "2024-05",
+    "Marzo 2024": "2024-03",
+    "Junio 2023": "2023-06",
+    "Febrero 2023": "2023-02",
+    "Nov - Dic 2022": "2022-11",
+    "Sep - Oct 2021": "2021-09",
+    "Abril - Mayo 2021": "2021-04",
+    "Diciembre 2019": "2019-12",
+    "Agosto 2019": "2019-08",
+    "Junio - Julio 2019": "2019-06",
+    "Junio - Agosto 2019": "2019-06",
+  };
 
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Conferencias y Talleres de David Morales Vega",
-    description:
-      "Colección de más de 16 conferencias, workshops y charlas técnicas impartidas en eventos de tecnología en Bolivia y Latinoamérica.",
-    numberOfItems: 16,
-    itemListElement: speakingEvents.map((event, index) => ({
+    description: `Colección de ${conferences.length} conferencias, workshops y charlas técnicas impartidas en eventos de tecnología en Bolivia y Latinoamérica desde 2019.`,
+    numberOfItems: conferences.length,
+    itemListElement: conferences.map((event: { title: string; description: string; date: string; institution: string; type: string; tags: string[] }, index: number) => ({
       "@type": "ListItem",
       position: index + 1,
       item: {
         "@type": "Event",
-        name: event.name,
-        description: event.description,
-        startDate: event.date,
+        name: `${event.title} ${event.description}`,
+        description: `${event.type} - ${event.tags.join(", ")}`,
+        startDate: dateMap[event.date] || "2019-01",
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         eventStatus: "https://schema.org/EventScheduled",
         location: {
           "@type": "Place",
-          name: event.location,
+          name: `${event.institution}, Bolivia`,
           address: { "@type": "PostalAddress", addressCountry: "Bolivia" },
         },
         performer: {

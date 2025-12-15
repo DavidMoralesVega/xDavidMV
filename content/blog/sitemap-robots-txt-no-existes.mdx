@@ -1,46 +1,67 @@
 ---
-title: "Sitemap.xml y Robots.txt: Si no configuras esto, no existes"
-description: "Guía práctica sobre los archivos fundamentales para el SEO técnico. Errores comunes con robots.txt y cómo configurar correctamente tu sitemap.xml."
-date: "2025-12-10"
-tags: ["SEO Técnico", "Infraestructura", "Web Development"]
-categories: ["SEO Técnico", "Infraestructura"]
+title: "Sitemap.xml y Robots.txt: Los Archivos que Determinan si Google Te Encuentra"
+description: "El 94% de páginas web no reciben tráfico de Google. Guía técnica de sitemap.xml y robots.txt para 2025: configuración correcta, errores fatales, AI crawlers, y optimización de crawl budget."
+date: "2025-12-13"
+tags: ["SEO Técnico", "Sitemap", "Robots.txt", "Google", "Indexación"]
+categories: ["SEO Técnico", "Infraestructura Web"]
 image: "/images/blog/article/robots-sitemaps.webp"
 imageAlt: "Configuración de sitemap.xml y robots.txt para SEO: archivos esenciales para indexación en Google"
 published: true
 ---
 
-Imagina que construyes una biblioteca inmensa, pero no le das un mapa al bibliotecario y, además, le pones un candado a la puerta de entrada. Eso es exactamente lo que pasa cuando ignoras el `sitemap.xml` y el `robots.txt`.
+Imagina que construyes una biblioteca inmensa, pero no le das un mapa al bibliotecario y además le pones un candado a la puerta de entrada. Eso es exactamente lo que pasa cuando ignoras el `sitemap.xml` y el `robots.txt`.
 
-Estos dos archivos son los porteros de tu sitio web. Controlan cómo interactúan los motores de búsqueda contigo.
+El dato más alarmante: según [SE Ranking](https://seranking.com/blog/seo-statistics/), **el 94% de todas las páginas web no reciben tráfico de Google**. Los archivos de configuración SEO correctos son la diferencia entre ser descubierto o ser ignorado.
 
-## 1. Robots.txt: El Cadenero del Club
+## El panorama SEO 2025: Los números
 
-Este archivo de texto vive en la raíz de tu dominio (`tusitio.com/robots.txt`). Su trabajo es decirles a las arañas (crawlers) a dónde **NO** pueden entrar.
+| Métrica | Dato |
+|---------|------|
+| Páginas que no reciben tráfico de Google | **94%** |
+| Búsquedas en Google por día | **8.5 mil millones** |
+| Búsquedas sin clic (zero-click) | **65%** |
+| Sitios con sitemap+robots bien configurados | **+20% visibilidad** |
+| Queries influenciadas por IA generativa (proyección 2025) | **70%** |
+
+### El nuevo factor: AI Crawlers
+
+Con la IA generativa dominando el 70% de queries para finales de 2025, el `robots.txt` ya no solo gestiona Googlebot. Ahora es el **gatekeeper de AI crawlers, content scrapers y tecnologías emergentes**.
+
+## Robots.txt: El guardián de tu sitio
+
+Este archivo de texto vive en la raíz de tu dominio (`tusitio.com/robots.txt`). Su trabajo es decirles a los crawlers (arañas) a dónde **NO** pueden entrar.
 
 ### El error catastrófico
 
-He visto sitios de empresas en Bolivia que, tras una migración de desarrollo a producción, olvidaron borrar esta línea:
+He visto sitios de empresas bolivianas que, tras una migración de desarrollo a producción, olvidaron borrar esta línea:
 
 ```text
 User-agent: *
 Disallow: /
 ```
 
-Esa simple barra `/` le dice a Google: "Prohibido entrar a todo el sitio". **Resultado: Desapareces de Google en 24-72 horas.**
+Esa simple barra `/` le dice a Google: **"Prohibido entrar a todo el sitio"**.
+
+**Resultado:** Desapareces de Google en 24-72 horas.
 
 Y el problema es que `robots.txt` no genera errores visibles. Tu sitio sigue funcionando perfectamente, pero Google simplemente deja de rastrearlo.
 
-### Configuración correcta para producción
+### Configuración correcta para producción (2025)
 
 ```text
-# Robots.txt para sitio de producción
+# ═══════════════════════════════════════════════════
+# Robots.txt - Sitio de Producción
+# ═══════════════════════════════════════════════════
+
+# Permitir acceso general
 User-agent: *
 Allow: /
 
-# Bloquear zonas administrativas
+# Bloquear zonas administrativas y privadas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /cuenta-usuario/
+Disallow: /dashboard/
 Disallow: /wp-admin/
 Disallow: /wp-login.php
 
@@ -49,141 +70,144 @@ Disallow: /*.json$
 Disallow: /*?preview=
 Disallow: /test/
 Disallow: /staging/
+Disallow: /_next/static/development/
 
 # Evitar rastreo de parámetros de tracking
 Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
 Disallow: /*?fbclid=
+Disallow: /*?gclid=
 
-# Indicar ubicación del sitemap
-Sitemap: https://tusitio.com/sitemap.xml
+# Evitar contenido duplicado por paginación
+Disallow: /*?page=
+Disallow: /*?sort=
+Disallow: /*?filter=
 
-# Configuraciones específicas por bot
+# ═══════════════════════════════════════════════════
+# Configuraciones por bot específico
+# ═══════════════════════════════════════════════════
+
+# Googlebot - Sin restricciones adicionales
 User-agent: Googlebot
 Crawl-delay: 0
 
+# Bingbot - Delay moderado
 User-agent: Bingbot
 Crawl-delay: 1
 
-# Bloquear scrapers maliciosos (opcional)
+# ═══════════════════════════════════════════════════
+# AI Crawlers (nuevo en 2025)
+# ═══════════════════════════════════════════════════
+
+# GPTBot (OpenAI) - Permitir o bloquear según preferencia
+User-agent: GPTBot
+# Disallow: /  # Descomenta para bloquear ChatGPT de usar tu contenido
+
+# Google-Extended (Bard/Gemini)
+User-agent: Google-Extended
+Allow: /
+
+# Claude Bot (Anthropic)
+User-agent: anthropic-ai
+Allow: /
+
+# ═══════════════════════════════════════════════════
+# Scrapers y bots de análisis (opcional)
+# ═══════════════════════════════════════════════════
+
+# Bloquear scrapers agresivos
 User-agent: SemrushBot
-Disallow: /
+Crawl-delay: 10
 
 User-agent: AhrefsBot
 Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+# ═══════════════════════════════════════════════════
+# Ubicación del Sitemap
+# ═══════════════════════════════════════════════════
+
+Sitemap: https://www.tusitio.com/sitemap.xml
 ```
 
-### Robots.txt no es seguridad
+### Robots.txt NO es seguridad
 
-**IMPORTANTE:** `robots.txt` no protege información sensible. Es solo una sugerencia que los bots educados respetan. Los bots maliciosos lo ignoran.
+**CRÍTICO:** `robots.txt` no protege información sensible. Es solo una **sugerencia** que los bots educados respetan. Los bots maliciosos lo ignoran completamente.
 
-Para proteger contenido sensible, usa:
-- Autenticación (login real)
+Para proteger contenido sensible:
+- Autenticación real (login)
 - Headers HTTP `X-Robots-Tag: noindex`
 - Meta tag `<meta name="robots" content="noindex,nofollow">`
 
-## 2. Sitemap.xml: El Mapa del Tesoro
+## Sitemap.xml: El mapa para los buscadores
 
-Google es listo, pero no adivino. El `sitemap.xml` lista todas las URLs que *tú quieres* que se indexen, con metadatos como fecha de modificación y prioridad.
+Google es listo, pero no adivino. El `sitemap.xml` lista todas las URLs que **tú quieres** que se indexen, con metadatos importantes.
 
 ### Anatomía de un sitemap
 
-```text
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://tusitio.com/</loc>
-    <lastmod>2025-12-10</lastmod>
+    <loc>https://www.tusitio.com/</loc>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tusitio.com/servicios</loc>
+    <loc>https://www.tusitio.com/servicios</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tusitio.com/blog/articulo-importante</loc>
-    <lastmod>2025-12-09</lastmod>
+    <loc>https://www.tusitio.com/blog/articulo-importante</loc>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.tusitio.com/images/articulo.webp</image:loc>
+      <image:caption>Descripción de la imagen</image:caption>
+    </image:image>
   </url>
 </urlset>
 ```
 
-**Campos importantes:**
-- `<loc>`: URL completa (obligatorio)
-- `<lastmod>`: Última modificación en formato ISO 8601 (recomendado)
-- `<changefreq>`: Frecuencia estimada de cambios (Google lo ignora mayormente)
-- `<priority>`: Importancia relativa 0.0-1.0 (Google lo ignora mayormente)
+### Campos del sitemap
 
-### Sitemap Index: Para sitios grandes
+| Campo | Obligatorio | Descripción | Impacto real |
+|-------|-------------|-------------|--------------|
+| `<loc>` | Sí | URL completa | Esencial |
+| `<lastmod>` | No, pero recomendado | Última modificación (ISO 8601) | Google lo considera |
+| `<changefreq>` | No | Frecuencia de cambios | Google lo ignora mayormente |
+| `<priority>` | No | Importancia relativa 0.0-1.0 | Google lo ignora mayormente |
+
+### Sitemap Index para sitios grandes
 
 Si tienes más de 50,000 URLs o tu sitemap pesa más de 50MB, necesitas dividirlo:
 
-```text
-<!-- sitemap-index.xml -->
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://tusitio.com/sitemap-pages.xml</loc>
-    <lastmod>2025-12-10</lastmod>
+    <loc>https://www.tusitio.com/sitemap-pages.xml</loc>
+    <lastmod>2025-12-13</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://tusitio.com/sitemap-blog.xml</loc>
-    <lastmod>2025-12-10</lastmod>
+    <loc>https://www.tusitio.com/sitemap-blog.xml</loc>
+    <lastmod>2025-12-13</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://tusitio.com/sitemap-products.xml</loc>
-    <lastmod>2025-12-09</lastmod>
+    <loc>https://www.tusitio.com/sitemap-products.xml</loc>
+    <lastmod>2025-12-12</lastmod>
   </sitemap>
 </sitemapindex>
 ```
 
-En `robots.txt` solo referencias el index:
-
-```text
-Sitemap: https://tusitio.com/sitemap-index.xml
-```
-
-## 3. Sitemaps especializados: Imágenes y Videos
-
-Google puede indexar imágenes y videos que aparecen en tu sitemap.
-
-### Sitemap de imágenes
-
-```text
-<url>
-  <loc>https://tusitio.com/blog/arquitectura-microservicios</loc>
-  <image:image>
-    <image:loc>https://tusitio.com/images/microservices-diagram.jpg</image:loc>
-    <image:caption>Diagrama de arquitectura de microservicios</image:caption>
-    <image:title>Arquitectura de Microservicios</image:title>
-  </image:image>
-</url>
-```
-
-### Sitemap de videos
-
-```text
-<url>
-  <loc>https://tusitio.com/blog/tutorial-docker</loc>
-  <video:video>
-    <video:thumbnail_loc>https://tusitio.com/thumbnails/docker.jpg</video:thumbnail_loc>
-    <video:title>Tutorial completo de Docker</video:title>
-    <video:description>Aprende Docker desde cero en 30 minutos</video:description>
-    <video:content_loc>https://tusitio.com/videos/docker-tutorial.mp4</video:content_loc>
-    <video:duration>1800</video:duration>
-    <video:publication_date>2025-12-01T00:00:00+00:00</video:publication_date>
-  </video:video>
-</url>
-```
-
-> Si tu sitemap incluye páginas de "Gracias por su compra" o URLs con contenido duplicado, estás confundiendo a Google. No envíes basura.
->
-> — David Morales Vega
-
-## 4. Qué incluir y qué excluir del sitemap
+## Qué incluir y qué excluir del sitemap
 
 | Incluir | Excluir |
 |---------|---------|
@@ -192,9 +216,8 @@ Google puede indexar imágenes y videos que aparecen en tu sitemap.
 | Páginas de servicios/productos | URLs con parámetros de tracking |
 | Landing pages | Páginas de login/registro |
 | Categorías importantes | Contenido duplicado |
-| Páginas de autor/equipo | Páginas de confirmación de email |
-| - | URLs canónicas duplicadas |
-| - | Páginas bloqueadas en robots.txt |
+| Páginas de autor/equipo | Páginas de confirmación |
+| URLs canónicas | URLs con query strings |
 
 ### La trampa del contenido duplicado
 
@@ -205,21 +228,21 @@ Si tienes:
 
 **Solo incluye la canónica** en el sitemap y usa canonical tags:
 
-```text
-<link rel="canonical" href="https://tusitio.com/blog/mi-articulo" />
+```html
+<link rel="canonical" href="https://www.tusitio.com/blog/mi-articulo" />
 ```
 
-## 5. Generación automática en Next.js
+## Generación automática en Next.js
 
-Next.js puede generar el sitemap dinámicamente:
+Next.js (App Router) genera el sitemap dinámicamente:
 
 ```typescript
-// app/sitemap.ts - Next.js App Router
+// app/sitemap.ts
 import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://tusitio.com'
+  const baseUrl = 'https://www.tusitio.com'
   const posts = await getAllPosts()
 
   const blogUrls = posts.map((post) => ({
@@ -229,18 +252,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }))
 
-  const staticPages = [
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
+      changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${baseUrl}/servicios`,
       lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'monthly',
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/contacto`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/conferencias`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
   ]
 
@@ -250,80 +285,106 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
 Next.js generará automáticamente el XML en `/sitemap.xml`.
 
-### Generación en Astro
+### Robots.txt dinámico en Next.js
 
-```text
-// src/pages/sitemap.xml.ts
-import type { APIRoute } from 'astro'
-import { getCollection } from 'astro:content'
+```typescript
+// app/robots.ts
+import { MetadataRoute } from 'next'
 
-export const GET: APIRoute = async ({ site }) => {
-  const posts = await getCollection('blog')
+export default function robots(): MetadataRoute.Robots {
+  const baseUrl = 'https://www.tusitio.com'
 
-  const sitemap = `
-    <?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      <url>
-        <loc>${site}</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
-        <priority>1.0</priority>
-      </url>
-      ${posts.map(post => `
-        <url>
-          <loc>${site}blog/${post.slug}/</loc>
-          <lastmod>${post.data.date.toISOString()}</lastmod>
-          <priority>0.8</priority>
-        </url>
-      `).join('')}
-    </urlset>
-  `
-
-  return new Response(sitemap, {
-    headers: { 'Content-Type': 'application/xml; charset=utf-8' }
-  })
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/admin/', '/api/', '/preview/'],
+      },
+      {
+        userAgent: 'GPTBot',
+        allow: '/',
+      },
+    ],
+    sitemap: `${baseUrl}/sitemap.xml`,
+  }
 }
 ```
 
-## 6. Robots Meta Tags vs Robots.txt
+## Optimización del Crawl Budget
 
-Hay una diferencia crítica:
+Google asigna un "presupuesto de rastreo" basado en la autoridad de tu dominio. En sitios grandes, desperdiciar crawl budget es crítico.
 
-**robots.txt:** Evita que Google rastree (crawl) una página.
-**Meta robots:** Google rastrea la página, pero no la indexa.
+### El problema de la navegación facetada
+
+En e-commerce, cada combinación de filtros crea una nueva URL:
 
 ```text
-<!-- Google puede ver esta página pero no la indexará -->
-<meta name="robots" content="noindex, follow" />
-
-<!-- Google no indexa ni sigue los enlaces -->
-<meta name="robots" content="noindex, nofollow" />
-
-<!-- Solo para Googlebot (otros bots sí indexan) -->
-<meta name="googlebot" content="noindex" />
+/productos?color=rojo
+/productos?color=rojo&talla=M
+/productos?color=rojo&talla=M&orden=precio
+/productos?color=rojo&talla=M&orden=precio&page=2
 ```
 
-**Caso de uso:** Páginas de categorías con contenido duplicado de productos. Quieres que Google vea los enlaces a productos (follow), pero no indexe la categoría misma (noindex).
+Esto puede generar **millones de URLs** de contenido duplicado.
 
-## 7. Optimización del Crawl Budget
+### Solución: Bloquear en robots.txt
 
-Google asigna un "presupuesto de rastreo" basado en la autoridad de tu dominio. En sitios pequeños (menos de 10,000 páginas) no es crítico. En sitios grandes, desperdiciar crawl budget es criminal.
+```text
+# Bloquear parámetros de filtrado
+Disallow: /*?color=
+Disallow: /*?talla=
+Disallow: /*?orden=
+Disallow: /*?page=
 
-### Estrategias de optimización
+# Permitir solo las URLs canónicas
+Allow: /productos/$
+```
 
-**Bloquea URLs de parámetros infinitos:**
+### Parámetros en Google Search Console
+
+En Search Console > Configuración > Parámetros de URL, indica qué parámetros son irrelevantes para el contenido.
+
+## Errores comunes y cómo detectarlos
+
+### 1. Sitemap no accesible
+
+```bash
+# Verificar accesibilidad
+curl -I https://www.tusitio.com/sitemap.xml
+
+# Debe retornar:
+HTTP/2 200
+content-type: application/xml
+```
+
+Si retorna 404, Google no lo puede leer.
+
+### 2. Conflicto robots.txt vs sitemap
 
 ```text
 # robots.txt
-Disallow: /*?page=
-Disallow: /*?sort=
-Disallow: /*?color=
+Disallow: /admin/
+
+# sitemap.xml (❌ MAL)
+<url>
+  <loc>https://www.tusitio.com/admin/dashboard</loc>
+</url>
 ```
 
-**Usa parámetros canónicos en Search Console:**
+Esto confunde a Google. Search Console te avisará del conflicto.
 
-En Google Search Console > Configuración > Parámetros de URL, indica qué parámetros son irrelevantes (tracking, sorting).
+### 3. URLs con redirecciones en sitemap
 
-**Elimina soft 404s:**
+El sitemap debe incluir solo URLs finales. Si `/old-page` redirige a `/new-page`, solo incluye `/new-page`.
+
+### 4. Sitemap desactualizado
+
+Si tu sitemap dice `lastmod: 2020-01-01` pero estamos en 2025, Google puede pensar que tu contenido está abandonado.
+
+**Solución:** Genera el sitemap dinámicamente en cada build.
+
+### 5. Soft 404s
 
 Páginas que devuelven 200 OK pero dicen "No encontrado". Google gasta presupuesto rastreándolas.
 
@@ -340,55 +401,29 @@ export async function generateMetadata({ params }) {
 }
 ```
 
-**Consolida contenido duplicado:**
+## Robots Meta Tags vs Robots.txt
 
-Si tienes 50 páginas de categorías casi idénticas, considera consolidar y hacer redirect 301.
+Hay una diferencia crítica:
 
-## 8. Errores comunes y cómo detectarlos
+| Método | Efecto |
+|--------|--------|
+| `robots.txt: Disallow` | Evita que Google **rastree** (crawl) la página |
+| `meta robots: noindex` | Google rastrea la página pero **no la indexa** |
 
-**Sitemap no accesible:**
+```html
+<!-- Google puede ver esta página pero no la indexará -->
+<meta name="robots" content="noindex, follow" />
 
-```bash
-# Verifica que esté accesible
-curl -I https://tusitio.com/sitemap.xml
+<!-- Google no indexa ni sigue los enlaces -->
+<meta name="robots" content="noindex, nofollow" />
 
-# Debe retornar:
-HTTP/2 200
-content-type: application/xml
+<!-- Solo para Googlebot -->
+<meta name="googlebot" content="noindex" />
 ```
 
-Si retorna 404, Google no lo puede leer.
+**Caso de uso:** Páginas de categorías con contenido duplicado. Quieres que Google vea los enlaces a productos (`follow`), pero no indexe la categoría misma (`noindex`).
 
-**URLs bloqueadas en robots.txt pero incluidas en sitemap:**
-
-```text
-# robots.txt
-Disallow: /admin/
-
-# sitemap.xml (❌ MAL)
-<url>
-  <loc>https://tusitio.com/admin/dashboard</loc>
-</url>
-```
-
-Esto confunde a Google. Search Console te avisará del conflicto.
-
-**URLs con redirecciones 301 en sitemap:**
-
-El sitemap debe incluir solo URLs finales. Si `tusitio.com/old-page` redirige a `/new-page`, solo incluye `/new-page`.
-
-```typescript
-// Filtra URLs con redirects
-const urls = allPages.filter(page => !page.redirectsTo)
-```
-
-**Sitemap desactualizado:**
-
-Si tu sitemap dice `lastmod: 2020-01-01` pero estamos en 2025, Google puede pensar que tu contenido está muerto.
-
-**Solución:** Genera el sitemap dinámicamente en cada build.
-
-## 9. Verificación en Google Search Console
+## Verificación en Google Search Console
 
 1. Ve a [Google Search Console](https://search.google.com/search-console)
 2. Selecciona tu propiedad
@@ -396,61 +431,68 @@ Si tu sitemap dice `lastmod: 2020-01-01` pero estamos en 2025, Google puede pens
 4. Agrega la URL de tu sitemap
 5. Haz clic en "Enviar"
 
-Google te dirá:
+**Google te dirá:**
 - Cuántas URLs descubrió
 - Cuántas indexó exitosamente
 - Errores encontrados
 
 **Monitorea semanalmente** para detectar problemas temprano.
 
-## 10. Herramientas de validación
+## Herramientas de validación
 
-Antes de enviar tu sitemap:
+| Herramienta | Uso |
+|-------------|-----|
+| [XML Sitemaps Validator](https://www.xml-sitemaps.com/validate-xml-sitemap.html) | Validar XML |
+| [Google Search Console](https://search.google.com/search-console) | Prueba de sitemap integrada |
+| [Screaming Frog](https://www.screamingfrog.co.uk/seo-spider/) | Rastrear y generar sitemap |
+| [Google Robots Testing Tool](https://support.google.com/webmasters/answer/6062598) | Validar robots.txt |
 
-- **Validador XML oficial:** [xml-sitemaps.com/validate-xml-sitemap.html](https://www.xml-sitemaps.com/validate-xml-sitemap.html)
-- **Google Search Console:** Prueba de sitemap integrada
-- **Screaming Frog:** Rastrea tu sitio y genera sitemap automático
-- **Validador de robots.txt:** [support.google.com/webmasters/tools/robots-testing-tool](https://support.google.com/webmasters/answer/6062598)
+## Checklist de verificación completa
 
-## Acción recomendada
+```text
+ROBOTS.TXT
+[ ] Existe y es accesible (tusitio.com/robots.txt)
+[ ] No bloquea contenido importante
+[ ] Referencia el sitemap correctamente
+[ ] Configura AI crawlers según preferencia
+[ ] No bloquea CSS/JS (Google necesita renderizar)
 
-Entra hoy mismo a `tusitio.com/robots.txt` y `tusitio.com/sitemap.xml`.
+SITEMAP.XML
+[ ] Es válido (XML bien formado)
+[ ] Todas las URLs retornan status 200
+[ ] No incluye contenido duplicado
+[ ] No incluye URLs bloqueadas en robots.txt
+[ ] lastmod actualizado en cada deploy
+[ ] Registrado en Google Search Console
+[ ] Registrado en Bing Webmaster Tools
 
-Si alguno de estos escenarios es cierto, **estás perdiendo tráfico**:
-
-- El robots.txt bloquea rutas importantes
-- No tienes sitemap.xml
-- El sitemap no está registrado en Search Console
-- Tienes URLs duplicadas en el sitemap
-- El sitemap incluye páginas que retornan 404
-- Hace más de 6 meses que no revisas errores en Search Console
-
-### Checklist de verificación completa
-
-- `robots.txt` existe y es accesible
-- No bloquea contenido importante
-- Referencia el sitemap correctamente
-- `sitemap.xml` es válido (XML bien formado)
-- Todas las URLs son accesibles (status 200)
-- No incluye contenido duplicado
-- Registrado en Google Search Console
-- Registrado en Bing Webmaster Tools
-- Sin errores de rastreo en Search Console
-- Sitemap generado automáticamente en cada deploy
+MONITOREO
+[ ] Sin errores de rastreo en Search Console
+[ ] Revisar cobertura de índice mensualmente
+[ ] Verificar que nuevas páginas se indexen
+```
 
 ## Conclusión
 
 `robots.txt` y `sitemap.xml` son infraestructura básica del SEO técnico. Ignorarlos es como tener una tienda física sin señalización en la calle.
 
-La buena noticia: configurarlos correctamente es un trabajo de 30 minutos que puede aumentar tu tráfico orgánico en 20-40% en los siguientes 3 meses.
+La buena noticia: configurarlos correctamente es un trabajo de **30 minutos** que puede aumentar tu visibilidad en **+20%** en los siguientes 3 meses.
 
-Si no entiendes lo que dice tu `robots.txt` actual, o si no tienes cuenta en **Google Search Console** enviando tu sitemap, cada día que pasa es tráfico orgánico perdido para siempre.
+Si no entiendes lo que dice tu `robots.txt` actual, o si no tienes cuenta en Google Search Console enviando tu sitemap, cada día que pasa es tráfico orgánico perdido.
 
-Hazlo hoy. Google (y tu cliente) te lo agradecerán.
+Hazlo hoy. Google te lo agradecerá.
 
-### Recursos para profundizar
+> El mejor sitemap es el que se genera automáticamente en cada deploy y nunca tienes que tocar manualmente.
+>
+> — David Morales Vega
 
+---
+
+## Fuentes y recursos
+
+- [SE Ranking: 120+ SEO Statistics 2025](https://seranking.com/blog/seo-statistics/)
 - [Google: Introduction to robots.txt](https://developers.google.com/search/docs/crawling-indexing/robots/intro)
 - [Sitemaps.org Protocol](https://www.sitemaps.org/protocol.html)
 - [Google Search Central: Sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview)
+- [Search Engine Land: Robots.txt SEO](https://searchengineland.com/robots-txt-seo-453779)
 - [Moz: XML Sitemaps Guide](https://moz.com/learn/seo/xml-sitemap)

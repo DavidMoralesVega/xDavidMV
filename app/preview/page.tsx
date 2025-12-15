@@ -1,19 +1,50 @@
-import BlogSection from "@/components/sections/BlogSection";
-import ConferencesSection from "@/components/sections/ConferencesSection";
-import CtaSection from "@/components/sections/CtaSection";
-import EducationSection from "@/components/sections/EducationSection";
+import dynamic from "next/dynamic";
 import Footer from "@/components/footers/Footer";
-
-import AboutSection from "@/components/sections/AboutSection";
-import ExperiencesSection from "@/components/sections/ExperiencesSection";
-import ServicesSection from "@/components/pages/services/Services";
 import HeroSection from "@/components/sections/hero/HeroSection";
-import MarqueeSection from "@/components/sections/MarqueeSection";
-import ParallaxImageDivider from "@/components/sections/dividers/ParallaxImageDivider";
-import ParallaxVideoDivider from "@/components/sections/dividers/ParallaxVideoDivider";
-import TechStackSection from "@/components/sections/TechStackSection";
-
+import AboutSection from "@/components/sections/AboutSection";
 import { Metadata } from "next";
+
+// Lazy load below-the-fold sections to reduce initial JS bundle
+const ParallaxVideoDivider = dynamic(
+  () => import("@/components/sections/dividers/ParallaxVideoDivider"),
+  { ssr: true }
+);
+const ConferencesSection = dynamic(
+  () => import("@/components/sections/ConferencesSection"),
+  { ssr: true }
+);
+const ServicesSection = dynamic(
+  () => import("@/components/pages/services/Services"),
+  { ssr: true }
+);
+const ParallaxImageDivider = dynamic(
+  () => import("@/components/sections/dividers/ParallaxImageDivider"),
+  { ssr: true }
+);
+const ExperiencesSection = dynamic(
+  () => import("@/components/sections/ExperiencesSection"),
+  { ssr: true }
+);
+const TechStackSection = dynamic(
+  () => import("@/components/sections/TechStackSection"),
+  { ssr: true }
+);
+const MarqueeSection = dynamic(
+  () => import("@/components/sections/MarqueeSection"),
+  { ssr: true }
+);
+const EducationSection = dynamic(
+  () => import("@/components/sections/EducationSection"),
+  { ssr: true }
+);
+const BlogSection = dynamic(
+  () => import("@/components/sections/BlogSection"),
+  { ssr: true }
+);
+const CtaSection = dynamic(
+  () => import("@/components/sections/CtaSection"),
+  { ssr: true }
+);
 
 export const metadata: Metadata = {
   title: "David Morales Vega | Solutions Architect & Tech Lead",

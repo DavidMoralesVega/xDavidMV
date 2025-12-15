@@ -13,6 +13,7 @@ export const metadata = generatePageMetadata({
   description:
     "Contáctame para proyectos de arquitectura de software, desarrollo web, consultoría tecnológica o conferencias. Oruro, Bolivia. +591 61816001",
   path: "/contacto",
+  image: "/images/og/og-contacto.webp",
 });
 export default function ContactPage() {
   return (

@@ -75,11 +75,11 @@ export const mdxComponents: MDXComponents = {
     return (
       <span className="article-image">
         <img
-                src="imageSrc"
-                alt={alt || ""}
-                className="rounded-lg"
-                loading="lazy"
-              />
+          src={imageSrc}
+          alt={alt || ""}
+          className="rounded-lg"
+          loading="lazy"
+        />
         {alt && <span className="article-image-caption">{alt}</span>}
       </span>
     );
@@ -121,11 +121,13 @@ export const mdxComponents: MDXComponents = {
   }) => (
     <span className="article-image">
       <img
-                src="src"
-                alt="alt"
-                className="rounded-lg"
-                loading="lazy"
-              />
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className="rounded-lg"
+        loading="lazy"
+      />
     </span>
   ),
 };

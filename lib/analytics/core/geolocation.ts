@@ -8,6 +8,75 @@ import type { GeoInfo } from "../types";
 let geoCache: GeoInfo | null = null;
 let geoCacheTimestamp: number = 0;
 const GEO_CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
+const GEO_STORAGE_KEY = "geo_cache";
+const GEO_RATE_LIMIT_KEY = "geo_rate_limited";
+
+/**
+ * Get cached geo from localStorage
+ */
+function getStoredGeo(): { geo: GeoInfo; timestamp: number } | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const stored = localStorage.getItem(GEO_STORAGE_KEY);
+    if (stored) {
+      return JSON.parse(stored);
+    }
+  } catch {
+    // Ignore storage errors
+  }
+  return null;
+}
+
+/**
+ * Store geo in localStorage
+ */
+function storeGeo(geo: GeoInfo): void {
+  if (typeof window === "undefined") return;
+  try {
+    localStorage.setItem(
+      GEO_STORAGE_KEY,
+      JSON.stringify({ geo, timestamp: Date.now() })
+    );
+  } catch {
+    // Ignore storage errors
+  }
+}
+
+/**
+ * Check if rate limited (to avoid repeated 429 errors)
+ */
+function isRateLimited(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    const limited = localStorage.getItem(GEO_RATE_LIMIT_KEY);
+    if (limited) {
+      const limitedUntil = parseInt(limited, 10);
+      if (Date.now() < limitedUntil) {
+        return true;
+      }
+      localStorage.removeItem(GEO_RATE_LIMIT_KEY);
+    }
+  } catch {
+    // Ignore storage errors
+  }
+  return false;
+}
+
+/**
+ * Mark as rate limited for 1 hour
+ */
+function setRateLimited(): void {
+  if (typeof window === "undefined") return;
+  try {
+    // Wait 1 hour before retrying after 429
+    localStorage.setItem(
+      GEO_RATE_LIMIT_KEY,
+      String(Date.now() + 60 * 60 * 1000)
+    );
+  } catch {
+    // Ignore storage errors
+  }
+}
 
 /**
  * Default/unknown geo info
@@ -34,9 +103,22 @@ const unknownGeo: GeoInfo = {
  * Uses ipapi.co for client-side geolocation (static export compatible)
  */
 export async function getGeolocation(): Promise<GeoInfo> {
-  // Return cached value if still valid
+  // Return memory cached value if still valid
   if (geoCache && Date.now() - geoCacheTimestamp < GEO_CACHE_DURATION) {
     return geoCache;
+  }
+
+  // Check localStorage cache
+  const stored = getStoredGeo();
+  if (stored && Date.now() - stored.timestamp < GEO_CACHE_DURATION) {
+    geoCache = stored.geo;
+    geoCacheTimestamp = stored.timestamp;
+    return stored.geo;
+  }
+
+  // Check if rate limited - return unknown geo silently
+  if (isRateLimited()) {
+    return unknownGeo;
   }
 
   // Client-side only: use ipapi.co directly
@@ -55,15 +137,23 @@ async function getGeoFromIpapi(): Promise<GeoInfo> {
       },
     });
 
+    // Handle rate limiting (429)
+    if (response.status === 429) {
+      setRateLimited();
+      return unknownGeo;
+    }
+
     if (!response.ok) {
       throw new Error(`ipapi.co returned ${response.status}`);
     }
 
     const data = await response.json();
 
-    // Check for rate limit or error
+    // Check for rate limit or error in response body
     if (data.error) {
-      console.warn("[Analytics] ipapi.co error:", data.reason);
+      if (data.reason === "RateLimited") {
+        setRateLimited();
+      }
       return unknownGeo;
     }
 
@@ -86,9 +176,15 @@ async function getGeoFromIpapi(): Promise<GeoInfo> {
 
     geoCache = geo;
     geoCacheTimestamp = Date.now();
+    storeGeo(geo);
 
     return geo;
   } catch (error) {
+    // Don't log 429 errors to console - they're handled silently
+    if (error instanceof Error && error.message.includes("429")) {
+      setRateLimited();
+      return unknownGeo;
+    }
     console.error("[Analytics] ipapi.co fetch failed:", error);
     return unknownGeo;
   }

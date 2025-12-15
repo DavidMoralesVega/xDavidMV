@@ -211,10 +211,13 @@ export default function BlogListClient({
   };
 
   const handlePageChange = (page: number) => {
+    if (page < 1 || page > totalPages) return;
     setCurrentPage(page);
     updateUrl(category, tag, search, page);
     // Scroll to top of posts
-    document.getElementById("blog-posts")?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      document.getElementById("blog-posts")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
   };
 
   const hasActiveFilters = category || tag || search;
@@ -448,7 +451,7 @@ export default function BlogListClient({
                     <button
                       type="button"
                       onClick={() => handlePageChange(validPage - 1)}
-                      className={`blog-pagination-control prev ${
+                      className={`btn btn-line-default blog-pagination-control prev ${
                         validPage <= 1 ? "disabled" : ""
                       }`}
                       disabled={validPage <= 1}
@@ -490,7 +493,7 @@ export default function BlogListClient({
                     <button
                       type="button"
                       onClick={() => handlePageChange(validPage + 1)}
-                      className={`blog-pagination-control next ${
+                      className={`btn btn-line-default blog-pagination-control next ${
                         validPage >= totalPages ? "disabled" : ""
                       }`}
                       disabled={validPage >= totalPages}

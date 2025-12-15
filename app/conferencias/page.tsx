@@ -14,6 +14,7 @@ export const metadata = generatePageMetadata({
   description:
     "Galería de conferencias, charlas y talleres impartidos en eventos tecnológicos de Bolivia y Latinoamérica. +16 presentaciones sobre Angular, NestJS, IA, DevOps y arquitectura de software.",
   path: "/conferencias",
+  image: "/images/og/og-conferencias.webp",
   tags: ["Conferencias", "Talleres", "Angular", "NestJS", "DevOps", "IA", "Speaker", "Bolivia"],
 });
 

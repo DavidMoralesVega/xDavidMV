@@ -82,7 +82,7 @@
  * ------------------------------------------------
  * Table of Contents End
  * ------------------------------------------------ */
-@import url(https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&amp;display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap);
 :root {
   --_size: 1.8rem;
@@ -388,28 +388,25 @@
   background-image: url(/images/illustrations/2400x1600_divider-10.webp);
 }
 .preview-image-1 {
-  background-image: url(/images/works/preview/1400x1400_prv-01.webp);
+  background-image: url(/images/conferences/preview/1400x1400_prv-01.webp);
 }
 .preview-image-2 {
-  background-image: url(/images/works/preview/1400x1400_prv-02.webp);
+  background-image: url(/images/conferences/preview/1400x1400_prv-02.webp);
 }
 .preview-image-3 {
-  background-image: url(/images/works/preview/1400x1400_prv-03.webp);
+  background-image: url(/images/conferences/preview/1400x1400_prv-03.webp);
 }
 .preview-image-4 {
-  background-image: url(/images/works/preview/1400x1400_prv-04.webp);
+  background-image: url(/images/conferences/preview/1400x1400_prv-04.webp);
 }
 .preview-image-5 {
-  background-image: url(/images/works/preview/1400x1400_prv-05.webp);
+  background-image: url(/images/conferences/preview/1400x1400_prv-05.webp);
 }
 .preview-image-6 {
-  background-image: url(/images/works/preview/1400x1400_prv-06.webp);
+  background-image: url(/images/conferences/preview/1400x1400_prv-06.webp);
 }
 .preview-image-7 {
-  background-image: url(/images/works/preview/1400x1400_prv-07.webp);
-}
-.blog-preview-image-1 {
-  background-image: url(/images/blog/preview/1000x1250_prv-01.webp);
+  background-image: url(/images/conferences/preview/1400x1400_prv-07.webp);
 }
 .blog-preview-image-2 {
   background-image: url(/images/blog/preview/1000x1250_prv-02.webp);
@@ -437,12 +434,6 @@
 }
 .headline-img-07::before {
   background-image: url(/images/brand/astronauta.webp);
-}
-.image-values-1 {
-  background-image: url(/images/team/1200x1600_team-01.webp);
-}
-.image-values-2 {
-  background-image: url(/images/team/1600x1200_team-01.webp);
 }
 .prj-details-img-01 {
   background-image: url(/images/works/2200x1650_prj-details-01.webp);

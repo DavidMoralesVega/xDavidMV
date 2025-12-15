@@ -7,6 +7,15 @@ import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Helper to defer non-critical work
+const scheduleIdleWork = (callback: () => void) => {
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(callback, { timeout: 2000 });
+  } else {
+    setTimeout(callback, 200);
+  }
+};
+
 export default function useGsapScrollScaleAnimations() {
   const pathname = usePathname();
   useEffect(() => {
@@ -252,10 +261,8 @@ export default function useGsapScrollScaleAnimations() {
     // Remove global refresh listener - let individual components handle their own refresh
     // ScrollTrigger.addEventListener("refresh", handleRefresh);
 
-    // Initialize with a small delay to ensure DOM is ready
-    setTimeout(() => {
-      initAnim();
-    }, 100);
+    // Initialize with requestIdleCallback to not block main thread
+    scheduleIdleWork(initAnim);
 
     return () => {
       // Only kill our specific ScrollTriggers

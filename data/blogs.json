@@ -1,19 +1,63 @@
 {
   "blogs1": [
     {
-      "id": 20,
+      "id": 30,
       "imageClass": "blog-preview-image-1",
-      "tags": ["Educación", "SENAPI"],
+      "tags": ["Bolivia Tech", "Industria"],
       "imgSrc": "/images/blog/preview/1000x1250_prv-01.webp",
       "title": {
-        "before": "Bolivia ante el reto de la",
-        "highlight": "educación permanente",
+        "before": "Estado del Desarrollo de",
+        "highlight": "Software en Bolivia 2025",
         "after": ""
       },
-      "slug": "bolivia-ante-el-reto-de-la-educacion-permanente"
+      "slug": "estado-desarrollo-software-bolivia-2025"
     }
   ],
   "blogs2": [
+    {
+      "id": 26,
+      "img": "/images/blog/article/bolivia-software-2025.webp",
+      "imgAlt": "Panorama de la industria del desarrollo de software en Bolivia 2025: startups, empresas y ecosistema tecnológico",
+      "categories": ["Análisis de Industria", "Bolivia Tech"],
+      "meta": ["Bolivia", "Startups", "Industria Tech"],
+      "date": "Diciembre 2025",
+      "title": "Estado del Desarrollo de Software en Bolivia 2025: Datos, Oportunidades y Realidades",
+      "excerpt": "Análisis exhaustivo de la industria del software boliviana: 152 startups, 1,149 empresas, $57 millones en exportaciones. Datos reales sobre salarios, talento, inversión y el ecosistema tech.",
+      "slug": "estado-desarrollo-software-bolivia-2025"
+    },
+    {
+      "id": 27,
+      "img": "/images/blog/article/angular-empresas-bolivia.webp",
+      "imgAlt": "Angular para empresas bolivianas: framework de desarrollo web para aplicaciones corporativas escalables",
+      "categories": ["Desarrollo Web", "Guías Técnicas"],
+      "meta": ["Angular", "Empresas", "Framework"],
+      "date": "Diciembre 2025",
+      "title": "Guía Completa de Angular para Empresas Bolivianas",
+      "excerpt": "Angular domina el desarrollo empresarial en Bolivia. Guía técnica y de negocio: arquitectura, casos de uso, costos, comparativas con React/Vue, y cómo implementarlo.",
+      "slug": "guia-angular-empresas-bolivianas"
+    },
+    {
+      "id": 28,
+      "img": "/images/blog/article/contratar-desarrolladores-oruro.webp",
+      "imgAlt": "Contratar desarrolladores de software en Oruro Bolivia: guía para empresas locales y remotas",
+      "categories": ["Mercado Laboral", "Bolivia Tech"],
+      "meta": ["Oruro", "Contratación", "Talento Tech"],
+      "date": "Diciembre 2025",
+      "title": "Cómo Contratar Desarrolladores en Oruro: Guía para Empresas",
+      "excerpt": "Guía práctica para contratar talento tech en Oruro, Bolivia. Salarios reales, dónde encontrar desarrolladores, qué evaluar, universidades locales (UTO), y cómo competir.",
+      "slug": "como-contratar-desarrolladores-oruro-bolivia"
+    },
+    {
+      "id": 29,
+      "img": "/images/blog/article/legal-tech-bolivia.webp",
+      "imgAlt": "Legal-Tech en Bolivia: tecnología jurídica, automatización legal e inteligencia artificial en el derecho boliviano",
+      "categories": ["Legal-Tech", "Innovación"],
+      "meta": ["Legal-Tech", "Derecho Digital", "IA Jurídica"],
+      "date": "Diciembre 2025",
+      "title": "Legal-Tech en Bolivia: El Futuro de la Tecnología Jurídica",
+      "excerpt": "Bolivia tiene un mercado legal-tech prácticamente virgen. Análisis desde la perspectiva única de un profesional con títulos en Ingeniería de Sistemas y Derecho.",
+      "slug": "legal-tech-bolivia-futuro-derecho-tecnologia"
+    },
     {
       "id": 1,
       "img": "/images/blog/article/education.webp",
@@ -28,23 +72,23 @@
     {
       "id": 21,
       "img": "/images/blog/article/programar-horas.webp",
-      "imgAlt": "Programador agotado trabajando largas horas: productividad vs burnout en desarrollo de software",
-      "categories": ["Opinión", "Carrera Profesional"],
-      "meta": ["Productividad", "Salud Mental", "Desarrollo"],
-      "date": "Noviembre 2024",
-      "title": "Programar 14 horas al día no es de \"Hacker\", es de Junior ineficiente",
-      "excerpt": "La calidad de un desarrollador no se mide por líneas de código ni por horas frente al IDE. Se mide por la complejidad de los problemas resueltos. La programación es un deporte de alto rendimiento cognitivo.",
+      "imgAlt": "Burnout en desarrolladores: productividad vs jornadas extensas en desarrollo de software",
+      "categories": ["Carrera Profesional", "Productividad"],
+      "meta": ["Burnout", "Productividad", "Salud Mental"],
+      "date": "Diciembre 2025",
+      "title": "El Mito de las 14 Horas: Por Qué el 83% de Desarrolladores Sufre Burnout",
+      "excerpt": "El 83% de desarrolladores sufre burnout según Haystack Analytics. Análisis basado en neurociencia y datos reales sobre por qué las jornadas extensas destruyen carreras.",
       "slug": "programar-14-horas-no-es-de-hacker"
     },
     {
       "id": 22,
       "img": "/images/blog/article/https-seguridad.webp",
-      "imgAlt": "Certificado SSL HTTPS y candado de seguridad web: protección de datos y confianza del usuario en sitios web",
-      "categories": ["Seguridad Web", "Negocios"],
-      "meta": ["SSL/TLS", "SEO", "Seguridad"],
-      "date": "Octubre 2024",
-      "title": "HTTPS no es opcional: Por qué el candadito verde define tus ventas",
-      "excerpt": "En 2025, si tu sitio web sigue en HTTP, eres invisible y sospechoso. Análisis técnico y comercial del impacto del HTTPS en tu negocio y posicionamiento.",
+      "imgAlt": "Certificado SSL HTTPS: seguridad web, candado verde y protección de datos en sitios web",
+      "categories": ["Seguridad Web", "SEO Técnico"],
+      "meta": ["HTTPS", "SSL", "TLS", "SEO"],
+      "date": "Diciembre 2025",
+      "title": "HTTPS en 2025: Por Qué el 95% de Google Ya Es Seguro y Tu Sitio Debería Serlo",
+      "excerpt": "El 87.6% de sitios web usan SSL en 2025. Análisis técnico de TLS 1.3, HSTS, impacto en SEO (+35% mejora), Let's Encrypt, y por qué HTTP sin cifrar es negligencia.",
       "slug": "https-no-es-opcional"
     },
     {
@@ -52,32 +96,32 @@
       "img": "/images/blog/article/problema-seo.webp",
       "imgAlt": "Problema de SEO en React y Angular: página en blanco en Google y soluciones con SSR y Next.js",
       "categories": ["Desarrollo Web", "SEO Técnico"],
-      "meta": ["React", "Angular", "Next.js"],
-      "date": "Septiembre 2024",
-      "title": "El problema del SEO en React y Angular: Por qué tu web sale en blanco en Google",
-      "excerpt": "Has creado una SPA increíble pero Google no indexa tu contenido. Explicación técnica del conflicto entre Client Side Rendering y las arañas de Google.",
+      "meta": ["React", "Angular", "Next.js", "SSR", "JavaScript"],
+      "date": "Diciembre 2025",
+      "title": "SEO en React y Angular: Por Qué el 40% de SPAs No Aparece en Google",
+      "excerpt": "El 67% de webs depende de JavaScript, pero el 40% sufre baja indexación. Análisis técnico del Web Rendering Service de Google, SSR, SSG, y cómo Next.js soluciona el problema.",
       "slug": "seo-en-react-angular-pagina-blanco-google"
     },
     {
       "id": 24,
       "img": "/images/blog/article/robots-sitemaps.webp",
       "imgAlt": "Configuración de sitemap.xml y robots.txt para SEO: archivos esenciales para indexación en Google",
-      "categories": ["SEO Técnico", "Infraestructura"],
-      "meta": ["Sitemap", "Robots.txt", "Google"],
-      "date": "Agosto 2024",
-      "title": "Sitemap.xml y Robots.txt: Si no configuras esto, no existes",
-      "excerpt": "Estos dos archivos son los porteros de tu sitio web. Controlan cómo interactúan los motores de búsqueda contigo. Guía práctica para configurarlos correctamente.",
+      "categories": ["SEO Técnico", "Infraestructura Web"],
+      "meta": ["Sitemap", "Robots.txt", "Google", "Indexación"],
+      "date": "Diciembre 2025",
+      "title": "Sitemap.xml y Robots.txt: Los Archivos que Determinan si Google Te Encuentra",
+      "excerpt": "El 94% de páginas web no reciben tráfico de Google. Guía técnica de sitemap.xml y robots.txt para 2025: configuración correcta, AI crawlers, y crawl budget.",
       "slug": "sitemap-robots-txt-no-existes"
     },
     {
       "id": 25,
-      "img": "/images/blog/article/dayli-sprint.webp",
-      "imgAlt": "Daily Stand-up meeting en Scrum: equipo de desarrollo en reunión ágil de 15 minutos",
+      "img": "/images/blog/article/daily-sprint.webp",
+      "imgAlt": "Daily Scrum meeting efectivo: equipo de desarrollo en reunión ágil de sincronización",
       "categories": ["Metodologías Ágiles", "Gestión de Equipos"],
-      "meta": ["Scrum", "Daily Stand-up", "Agilidad"],
-      "date": "Julio 2024",
-      "title": "La \"Daily\" de 15 minutos que dura una hora: Cómo arruinar Scrum",
-      "excerpt": "El Daily Stand-up es la ceremonia más sagrada de Scrum. Y también es la más maltratada. He estado en reuniones llamadas \"Daily\" que duran 50 minutos.",
+      "meta": ["Scrum", "Daily Standup", "Productividad"],
+      "date": "Diciembre 2025",
+      "title": "Daily Scrum: Por Qué Tu Reunión de 15 Minutos Dura Una Hora y Cómo Solucionarlo",
+      "excerpt": "El 87% de equipos Scrum hacen Daily meetings, pero la mayoría las implementa mal. Anti-patterns comunes y técnicas probadas para meetings de menos de 10 minutos.",
       "slug": "daily-15-minutos-dura-hora-arruinar-scrum"
     }
   ]

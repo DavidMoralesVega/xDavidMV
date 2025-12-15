@@ -5,19 +5,27 @@
  * Compatible with SSG (Static Site Generation)
  */
 
-const CACHE_VERSION = 'v1.1.0';
+const CACHE_VERSION = 'v1.2.1';
 const CACHE_NAME = `dmv-portfolio-${CACHE_VERSION}`;
-const OFFLINE_PAGE = '/offline.html';
 
-// Assets to cache on install
+// Assets to cache on install (only files that definitely exist)
 const STATIC_ASSETS = [
   '/',
-  '/offline.html',
+  '/favicon/favicon.ico',
+  '/favicon/icon.svg',
+  '/favicon/icon-16x16.png',
+  '/favicon/icon-32x32.png',
+  '/favicon/icon-48x48.png',
+  '/favicon/icon-72x72.png',
+  '/favicon/icon-96x96.png',
+  '/favicon/icon-128x128.png',
+  '/favicon/icon-144x144.png',
+  '/favicon/icon-152x152.png',
   '/favicon/icon-192x192.png',
-  '/favicon/icon-512x512.png',
+  '/favicon/icon-256x256.png',
+  '/favicon/icon-384x384.png',
   '/favicon/android-icon-512.png',
   '/favicon/apple-touch-icon.png',
-  '/favicon/favicon.ico',
 ];
 
 // Cache strategies
@@ -220,10 +228,10 @@ function shouldCacheCrossOrigin(url) {
  * Get offline fallback page
  */
 async function getOfflineFallback(request) {
-  const cachedOffline = await caches.match(OFFLINE_PAGE);
-
-  if (cachedOffline) {
-    return cachedOffline;
+  // Try to get cached homepage as fallback
+  const cachedHome = await caches.match('/');
+  if (cachedHome) {
+    return cachedHome;
   }
 
   // Return a basic offline response

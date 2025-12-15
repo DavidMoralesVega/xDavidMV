@@ -4,13 +4,26 @@ import Modal from "react-modal";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Keyboard } from "swiper/modules";
 
+export interface GalleryImage {
+  src: string;
+  alt: string;
+}
+
 interface Props {
-  images: string[];
+  images: (string | GalleryImage)[];
   title: string;
   initialSlide?: number;
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
+// Helper to normalize image data
+const getImageData = (img: string | GalleryImage, title: string, idx: number): { src: string; alt: string } => {
+  if (typeof img === "string") {
+    return { src: img, alt: `${title} - Imagen ${idx + 1}` };
+  }
+  return { src: img.src, alt: img.alt };
+};
 
 export default function ImageLightbox({ images, title, initialSlide = 0, open, setOpen }: Props) {
   return (
@@ -58,18 +71,21 @@ export default function ImageLightbox({ images, title, initialSlide = 0, open, s
           speed={500}
           className="imageLightbox__swiper"
         >
-          {images.map((img, idx) => (
-            <SwiperSlide key={idx}>
-              <div className="imageLightbox__slide">
-                <img
-                src="img"
-                alt="`${title"
-                fetchPriority="high"
-                loading="eager"
-              />
-              </div>
-            </SwiperSlide>
-          ))}
+          {images.map((img, idx) => {
+            const { src, alt } = getImageData(img, title, idx);
+            return (
+              <SwiperSlide key={idx}>
+                <div className="imageLightbox__slide">
+                  <img
+                    src={src}
+                    alt={alt}
+                    fetchPriority="high"
+                    loading="eager"
+                  />
+                </div>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
 
         {/* Navigation */}
@@ -151,6 +167,14 @@ export default function ImageLightbox({ images, title, initialSlide = 0, open, s
           position: relative;
           width: 100%;
           height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .imageLightbox__slide img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
         }
         .imageLightbox__controls {
           position: absolute;

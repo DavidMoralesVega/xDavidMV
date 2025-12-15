@@ -9,69 +9,51 @@ export default function LenisSmoothScroll() {
   useEffect(() => {
     if (!lenis) return;
 
-    // Create scrollerProxy for better ScrollTrigger integration
-    ScrollTrigger.scrollerProxy(document.body, {
-      scrollTop(value) {
-        if (arguments.length && value !== undefined) {
-          lenis.scrollTo(value, { immediate: true });
-        }
-        return lenis.scroll;
-      },
-      scrollLeft(value) {
-        if (arguments.length && value !== undefined) {
-          lenis.scrollTo(value, { immediate: true });
-        }
-        return lenis.scroll;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
-      pinType: document.body.style.transform ? "transform" : "fixed",
-    });
-
-    // Ensure scrollbar is visible and working
+    // Ensure scrollbar is visible
     document.body.style.overflow = "auto";
 
-    // Update ScrollTrigger when Lenis scrolls
+    // Sync Lenis with ScrollTrigger
     lenis.on("scroll", ScrollTrigger.update);
 
-    // Centralized refresh handler for all animations
-    const handleRefresh = () => {
-      // Small delay to ensure all components are ready
-      setTimeout(() => {
-        ScrollTrigger.refresh();
-      }, 100);
-    };
+    // Refresh ScrollTrigger after load
+    const refreshTimer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 300);
 
-    // Handle window resize
+    // Handle resize
     const handleResize = () => {
-      handleRefresh();
+      setTimeout(() => ScrollTrigger.refresh(), 100);
     };
 
-    // Listen for ScrollTrigger refresh events
-    ScrollTrigger.addEventListener("refresh", handleRefresh);
     window.addEventListener("resize", handleResize);
 
     return () => {
+      clearTimeout(refreshTimer);
       window.removeEventListener("resize", handleResize);
-      ScrollTrigger.removeEventListener("refresh", handleRefresh);
-      // Revert scrollerProxy
-      ScrollTrigger.scrollerProxy(document.body, {});
-      // Reset body overflow
       document.body.style.overflow = "";
     };
   }, [lenis]);
-  // return null for ios
+
+  // Disable on iOS for native scroll
   if (
     typeof window !== "undefined" &&
     /iPad|iPhone|iPod/.test(navigator.userAgent)
   ) {
     return null;
   }
-  return <ReactLenis root />;
+
+  return (
+    <ReactLenis
+      root
+      options={{
+        lerp: 0.08,
+        duration: 0.8,
+        smoothWheel: true,
+        wheelMultiplier: 1.2,
+        touchMultiplier: 1.5,
+        infinite: false,
+        autoResize: true,
+      }}
+    />
+  );
 }

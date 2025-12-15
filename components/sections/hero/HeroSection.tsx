@@ -12,6 +12,15 @@ import AnimatedButton from "@/components/animation/AnimatedButton";
 import { usePathname } from "next/navigation";
 gsap.registerPlugin(ScrollTrigger);
 
+// Helper to defer non-critical work
+const scheduleIdleWork = (callback: () => void) => {
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(callback, { timeout: 2000 });
+  } else {
+    setTimeout(callback, 100);
+  }
+};
+
 export default function HeroSection() {
   const pathname = usePathname();
   const rootRef = useRef<HTMLDivElement | null>(null);
@@ -19,8 +28,14 @@ export default function HeroSection() {
   useEffect(() => {
     if (!rootRef.current) return;
 
-    // Scope GSAP selectors/tweens to this component
-    const ctx = gsap.context(() => {
+    let ctx: gsap.Context | null = null;
+
+    // Defer scroll animations to not block initial render
+    scheduleIdleWork(() => {
+      if (!rootRef.current) return;
+
+      // Scope GSAP selectors/tweens to this component
+      ctx = gsap.context(() => {
       const trigger = ".mxd-hero-07__tl-trigger";
 
       // slide-out elements
@@ -70,9 +85,10 @@ export default function HeroSection() {
               }
             );
         });
-    }, rootRef);
+      }, rootRef.current);
+    });
 
-    return () => ctx.revert(); // clean up timelines & ScrollTriggers
+    return () => ctx?.revert(); // clean up timelines & ScrollTriggers
   }, [pathname]);
   return (
     <div className="mxd-section" ref={rootRef}>

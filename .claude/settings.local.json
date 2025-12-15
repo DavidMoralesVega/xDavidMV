@@ -35,7 +35,16 @@
       "Bash(git checkout:*)",
       "Bash(npm run test:run:*)",
       "Bash(npx playwright install chromium)",
-      "Bash(npx playwright --version)"
+      "Bash(npx playwright --version)",
+      "Bash(copy hero-video-optimized.webp hero-video.webp /Y)",
+      "WebSearch",
+      "Bash(wc:*)",
+      "Bash(ren \"C:\\Users\\moral\\Desktop\\BeMoreX\\xCode\\xDmV\\public\\images\\blog\\article\\dayli-sprint.webp\" \"daily-sprint.webp\")",
+      "Bash(taskkill:*)",
+      "Bash(tasklist:*)",
+      "Bash(done)",
+      "Bash(for f in opt_*.webp)",
+      "Bash(do mv -f \"$f\" \"$f#opt_\")"
     ],
     "deny": [],
     "ask": []

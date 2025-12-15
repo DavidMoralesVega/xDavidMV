@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 
 import AnimatedButton from "@/components/animation/AnimatedButton";
@@ -17,16 +16,9 @@ export default function CtaSection() {
               <div className="mxd-promo__content">
                 <p className="mxd-promo__title anim-uni-in-up">
                   <span className="mxd-promo__icon">
-                    <Image
-                      alt="Icon"
-                      src="/images/brand/bemorex.png"
-                      width={400}
-                      height={400}
-                    />
+                    <Image alt="Icon" src="/images/brand/bemorex.png" width={400} height={400} />
                   </span>
-                  <span className="mxd-promo__caption">
-                    Hablemos de tu proyecto!
-                  </span>
+                  <span className="mxd-promo__caption">Hablemos de tu proyecto!</span>
                 </p>
                 <div className="mxd-promo__controls anim-uni-in-up">
                   <AnimatedButton

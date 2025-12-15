@@ -5,8 +5,28 @@
       "title": "El Viaje del Arquitecto:",
       "description": "Sistemas Empresariales - CCBOL 2025",
       "images": [
-        "/images/works/preview/1400x1400_prv-01.webp",
-        "/images/works/preview/1400x1400_prv-02.webp"
+        "/images/conferences/ccbol-architect/david-morales-vega-ccbol-arquitectura-sistemas-01.webp",
+        "/images/conferences/ccbol-architect/david-morales-vega-ccbol-arquitectura-sistemas-02.webp",
+        "/images/conferences/ccbol-architect/david-morales-vega-ccbol-arquitectura-sistemas-03.webp",
+        "/images/conferences/ccbol-architect/david-morales-vega-ccbol-arquitectura-sistemas-04.webp",
+        "/images/conferences/ccbol-architect/david-morales-vega-ccbol-arquitectura-sistemas-05.webp",
+        "/images/conferences/ccbol-architect/david-morales-vega-ccbol-arquitectura-sistemas-06.webp"
+      ],
+      "imageAlts": [
+        "David Morales Vega presentando arquitectura de sistemas empresariales en CCBOL 2025 Bolivia",
+        "David Morales Vega explicando migración de ERP y estrategia tecnológica en conferencia CCBOL",
+        "David Morales Vega como speaker en el Congreso Científico de Bolivia hablando sobre arquitectura de software",
+        "David Morales Vega mostrando diagramas de arquitectura hexagonal en CCBOL 2025",
+        "David Morales Vega en sesión de preguntas sobre sistemas empresariales CCBOL Bolivia",
+        "David Morales Vega con asistentes del congreso científico CCBOL 2025 Oruro"
+      ],
+      "gallery": [
+        { "src": "/images/conferences/ccbol-architect/david-morales-vega-ccbol-arquitectura-sistemas-01.webp", "alt": "David Morales Vega presentando arquitectura de sistemas empresariales en CCBOL 2025 Bolivia" },
+        { "src": "/images/conferences/ccbol-architect/david-morales-vega-ccbol-arquitectura-sistemas-02.webp", "alt": "David Morales Vega explicando migración de ERP y estrategia tecnológica en conferencia CCBOL" },
+        { "src": "/images/conferences/ccbol-architect/david-morales-vega-ccbol-arquitectura-sistemas-03.webp", "alt": "David Morales Vega como speaker en el Congreso Científico de Bolivia hablando sobre arquitectura de software" },
+        { "src": "/images/conferences/ccbol-architect/david-morales-vega-ccbol-arquitectura-sistemas-04.webp", "alt": "David Morales Vega mostrando diagramas de arquitectura hexagonal en CCBOL 2025" },
+        { "src": "/images/conferences/ccbol-architect/david-morales-vega-ccbol-arquitectura-sistemas-05.webp", "alt": "David Morales Vega en sesión de preguntas sobre sistemas empresariales CCBOL Bolivia" },
+        { "src": "/images/conferences/ccbol-architect/david-morales-vega-ccbol-arquitectura-sistemas-06.webp", "alt": "David Morales Vega con asistentes del congreso científico CCBOL 2025 Oruro" }
       ],
       "tags": ["Arquitectura", "ERP", "CCBOL"],
       "anim": "anim-uni-in-up",
@@ -20,9 +40,19 @@
       "title": "Decisiones Inteligentes:",
       "description": "App de IA con Python y OpenAI - CCBOL 2025",
       "images": [
-        "/images/works/preview/1400x1400_prv-02.webp",
-        "/images/works/preview/1400x1400_prv-03.webp",
-        "/images/works/preview/1400x1400_prv-04.webp"
+        "/images/conferences/ccbol-python/david-morales-vega-ccbol-python-openai-01.webp",
+        "/images/conferences/ccbol-python/david-morales-vega-ccbol-python-openai-02.webp",
+        "/images/conferences/ccbol-python/david-morales-vega-ccbol-python-openai-03.webp"
+      ],
+      "imageAlts": [
+        "David Morales Vega impartiendo workshop de Python y OpenAI API en CCBOL 2025 Bolivia",
+        "David Morales Vega enseñando desarrollo de aplicaciones con inteligencia artificial y FastAPI",
+        "David Morales Vega demostrando prompt engineering y microservicios en congreso CCBOL"
+      ],
+      "gallery": [
+        { "src": "/images/conferences/ccbol-python/david-morales-vega-ccbol-python-openai-01.webp", "alt": "David Morales Vega impartiendo workshop de Python y OpenAI API en CCBOL 2025 Bolivia" },
+        { "src": "/images/conferences/ccbol-python/david-morales-vega-ccbol-python-openai-02.webp", "alt": "David Morales Vega enseñando desarrollo de aplicaciones con inteligencia artificial y FastAPI" },
+        { "src": "/images/conferences/ccbol-python/david-morales-vega-ccbol-python-openai-03.webp", "alt": "David Morales Vega demostrando prompt engineering y microservicios en congreso CCBOL" }
       ],
       "tags": ["Python", "FastAPI", "OpenAI"],
       "anim": "anim-uni-in-up",
@@ -36,8 +66,58 @@
       "title": "Tu Carrera Global:",
       "description": "De Bolivia al Mundo - AIESEC 2025",
       "images": [
-        "/images/works/preview/1400x1400_prv-03.webp",
-        "/images/works/preview/1400x1400_prv-01.webp"
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-01.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-02.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-03.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-04.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-05.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-06.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-07.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-08.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-09.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-11.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-12.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-13.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-16.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-17.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-19.webp",
+        "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-22.webp"
+      ],
+      "imageAlts": [
+        "David Morales Vega iniciando seminario Tu Carrera Global en AIESEC Bolivia septiembre 2025",
+        "David Morales Vega dando la bienvenida al evento de carreras internacionales AIESEC",
+        "David Morales Vega presentando estrategias de IA generativa para branding personal",
+        "David Morales Vega explicando marketing digital y presencia online en AIESEC",
+        "David Morales Vega ante audiencia de jóvenes profesionales bolivianos en evento AIESEC",
+        "David Morales Vega con participantes atentos a la presentación sobre carreras tech",
+        "David Morales Vega en vista general del auditorio durante seminario AIESEC Bolivia",
+        "David Morales Vega en momento de interacción con la audiencia AIESEC",
+        "David Morales Vega en sesión interactiva sobre marketing digital y carreras internacionales",
+        "David Morales Vega con participantes tomando notas sobre oportunidades laborales globales",
+        "David Morales Vega en ambiente colaborativo en el seminario AIESEC Bolivia",
+        "David Morales Vega facilitando networking entre profesionales tech bolivianos en AIESEC",
+        "David Morales Vega mostrando ejemplos prácticos de uso de IA generativa",
+        "David Morales Vega en sesión de preguntas y respuestas sobre carreras en tecnología",
+        "David Morales Vega en foto grupal de participantes del seminario AIESEC Bolivia 2025",
+        "David Morales Vega dando reconocimiento a participantes destacados del seminario"
+      ],
+      "gallery": [
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-01.webp", "alt": "David Morales Vega iniciando seminario Tu Carrera Global en AIESEC Bolivia septiembre 2025" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-02.webp", "alt": "David Morales Vega dando la bienvenida al evento de carreras internacionales AIESEC" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-03.webp", "alt": "David Morales Vega presentando estrategias de IA generativa para branding personal" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-04.webp", "alt": "David Morales Vega explicando marketing digital y presencia online en AIESEC" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-05.webp", "alt": "David Morales Vega ante audiencia de jóvenes profesionales bolivianos en evento AIESEC" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-06.webp", "alt": "David Morales Vega con participantes atentos a la presentación sobre carreras tech" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-07.webp", "alt": "David Morales Vega en vista general del auditorio durante seminario AIESEC Bolivia" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-08.webp", "alt": "David Morales Vega en momento de interacción con la audiencia AIESEC" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-09.webp", "alt": "David Morales Vega en sesión interactiva sobre marketing digital y carreras internacionales" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-11.webp", "alt": "David Morales Vega con participantes tomando notas sobre oportunidades laborales globales" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-12.webp", "alt": "David Morales Vega en ambiente colaborativo en el seminario AIESEC Bolivia" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-13.webp", "alt": "David Morales Vega facilitando networking entre profesionales tech bolivianos en AIESEC" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-16.webp", "alt": "David Morales Vega mostrando ejemplos prácticos de uso de IA generativa" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-17.webp", "alt": "David Morales Vega en sesión de preguntas y respuestas sobre carreras en tecnología" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-19.webp", "alt": "David Morales Vega en foto grupal de participantes del seminario AIESEC Bolivia 2025" },
+        { "src": "/images/conferences/aiesec/david-morales-vega-aiesec-carrera-global-2025-22.webp", "alt": "David Morales Vega dando reconocimiento a participantes destacados del seminario" }
       ],
       "tags": ["IA Generativa", "Branding", "Marketing"],
       "anim": "anim-uni-in-up",
@@ -51,9 +131,46 @@
       "title": "FNI Go:",
       "description": "Laboratorio de Innovación Tecnológica - UTO 2025",
       "images": [
-        "/images/works/preview/1400x1400_prv-04.webp",
-        "/images/works/preview/1400x1400_prv-05.webp",
-        "/images/works/preview/1400x1400_prv-06.webp"
+        "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-01.webp",
+        "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-04.webp",
+        "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-05.webp",
+        "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-09.webp",
+        "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-10.webp",
+        "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-11.webp",
+        "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-12.webp",
+        "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-13.webp",
+        "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-15.webp",
+        "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-17.webp",
+        "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-19.webp",
+        "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-22.webp"
+      ],
+      "imageAlts": [
+        "David Morales Vega inaugurando laboratorio FNI Go en la Facultad Nacional de Ingeniería UTO",
+        "David Morales Vega en sesión práctica de NGRX Signals y gestión de estado en Angular",
+        "David Morales Vega mostrando código en pantalla durante explicación de arquitectura",
+        "David Morales Vega en segundo día del workshop FNI Go con integración de Firebase",
+        "David Morales Vega explicando servicios de Firebase para aplicaciones web",
+        "David Morales Vega con estudiantes bolivianos aprendiendo desarrollo web profesional",
+        "David Morales Vega en ambiente de aprendizaje colaborativo en el laboratorio UTO",
+        "David Morales Vega en práctica de CI/CD y deployment automatizado en proyecto Angular",
+        "David Morales Vega aplicando metodología Scrum en laboratorio de innovación UTO",
+        "David Morales Vega en revisión de código y buenas prácticas de desarrollo en equipo",
+        "David Morales Vega en presentación de proyectos finales del laboratorio FNI Go 2025",
+        "David Morales Vega en foto final con participantes del programa FNI Go UTO"
+      ],
+      "gallery": [
+        { "src": "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-01.webp", "alt": "David Morales Vega inaugurando laboratorio FNI Go en la Facultad Nacional de Ingeniería UTO" },
+        { "src": "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-04.webp", "alt": "David Morales Vega en sesión práctica de NGRX Signals y gestión de estado en Angular" },
+        { "src": "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-05.webp", "alt": "David Morales Vega mostrando código en pantalla durante explicación de arquitectura" },
+        { "src": "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-09.webp", "alt": "David Morales Vega en segundo día del workshop FNI Go con integración de Firebase" },
+        { "src": "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-10.webp", "alt": "David Morales Vega explicando servicios de Firebase para aplicaciones web" },
+        { "src": "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-11.webp", "alt": "David Morales Vega con estudiantes bolivianos aprendiendo desarrollo web profesional" },
+        { "src": "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-12.webp", "alt": "David Morales Vega en ambiente de aprendizaje colaborativo en el laboratorio UTO" },
+        { "src": "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-13.webp", "alt": "David Morales Vega en práctica de CI/CD y deployment automatizado en proyecto Angular" },
+        { "src": "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-15.webp", "alt": "David Morales Vega aplicando metodología Scrum en laboratorio de innovación UTO" },
+        { "src": "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-17.webp", "alt": "David Morales Vega en revisión de código y buenas prácticas de desarrollo en equipo" },
+        { "src": "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-19.webp", "alt": "David Morales Vega en presentación de proyectos finales del laboratorio FNI Go 2025" },
+        { "src": "/images/conferences/laboratory/david-morales-vega-fni-go-uto-2025-22.webp", "alt": "David Morales Vega en foto final con participantes del programa FNI Go UTO" }
       ],
       "tags": ["Angular", "NGRX", "Firebase"],
       "anim": "anim-uni-in-up",
@@ -67,8 +184,58 @@
       "title": "NgWorkshop Oruro:",
       "description": "Evento oficial Angular Bolivia 2024",
       "images": [
-        "/images/works/preview/1400x1400_prv-05.webp",
-        "/images/works/preview/1400x1400_prv-07.webp"
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-01.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-02.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-03.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-04.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-05.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-06.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-07.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-08.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-10.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-11.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-12.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-13.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-14.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-15.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-16.webp",
+        "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-17.webp"
+      ],
+      "imageAlts": [
+        "David Morales Vega en apertura del NgWorkshop Oruro con la comunidad Angular Bolivia",
+        "David Morales Vega enseñando Reactive Forms en Angular a desarrolladores bolivianos",
+        "David Morales Vega en sesión práctica de maquetación de componentes Angular",
+        "David Morales Vega con participantes del workshop Angular trabajando en sus laptops",
+        "David Morales Vega como director técnico del NgWorkshop Oruro Bolivia 2024",
+        "David Morales Vega explicando conceptos avanzados de Angular en workshop oficial",
+        "David Morales Vega demostrando UI/UX design para aplicaciones Angular",
+        "David Morales Vega con comunidad de desarrolladores Angular reunida en Oruro Bolivia",
+        "David Morales Vega en sesión de preguntas técnicas sobre Angular en Oruro",
+        "David Morales Vega en sesión de deployment a Firebase Hosting desde Angular CLI",
+        "David Morales Vega facilitando networking entre desarrolladores frontend de Bolivia",
+        "David Morales Vega en foto grupal del NgWorkshop Oruro Angular Bolivia 2024",
+        "David Morales Vega celebrando el éxito del evento Angular Bolivia",
+        "David Morales Vega en momento de camaradería entre la comunidad tech",
+        "David Morales Vega entregando certificados del workshop oficial Angular Bolivia",
+        "David Morales Vega dando reconocimiento a instructores y organizadores"
+      ],
+      "gallery": [
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-01.webp", "alt": "David Morales Vega en apertura del NgWorkshop Oruro con la comunidad Angular Bolivia" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-02.webp", "alt": "David Morales Vega enseñando Reactive Forms en Angular a desarrolladores bolivianos" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-03.webp", "alt": "David Morales Vega en sesión práctica de maquetación de componentes Angular" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-04.webp", "alt": "David Morales Vega con participantes del workshop Angular trabajando en sus laptops" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-05.webp", "alt": "David Morales Vega como director técnico del NgWorkshop Oruro Bolivia 2024" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-06.webp", "alt": "David Morales Vega explicando conceptos avanzados de Angular en workshop oficial" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-07.webp", "alt": "David Morales Vega demostrando UI/UX design para aplicaciones Angular" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-08.webp", "alt": "David Morales Vega con comunidad de desarrolladores Angular reunida en Oruro Bolivia" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-10.webp", "alt": "David Morales Vega en sesión de preguntas técnicas sobre Angular en Oruro" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-11.webp", "alt": "David Morales Vega en sesión de deployment a Firebase Hosting desde Angular CLI" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-12.webp", "alt": "David Morales Vega facilitando networking entre desarrolladores frontend de Bolivia" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-13.webp", "alt": "David Morales Vega en foto grupal del NgWorkshop Oruro Angular Bolivia 2024" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-14.webp", "alt": "David Morales Vega celebrando el éxito del evento Angular Bolivia" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-15.webp", "alt": "David Morales Vega en momento de camaradería entre la comunidad tech" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-16.webp", "alt": "David Morales Vega entregando certificados del workshop oficial Angular Bolivia" },
+        { "src": "/images/conferences/ng-workshop/david-morales-vega-ng-workshop-oruro-2024-17.webp", "alt": "David Morales Vega dando reconocimiento a instructores y organizadores" }
       ],
       "tags": ["Angular", "Workshop", "Organizador"],
       "anim": "anim-uni-in-up",
@@ -82,8 +249,58 @@
       "title": "NgShe Cochabamba:",
       "description": "Mentoría Angular para mujeres en tech",
       "images": [
-        "/images/works/preview/1400x1400_prv-06.webp",
-        "/images/works/preview/1400x1400_prv-01.webp"
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-01.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-02.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-04.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-06.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-07.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-09.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-12.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-13.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-14.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-16.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-18.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-19.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-23.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-24.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-25.webp",
+        "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-32.webp"
+      ],
+      "imageAlts": [
+        "David Morales Vega iniciando evento NgShe Cochabamba para mujeres desarrolladoras",
+        "David Morales Vega con mujeres bolivianas aprendiendo desarrollo web con Angular",
+        "David Morales Vega en ambiente inclusivo de aprendizaje tech para mujeres",
+        "David Morales Vega en sesión de mentoría técnica con desarrolladoras junior",
+        "David Morales Vega con participantes del programa NgShe trabajando en código Angular",
+        "David Morales Vega supervisando desarrollo de proyectos en equipo NgShe",
+        "David Morales Vega en ejercicios prácticos de buenas prácticas en desarrollo frontend",
+        "David Morales Vega con comunidad de mujeres desarrolladoras de Cochabamba Bolivia",
+        "David Morales Vega en sesión de pair programming en el programa NgShe",
+        "David Morales Vega promoviendo intercambio de experiencias entre participantes NgShe",
+        "David Morales Vega evaluando demostración de aplicaciones desarrolladas por mujeres",
+        "David Morales Vega dando feedback y mejoras sugeridas a participantes",
+        "David Morales Vega en palabras de cierre del programa de mentoría Angular",
+        "David Morales Vega en foto grupal del evento NgShe Cochabamba Angular Bolivia 2024",
+        "David Morales Vega en vista adicional del evento NgShe Cochabamba",
+        "David Morales Vega con sonrisas y entusiasmo en el evento tech femenino Bolivia"
+      ],
+      "gallery": [
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-01.webp", "alt": "David Morales Vega iniciando evento NgShe Cochabamba para mujeres desarrolladoras" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-02.webp", "alt": "David Morales Vega con mujeres bolivianas aprendiendo desarrollo web con Angular" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-04.webp", "alt": "David Morales Vega en ambiente inclusivo de aprendizaje tech para mujeres" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-06.webp", "alt": "David Morales Vega en sesión de mentoría técnica con desarrolladoras junior" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-07.webp", "alt": "David Morales Vega con participantes del programa NgShe trabajando en código Angular" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-09.webp", "alt": "David Morales Vega supervisando desarrollo de proyectos en equipo NgShe" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-12.webp", "alt": "David Morales Vega en ejercicios prácticos de buenas prácticas en desarrollo frontend" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-13.webp", "alt": "David Morales Vega con comunidad de mujeres desarrolladoras de Cochabamba Bolivia" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-14.webp", "alt": "David Morales Vega en sesión de pair programming en el programa NgShe" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-16.webp", "alt": "David Morales Vega promoviendo intercambio de experiencias entre participantes NgShe" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-18.webp", "alt": "David Morales Vega evaluando demostración de aplicaciones desarrolladas por mujeres" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-19.webp", "alt": "David Morales Vega dando feedback y mejoras sugeridas a participantes" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-23.webp", "alt": "David Morales Vega en palabras de cierre del programa de mentoría Angular" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-24.webp", "alt": "David Morales Vega en foto grupal del evento NgShe Cochabamba Angular Bolivia 2024" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-25.webp", "alt": "David Morales Vega en vista adicional del evento NgShe Cochabamba" },
+        { "src": "/images/conferences/ng-she/david-morales-vega-ng-she-cochabamba-2024-32.webp", "alt": "David Morales Vega con sonrisas y entusiasmo en el evento tech femenino Bolivia" }
       ],
       "tags": ["Angular", "Mentoría", "Comunidad"],
       "anim": "anim-uni-in-up",
@@ -97,9 +314,13 @@
       "title": "Chatbots con Python:",
       "description": "ChatGPT + WhatsApp Business - PyDay 2023",
       "images": [
-        "/images/works/preview/1400x1400_prv-07.webp",
-        "/images/works/preview/1400x1400_prv-02.webp",
-        "/images/works/preview/1400x1400_prv-03.webp"
+        "/images/conferences/pyday-2023/david-morales-vega-pyday-la-paz-2023-01.webp"
+      ],
+      "imageAlts": [
+        "David Morales Vega presentando workshop de chatbots con Python y ChatGPT en PyDay La Paz UMSA 2023"
+      ],
+      "gallery": [
+        { "src": "/images/conferences/pyday-2023/david-morales-vega-pyday-la-paz-2023-01.webp", "alt": "David Morales Vega presentando workshop de chatbots con Python y ChatGPT en PyDay La Paz UMSA 2023" }
       ],
       "tags": ["Python", "ChatGPT", "WhatsApp"],
       "anim": "anim-uni-in-up",
@@ -113,9 +334,12 @@
       "title": "Warmi Científica:",
       "description": "Educación STEAM para mujeres - Elemental 2023",
       "images": [
-        "/images/works/preview/1400x1400_prv-01.webp",
-        "/images/works/preview/1400x1400_prv-04.webp"
+        "/images/conferences/generic.webp"
       ],
+      "imageAlts": [
+        "David Morales Vega como facilitador del programa Warmi Científica de educación STEAM para mujeres bolivianas"
+      ],
+      "gallery": [],
       "tags": ["Python", "STEAM", "Educación"],
       "anim": "anim-uni-in-up",
       "type": "Facilitador",
@@ -128,10 +352,12 @@
       "title": "Bootcamp FullStack:",
       "description": "Nivel Avanzado - UTO FNI 2022",
       "images": [
-        "/images/works/preview/1400x1400_prv-02.webp",
-        "/images/works/preview/1400x1400_prv-05.webp",
-        "/images/works/preview/1400x1400_prv-06.webp"
+        "/images/conferences/generic.webp"
       ],
+      "imageAlts": [
+        "David Morales Vega como instructor del Bootcamp FullStack avanzado en la Universidad Técnica de Oruro 2022"
+      ],
+      "gallery": [],
       "tags": ["NestJS", "Angular", "PostgreSQL"],
       "anim": "anim-uni-in-up",
       "type": "Instructor",
@@ -144,9 +370,12 @@
       "title": "Desarrollo Software V2:",
       "description": "Tecnologías asíncronas - Instituto JM 2021",
       "images": [
-        "/images/works/preview/1400x1400_prv-03.webp",
-        "/images/works/preview/1400x1400_prv-07.webp"
+        "/images/conferences/generic.webp"
       ],
+      "imageAlts": [
+        "David Morales Vega instructor de desarrollo de software con JavaScript y PHP en Instituto Jesús María 2021"
+      ],
+      "gallery": [],
       "tags": ["JavaScript", "PHP", "GitHub"],
       "anim": "anim-uni-in-up",
       "type": "Instructor",
@@ -159,9 +388,12 @@
       "title": "Excel BI:",
       "description": "Business Intelligence - UTO Técnica 2021",
       "images": [
-        "/images/works/preview/1400x1400_prv-04.webp",
-        "/images/works/preview/1400x1400_prv-01.webp"
+        "/images/conferences/generic.webp"
       ],
+      "imageAlts": [
+        "David Morales Vega instructor de Excel Business Intelligence en la Facultad Técnica UTO 2021"
+      ],
+      "gallery": [],
       "tags": ["Excel", "BigQuery", "Analytics"],
       "anim": "anim-uni-in-up",
       "type": "Instructor",
@@ -174,10 +406,12 @@
       "title": "PWA con Angular:",
       "description": "Apps real-time + Firebase - UTO 2021",
       "images": [
-        "/images/works/preview/1400x1400_prv-05.webp",
-        "/images/works/preview/1400x1400_prv-02.webp",
-        "/images/works/preview/1400x1400_prv-03.webp"
+        "/images/conferences/generic.webp"
       ],
+      "imageAlts": [
+        "David Morales Vega instructor de Progressive Web Apps con Angular y Firebase en UTO 2021"
+      ],
+      "gallery": [],
       "tags": ["Angular", "Firebase", "PWA"],
       "anim": "anim-uni-in-up",
       "type": "Instructor",
@@ -190,9 +424,12 @@
       "title": "PHP 7 Intensivo:",
       "description": "Backend seguro y patrones - UTO 2019",
       "images": [
-        "/images/works/preview/1400x1400_prv-06.webp",
-        "/images/works/preview/1400x1400_prv-04.webp"
+        "/images/conferences/generic.webp"
       ],
+      "imageAlts": [
+        "David Morales Vega instructor de PHP 7 con enfoque en seguridad backend en UTO 2019"
+      ],
+      "gallery": [],
       "tags": ["PHP", "MySQL", "MVC"],
       "anim": "anim-uni-in-up",
       "type": "Instructor",
@@ -205,9 +442,12 @@
       "title": "Desarrollo Software:",
       "description": "Fundamentos y CRUD - Instituto JM 2019",
       "images": [
-        "/images/works/preview/1400x1400_prv-07.webp",
-        "/images/works/preview/1400x1400_prv-05.webp"
+        "/images/conferences/generic.webp"
       ],
+      "imageAlts": [
+        "David Morales Vega instructor de fundamentos de desarrollo de software en Instituto Jesús María 2019"
+      ],
+      "gallery": [],
       "tags": ["PHP", "jQuery", "AJAX"],
       "anim": "anim-uni-in-up",
       "type": "Instructor",
@@ -220,10 +460,12 @@
       "title": "Framework Angular:",
       "description": "Maquetación componentes - Instituto JM 2019",
       "images": [
-        "/images/works/preview/1400x1400_prv-01.webp",
-        "/images/works/preview/1400x1400_prv-06.webp",
-        "/images/works/preview/1400x1400_prv-07.webp"
+        "/images/conferences/generic.webp"
       ],
+      "imageAlts": [
+        "David Morales Vega instructor de Angular Framework y maquetación de componentes en Instituto Jesús María 2019"
+      ],
+      "gallery": [],
       "tags": ["Angular", "TypeScript", "Componentes"],
       "anim": "anim-uni-in-up",
       "type": "Instructor",
@@ -236,9 +478,12 @@
       "title": "Desarrollo Web:",
       "description": "Nivel Inicial - UTO Técnica 2019",
       "images": [
-        "/images/works/preview/1400x1400_prv-02.webp",
-        "/images/works/preview/1400x1400_prv-03.webp"
+        "/images/conferences/generic.webp"
       ],
+      "imageAlts": [
+        "David Morales Vega instructor de desarrollo web nivel inicial en Facultad Técnica UTO 2019"
+      ],
+      "gallery": [],
       "tags": ["HTML", "CSS", "JavaScript"],
       "anim": "anim-uni-in-up",
       "type": "Instructor",

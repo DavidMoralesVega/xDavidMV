@@ -9,6 +9,7 @@ export {
   generateProfilePageSchema,
   generateProfessionalServiceSchema,
   generateFAQSchema,
+  generateLocalBusinessSchema,
   generateEventSchema,
   generateSpeakingEventsSchema,
   generateCollectionPageSchema,

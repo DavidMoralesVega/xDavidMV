@@ -4,6 +4,56 @@
  * ------------------------------------------------ */
 
 /* ============================================
+   Loading Animation Initial States
+   Prevents hydration mismatch between server/client
+   ============================================ */
+
+.loading__item,
+.loading__fade {
+  opacity: 0;
+}
+
+/* ============================================
+   Email Link Overflow Fix
+   Prevents long email addresses from breaking layout
+   ============================================ */
+
+a[href^="mailto:"] {
+  word-break: break-all;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Footer email fix */
+.footer-blocks__card a[href^="mailto:"] {
+  display: inline-block;
+  max-width: 100%;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+}
+
+/* Contact page email fix */
+.btn-line-headline .btn-caption {
+  word-break: break-all;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+@media (max-width: 576px) {
+  .btn-line-headline {
+    font-size: clamp(1.4rem, 4vw, 2rem) !important;
+  }
+
+  .btn-line-headline .btn-caption {
+    font-size: inherit;
+  }
+}
+
+/* Locations email fix */
+.mxd-paragraph__lists-item a[href^="mailto:"] {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+}
+
+/* ============================================
    Code Block Styles
    ============================================ */
 
@@ -1372,7 +1422,7 @@ code[data-line-numbers] > [data-line]::before {
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
-  color: var(--text-muted, #8b949e);
+  color: var(--t-muted, #8b949e);
   font-size: 1rem;
   letter-spacing: 0.1em;
 }
@@ -1381,6 +1431,48 @@ code[data-line-numbers] > [data-line]::before {
   opacity: 0.4;
   pointer-events: none;
   cursor: not-allowed;
+}
+
+/* Pagination number enhancements */
+.blog-pagination-number {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+.blog-pagination-number:hover:not(.active) {
+  color: var(--accent, #388bfd);
+  transform: scale(1.1);
+}
+
+.blog-pagination-number.active {
+  color: var(--accent, #388bfd);
+  pointer-events: none;
+}
+
+/* Pagination controls */
+.blog-pagination-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blog-pagination-control:hover:not(.disabled) {
+  color: var(--accent, #388bfd);
+}
+
+.blog-pagination-control:hover:not(.disabled) i {
+  transform: translateX(-3px);
+}
+
+.blog-pagination-control.next:hover:not(.disabled) i {
+  transform: translateX(3px);
 }
 
 /* ============================================

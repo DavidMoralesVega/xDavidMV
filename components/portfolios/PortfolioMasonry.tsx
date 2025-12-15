@@ -7,7 +7,7 @@ import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 
 import AnimateRotation from "../animation/AnimateRotation";
 import MasonryGrid from "../animation/MasonryGrid";
-import ImageLightbox from "@/components/ui/ImageLightbox";
+import ImageLightbox, { GalleryImage } from "@/components/ui/ImageLightbox";
 import { conferences } from "@/data/conferences.json";
 
 interface Conference {
@@ -15,6 +15,8 @@ interface Conference {
   title: string;
   description: string;
   images: string[];
+  imageAlts?: string[];
+  gallery?: GalleryImage[];
   tags: string[];
   anim: string;
   type: string;
@@ -25,19 +27,35 @@ interface Conference {
 
 export default function PortfolioMasonry() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxData, setLightboxData] = useState<{ images: string[]; title: string; initialSlide: number }>({
+  const [lightboxData, setLightboxData] = useState<{
+    images: (string | GalleryImage)[];
+    title: string;
+    initialSlide: number;
+  }>({
     images: [],
     title: "",
     initialSlide: 0,
   });
 
   const openLightbox = (item: Conference, slideIndex: number = 0) => {
+    // Use gallery images if available, otherwise use preview images
+    const galleryImages: (string | GalleryImage)[] =
+      item.gallery && item.gallery.length > 0 ? item.gallery : item.images;
+
     setLightboxData({
-      images: item.images,
+      images: galleryImages,
       title: `${item.title} ${item.description}`,
       initialSlide: slideIndex,
     });
     setLightboxOpen(true);
+  };
+
+  // Helper to get alt text for preview images
+  const getPreviewAlt = (item: Conference, idx: number): string => {
+    if (item.imageAlts && item.imageAlts[idx]) {
+      return item.imageAlts[idx];
+    }
+    return `${item.title} ${item.description} - Imagen ${idx + 1}`;
   };
 
   return (
@@ -61,7 +79,10 @@ export default function PortfolioMasonry() {
                       <br />y talleres
                     </h1>
                     {/* Contador total */}
-                    <p className="mxd-point-subtitle anim-uni-in-up" style={{ marginTop: "1.5rem" }}>
+                    <p
+                      className="mxd-point-subtitle anim-uni-in-up"
+                      style={{ marginTop: "1.5rem" }}
+                    >
                       <svg
                         version="1.1"
                         xmlns="http://www.w3.org/2000/svg"
@@ -122,11 +143,7 @@ export default function PortfolioMasonry() {
                         {item.images.map((img, idx) => (
                           <SwiperSlide key={idx}>
                             <div className="mxd-project-item__preview masonry-preview radius-l">
-                              <img
-                                src={img}
-                                alt={`${item.title} ${idx + 1}`}
-                                loading="lazy"
-                              />
+                              <img src={img} alt={getPreviewAlt(item, idx)} loading="lazy" />
                             </div>
                           </SwiperSlide>
                         ))}
@@ -135,7 +152,9 @@ export default function PortfolioMasonry() {
                       {/* Navigation Controls */}
                       {item.images.length > 1 && (
                         <div className="swiper-testimonials__controls conf-controls">
-                          <div className={`conf-prev-${item.id} mxd-slider-btn mxd-slider-btn-round-prev`}>
+                          <div
+                            className={`conf-prev-${item.id} mxd-slider-btn mxd-slider-btn-round-prev`}
+                          >
                             <a
                               className="btn btn-round btn-round-small btn-outline slide-left anim-no-delay"
                               href="#"
@@ -144,8 +163,12 @@ export default function PortfolioMasonry() {
                               <i className="ph ph-arrow-left" />
                             </a>
                           </div>
-                          <div className={`conf-pagination-${item.id} mxd-swiper-pagination-fraction`} />
-                          <div className={`conf-next-${item.id} mxd-slider-btn mxd-slider-btn-round-next`}>
+                          <div
+                            className={`conf-pagination-${item.id} mxd-swiper-pagination-fraction`}
+                          />
+                          <div
+                            className={`conf-next-${item.id} mxd-slider-btn mxd-slider-btn-round-next`}
+                          >
                             <a
                               className="btn btn-round btn-round-small btn-outline slide-right anim-no-delay"
                               href="#"
@@ -160,18 +183,29 @@ export default function PortfolioMasonry() {
                       {/* Tags */}
                       <div className="mxd-project-item__tags conf-tags">
                         {item.tags.map((tag, idx) => (
-                          <span
-                            key={idx}
-                            className="tag tag-default tag-permanent"
-                          >
+                          <span key={idx} className="tag tag-default tag-permanent">
                             {tag}
                           </span>
                         ))}
                       </div>
+
+                      {/* Gallery indicator */}
+                      {item.gallery && item.gallery.length > 0 && (
+                        <div className="conf-gallery-indicator" onClick={() => openLightbox(item)}>
+                          <i className="ph ph-images" aria-hidden="true" />
+                          <span>{item.gallery.length} fotos</span>
+                        </div>
+                      )}
                     </div>
                     <div className="mxd-project-item__promo masonry-promo">
                       <div className="mxd-project-item__name">
-                        <a href="#" onClick={(e) => { e.preventDefault(); openLightbox(item); }}>
+                        <a
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            openLightbox(item);
+                          }}
+                        >
                           <span>{item.title}</span> {item.description}
                         </a>
                       </div>
@@ -186,10 +220,7 @@ export default function PortfolioMasonry() {
               {/* Portfolio Gallery End */}
               {/* Portfolio Link Start */}
               <div className="mxd-projects-masonry__btngroup anim-uni-in-up">
-                <Link
-                  className="btn-rotating btn-rotating-180 ver-02"
-                  href={`/contacto`}
-                >
+                <Link className="btn-rotating btn-rotating-180 ver-02" href={`/contacto`}>
                   <AnimateRotation
                     as="svg"
                     version="1.1"
@@ -213,20 +244,18 @@ export default function PortfolioMasonry() {
                     <g>
                       <use xlinkHref="#textPath" fill="none" />
                       <text>
-                        <textPath xlinkHref="#textPath">
-                          Hablemos de tu proyecto * Hablemos de tu proyecto *
-                        </textPath>
+                        <textPath xlinkHref="#textPath">Hablemos de tu proyecto *</textPath>
                       </text>
                     </g>
                   </AnimateRotation>
                   <img
-  src="/images/icons/300x300_obj-btn-03.webp"
-  alt="Object"
-  width="300"
-  height="300"
-  className="btn-rotating__image"
-  loading="lazy"
-/>
+                    src="/images/brand/bemorex.png"
+                    alt="Object"
+                    width="300"
+                    height="300"
+                    className="btn-rotating__image"
+                    loading="lazy"
+                  />
                 </Link>
               </div>
               {/* Portfolio Link End */}
@@ -245,6 +274,25 @@ export default function PortfolioMasonry() {
       />
 
       <style jsx global>{`
+        /* Fix height for masonry media - override the height: auto from main.css */
+        .mxd-project-item__media.masonry-media {
+          height: 460px;
+        }
+        @media only screen and (min-width: 768px) {
+          .mxd-project-item__media.masonry-media {
+            height: 600px;
+          }
+        }
+        @media only screen and (min-width: 1200px) {
+          .mxd-project-item__media.masonry-media {
+            height: 600px;
+          }
+        }
+        @media only screen and (min-width: 1600px) {
+          .mxd-project-item__media.masonry-media {
+            height: 800px;
+          }
+        }
         .mxd-conf-swiper {
           position: absolute;
           top: 0;
@@ -262,6 +310,11 @@ export default function PortfolioMasonry() {
           width: 100%;
           height: 100%;
           overflow: hidden;
+        }
+        .mxd-conf-swiper .mxd-project-item__preview img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
         /* Tags */
         .conf-tags {
@@ -301,10 +354,42 @@ export default function PortfolioMasonry() {
           width: 32px;
           height: 32px;
         }
+        /* Gallery indicator */
+        .conf-gallery-indicator {
+          position: absolute;
+          top: 1.5rem;
+          right: 1.5rem;
+          z-index: 20;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.5rem 1rem;
+          background: var(--color-base);
+          border-radius: 50px;
+          font-size: 12px;
+          font-weight: 500;
+          cursor: pointer;
+          transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+        }
+        .conf-gallery-indicator:hover {
+          transform: scale(1.05);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .conf-gallery-indicator i {
+          font-size: 16px;
+        }
         /* Responsive */
         @media only screen and (max-width: 767px) {
           .conf-controls {
             bottom: 4.5rem;
+          }
+          .conf-gallery-indicator {
+            top: 1rem;
+            right: 1rem;
+            padding: 0.4rem 0.8rem;
+            font-size: 11px;
           }
         }
         @media only screen and (min-width: 768px) {
@@ -323,6 +408,10 @@ export default function PortfolioMasonry() {
             width: 36px;
             height: 36px;
           }
+          .conf-gallery-indicator {
+            top: 2rem;
+            right: 2rem;
+          }
         }
         @media only screen and (min-width: 1200px) {
           .conf-tags {
@@ -335,6 +424,15 @@ export default function PortfolioMasonry() {
           .conf-controls .btn-round-small {
             width: 40px;
             height: 40px;
+          }
+          .conf-gallery-indicator {
+            top: 3rem;
+            right: 3rem;
+            padding: 0.6rem 1.2rem;
+            font-size: 14px;
+          }
+          .conf-gallery-indicator i {
+            font-size: 18px;
           }
         }
       `}</style>
