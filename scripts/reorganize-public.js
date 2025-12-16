@@ -43,7 +43,7 @@ const pathMappings = {
   "/images/favicon/": "/favicon/",
 
   // Documentos
-  "/images/brand/DavidMoralesVega-CV.pdf": "/documents/cv/DavidMoralesVega-CV.pdf",
+  "/documents/cv/DavidMoralesVega-CV.pdf": "/documents/cv/DavidMoralesVega-CV.pdf",
 };
 
 // Archivos y carpetas a procesar
@@ -151,9 +151,9 @@ function moveFiles() {
 
     // Documentos
     {
-      from: "public/images/brand/DavidMoralesVega-CV.pdf",
+      from: "public/documents/cv/DavidMoralesVega-CV.pdf",
       to: "public/documents/cv/DavidMoralesVega-CV.pdf",
-      type: "file"
+      type: "file",
     },
 
     // Images - carpetas completas
@@ -173,12 +173,12 @@ function moveFiles() {
     {
       from: "public/images/logo.png",
       to: "public/images/brand/logo.png",
-      type: "file"
+      type: "file",
     },
     {
       from: "public/images/logo-small.png",
       to: "public/images/brand/logo-small.png",
-      type: "file"
+      type: "file",
     },
   ];
 
@@ -265,33 +265,41 @@ function updateReferences() {
   }
 
   // Buscar archivos usando find en Windows/Unix
-  const findCommand = process.platform === "win32"
-    ? 'dir /s /b *.ts *.tsx *.js *.jsx *.json *.css *.mdx 2>nul'
-    : 'find . -type f \\( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" -o -name "*.css" -o -name "*.mdx" \\)';
+  const findCommand =
+    process.platform === "win32"
+      ? "dir /s /b *.ts *.tsx *.js *.jsx *.json *.css *.mdx 2>nul"
+      : 'find . -type f \\( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" -o -name "*.css" -o -name "*.mdx" \\)';
 
   try {
     // Obtener lista de archivos según la plataforma
     let files;
     if (process.platform === "win32") {
       // En Windows, buscar en directorios específicos
-      const dirs = ["components", "app", "lib", "data", "content", "public", "scripts", ".well-known"];
+      const dirs = [
+        "components",
+        "app",
+        "lib",
+        "data",
+        "content",
+        "public",
+        "scripts",
+        ".well-known",
+      ];
       files = [];
-      dirs.forEach(dir => {
+      dirs.forEach((dir) => {
         const dirPath = path.join(process.cwd(), dir);
         if (fs.existsSync(dirPath)) {
           const dirFiles = getAllFiles(dirPath);
-          files.push(...dirFiles.filter(f =>
-            /\.(ts|tsx|js|jsx|json|css|mdx)$/.test(f)
-          ));
+          files.push(...dirFiles.filter((f) => /\.(ts|tsx|js|jsx|json|css|mdx)$/.test(f)));
         }
       });
     } else {
       const output = execSync(findCommand, { cwd: process.cwd(), encoding: "utf-8" });
-      files = output.split("\n").filter(f => f.trim());
+      files = output.split("\n").filter((f) => f.trim());
     }
 
     // Actualizar cada archivo
-    files.forEach(file => {
+    files.forEach((file) => {
       const fullPath = path.isAbsolute(file) ? file : path.join(process.cwd(), file);
       if (fs.existsSync(fullPath) && fs.statSync(fullPath).isFile()) {
         updateFile(fullPath);
@@ -311,7 +319,7 @@ function updateReferences() {
 function getAllFiles(dirPath, arrayOfFiles = []) {
   const files = fs.readdirSync(dirPath);
 
-  files.forEach(file => {
+  files.forEach((file) => {
     const fullPath = path.join(dirPath, file);
     if (fs.statSync(fullPath).isDirectory()) {
       // Ignorar node_modules y .next
@@ -332,12 +340,9 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
 function cleanEmptyDirectories() {
   log.title("🧹 Paso 5: Limpiando directorios vacíos");
 
-  const oldDirs = [
-    "public/img",
-    "public/video",
-  ];
+  const oldDirs = ["public/img", "public/video"];
 
-  oldDirs.forEach(dir => {
+  oldDirs.forEach((dir) => {
     const dirPath = path.join(process.cwd(), dir);
     if (fs.existsSync(dirPath)) {
       try {
@@ -348,7 +353,9 @@ function cleanEmptyDirectories() {
           log.success(`Eliminado directorio vacío: ${dir}`);
         } else {
           log.warning(`Directorio no vacío (revisar manualmente): ${dir}`);
-          log.warning(`  Contiene: ${files.slice(0, 5).join(", ")}${files.length > 5 ? "..." : ""}`);
+          log.warning(
+            `  Contiene: ${files.slice(0, 5).join(", ")}${files.length > 5 ? "..." : ""}`
+          );
         }
       } catch (error) {
         log.error(`Error eliminando ${dir}: ${error.message}`);
@@ -376,15 +383,20 @@ function main() {
     cleanEmptyDirectories();
 
     log.title("📊 Resumen de cambios");
-    console.log(`  Archivos temporales eliminados: ${colors.green}${stats.tmpDeleted}${colors.reset}`);
+    console.log(
+      `  Archivos temporales eliminados: ${colors.green}${stats.tmpDeleted}${colors.reset}`
+    );
     console.log(`  Directorios creados: ${colors.green}${stats.directoriesCreated}${colors.reset}`);
     console.log(`  Archivos/carpetas movidos: ${colors.green}${stats.filesMoved}${colors.reset}`);
-    console.log(`  Archivos de código actualizados: ${colors.green}${stats.filesUpdated}${colors.reset}`);
-    console.log(`  Referencias actualizadas: ${colors.green}${stats.referencesUpdated}${colors.reset}`);
+    console.log(
+      `  Archivos de código actualizados: ${colors.green}${stats.filesUpdated}${colors.reset}`
+    );
+    console.log(
+      `  Referencias actualizadas: ${colors.green}${stats.referencesUpdated}${colors.reset}`
+    );
 
     log.title("✨ Reorganización completada exitosamente!");
     log.info("Ejecuta 'npm run build' para verificar que todo funciona correctamente.");
-
   } catch (error) {
     log.error(`Error fatal: ${error.message}`);
     process.exit(1);
