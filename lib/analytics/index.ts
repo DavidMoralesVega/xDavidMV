@@ -102,7 +102,8 @@ export {
 export {
   saveSession,
   updateSession,
-  getSession as getSessionFromDb,
+  getSessionById,
+  getSessionById as getSessionFromDb,
   saveVisitor,
   getVisitor,
   savePageview,

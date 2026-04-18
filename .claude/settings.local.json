@@ -44,7 +44,13 @@
       "Bash(tasklist:*)",
       "Bash(done)",
       "Bash(for f in opt_*.webp)",
-      "Bash(do mv -f \"$f\" \"$f#opt_\")"
+      "Bash(do mv -f \"$f\" \"$f#opt_\")",
+      "Bash(npm install)",
+      "Bash(npm audit:*)",
+      "Bash(npm run deploy:*)",
+      "Bash(firebase login:list:*)",
+      "Bash(firebase projects:list:*)",
+      "Bash(firebase use:*)"
     ],
     "deny": [],
     "ask": []

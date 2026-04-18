@@ -171,7 +171,6 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
 
     // Check if bot
     if (!analyticsConfig.trackBots && isBot()) {
-      console.log("[Analytics] Bot detected, tracking disabled");
       return;
     }
 
@@ -251,8 +250,8 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
             fingerprint: fingerprint.substring(0, 8) + "...",
           });
         }
-      } catch (error) {
-        console.error("[Analytics] Initialization failed:", error);
+      } catch {
+        // Silently ignore initialization errors
       }
     };
 
@@ -338,8 +337,8 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
             timeOnPage: prevPageview.timeOnPage,
             scrollDepth: prevPageview.scrollDepth,
           });
-        } catch (error) {
-          console.error("[Analytics] Error updating previous pageview:", error);
+        } catch {
+          // Silently ignore errors
         }
       }
 
@@ -354,8 +353,8 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
         // Save to Firestore (custom analytics)
         try {
           await savePageview(pageview);
-        } catch (error) {
-          console.error("[Analytics] Error saving pageview to Firestore:", error);
+        } catch {
+          // Silently ignore errors
         }
 
         setState((prev) => ({
@@ -369,8 +368,8 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
             page_path: pageview.path,
             page_title: pageview.title,
           });
-        } catch (error) {
-          console.error("[Analytics] Error sending pageview to Firebase Analytics:", error);
+        } catch {
+          // Silently ignore errors
         }
       }
     },
@@ -393,8 +392,8 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
       try {
         await trackEventCore(name, category, options);
         updateSessionActivity();
-      } catch (error) {
-        console.error("[Analytics] Error tracking event to Firestore:", error);
+      } catch {
+        // Silently ignore errors
       }
 
       // Also send to Firebase Analytics (Google Analytics) - independent try-catch
@@ -405,8 +404,8 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
           value: options?.value,
           ...options?.properties,
         });
-      } catch (error) {
-        console.error("[Analytics] Error sending event to Firebase Analytics:", error);
+      } catch {
+        // Silently ignore errors
       }
     },
     [initialized]

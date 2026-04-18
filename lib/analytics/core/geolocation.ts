@@ -180,12 +180,10 @@ async function getGeoFromIpapi(): Promise<GeoInfo> {
 
     return geo;
   } catch (error) {
-    // Don't log 429 errors to console - they're handled silently
+    // Handle rate limiting silently
     if (error instanceof Error && error.message.includes("429")) {
       setRateLimited();
-      return unknownGeo;
     }
-    console.error("[Analytics] ipapi.co fetch failed:", error);
     return unknownGeo;
   }
 }

@@ -71,8 +71,8 @@ export async function trackEvent(
   for (const callback of eventCallbacks) {
     try {
       await callback(event);
-    } catch (error) {
-      console.error("[Analytics] Event callback error:", error);
+    } catch {
+      // Silently ignore callback errors
     }
   }
 

@@ -67,8 +67,8 @@ function getPerformanceMetrics(): PerformanceMetrics {
 
     // LCP, CLS, FID, INP are collected via web-vitals or PerformanceObserver
     // These will be updated asynchronously
-  } catch (error) {
-    console.warn("[Analytics] Performance metrics error:", error);
+  } catch {
+    // Silently ignore performance metrics errors
   }
 
   return defaultMetrics;

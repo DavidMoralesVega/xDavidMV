@@ -198,8 +198,8 @@ function preloadNearbyImages(element: HTMLElement) {
         document.head.appendChild(link);
       }
     });
-  } catch (error) {
-    console.warn('Error preloading nearby images:', error);
+  } catch {
+    // Silently ignore preload errors
   }
 }
 

@@ -317,8 +317,6 @@ export default function AnalyticsDashboard() {
     try {
       const range = dateRanges[selectedRange];
 
-      console.log("[Analytics Dashboard] Loading data for range:", selectedRange);
-
       // Load all data in parallel
       const [metricsData, sessionsData, eventsData] = await Promise.all([
         getDashboardMetrics(range.start, range.end),
@@ -326,17 +324,10 @@ export default function AnalyticsDashboard() {
         getRecentEvents(50),
       ]);
 
-      console.log("[Analytics Dashboard] Data loaded:", {
-        metrics: metricsData,
-        sessions: sessionsData.length,
-        events: eventsData.length,
-      });
-
       setMetrics(metricsData);
       setSessions(sessionsData);
       setEvents(eventsData);
     } catch (err: unknown) {
-      console.error("[Analytics Dashboard] Error loading:", err);
       const errorMessage = err instanceof Error ? err.message : "Error desconocido";
       setError(`Error al cargar datos: ${errorMessage}. Verifica que Firestore este habilitado y las reglas permitan lectura.`);
     } finally {

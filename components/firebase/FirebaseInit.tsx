@@ -1,15 +1,7 @@
 "use client";
 
 import { useEffect } from 'react';
-
-// Helper to defer non-critical work
-const scheduleIdleWork = (callback: () => void) => {
-  if ("requestIdleCallback" in window) {
-    requestIdleCallback(callback, { timeout: 3000 });
-  } else {
-    setTimeout(callback, 1000);
-  }
-};
+import { initializeFirebase } from '@/lib/firebase';
 
 /**
  * Componente que inicializa Firebase en el cliente
@@ -17,17 +9,9 @@ const scheduleIdleWork = (callback: () => void) => {
  */
 export default function FirebaseInit() {
   useEffect(() => {
-    // Defer Firebase initialization to not block main thread
-    scheduleIdleWork(() => {
-      const initFirebase = async () => {
-        try {
-          await import('@/lib/firebase');
-          console.log('Firebase inicializado correctamente');
-        } catch (error) {
-          console.error('Error al inicializar Firebase:', error);
-        }
-      };
-      initFirebase();
+    // Initialize Firebase immediately on mount
+    initializeFirebase().catch(() => {
+      // Silently ignore initialization errors
     });
   }, []);
 

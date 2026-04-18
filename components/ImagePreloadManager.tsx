@@ -13,7 +13,7 @@ import { useImagePreload, usePreloadCriticalImages } from '@/hooks/useImagePrelo
  */
 export default function ImagePreloadManager() {
   // Initialize intelligent image preloading
-  const { preloadedCount } = useImagePreload({
+  useImagePreload({
     preloadDistance: 800, // Start preloading 800px before viewport
     maxPreload: 5, // Preload max 5 images at a time
     preloadDelay: 150, // Wait 150ms after scroll stops
@@ -25,29 +25,13 @@ export default function ImagePreloadManager() {
     '/favicon/icon-192x192.png',
   ]);
 
-  // Log preload statistics (development only)
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('[ImagePreload] Active - preloaded:', preloadedCount, 'images');
-    }
-  }, [preloadedCount]);
-
   // Add performance observer to monitor image loading
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     try {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'resource' && entry.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/i)) {
-            const resourceEntry = entry as PerformanceResourceTiming;
-            console.log(
-              '[ImagePreload] Loaded:',
-              entry.name.split('/').pop(),
-              `(${Math.round(resourceEntry.duration)}ms)`
-            );
-          }
-        }
+      const observer = new PerformanceObserver(() => {
+        // Silently observe resource loading
       });
 
       observer.observe({ entryTypes: ['resource'] });
@@ -55,8 +39,8 @@ export default function ImagePreloadManager() {
       return () => {
         observer.disconnect();
       };
-    } catch (error) {
-      console.warn('[ImagePreload] Performance observer failed:', error);
+    } catch {
+      // Silently ignore performance observer errors
     }
   }, []);
 

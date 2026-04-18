@@ -51,8 +51,7 @@ export async function getFingerprint(): Promise<string> {
     }
 
     return fingerprintCache;
-  } catch (error) {
-    console.error("[Analytics] Fingerprint generation failed:", error);
+  } catch {
     // Fallback to a simple hash-based fingerprint
     return generateFallbackFingerprint();
   }
@@ -115,8 +114,7 @@ export async function getExtendedFingerprint(): Promise<{
       confidence: result.confidence.score,
       components: result.components as unknown as Record<string, unknown>,
     };
-  } catch (error) {
-    console.error("[Analytics] Extended fingerprint failed:", error);
+  } catch {
     return {
       visitorId: await getFingerprint(),
       confidence: 0,

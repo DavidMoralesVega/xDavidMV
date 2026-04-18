@@ -23,7 +23,6 @@ export default function ContactForm() {
   const onSubmit = async (data: ContactForm) => {
     // Verificar honeypot - si está lleno, es spam
     if (data.website && data.website.length > 0) {
-      console.warn('Spam detected via honeypot');
       // No mostrar error al spammer, simular éxito
       reset();
       toast.success("Mensaje enviado — gracias!");
@@ -34,8 +33,7 @@ export default function ContactForm() {
       await fsSubmit(data); // submit to Formspree
       reset(); // reset form fields
       toast.success("¡Mensaje enviado exitosamente! Te responderé pronto.");
-    } catch (error) {
-      console.error('Form submission error:', error);
+    } catch {
       toast.error("Error al enviar el mensaje. Por favor intenta de nuevo más tarde.");
     }
   };

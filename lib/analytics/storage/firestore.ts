@@ -20,8 +20,9 @@ import {
   serverTimestamp,
   DocumentSnapshot,
   QueryConstraint,
+  Firestore,
 } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+import { getDb } from "@/lib/firebase";
 import { COLLECTIONS, analyticsConfig } from "../config";
 import type {
   Session,
@@ -97,10 +98,8 @@ function prepareForFirestore<T extends Record<string, unknown>>(data: T): T {
  * Save session to Firestore
  */
 export async function saveSession(session: Session): Promise<void> {
-  if (!db) {
-    console.warn("[Analytics] Firestore not initialized");
-    return;
-  }
+  const db = await getDb();
+  if (!db) return;
 
   try {
     const sessionRef = doc(collection(db, COLLECTIONS.SESSIONS), session.id);
@@ -111,12 +110,8 @@ export async function saveSession(session: Session): Promise<void> {
     });
 
     await setDoc(sessionRef, data);
-
-    if (analyticsConfig.debug) {
-      console.log("[Analytics] Session saved:", session.id);
-    }
-  } catch (error) {
-    console.error("[Analytics] Failed to save session:", error);
+  } catch {
+    // Silently ignore errors
   }
 }
 
@@ -127,6 +122,7 @@ export async function updateSession(
   sessionId: string,
   updates: Partial<Session>
 ): Promise<void> {
+  const db = await getDb();
   if (!db) return;
 
   try {
@@ -137,15 +133,16 @@ export async function updateSession(
     });
 
     await updateDoc(sessionRef, data);
-  } catch (error) {
-    console.error("[Analytics] Failed to update session:", error);
+  } catch {
+    // Silently ignore errors
   }
 }
 
 /**
  * Get session by ID
  */
-export async function getSession(sessionId: string): Promise<Session | null> {
+export async function getSessionById(sessionId: string): Promise<Session | null> {
+  const db = await getDb();
   if (!db) return null;
 
   try {
@@ -160,8 +157,7 @@ export async function getSession(sessionId: string): Promise<Session | null> {
       startedAt: fromTimestamp(data.startedAt),
       lastActivityAt: fromTimestamp(data.lastActivityAt),
     } as Session;
-  } catch (error) {
-    console.error("[Analytics] Failed to get session:", error);
+  } catch {
     return null;
   }
 }
@@ -172,6 +168,7 @@ export async function getSession(sessionId: string): Promise<Session | null> {
  * Save or update visitor
  */
 export async function saveVisitor(visitor: Visitor): Promise<void> {
+  const db = await getDb();
   if (!db) return;
 
   try {
@@ -194,8 +191,8 @@ export async function saveVisitor(visitor: Visitor): Promise<void> {
       });
       await setDoc(visitorRef, data);
     }
-  } catch (error) {
-    console.error("[Analytics] Failed to save visitor:", error);
+  } catch {
+    // Silently ignore errors
   }
 }
 
@@ -203,6 +200,7 @@ export async function saveVisitor(visitor: Visitor): Promise<void> {
  * Get visitor by ID
  */
 export async function getVisitor(visitorId: string): Promise<Visitor | null> {
+  const db = await getDb();
   if (!db) return null;
 
   try {
@@ -217,8 +215,7 @@ export async function getVisitor(visitorId: string): Promise<Visitor | null> {
       firstSeenAt: fromTimestamp(data.firstSeenAt),
       lastSeenAt: fromTimestamp(data.lastSeenAt),
     } as Visitor;
-  } catch (error) {
-    console.error("[Analytics] Failed to get visitor:", error);
+  } catch {
     return null;
   }
 }
@@ -229,6 +226,7 @@ export async function getVisitor(visitorId: string): Promise<Visitor | null> {
  * Save pageview to Firestore
  */
 export async function savePageview(pageview: Pageview): Promise<void> {
+  const db = await getDb();
   if (!db) return;
 
   try {
@@ -242,12 +240,8 @@ export async function savePageview(pageview: Pageview): Promise<void> {
 
     // Update daily stats
     await updateDailyStats("pageviews", 1);
-
-    if (analyticsConfig.debug) {
-      console.log("[Analytics] Pageview saved:", pageview.id);
-    }
-  } catch (error) {
-    console.error("[Analytics] Failed to save pageview:", error);
+  } catch {
+    // Silently ignore errors
   }
 }
 
@@ -258,6 +252,7 @@ export async function updatePageview(
   pageviewId: string,
   updates: Partial<Pageview>
 ): Promise<void> {
+  const db = await getDb();
   if (!db) return;
 
   try {
@@ -265,8 +260,8 @@ export async function updatePageview(
     const data = prepareForFirestore(updates);
 
     await updateDoc(pageviewRef, data);
-  } catch (error) {
-    console.error("[Analytics] Failed to update pageview:", error);
+  } catch {
+    // Silently ignore errors
   }
 }
 
@@ -276,6 +271,7 @@ export async function updatePageview(
  * Save event to Firestore
  */
 export async function saveEvent(event: AnalyticsEvent): Promise<void> {
+  const db = await getDb();
   if (!db) return;
 
   try {
@@ -290,12 +286,8 @@ export async function saveEvent(event: AnalyticsEvent): Promise<void> {
     // Update daily stats
     await updateDailyStats("events", 1);
     await updateDailyStats(`event_${event.name}`, 1);
-
-    if (analyticsConfig.debug) {
-      console.log("[Analytics] Event saved:", event.name);
-    }
-  } catch (error) {
-    console.error("[Analytics] Failed to save event:", error);
+  } catch {
+    // Silently ignore errors
   }
 }
 
@@ -303,7 +295,10 @@ export async function saveEvent(event: AnalyticsEvent): Promise<void> {
  * Save multiple events in batch
  */
 export async function saveEventsBatch(events: AnalyticsEvent[]): Promise<void> {
-  if (!db || events.length === 0) return;
+  if (events.length === 0) return;
+
+  const db = await getDb();
+  if (!db) return;
 
   try {
     const batch = writeBatch(db);
@@ -321,12 +316,8 @@ export async function saveEventsBatch(events: AnalyticsEvent[]): Promise<void> {
 
     // Update daily stats
     await updateDailyStats("events", events.length);
-
-    if (analyticsConfig.debug) {
-      console.log("[Analytics] Batch saved:", events.length, "events");
-    }
-  } catch (error) {
-    console.error("[Analytics] Failed to save events batch:", error);
+  } catch {
+    // Silently ignore errors
   }
 }
 
@@ -344,6 +335,7 @@ function getTodayKey(): string {
  * Update daily statistics
  */
 async function updateDailyStats(metric: string, value: number): Promise<void> {
+  const db = await getDb();
   if (!db) return;
 
   try {
@@ -359,8 +351,8 @@ async function updateDailyStats(metric: string, value: number): Promise<void> {
       },
       { merge: true }
     );
-  } catch (error) {
-    console.error("[Analytics] Failed to update daily stats:", error);
+  } catch {
+    // Silently ignore errors
   }
 }
 
@@ -373,6 +365,7 @@ export async function getRecentSessions(
   limitCount: number = 50,
   lastDoc?: DocumentSnapshot
 ): Promise<Session[]> {
+  const db = await getDb();
   if (!db) return [];
 
   try {
@@ -396,8 +389,7 @@ export async function getRecentSessions(
         lastActivityAt: fromTimestamp(data.lastActivityAt),
       } as Session;
     });
-  } catch (error) {
-    console.error("[Analytics] Failed to get recent sessions:", error);
+  } catch {
     return [];
   }
 }
@@ -409,6 +401,7 @@ export async function getRecentEvents(
   limitCount: number = 100,
   eventName?: string
 ): Promise<AnalyticsEvent[]> {
+  const db = await getDb();
   if (!db) return [];
 
   try {
@@ -431,8 +424,7 @@ export async function getRecentEvents(
         timestamp: fromTimestamp(data.timestamp),
       } as AnalyticsEvent;
     });
-  } catch (error) {
-    console.error("[Analytics] Failed to get recent events:", error);
+  } catch {
     return [];
   }
 }
@@ -444,6 +436,7 @@ export async function getPageviewsByPath(
   path: string,
   limitCount: number = 100
 ): Promise<Pageview[]> {
+  const db = await getDb();
   if (!db) return [];
 
   try {
@@ -463,8 +456,7 @@ export async function getPageviewsByPath(
         timestamp: fromTimestamp(data.timestamp),
       } as Pageview;
     });
-  } catch (error) {
-    console.error("[Analytics] Failed to get pageviews by path:", error);
+  } catch {
     return [];
   }
 }
@@ -476,6 +468,7 @@ export async function getDailyStats(
   startDate: string,
   endDate: string
 ): Promise<Record<string, Record<string, number>>> {
+  const db = await getDb();
   if (!db) return {};
 
   try {
@@ -495,8 +488,7 @@ export async function getDailyStats(
     });
 
     return stats;
-  } catch (error) {
-    console.error("[Analytics] Failed to get daily stats:", error);
+  } catch {
     return {};
   }
 }
@@ -508,6 +500,7 @@ export async function getDashboardMetrics(
   startDate: Date,
   endDate: Date
 ): Promise<Partial<DashboardMetrics>> {
+  const db = await getDb();
   if (!db) return {};
 
   try {
@@ -619,8 +612,7 @@ export async function getDashboardMetrics(
       devices: deviceCounts,
       events: topEvents,
     };
-  } catch (error) {
-    console.error("[Analytics] Failed to get dashboard metrics:", error);
+  } catch {
     return {};
   }
 }

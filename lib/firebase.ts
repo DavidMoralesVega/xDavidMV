@@ -15,59 +15,97 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase (singleton pattern)
-let app: FirebaseApp;
-let db: Firestore;
+let app: FirebaseApp | null = null;
+let db: Firestore | null = null;
 let analytics: Analytics | null = null;
+let firebaseInitialized = false;
+let initPromise: Promise<void> | null = null;
 
+/**
+ * Initialize Firebase - call this before using db or analytics
+ * Returns a promise that resolves when Firebase is ready
+ */
+export function initializeFirebase(): Promise<void> {
+  // Return existing promise if already initializing
+  if (initPromise) return initPromise;
+
+  // Already initialized
+  if (firebaseInitialized) return Promise.resolve();
+
+  // Server-side: return resolved promise
+  if (typeof window === 'undefined') {
+    return Promise.resolve();
+  }
+
+  initPromise = new Promise((resolve) => {
+    try {
+      // Initialize app
+      app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+
+      // Initialize App Check with reCAPTCHA v3
+      if (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) {
+        try {
+          initializeAppCheck(app, {
+            provider: new ReCaptchaV3Provider(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY),
+            isTokenAutoRefreshEnabled: true,
+          });
+        } catch {
+          // App Check already initialized or error - silently ignore
+        }
+      }
+
+      // Initialize Firestore
+      db = getFirestore(app);
+
+      // Initialize Analytics (only in production)
+      if (process.env.NODE_ENV === 'production' && firebaseConfig.measurementId) {
+        try {
+          analytics = getAnalytics(app);
+        } catch {
+          analytics = null;
+        }
+      }
+
+      firebaseInitialized = true;
+      resolve();
+    } catch {
+      resolve(); // Resolve anyway to not block the app
+    }
+  });
+
+  return initPromise;
+}
+
+/**
+ * Get Firestore instance - ensures Firebase is initialized first
+ */
+export async function getDb(): Promise<Firestore | null> {
+  await initializeFirebase();
+  return db;
+}
+
+/**
+ * Check if Firebase is initialized
+ */
+export function isFirebaseInitialized(): boolean {
+  return firebaseInitialized;
+}
+
+// Auto-initialize on client side import
 if (typeof window !== 'undefined') {
-  // Solo inicializar en el cliente
-  app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
-
-  // Inicializar App Check con reCAPTCHA v3
-  if (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) {
-    try {
-      initializeAppCheck(app, {
-        provider: new ReCaptchaV3Provider(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY),
-        isTokenAutoRefreshEnabled: true, // Auto-refresh cada hora
-      });
-      console.log('✅ Firebase App Check activado con reCAPTCHA v3');
-    } catch (error) {
-      console.warn('⚠️ App Check ya inicializado o error:', error);
-    }
-  } else {
-    console.warn('⚠️ NEXT_PUBLIC_RECAPTCHA_SITE_KEY no configurado');
-  }
-
-  // Inicializar Firestore
-  db = getFirestore(app);
-
-  // Inicializar Analytics (solo en producción)
-  if (process.env.NODE_ENV === 'production' && firebaseConfig.measurementId) {
-    try {
-      analytics = getAnalytics(app);
-      console.log('✅ Firebase Analytics inicializado correctamente');
-    } catch (error) {
-      console.error('❌ Error al inicializar Firebase Analytics:', error);
-      analytics = null;
-    }
-  } else {
-    console.log('ℹ️ Firebase Analytics no se inicializa en modo desarrollo');
-  }
+  initializeFirebase();
 }
 
 // Helper para trackear eventos en Analytics
 export const trackEvent = (eventName: string, params?: Record<string, unknown>) => {
   if (!analytics) {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('[Firebase Analytics - Dev Mode]', eventName, params);
-    }
     return;
   }
 
   try {
     logEvent(analytics, eventName, params);
-  } catch (error) {
-    console.error('[Firebase Analytics] Error logging event:', error);
+  } catch {
+    // Silently ignore analytics errors
   }
 };
 
