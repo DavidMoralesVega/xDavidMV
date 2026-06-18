@@ -24,6 +24,40 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* =========================================================================
+   PALETA DE MARCA — Material You 3 (semilla Google Blue #0B57D0, algoritmo
+   TonalSpot, el mismo del Material Theme Builder actual).
+   Solo se sobrescriben las variables FUENTE (--*--light / --*--dark). El tema
+   resuelve --accent / --additional segun el modo (atributo color-scheme="dark"
+   en <html>), asi que ambos modos se actualizan automaticamente.
+   ========================================================================= */
+:root {
+  /* --- Modo claro --- */
+  --accent--light: #495d92; /* M3 primary  (azul Google refinado) */
+  --accent-rgb--light: 73, 93, 146;
+  --additional--light: #1a73e8; /* pop: azul Google vivido        */
+  --additional-rgb--light: 26, 115, 232;
+
+  /* --- Modo oscuro --- */
+  --accent--dark: #b2c5ff; /* M3 primary (dark) */
+  --accent-rgb--dark: 178, 197, 255;
+  --additional--dark: #8ab4f8; /* pop azul (dark) */
+  --additional-rgb--dark: 138, 180, 248;
+}
+
+/* On-color INTELIGENTE (estilo Material 3 "on-primary/on-tertiary").
+   accent y additional son colores OSCUROS en modo claro y CLAROS en modo
+   oscuro, por lo que el texto encima SIEMPRE debe ser --t-opp-bright
+   (blanco en claro / tinta en oscuro). El template ataba el texto de los
+   elementos 'additional' a --t-bright (la convencion inversa), lo que daba
+   fondo azul + letra oscura = sin contraste. Esto lo corrige en claro y oscuro. */
+.btn-additional,
+.btn-additional .btn-anim__letter,
+.tag-additional,
+.bg-additional {
+  color: var(--t-opp-bright) !important;
+}
 .mxd-nav__wrap {
   display: block;
   pointer-events: none;
@@ -124,4 +158,25 @@ html {
 .hero-07-circle__image img {
   object-fit: cover !important;
   object-position: center top !important;
+}
+
+/* Hero circle - reducir y rebalancear la foto SOLO en desktop.
+   El tema la dejaba en 680px (la imagen nativa es 600px => se escalaba hacia
+   arriba y dominaba el viewport). Aquí la limitamos con clamp (escala entre
+   ~440px y 560px segun el ancho) y la recentramos verticalmente dentro del
+   bloque inferior. Movil (<992px) queda sin tocar. */
+@media (min-width: 992px) {
+  .mxd-hero-07__circle {
+    width: clamp(440px, 39vw, 560px) !important;
+    height: clamp(440px, 39vw, 560px) !important;
+    max-width: 560px !important;
+    top: 45% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+  .hero-07-circle__image,
+  .hero-07-circle__image img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+  }
 }
