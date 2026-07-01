@@ -245,7 +245,7 @@ export function generateFAQSchema() {
         name: "¿Quién es David Morales Vega?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "David Morales Vega es un Arquitecto de Soluciones y Technical Lead boliviano con más de 7 años de experiencia en desarrollo de software. Posee un perfil único: es Ingeniero de Sistemas y Abogado, lo que lo posiciona como experto en Legal-Tech en Bolivia. Se especializa en Angular, NestJS, microservicios y liderazgo de equipos técnicos. Es fundador de BeMoreX y conferencista activo con más de 16 presentaciones en eventos tecnológicos.",
+          text: "David Morales Vega es un Arquitecto de Soluciones y Technical Lead boliviano con más de 8 años de experiencia en desarrollo de software. Posee un perfil único: es Ingeniero de Sistemas y Abogado, lo que lo posiciona como experto en Legal-Tech en Bolivia. Se especializa en Angular, NestJS, microservicios, inteligencia artificial (IA/ML/Data Science) y liderazgo de equipos técnicos. Es fundador de BeMoreX y conferencista activo con 16 presentaciones en eventos tecnológicos.",
         },
       },
       {
@@ -309,7 +309,7 @@ export function generateFAQSchema() {
         name: "¿David Morales Vega ofrece capacitaciones y conferencias?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Sí, David Morales Vega es conferencista activo con más de 16 presentaciones en eventos tecnológicos de Bolivia y Latinoamérica. Ofrece bootcamps, workshops y talleres sobre Angular, NestJS, Python, IA, arquitectura de software y desarrollo web.",
+          text: "Sí, David Morales Vega es conferencista activo con 16 presentaciones en eventos tecnológicos de Bolivia y Latinoamérica. Ofrece bootcamps, workshops y talleres sobre Angular, NestJS, Python, IA, arquitectura de software y desarrollo web.",
         },
       },
     ],

@@ -212,7 +212,7 @@ export default function Footer({ text = "David Morales Vega" }: { text?: string 
               <p className="t-xsmall t-muted">
                 <a
                   className="no-effect"
-                  href="https://www.moralesvegadavid.com"
+                  href="https://moralesvegadavid.com"
                   target="_blank"
                 >
                   David Morales Vega

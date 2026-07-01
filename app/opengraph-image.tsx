@@ -123,7 +123,7 @@ export default async function Image() {
               maxWidth: "800px",
             }}
           >
-            Arquitecto de Soluciones con 7+ años de experiencia en ecosistemas digitales escalables
+            Arquitecto de Soluciones con 8+ años de experiencia en ecosistemas digitales escalables
           </p>
         </div>
 

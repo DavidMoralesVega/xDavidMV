@@ -250,7 +250,7 @@ export default function MobileMenu() {
                     className="menu-promo__caption fade-in-elm"
                     style={{ transitionDelay: "0.4s" }}
                   >
-                    7+ años de experiencia
+                    8+ años de experiencia
                     <br />
                     diseñando ecosistemas digitales escalables y liderando equipos de alto rendimiento.
                   </p>
@@ -296,7 +296,7 @@ export default function MobileMenu() {
               <p className="t-xsmall">
                 <a
                   className="no-effect"
-                  href="https://www.moralesvegadavid.com"
+                  href="https://moralesvegadavid.com"
                   target="_blank"
                 >
                   David Morales Vega

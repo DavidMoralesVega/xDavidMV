@@ -3,32 +3,34 @@
 
 ## About
 Name: David Morales Vega
-Role: Solutions Architect & Technical Lead
+Role: Solutions Architect, Technical Lead, Lawyer & Software Engineer
 Location: Oruro, Bolivia
-Website: https://www.moralesvegadavid.com
+Website: https://moralesvegadavid.com
 Email: contacto@moralesvegadavid.com
 Phone: +591 61816001
 
 ## Professional Summary
-David Morales Vega is a Solutions Architect and Technical Lead from Oruro, Bolivia, with over 7 years of experience designing scalable digital ecosystems. He specializes in Angular, NestJS, microservices architecture, hexagonal architecture, DDD (Domain-Driven Design), and technical team leadership.
+David Morales Vega is a Solutions Architect and Technical Lead from Oruro, Bolivia, with over 8 years of experience designing scalable digital ecosystems. He holds a unique dual profile as both a Systems Engineer and a Lawyer, positioning him as a Legal-Tech expert in Bolivia. He specializes in Angular, NestJS, microservices architecture, hexagonal architecture, DDD (Domain-Driven Design), artificial intelligence (AI/ML/Data Science), and technical team leadership. He is the founder of BeMoreX, a digital innovation and technology agency.
 
 ## Expertise Areas
 - Software Architecture (Microservices, Hexagonal, DDD, CQRS, EDA)
+- Artificial Intelligence & Data Science (Machine Learning, LLMs/Gemini, vector search, OCR/computer vision)
 - Frontend Development (Angular, Next.js, React, Flutter)
 - Backend Development (NestJS, Node.js, Spring Boot, Laravel)
-- Cloud & DevOps (Docker, Kubernetes, Firebase, AWS, GCP)
+- Cloud & DevOps (Docker, Podman, Firebase, Cloudflare, CI/CD)
 - Technical Leadership & Team Management
-- Agile Methodologies (Scrum, Kanban)
+- Legal-Tech (intersection of law and technology)
+- Agile Methodologies (Scrum, Kanban, XP)
 
 ## Technologies
 Primary: Angular, NestJS, TypeScript, Node.js
-Secondary: React, Next.js, Flutter, Spring Boot, Laravel
-Databases: PostgreSQL, MongoDB, MySQL, Firebase
-Cloud: Firebase, AWS, Google Cloud Platform
-DevOps: Docker, Kubernetes, CI/CD, GitHub Actions
+Secondary: React, Next.js, Flutter, Spring Boot, Laravel, Python
+Databases: PostgreSQL, MongoDB, MySQL, Firebase, pgvector
+Cloud: Firebase, Google Cloud Platform, Cloudflare
+DevOps: Docker, Podman, CI/CD, GitHub Actions
 
 ## Speaking & Conferences
-David has delivered 16+ presentations at technology events across Bolivia and Latin America, covering topics such as:
+David has delivered 16 presentations at technology events across Bolivia and Latin America, covering topics such as:
 - Angular advanced patterns and best practices
 - NestJS and microservices architecture
 - Artificial Intelligence applications
@@ -36,8 +38,10 @@ David has delivered 16+ presentations at technology events across Bolivia and La
 - Software architecture patterns
 
 ## Education
-- Systems Engineering - Universidad Tecnica de Oruro (UTO)
+- Systems Engineering - Universidad Adventista de Bolivia
 - Law Degree - Universidad Tecnica de Oruro (UTO)
+- Master's in AI, Machine Learning & Data Science - UPEA (in progress)
+- Master's in Digital Transformation - UMSA (in progress)
 
 ## Professional Experience
 - Founder & Tech Lead at BeMoreX Digital Agency
@@ -54,13 +58,14 @@ David has delivered 16+ presentations at technology events across Bolivia and La
 For consulting, speaking engagements, or collaboration opportunities:
 - Email: contacto@moralesvegadavid.com
 - Phone: +591 61816001
-- Website: https://www.moralesvegadavid.com/contact
+- Website: https://moralesvegadavid.com/contacto
 
 ## Site Structure
-- Home: https://www.moralesvegadavid.com/
-- Conferences: https://www.moralesvegadavid.com/conferencias
-- Blog: https://www.moralesvegadavid.com/blog-standard
-- Contact: https://www.moralesvegadavid.com/contact
+- Home: https://moralesvegadavid.com/
+- Projects: https://moralesvegadavid.com/proyectos
+- Conferences: https://moralesvegadavid.com/conferencias
+- Blog: https://moralesvegadavid.com/blog
+- Contact: https://moralesvegadavid.com/contacto
 
 ## Last Updated
-2025-12-10
+2026-07-01

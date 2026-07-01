@@ -17,7 +17,7 @@ export default function Locations() {
                 <div className="mxd-block__content">
                   <div className="mxd-block__paragraph">
                     <p className="t-large t-bright anim-uni-in-up">
-                      Arquitecto de Soluciones y Technical Lead con 7+ años de experiencia
+                      Arquitecto de Soluciones y Technical Lead con 8+ años de experiencia
                       en ecosistemas digitales escalables. Disponible para proyectos remotos
                       y presenciales en Bolivia.
                     </p>
@@ -77,8 +77,8 @@ export default function Locations() {
                                 <a href="https://www.bemorex.com" target="_blank">www.bemorex.com</a>
                               </li>
                               <li className="anim-uni-in-up">
-                                <a href="https://www.moralesvegadavid.com" target="_blank">
-                                  www.moralesvegadavid.com
+                                <a href="https://moralesvegadavid.com" target="_blank">
+                                  moralesvegadavid.com
                                 </a>
                               </li>
                             </ul>

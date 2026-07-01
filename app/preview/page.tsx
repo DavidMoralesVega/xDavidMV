@@ -53,7 +53,7 @@ const CtaSection = dynamic(
 export const metadata: Metadata = {
   title: "David Morales Vega | Solutions Architect & Tech Lead",
   description:
-    "Arquitecto de Soluciones y Technical Lead con 7+ años de experiencia en diseño de ecosistemas digitales escalables. Especializado en Angular, NestJS, Microservicios y liderazgo de equipos de alto rendimiento.",
+    "Arquitecto de Soluciones y Technical Lead con 8+ años de experiencia en diseño de ecosistemas digitales escalables. Especializado en Angular, NestJS, Microservicios y liderazgo de equipos de alto rendimiento.",
 };
 
 export default function PreviewPage() {

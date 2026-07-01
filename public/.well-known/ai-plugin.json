@@ -9,9 +9,9 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://www.moralesvegadavid.com/openapi.yaml"
+    "url": "https://moralesvegadavid.com/openapi.yaml"
   },
-  "logo_url": "https://www.moralesvegadavid.com/images/logo.png",
+  "logo_url": "https://moralesvegadavid.com/images/logo.png",
   "contact_email": "contacto@moralesvegadavid.com",
-  "legal_info_url": "https://www.moralesvegadavid.com/"
+  "legal_info_url": "https://moralesvegadavid.com/"
 }

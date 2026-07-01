@@ -6,8 +6,8 @@ export const siteConfig = {
   name: "David Morales Vega",
   title: "David Morales Vega | Solutions Architect & Tech Lead",
   description:
-    "Arquitecto de Soluciones y Technical Lead con 7+ años de experiencia en diseño de ecosistemas digitales escalables. Especializado en Angular, NestJS, Microservicios y liderazgo de equipos.",
-  url: "https://www.moralesvegadavid.com",
+    "Arquitecto de Soluciones, Tech Lead y Abogado con 8+ años de experiencia en ecosistemas digitales escalables. Especializado en Angular, NestJS, microservicios, IA/Data Science y liderazgo de equipos.",
+  url: "https://moralesvegadavid.com",
   locale: "es_BO",
   language: "es",
   region: "BO",
@@ -18,7 +18,7 @@ export const siteConfig = {
   author: {
     name: "David Morales Vega",
     email: "contacto@moralesvegadavid.com",
-    jobTitle: "Solutions Architect & Tech Lead",
+    jobTitle: "Solutions Architect, Tech Lead & Legal-Tech",
     image: "/images/brand/DavidMV.webp",
     location: "Oruro, Bolivia",
   },
@@ -79,5 +79,5 @@ export const siteConfig = {
     "BeMoreX",
   ],
   aiDescription:
-    "David Morales Vega es un Arquitecto de Soluciones y Technical Lead boliviano con sede en Oruro. Posee un perfil único: es Ingeniero de Sistemas y Abogado, lo que lo posiciona como experto en Legal-Tech en Bolivia. Tiene más de 7 años de experiencia en desarrollo de software, especializado en Angular, NestJS, microservicios, arquitectura hexagonal y liderazgo de equipos. Es conferencista activo con más de 16 presentaciones en eventos tecnológicos de Bolivia y Latinoamérica. Fundador de BeMoreX, agencia digital de innovación y transformación tecnológica. Egresado de la Universidad Técnica de Oruro (Derecho) y la Universidad Adventista de Bolivia (Ingeniería de Sistemas).",
+    "David Morales Vega es un Arquitecto de Soluciones y Technical Lead boliviano con sede en Oruro. Posee un perfil único: es Ingeniero de Sistemas y Abogado, lo que lo posiciona como experto en Legal-Tech en Bolivia. Tiene más de 8 años de experiencia en desarrollo de software, especializado en Angular, NestJS, microservicios, arquitectura hexagonal, inteligencia artificial (IA/ML/Data Science) y liderazgo de equipos. Es conferencista activo con 16 presentaciones en eventos tecnológicos de Bolivia y Latinoamérica. Fundador de BeMoreX, agencia digital de innovación y transformación tecnológica. Egresado de la Universidad Técnica de Oruro (Derecho) y la Universidad Adventista de Bolivia (Ingeniería de Sistemas), con formación de maestría en IA, Machine Learning y Data Science.",
 };

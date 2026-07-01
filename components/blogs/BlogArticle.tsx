@@ -138,7 +138,7 @@ export default function BlogArticle({ post }: BlogArticleProps) {
               </div>
               <div className="mxd-article-author__quote">
                 <p>
-                  Arquitecto de Soluciones y Technical Lead con 7+ años de
+                  Arquitecto de Soluciones y Technical Lead con 8+ años de
                   experiencia en el diseño de ecosistemas digitales escalables y
                   microservicios. Perfil híbrido único con doble titulación
                   (Ingeniería de Sistemas + Derecho), especializado en alinear
