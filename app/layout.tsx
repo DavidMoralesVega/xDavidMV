@@ -114,6 +114,28 @@ export const metadata: Metadata = {
   },
 };
 
+// Synchronous kill-switch: runs before any other JS / hydration so that any
+// visitor still carrying the legacy service worker (which cached HTML together
+// with its Content-Encoding header and caused double-decoded/garbage renders)
+// is torn down on the very first paint. Defense-in-depth alongside <PWARegister/>
+// and public/sw.js. This site is a static export with no PWA — no SW should exist.
+const killServiceWorkersScript = `
+(function() {
+  try {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations()
+        .then(function(rs) { rs.forEach(function(r) { r.unregister(); }); })
+        .catch(function() {});
+    }
+    if (window.caches && caches.keys) {
+      caches.keys()
+        .then(function(keys) { keys.forEach(function(k) { caches.delete(k); }); })
+        .catch(function() {});
+    }
+  } catch (e) {}
+})();
+`;
+
 const setColorSchemeScript = `
 (function() {
   try {
@@ -145,6 +167,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://firebaseinstallations.googleapis.com" />
         <link rel="preconnect" href="https://firebase.googleapis.com" />
+        <script dangerouslySetInnerHTML={{ __html: killServiceWorkersScript }} />
         <script dangerouslySetInnerHTML={{ __html: setColorSchemeScript }} />
         <JsonLd data={structuredData} />
         <GoogleAnalytics />

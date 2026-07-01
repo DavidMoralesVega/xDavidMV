@@ -4,6 +4,11 @@
     "href": "/"
   },
   {
+    "label": "Proyectos",
+    "href": "/proyectos",
+    "counter": 16
+  },
+  {
     "label": "Conferencias",
     "href": "/conferencias",
     "counter": 16

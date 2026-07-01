@@ -1,0 +1,788 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "slug": "citi",
+      "title": "CITI — Colegio de Ingenieros en TI",
+      "tagline": "Ecosistema digital de un colegio profesional: backend GraphQL único para web y móvil",
+      "category": "Plataforma institucional / gestión colegial",
+      "year": "2026",
+      "client": "Colegio de Ingenieros en Tecnologías de la Información — Oruro (CITI Oruro)",
+      "role": "Solutions Architect & Tech Lead",
+      "stack": [
+        "Laravel 13",
+        "Lighthouse GraphQL 6.67",
+        "PHP 8.3",
+        "MySQL",
+        "Spatie Permission",
+        "Next.js 16",
+        "React 19",
+        "Tailwind 4",
+        "BeerCSS (Material 3)",
+        "Firebase Auth/Firestore",
+        "Firebase Functions",
+        "TipTap",
+        "Flutter",
+        "Dart",
+        "Riverpod",
+        "Python (pandas, matplotlib, reportlab)"
+      ],
+      "liveUrl": "https://citior.org.bo",
+      "featured": true,
+      "cover": "/images/projects/citi/cover.webp",
+      "coverAlt": "CITI — Colegio de Ingenieros en TI — Ecosistema digital de un colegio profesional: backend GraphQL único para web y móvil",
+      "images": [
+        "/images/projects/citi/cover.webp",
+        "/images/projects/citi/01.webp",
+        "/images/projects/citi/02.webp",
+        "/images/projects/citi/03.webp",
+        "/images/projects/citi/04.webp",
+        "/images/projects/citi/05.webp"
+      ],
+      "tags": [
+        "GraphQL",
+        "RBAC",
+        "QR",
+        "Flutter",
+        "Multi-app"
+      ],
+      "summary": "Ecosistema multi-app para digitalizar la gestión de un colegio profesional de ingeniería en Oruro (Bolivia): un único backend GraphQL consumido por un sitio institucional con panel administrativo, un portal del afiliado y una app móvil de colegiados. Reconstruye y unifica sistemas legacy dispersos (consulta RNI en Node y registro de aportes en Laravel 8) alrededor de un solo dominio.",
+      "challenge": "El colegio operaba con herramientas dispersas y de generación anterior: una consulta de aportes por RNI, un sistema Laravel 8 + AdminLTE para recibos y ningún autoservicio para el colegiado. Había que unificar padrón, aportes con cálculo de mora, tesorería de doble flujo, tribunales, kárdex y certificados, migrando la base legacy (~322 colegiados) sin perder integridad financiera ni trazabilidad.",
+      "solution": "Diseñé un backend GraphQL-first en Laravel 13 + Lighthouse (34 modelos Eloquent, ~43 tablas, 47 migraciones) con identidad federada Firebase y RBAC Spatie (7 roles / 20 permisos), consumido por un sitio estático Next.js 16 con blog autoadministrable y una app Flutter con carnet digital y onboarding/censo. El pago de mensualidades por QR usa un patrón Gateway conmutable, hoy en stub, listo para enchufar un proveedor bancario.",
+      "highlights": [
+        "Backend GraphQL único para web + móvil",
+        "Cálculo automático de mora con tarifas históricas",
+        "Tesorería de doble flujo con anulación lógica y auditoría",
+        "Certificados con verificación pública por QR",
+        "RBAC de 7 roles / 20 permisos y 92 pruebas Pest",
+        "Análisis de datos del padrón electoral S.I.B. Oruro 2026–2028 (Python)"
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "fedeliq",
+      "title": "Fedeliq (Liqmin V4) — Liquidación minera",
+      "tagline": "PWA que operacionaliza la Ley 535 para verificar liquidaciones mineras de cooperativistas",
+      "category": "PWA gubernamental / RegTech minero",
+      "year": "2026",
+      "client": "CISEP + FNI (UTO) para FEDECOMIN Oruro",
+      "role": "Solutions Architect & Tech Lead",
+      "stack": [
+        "Angular 21",
+        "TypeScript 5.9",
+        "PWA (offline-first)",
+        "Firebase (Firestore, Cloud Functions Node 22, Auth, Storage, Hosting)",
+        "Firebase AI Logic (Gemini 3.5 Flash)",
+        "cheerio",
+        "pdf-parse",
+        "jsPDF",
+        "Bun",
+        "Vitest"
+      ],
+      "liveUrl": "https://xliqmin4.web.app",
+      "featured": true,
+      "cover": "/images/projects/fedeliq/cover.webp",
+      "coverAlt": "Fedeliq (Liqmin V4) — Liquidación minera — PWA que operacionaliza la Ley 535 para verificar liquidaciones mineras de cooperativistas",
+      "images": [
+        "/images/projects/fedeliq/cover.webp",
+        "/images/projects/fedeliq/01.webp",
+        "/images/projects/fedeliq/02.webp",
+        "/images/projects/fedeliq/03.webp",
+        "/images/projects/fedeliq/04.webp",
+        "/images/projects/fedeliq/05.webp"
+      ],
+      "tags": [
+        "PWA",
+        "OCR/IA",
+        "Scraping",
+        "Cálculo regulatorio",
+        "Offline-first"
+      ],
+      "summary": "PWA mobile-first, offline-first e instalable que pone en el celular del cooperativista minero la fórmula completa de la Ley 535 boliviana para verificar si la liquidación que le paga la comercializadora es justa. Incluye un panel administrativo (Observatorio de liquidaciones mineras) para CISEP/FEDECOMIN. Reescritura completa del legacy V3.",
+      "challenge": "En Bolivia ~9 de cada 10 mineros son cooperativistas y la mayoría no puede verificar el cálculo de su boleta de liquidación (pesos, leyes, humedad, mermas, cotizaciones, Regalía Minera y decenas de descuentos). La asimetría de información se traduce en menor ingreso familiar; había que operacionalizar el derecho a información (Art. 87h/89) con un motor de cálculo fiel a la norma y datos oficiales actualizados.",
+      "solution": "Construí un motor de cálculo determinista de la Regalía Minera (alícuota Art. 227 en escala dinámica por mineral, DS 29577, T/C dual) replicado en cliente y en Cloud Functions, validado contra recibos reales al céntimo. Automaticé la ingesta de cotizaciones SENARECOM y tipo de cambio BCB con scrapers cron idempotentes, integré OCR de boletas con Gemini y levanté un Observatorio con KPIs y reclamos Art. 89, todo serverless a costo ~$0/año.",
+      "highlights": [
+        "Motor de cálculo Ley 535 Art. 227 validado al céntimo",
+        "580 tests (Vitest, 28 archivos)",
+        "Escaneo de boletas con IA (Gemini/Firebase AI Logic)",
+        "18 Cloud Functions con scrapers cron BCB/SENARECOM",
+        "~204 comercializadoras + ~125 cooperativas cargadas",
+        "Reliquidación Art. 89 con cierre automático a 5 días hábiles"
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "bemorex-saas",
+      "title": "Bemorex Mi Negocio (SaaS) — directorio + back-office",
+      "tagline": "SaaS multi-tenant: directorio de ~130.000 negocios + ERP con facturación fiscal boliviana",
+      "category": "SaaS multi-tenant (ERP + marketplace)",
+      "year": "2026",
+      "client": "Bemorex (producto propio)",
+      "role": "Solutions Architect, Tech Lead y desarrollador único",
+      "stack": [
+        ".NET 10",
+        "C# 14",
+        "EF Core 10",
+        "PostgreSQL 18",
+        "Hot Chocolate GraphQL 15",
+        "pgvector",
+        "Angular 22 SSR",
+        "Apollo Client 4",
+        "NgRx Signals",
+        "Bun",
+        "Google Cloud Run",
+        "Supabase",
+        "Firebase App Hosting",
+        "Cloudflare R2",
+        "Gemini Embedding 2 / 2.5 Flash-Lite"
+      ],
+      "liveUrl": "https://business.bemorex.com",
+      "featured": true,
+      "cover": "/images/projects/bemorex-saas/cover.webp",
+      "coverAlt": "Bemorex Mi Negocio (SaaS) — directorio + back-office — SaaS multi-tenant: directorio de ~130.000 negocios + ERP con facturación fiscal boliviana",
+      "images": [
+        "/images/projects/bemorex-saas/cover.webp",
+        "/images/projects/bemorex-saas/01.webp"
+      ],
+      "tags": [
+        "Multi-tenant",
+        "GraphQL",
+        "Facturación SIAT",
+        "Búsqueda híbrida",
+        "DDD/CQRS"
+      ],
+      "summary": "Producto SaaS propio de la agencia: una plataforma con dos caras sobre una misma base de datos. Un directorio público/marketplace de ~130.000 negocios reales de Bolivia (búsqueda, mapa, favoritos, carrito) y un panel Mi Negocio back-office multi-tenant donde cada PyME reclama su ficha y opera un ERP comercial completo (catálogo, inventario, compras, ventas/POS, reservas y facturación electrónica fiscal).",
+      "challenge": "Darle a una PyME boliviana presencia digital y herramientas operativas en un solo producto por suscripción exigía un back-office multi-tenant con aislamiento estricto por tenant, cumplimiento fiscal boliviano (SIAT/SIN), inventario avanzado y búsqueda semántica sobre ~130.000 negocios, todo bajo el principio el backend manda, el frontend se adapta.",
+      "solution": "Diseñé y desarrollé end-to-end un Modular Monolith en .NET 10 (15 módulos de dominio, Clean Architecture de 4 capas, DDD, CQRS con pipeline propio, GraphQL-first) con multi-tenancy por filtro global y patrón Outbox transaccional, más un frontend Angular 22 SSR. Construí un motor de búsqueda híbrido (FTS español + RRF + query-rewrite Gemini) y diseñé/validé un motor de búsqueda vectorial (pgvector + Gemini + HNSW), base de una charla en FLISOL 2026. Operé el ciclo DevOps completo sobre Cloud Run + Supabase.",
+      "highlights": [
+        "Directorio de ~130.000 negocios de Bolivia con mapa y búsqueda",
+        "Facturación electrónica SIAT/SIN con log fiscal hash-chain",
+        "Búsqueda vectorial pgvector + Gemini (3072-d, HNSW); backfill de 130K por ~$5",
+        "Motor híbrido léxico ⊕ vectorial fusionado por RRF",
+        "15 módulos de dominio, ~3.638 .cs backend / ~3.134 .ts frontend",
+        "Ponente en FLISOL 2026 sobre arquitectura de búsqueda vectorial"
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "ventur",
+      "title": "Ventur — POS / ERP retail",
+      "tagline": "POS + ERP de inventario, ventas, crédito y caja para una importadora de electrodomésticos",
+      "category": "ERP / Punto de venta",
+      "year": "2025–2026",
+      "client": "Importadora Ventur (Oruro, Bolivia)",
+      "role": "Solutions Architect & Tech Lead",
+      "stack": [
+        "Angular 21 (signals, standalone)",
+        "NgRx Signals",
+        "Supabase (PostgreSQL, Auth, RLS, RPC)",
+        "Firebase Hosting/Storage",
+        "Tailwind CSS 4",
+        "Chart.js",
+        "JsBarcode",
+        "big.js",
+        "TypeScript 5.9",
+        "Bun",
+        "Vitest",
+        "PWA"
+      ],
+      "liveUrl": "https://xventur.web.app",
+      "featured": true,
+      "cover": "/images/projects/ventur/cover.webp",
+      "coverAlt": "Ventur — POS / ERP retail — POS + ERP de inventario, ventas, crédito y caja para una importadora de electrodomésticos",
+      "images": [
+        "/images/projects/ventur/cover.webp",
+        "/images/projects/ventur/01.webp",
+        "/images/projects/ventur/02.webp",
+        "/images/projects/ventur/03.webp",
+        "/images/projects/ventur/04.webp",
+        "/images/projects/ventur/05.webp"
+      ],
+      "tags": [
+        "POS",
+        "Kardex FIFO",
+        "Multi-presentación",
+        "RLS",
+        "PWA"
+      ],
+      "summary": "Aplicación web SPA/PWA que cubre todo el ciclo comercial de una importadora orureña de electrodomésticos: punto de venta, ERP de inventario con kardex por lote, ventas en tres modalidades, cuentas corrientes de crédito, caja, importaciones (DIM) y reportería. Reemplaza el control manual por planillas con un sistema único trazable.",
+      "challenge": "El negocio requería un catálogo con múltiples presentaciones por producto (Unidad / Caja×N / Paquete×M), precios escalonados por cantidad y overrides de precio por lote, más tres modalidades de venta (directa, a pedido, a crédito) que afectan stock y contabilidad de forma distinta, todo con trazabilidad y auditoría completas.",
+      "solution": "Modelé la base PostgreSQL en Supabase (≈36 tablas, vistas, triggers y RPCs) con la lógica de negocio en la base (descuento/reserva/restauración de stock por modalidad, FIFO por lote, expiración de cotizaciones, restock de devoluciones) y un frontend Angular 21 con signals, motor de precios efectivo (override de lote → tier → default), permisos granulares con RLS y un design system propio de 12+ componentes.",
+      "highlights": [
+        "POS con escaneo de código de barras, pagos efectivo/QR/mixto y recibos 80mm/A4",
+        "Motor de precios: override de lote → tier por cantidad → default",
+        "Kardex multi-almacén con saldo por movimiento",
+        "3 modalidades de venta (directa/pedido/crédito con abonos)",
+        "~55.700 líneas TS/HTML, 90 componentes, 54 servicios",
+        "80 archivos de migración SQL, ~533 productos semilla (línea RAF)"
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "kairos",
+      "title": "Kairos — Gestión + e-commerce multi-sucursal",
+      "tagline": "ERP multi-moneda y tienda pública para una importadora, sobre SPA estática + Supabase",
+      "category": "ERP / Punto de venta + e-commerce",
+      "year": "2026",
+      "client": "Importadora Kairos VCL (Oruro, Bolivia)",
+      "role": "Solutions Architect & Tech Lead",
+      "stack": [
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS v4",
+        "TanStack React Query v5",
+        "Zustand 5",
+        "React Hook Form + Zod",
+        "Supabase (PostgreSQL, Auth, Storage)",
+        "Firebase Hosting",
+        "PWA"
+      ],
+      "liveUrl": "https://xkairos.web.app",
+      "featured": true,
+      "cover": "/images/projects/kairos/cover.webp",
+      "coverAlt": "Kairos — Gestión + e-commerce multi-sucursal — ERP multi-moneda y tienda pública para una importadora, sobre SPA estática + Supabase",
+      "images": [
+        "/images/projects/kairos/cover.webp",
+        "/images/projects/kairos/01.webp",
+        "/images/projects/kairos/02.webp"
+      ],
+      "tags": [
+        "Multi-moneda",
+        "FIFO",
+        "RLS",
+        "E-commerce",
+        "PWA"
+      ],
+      "summary": "Producto único con dos caras para una importadora boliviana-argentina: un back-office (inventario, POS, caja, clientes, reportes) y una tienda pública/e-commerce sin pasarela donde los clientes consultan catálogo y generan pedidos que se cobran por WhatsApp/sucursal. Deriva del dominio del proyecto hermano Ventur, añadiendo multi-moneda ARS, sitio público, productos unidad+caja y PWA.",
+      "challenge": "El negocio exigía manejo multi-moneda (Bs/ARS/USD por la mezcla de importación), venta por unidad y por caja del mismo producto, operación multi-sucursal sobre una sola base compartida y presencia comercial en línea con pedidos sin pago anticipado.",
+      "solution": "Desarrollé una SPA estática Next.js 16 + BaaS con tres route groups (público / admin / auth), delegando la seguridad a RLS y a una función has_permission. Modelé 42 tablas y escribí 24 migraciones PostgreSQL (3.031 líneas, 38 funciones security definer) con RPCs atómicas (venta con descuento FIFO por lote, crédito, devoluciones con restock, ciclo de caja, traslados entre sucursales) y una capa de datos client-side de 24 módulos con React Query.",
+      "highlights": [
+        "POS con 3 modalidades (directa/pedido/crédito) y FIFO por lote",
+        "Multi-moneda BOB/ARS/USD con snapshot de tipo de cambio",
+        "42 tablas, 24 migraciones (3.031 líneas), 38 funciones PL/pgSQL",
+        "Traslados de stock entre sucursales con estados",
+        "Tienda pública con login Google, carrito y pedidos en línea",
+        "PWA instalable con design system propio (light/dark)"
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "uto-lms",
+      "title": "UTO Learn — LMS de postgrado",
+      "tagline": "Plataforma e-learning con catálogo, matrícula, kárdex académico y tienda de cursos",
+      "category": "LMS / plataforma educativa",
+      "year": "2026",
+      "client": "Instituto UTO (Oruro, Bolivia)",
+      "role": "Solutions Architect & Full Stack",
+      "stack": [
+        "Angular 21",
+        "Express (SSR)",
+        "Firebase",
+        "Next.js",
+        "TypeScript"
+      ],
+      "liveUrl": "https://xutolearn.web.app",
+      "featured": true,
+      "cover": "/images/projects/uto-lms/cover.webp",
+      "coverAlt": "UTO Learn — LMS de postgrado — Plataforma e-learning con catálogo, matrícula, kárdex académico y tienda de cursos",
+      "images": [
+        "/images/projects/uto-lms/cover.webp",
+        "/images/projects/uto-lms/01.webp",
+        "/images/projects/uto-lms/02.webp",
+        "/images/projects/uto-lms/03.webp",
+        "/images/projects/uto-lms/04.webp",
+        "/images/projects/uto-lms/05.webp"
+      ],
+      "tags": [
+        "LMS",
+        "Kárdex",
+        "Carrito",
+        "RBAC",
+        "SSR"
+      ],
+      "summary": "LMS para un instituto de postgrado: catálogo de cursos, matrícula, kárdex académico, carrito con cupones y paneles de instructor y administración con roles diferenciados.",
+      "challenge": "La gestión académica y la venta de cursos vivían en procesos separados. Se requería una plataforma única con catálogo, inscripción, seguimiento académico (kárdex) y cobros, con permisos diferenciados por rol.",
+      "solution": "Construí un LMS con catálogo y detalle de curso, matrícula y carrito con cupones, kárdex académico y paneles de instructor/administración, sobre un kit de UI propio y control de acceso por roles.",
+      "highlights": [
+        "Catálogo y detalle de cursos",
+        "Matrícula + carrito con cupones",
+        "Kárdex académico del estudiante",
+        "Paneles de instructor y administración",
+        "Roles y permisos diferenciados"
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "lilaohu",
+      "title": "Lilaohu — Portal consultora legal-contable",
+      "tagline": "Sitio corporativo + portal privado de documentos PDF con control de acceso por cliente",
+      "category": "Sitio corporativo + portal de clientes",
+      "year": "2026",
+      "client": "LILAOHU S.R.L. — Consultora Legal Contable",
+      "role": "Solutions Architect & Tech Lead",
+      "stack": [
+        "Bemorex Engine 1.2.0",
+        "Firebase (Hosting, Auth con Google, Firestore, Storage)",
+        "JavaScript vanilla modular (ES5/IIFE)",
+        "PDF.js",
+        "TypeScript (config)",
+        "Bootstrap",
+        "Node 24"
+      ],
+      "liveUrl": "https://lilaohu.com.bo",
+      "featured": false,
+      "cover": "/images/projects/lilaohu/cover.webp",
+      "coverAlt": "Lilaohu — Portal consultora legal-contable — Sitio corporativo + portal privado de documentos PDF con control de acceso por cliente",
+      "images": [
+        "/images/projects/lilaohu/cover.webp",
+        "/images/projects/lilaohu/01.webp",
+        "/images/projects/lilaohu/02.webp",
+        "/images/projects/lilaohu/03.webp",
+        "/images/projects/lilaohu/04.webp",
+        "/images/projects/lilaohu/05.webp"
+      ],
+      "tags": [
+        "Serverless",
+        "RBAC",
+        "Visor PDF",
+        "SEO",
+        "Firebase"
+      ],
+      "summary": "Portal serverless para una consultora de asesoría legal y contable en Oruro: un sitio corporativo público con SEO completo, un panel administrativo y un portal de clientes para distribuir documentos jurídico-contables en PDF de forma controlada (a todos o a clientes específicos) con seguimiento de lecturas. Todo sobre Firebase, sin backend propio.",
+      "challenge": "La consultora necesitaba presencia web profesional y, sobre todo, una forma de entregar boletines, modelos de contrato, calendarios tributarios y checklists sin enviar archivos por correo/WhatsApp, con visibilidad por cliente y trazabilidad de quién ha leído qué.",
+      "solution": "Diseñé una arquitectura static-first + serverless: el sitio público lo genera el motor propio de la agencia (Bemorex Engine) y las zonas privadas son dos SPAs en JavaScript vanilla modular que hablan directo con Firebase. Construí un visor de PDF integrado con PDF.js sobre canvas (compatible con móviles), un modelo de visibilidad de documentos (todos vs. específicos) y reglas de seguridad RBAC con índices compuestos.",
+      "highlights": [
+        "Sitio público en vivo (HTTP/2 200) con SEO y JSON-LD LegalService",
+        "Visor de PDF integrado multiplataforma (PDF.js → canvas)",
+        "Distribución de documentos Todos o Específico por usuario",
+        "Seguimiento idempotente de lecturas (user_reads)",
+        "Subida de PDF con drag & drop, validación (solo PDF, ≤10 MB)",
+        "8 índices compuestos Firestore; cascada de renombrado de categorías"
+      ]
+    },
+    {
+      "id": 8,
+      "slug": "cisep",
+      "title": "CISEP — Sitio web institucional estratégico",
+      "tagline": "Sitio estratégico de una ONG: donaciones, denuncia anónima, transparencia y voluntariado",
+      "category": "Sitio institucional estratégico (ONG)",
+      "year": "2026",
+      "client": "CISEP — Centro de Investigación y Servicio Popular (ONG jesuita, Oruro)",
+      "role": "Solutions Architect & Tech Lead",
+      "stack": [
+        "Next.js 16.2.7",
+        "React 19",
+        "TypeScript 5.7",
+        "Firebase (Firestore, Hosting)",
+        "Leaflet/OpenStreetMap",
+        "plantilla Donatix (jQuery/GSAP)",
+        "GA4"
+      ],
+      "liveUrl": "https://cisep.org.bo",
+      "featured": true,
+      "cover": "/images/projects/cisep/cover.webp",
+      "coverAlt": "CISEP — Sitio web institucional estratégico — Sitio estratégico de una ONG: donaciones, denuncia anónima, transparencia y voluntariado",
+      "images": [
+        "/images/projects/cisep/cover.webp",
+        "/images/projects/cisep/01.webp",
+        "/images/projects/cisep/02.webp",
+        "/images/projects/cisep/03.webp",
+        "/images/projects/cisep/04.webp",
+        "/images/projects/cisep/05.webp"
+      ],
+      "tags": [
+        "ONG",
+        "Denuncia anónima",
+        "SEO/301",
+        "HTML-in-React",
+        "Firestore"
+      ],
+      "summary": "Migración de un WordPress legacy a un sitio institucional estratégico (no meramente informativo) de 54 rutas para una ONG jesuita con 40+ años de trayectoria: capta donaciones y voluntariado, ofrece un canal de denuncia anónimo, rinde cuentas (transparencia) y sirve de vitrina de su ecosistema de apps, preservando el SEO acumulado.",
+      "challenge": "El encargo no era rehacer la web bonita, sino convertirla en herramienta estratégica: captación de donaciones/voluntariado, un canal de denuncia anónimo y seguro, transparencia con auditorías en PDF y verificación de certificados, todo migrando desde un WordPress lento (~2.371 archivos) sin perder posicionamiento.",
+      "solution": "Implementé un patrón HTML-in-React que sirve la plantilla Donatix byte-exacta bajo App Router (Server Component + dangerouslySetInnerHTML) con los ~26 scripts legacy orquestados en cliente. Integré 3 formularios a Firestore con reglas de seguridad (default-deny, validación de esquema, allowlist de admins), anonimato reforzado en denuncias (sin IP/UA), honeypot y rate-limit, más redirects 301 desde el WordPress legacy.",
+      "highlights": [
+        "54 rutas Next.js sobre plantilla Donatix reutilizada byte-exacta",
+        "Canal de denuncia anónima (sin IP/UA) con código de seguimiento",
+        "3 colecciones Firestore con reglas default-deny y allowlist de admins",
+        "Dashboard de impacto con mapa Leaflet/OpenStreetMap",
+        "14 redirects 301 para preservar el SEO del WordPress legacy",
+        "Centro de transparencia con auditorías y memorias en PDF reales"
+      ]
+    },
+    {
+      "id": 9,
+      "slug": "xmissing",
+      "title": "Personas Desaparecidas — Plataforma FELCC",
+      "tagline": "Registro y búsqueda de personas desaparecidas con panel de moderación y mapa de calor",
+      "category": "Plataforma pública + admin (seguridad ciudadana)",
+      "year": "2026",
+      "client": "Seguridad ciudadana — FELCC (Oruro, Bolivia)",
+      "role": "Solutions Architect & Full Stack",
+      "stack": [
+        "Angular 21",
+        "Firebase (Firestore, Auth)",
+        "TypeScript",
+        "Leaflet / Mapas",
+        "PWA"
+      ],
+      "liveUrl": "https://xmissingpeople.web.app",
+      "featured": true,
+      "cover": "/images/projects/xmissing/cover.webp",
+      "coverAlt": "Personas Desaparecidas — Plataforma FELCC — Registro y búsqueda de personas desaparecidas con panel de moderación y mapa de calor",
+      "images": [
+        "/images/projects/xmissing/cover.webp",
+        "/images/projects/xmissing/01.webp",
+        "/images/projects/xmissing/02.webp",
+        "/images/projects/xmissing/03.webp",
+        "/images/projects/xmissing/04.webp",
+        "/images/projects/xmissing/05.webp"
+      ],
+      "tags": [
+        "Mapa",
+        "Alertas",
+        "Admin",
+        "Denuncias",
+        "Firebase"
+      ],
+      "summary": "Plataforma pública con panel administrativo para reportar y buscar personas desaparecidas: fichas de caso, buscador, mapa interactivo, emisión de “Alerta”, categorización y registro centralizado.",
+      "challenge": "La búsqueda de personas desaparecidas dependía de difusión dispersa (redes, papel), sin registro centralizado ni geolocalización. Hacía falta un canal único, público y con moderación, que permitiera reportar, buscar y dar seguimiento a los casos con trazabilidad.",
+      "solution": "Desarrollé una SPA/PWA en Angular + Firebase con ficha de denuncia, buscador, mapa interactivo de casos y emisión de alertas, más un panel de moderación con dashboard y mapa de calor para las autoridades.",
+      "highlights": [
+        "Ficha de denuncia y buscador público",
+        "Mapa interactivo de casos + mapa de calor",
+        "Emisión y difusión de Alertas",
+        "Panel de moderación con dashboard",
+        "PWA instalable sobre Firebase"
+      ]
+    },
+    {
+      "id": 10,
+      "slug": "bemorex-website",
+      "title": "Bemorex — Sitio web de la agencia",
+      "tagline": "Sitio de marca + blog SEO + suite de herramientas, migrado a Next.js como export estático",
+      "category": "Sitio corporativo + blog + herramientas",
+      "year": "2026",
+      "client": "Bemorex (producto propio)",
+      "role": "Fundador / Solutions Architect & Tech Lead",
+      "stack": [
+        "Next.js 15.5 (App Router, output export)",
+        "React 19",
+        "TypeScript 5.7",
+        "Bun",
+        "Tailwind CSS v3",
+        "Zustand 5",
+        "Firebase Hosting/Firestore",
+        "GSAP",
+        "arquitectura hexagonal + SOLID"
+      ],
+      "liveUrl": "https://www.bemorex.com",
+      "featured": false,
+      "cover": "/images/projects/bemorex-website/cover.webp",
+      "coverAlt": "Bemorex — Sitio web de la agencia — Sitio de marca + blog SEO + suite de herramientas, migrado a Next.js como export estático",
+      "images": [
+        "/images/projects/bemorex-website/cover.webp",
+        "/images/projects/bemorex-website/01.webp",
+        "/images/projects/bemorex-website/02.webp",
+        "/images/projects/bemorex-website/03.webp"
+      ],
+      "tags": [
+        "Next.js",
+        "SSG estático",
+        "SEO técnico",
+        "Hexagonal",
+        "Herramientas web"
+      ],
+      "summary": "Sitio web oficial y de marca de la agencia Bemorex (Oruro): escaparate de marca y motor de captación de leads con home animado, páginas de servicios, portafolio, blog SEO de ~48 artículos y una suite de ~16 herramientas web gratuitas. Export 100% estático servido desde Firebase Hosting, con contenido principal en español de Bolivia.",
+      "challenge": "Migrar un SSG propio (bemorex-engine) a Next.js 15 manteniendo paridad visual (port, no rewrite) de un tema de agencia pesado (GSAP, jQuery, WebGL), sin backend ni CRM, y convivir en el mismo proyecto con una plataforma de herramientas moderna sin romper el tema en vivo.",
+      "solution": "Diseñé una arquitectura MPA estática con una ruta catch-all que enumera ~188 rutas y reconstruye el markup/CSS/JS del tema para ejecutarse en orden. Para la suite de herramientas implementé arquitectura hexagonal (ports & adapters) + SOLID: dominio puro testeado, casos de uso, adapters de infraestructura, inyección de dependencias manual y estado con Zustand, todo client-side y bilingüe. Añadí SEO técnico integral y endurecimiento de seguridad.",
+      "highlights": [
+        "~188 rutas estáticas migradas con paridad visual (port verbatim)",
+        "Blog SEO de 48 artículos en español (E-E-A-T)",
+        "Suite de ~16 herramientas web bilingües, 100% client-side",
+        "SEO técnico: JSON-LD, hreflang es-BO/en, sitemap, IndexNow",
+        "Arquitectura hexagonal + SOLID con dominio puro testeado (Bun)",
+        "Analítica multi-proveedor (GA4, Meta Pixel, Clarity + propia) y CSP/HSTS"
+      ]
+    },
+    {
+      "id": 11,
+      "slug": "physiolife",
+      "title": "PhysioLife — Centro de rehabilitación y fisioterapia",
+      "tagline": "Sitio de captación con SSR/SSG, catálogos ricos, blog SEO y analítica propia",
+      "category": "Sitio institucional + catálogo + blog SEO",
+      "year": "2025–2026",
+      "client": "PhysioLife — Centro de Rehabilitación (Oruro, Bolivia)",
+      "role": "Solutions Architect & Tech Lead",
+      "stack": [
+        "Angular 21",
+        "TypeScript 5.9",
+        "Angular SSR + Express 5",
+        "SSG/prerender",
+        "Firebase (Hosting, Firestore, Analytics)",
+        "@angular/fire 21",
+        "Bootstrap 5.3",
+        "ngx-markdown",
+        "PWA (service worker)",
+        "Bun"
+      ],
+      "liveUrl": "https://physiolife.center",
+      "featured": false,
+      "cover": "/images/projects/physiolife/cover.webp",
+      "coverAlt": "PhysioLife — Centro de rehabilitación y fisioterapia — Sitio de captación con SSR/SSG, catálogos ricos, blog SEO y analítica propia",
+      "images": [
+        "/images/projects/physiolife/cover.webp",
+        "/images/projects/physiolife/01.webp",
+        "/images/projects/physiolife/02.webp",
+        "/images/projects/physiolife/03.webp",
+        "/images/projects/physiolife/04.webp",
+        "/images/projects/physiolife/05.webp"
+      ],
+      "tags": [
+        "SSR/SSG",
+        "SEO schema.org",
+        "Analítica propia",
+        "PWA",
+        "Blog Markdown"
+      ],
+      "summary": "Sitio web institucional y de captación para un centro de fisioterapia y rehabilitación en Oruro: presenta 14 servicios especializados, un catálogo de ~30 productos de bienestar y un blog SEO de 36 artículos, con conversión directa a WhatsApp. Incluye una plataforma de analítica de comportamiento construida a medida sobre Firestore.",
+      "challenge": "El centro necesitaba visibilidad y captación local vía SEO (posicionarse para fisioterapia Oruro, rehabilitación Oruro), presentar con claridad su oferta clínica y convertir sin fricción, sin un sistema de gestión clínica ni reservas con backend. Todo debía cargar rápido y ser indexable.",
+      "solution": "Construí el sitio con Angular 21 (SSR/SSG + PWA) y una capa de datos estática tipada como única fuente de verdad para servicios, productos y equipo. Implementé una estrategia SEO transversal (SeoService que inyecta 12+ tipos top-level de JSON-LD, OG/Twitter, sitemap auto-generado) y una plataforma de analítica propia sobre Firestore (sesiones, visitantes, eventos, presencia en tiempo real, Web Vitals) integrada con GA4.",
+      "highlights": [
+        "14 servicios y ~30 productos con fichas detalladas y SEO propio",
+        "Blog SEO de 36 artículos en Markdown, 6 categorías",
+        "12+ tipos top-level de JSON-LD (MedicalBusiness, MedicalTherapy, etc.)",
+        "Analítica de comportamiento a medida en Firestore + GA4",
+        "SSR/SSG + PWA con caché inmutable de assets",
+        "sitemap.xml (84 URLs), robots.txt y llms.txt para crawlers de IA"
+      ]
+    },
+    {
+      "id": 12,
+      "slug": "renacer",
+      "title": "Revista Renacer — Plataforma editorial",
+      "tagline": "Sitio de la revista educativa Renacer: blog SEO, portal y edición digital",
+      "category": "Medio digital / editorial",
+      "year": "2026",
+      "client": "Revista Educativa “Renacer”",
+      "role": "Fundador / Solutions Architect & Full Stack",
+      "stack": [
+        "Next.js 16",
+        "React 19",
+        "Tailwind CSS 4",
+        "Firebase"
+      ],
+      "liveUrl": "https://xreborn.web.app",
+      "featured": false,
+      "cover": "/images/projects/renacer/cover.webp",
+      "coverAlt": "Revista Renacer — Plataforma editorial — Sitio de la revista educativa Renacer: blog SEO, portal y edición digital",
+      "images": [
+        "/images/projects/renacer/cover.webp",
+        "/images/projects/renacer/01.webp",
+        "/images/projects/renacer/02.webp",
+        "/images/projects/renacer/03.webp",
+        "/images/projects/renacer/04.webp",
+        "/images/projects/renacer/05.webp"
+      ],
+      "tags": [
+        "Editorial",
+        "Blog",
+        "SEO",
+        "Next.js",
+        "Firebase"
+      ],
+      "summary": "Sitio web de la revista educativa “Renacer”, medio de comunicación a nivel nacional: edición digital, blog optimizado para SEO, sección de convocatorias/carreras, FAQ y portal.",
+      "challenge": "La revista necesitaba una presencia digital que reflejara su línea editorial impresa y sirviera de canal para difundir experiencias, investigaciones e innovaciones educativas.",
+      "solution": "Desarrollé el sitio con Next.js 16 y Firebase, con blog optimizado para SEO, secciones editoriales y una identidad visual acorde a la publicación impresa (4ª edición).",
+      "highlights": [
+        "Blog editorial optimizado para SEO",
+        "Rediseño de marca acorde a la revista impresa",
+        "Secciones de convocatorias y FAQ",
+        "Stack Next.js 16 + Firebase",
+        "Medio de comunicación a nivel nacional"
+      ]
+    },
+    {
+      "id": 13,
+      "slug": "romaneo",
+      "title": "Romaneo — Digitalización del romaneo de madera",
+      "tagline": "PWA offline-first de campo para medir madera y calcular pies tablares en aserradero",
+      "category": "PWA de operación en campo",
+      "year": "2025",
+      "client": "Empresa maderera (Bolivia)",
+      "role": "Solutions Architect & Tech Lead",
+      "stack": [
+        "Angular",
+        "TypeScript",
+        "TailwindCSS",
+        "Firebase (offline sync)",
+        "PWA (offline-first, instalable)",
+        "Figma"
+      ],
+      "liveUrl": "https://bemorex.com/proyectos/romaneo/",
+      "featured": false,
+      "cover": "/images/projects/romaneo/cover.webp",
+      "coverAlt": "Romaneo — Digitalización del romaneo de madera — PWA offline-first de campo para medir madera y calcular pies tablares en aserradero",
+      "images": [
+        "/images/projects/romaneo/cover.webp",
+        "/images/projects/romaneo/01.webp",
+        "/images/projects/romaneo/02.webp",
+        "/images/projects/romaneo/03.webp",
+        "/images/projects/romaneo/04.webp",
+        "/images/projects/romaneo/05.webp"
+      ],
+      "tags": [
+        "PWA",
+        "Offline-first",
+        "Pies tablares",
+        "Exportación PDF/Excel",
+        "UX de campo"
+      ],
+      "summary": "Sistema tipo PWA que digitaliza el proceso de romaneo de madera (medición y registro de piezas) para una empresa maderera en Bolivia, reemplazando papel, calculadora y Excel por registro en campo, cálculo automático y generación de reportes. Diseñado para condiciones reales de aserradero.",
+      "challenge": "Antes del sistema la operación era manual y caótica (hojas de papel, calculadoras y Excel desactualizados), lo que causaba cálculos deficientes de volúmenes, envíos sin trazabilidad, reportes que tardaban días y pérdidas por errores. Todo debía funcionar con pantallas vistas bajo el sol, operarios con guantes y conectividad intermitente.",
+      "solution": "Se construyó una PWA offline-first con Angular + Firebase que centraliza producción y despacho: registro de romaneos con detalle de paquetes, cálculo automático de pies tablares por pieza y por envío, sincronización offline, dashboard con totales y filtros, y exportación a PDF/Excel con compartición por WhatsApp/email. La UX se optimizó para campo (teclado numérico para guantes, modo claro/oscuro, legibilidad bajo sol).",
+      "highlights": [
+        "Cálculo automático de pies tablares por pieza y por envío",
+        "Funcionamiento offline con sincronización Firebase",
+        "Teclado numérico optimizado para uso con guantes",
+        "Registro de un paquete en menos de 10 segundos",
+        "Exportación a PDF y Excel + compartir por WhatsApp/email",
+        "Diseño UX específico para condiciones de aserradero"
+      ]
+    },
+    {
+      "id": 14,
+      "slug": "ferromader",
+      "title": "Ferromader — Gestión de barraca de madera",
+      "tagline": "ERP ligero de ventas e inventario con cálculo automático de pies tablares",
+      "category": "ERP ligero / gestión comercial",
+      "year": "2026",
+      "client": "Comercial / Barraca Ferromader (Bolivia)",
+      "role": "Solutions Architect & Tech Lead",
+      "stack": [
+        "Angular 21 (standalone, signals, zoneless)",
+        "Firebase (Firestore + Auth)",
+        "@angular/fire 20",
+        "TypeScript 5.9",
+        "Tailwind CSS 4",
+        "Chart.js 4",
+        "jsPDF + autotable",
+        "date-fns",
+        "Vitest 4",
+        "Bun"
+      ],
+      "liveUrl": "https://xferromader.web.app",
+      "featured": false,
+      "cover": "/images/projects/ferromader/cover.webp",
+      "coverAlt": "Ferromader — Gestión de barraca de madera — ERP ligero de ventas e inventario con cálculo automático de pies tablares",
+      "images": [
+        "/images/projects/ferromader/cover.webp"
+      ],
+      "tags": [
+        "Pies tablares",
+        "Kardex",
+        "RBAC",
+        "Auditoría",
+        "Firestore"
+      ],
+      "summary": "Sistema web interno a medida para administrar una barraca de madera con línea de ferretería: ventas, inventario en pies tablares, clientes/proveedores, recepciones, dashboard y reportes. Automatiza el cálculo propio del rubro maderero y mantiene el inventario sincronizado venta a venta con trazabilidad.",
+      "challenge": "En el rubro maderero la unidad de venta no es la pieza sino el pie tablar, que depende de espesor × ancho × largo. Había que automatizar ese cálculo (y el de productos terminados con equivalencia fija), evitar errores de precio y mantener el stock sincronizado en ventas, anulaciones y recepciones, con auditoría de quién hizo qué.",
+      "solution": "Desarrollé una SPA Angular 21 standalone y zoneless (signals) sobre Firebase, con ítems mixtos madera/producto, cálculo automático de pies tablares, transacciones (runTransaction) para descontar/recuperar stock junto al correlativo de venta y writeBatch para cascadas de desnormalización. Añadí seguridad por roles y permisos granulares con reglas Firestore endurecidas (anti-escalada, pre-registro, auditoría inmutable, default-deny).",
+      "highlights": [
+        "Cálculo automático de pies tablares con precio sugerido editable",
+        "Doble línea de catálogo: madera (por pies) + ferretería (por unidad)",
+        "Ventas con estado y saldo (pago parcial/crédito) y factura opcional",
+        "Control de stock transaccional (venta/anulación/recepción)",
+        "18 permisos granulares y 3 roles; auditoría inmutable",
+        "~18.100 líneas TS en 55 archivos; 11 colecciones Firestore"
+      ]
+    },
+    {
+      "id": 15,
+      "slug": "ascenso",
+      "title": "Ascenso de Categoría — PWA de estudio docente",
+      "tagline": "Simulacros y fichas para preparar el examen de ascenso docente 2026",
+      "category": "PWA educativa (preparación de examen)",
+      "year": "2026",
+      "client": "Producto para docentes (Bolivia)",
+      "role": "Solutions Architect & Full Stack",
+      "stack": [
+        "Angular 22",
+        "Firebase",
+        "TypeScript",
+        "PWA (offline-first)"
+      ],
+      "liveUrl": "https://xrebornascent.web.app",
+      "featured": false,
+      "cover": "/images/projects/ascenso/cover.webp",
+      "coverAlt": "Ascenso de Categoría — PWA de estudio docente — Simulacros y fichas para preparar el examen de ascenso docente 2026",
+      "images": [
+        "/images/projects/ascenso/cover.webp",
+        "/images/projects/ascenso/01.webp",
+        "/images/projects/ascenso/02.webp",
+        "/images/projects/ascenso/03.webp",
+        "/images/projects/ascenso/04.webp"
+      ],
+      "tags": [
+        "PWA",
+        "Simulacros",
+        "Offline",
+        "Progreso",
+        "Firebase"
+      ],
+      "summary": "PWA para preparar el examen de ascenso de categoría docente 2026 en Bolivia: exámenes simulados, fichas de estudio y seguimiento de progreso, con un banco de 890 preguntas y 1112 fichas.",
+      "challenge": "Los docentes preparaban el examen con material disperso y sin retroalimentación. Hacía falta una herramienta móvil con banco de preguntas, simulacros cronometrados y seguimiento del avance, usable sin conexión estable.",
+      "solution": "PWA Angular + Firebase con simulacros, fichas de estudio, seguimiento de progreso y sincronización offline, más un panel administrativo para gestionar el contenido de estudio.",
+      "highlights": [
+        "Banco de 890 preguntas y 1112 fichas",
+        "Exámenes simulados con seguimiento de progreso",
+        "Funcionamiento offline (PWA)",
+        "Panel administrativo de contenido",
+        "Sincronización con Firebase"
+      ]
+    },
+    {
+      "id": 16,
+      "slug": "peluditos",
+      "title": "Peluditos — Registro y adopción de mascotas",
+      "tagline": "PWA para registrar y buscar mascotas perdidas y en adopción",
+      "category": "PWA comunitaria (mascotas)",
+      "year": "2026",
+      "client": "Peluditos (producto)",
+      "role": "Solutions Architect & Full Stack",
+      "stack": [
+        "Angular 21",
+        "Firebase",
+        "TypeScript",
+        "PWA"
+      ],
+      "liveUrl": "https://peluditos.org.bo",
+      "featured": false,
+      "cover": "/images/projects/peluditos/cover.webp",
+      "coverAlt": "Peluditos — Registro y adopción de mascotas — PWA para registrar y buscar mascotas perdidas y en adopción",
+      "images": [
+        "/images/projects/peluditos/cover.webp",
+        "/images/projects/peluditos/01.webp",
+        "/images/projects/peluditos/02.webp",
+        "/images/projects/peluditos/03.webp"
+      ],
+      "tags": [
+        "PWA",
+        "Adopción",
+        "Búsqueda",
+        "Comunidad",
+        "Firebase"
+      ],
+      "summary": "Plataforma tipo PWA para registrar y buscar mascotas (perdidas o en adopción), conectando a la comunidad mediante fichas con fotos, búsqueda por estado e instalación en el móvil.",
+      "challenge": "No existía un registro centralizado para reportar mascotas perdidas o en adopción; la difusión dependía de redes sociales sin estructura ni búsqueda.",
+      "solution": "Desarrollé una PWA Angular + Firebase con registro de mascotas, fichas con fotos, buscador y estados (perdida/adopción), instalable en el móvil y publicada en peluditos.org.bo.",
+      "highlights": [
+        "Registro de mascotas con fotos",
+        "Búsqueda por estado (perdida/adopción)",
+        "PWA instalable",
+        "Backend serverless Firebase",
+        "Publicado en peluditos.org.bo"
+      ]
+    }
+  ]
+}
