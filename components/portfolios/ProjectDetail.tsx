@@ -225,7 +225,12 @@ export default function ProjectDetail({ slug }: { slug: string }) {
           padding-bottom: 2.2rem;
         }
         .project-detail .pd-hero {
-          padding-top: 3rem;
+          padding-top: 150px;
+        }
+        @media (max-width: 991px) {
+          .project-detail .pd-hero {
+            padding-top: 120px;
+          }
         }
         .pd-meta-top {
           display: flex;
@@ -279,7 +284,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
           cursor: zoom-in;
           overflow: hidden;
           background: color-mix(in srgb, currentColor 6%, transparent);
-          aspect-ratio: 16 / 9;
+          aspect-ratio: 16 / 10;
         }
         .pd-cover img {
           width: 100%;

@@ -1,0 +1,486 @@
+- generic [active] [ref=f101e1]:
+  - link "Saltar al contenido principal" [ref=f101e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation:
+    - button "Abrir menú" [ref=f101e3] [cursor=pointer]
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - navigation:
+                - list
+  - banner [ref=f101e7]:
+    - link "David Morales Vega David MV" [ref=f101e9] [cursor=pointer]:
+      - /url: /
+      - img "David Morales Vega" [ref=f101e10]
+      - generic [ref=f101e11]:
+        - text: David
+        - text: MV
+    - link "Hablemos" [ref=f101e13] [cursor=pointer]:
+      - /url: /contacto
+      - generic [ref=f101e14]:
+        - generic [ref=f101e15]: Hablemos
+        - generic [ref=f101e16]: Hablemos
+      - generic [ref=f101e17]: 
+  - main [ref=f101e18]:
+    - main [ref=f101e19]:
+      - generic [ref=f101e24]:
+        - generic [ref=f101e25]:
+          - generic [ref=f101e27]:
+            - heading "Proyectos y productos" [level=1] [ref=f101e28]:
+              - text: Proyectos
+              - text: y productos
+            - paragraph [ref=f101e29]:
+              - img [ref=f101e30]
+              - generic [ref=f101e32]: 20 productos en producción
+          - 'link "Ver caso de estudio: CITI — Colegio de Ingenieros en TI" [ref=f101e34] [cursor=pointer]':
+            - /url: /proyectos/citi
+            - generic [ref=f101e35]:
+              - 'img "CITI — Colegio de Ingenieros en TI — Ecosistema digital de un colegio profesional: backend GraphQL único para web y móvil" [ref=f101e37]'
+              - generic [ref=f101e38]: Plataforma institucional / gestión colegial2026
+              - generic [ref=f101e39]:
+                - generic [ref=f101e40]: GraphQL
+                - generic [ref=f101e41]: RBAC
+                - generic [ref=f101e42]: QR
+                - generic [ref=f101e43]: Flutter
+              - generic [ref=f101e44]:
+                - text: Ver caso
+                - generic [ref=f101e45]: 
+            - generic [ref=f101e46]:
+              - generic [ref=f101e47]: CITI — Colegio de Ingenieros en TI
+              - paragraph [ref=f101e48]: "Ecosistema digital de un colegio profesional: backend GraphQL único para web y móvil"
+          - 'link "Ver caso de estudio: Fedeliq (Liqmin V4) — Liquidación minera" [ref=f101e50] [cursor=pointer]':
+            - /url: /proyectos/fedeliq
+            - generic [ref=f101e51]:
+              - img "Fedeliq (Liqmin V4) — Liquidación minera — PWA que operacionaliza la Ley 535 para verificar liquidaciones mineras de cooperativistas" [ref=f101e53]
+              - generic [ref=f101e54]: PWA gubernamental / RegTech minero2026
+              - generic [ref=f101e55]:
+                - generic [ref=f101e56]: PWA
+                - generic [ref=f101e57]: OCR/IA
+                - generic [ref=f101e58]: Scraping
+                - generic [ref=f101e59]: Cálculo regulatorio
+              - generic [ref=f101e60]:
+                - text: Ver caso
+                - generic [ref=f101e61]: 
+            - generic [ref=f101e62]:
+              - generic [ref=f101e63]: Fedeliq (Liqmin V4) — Liquidación minera
+              - paragraph [ref=f101e64]: PWA que operacionaliza la Ley 535 para verificar liquidaciones mineras de cooperativistas
+          - 'link "Ver caso de estudio: Bemorex Mi Negocio (SaaS) — directorio + back-office" [ref=f101e66] [cursor=pointer]':
+            - /url: /proyectos/bemorex-saas
+            - generic [ref=f101e67]:
+              - 'img "Bemorex Mi Negocio (SaaS) — directorio + back-office — SaaS multi-tenant: directorio de ~130.000 negocios + ERP con facturación fiscal boliviana" [ref=f101e69]'
+              - generic [ref=f101e70]: SaaS multi-tenant (ERP + marketplace)2026
+              - generic [ref=f101e71]:
+                - generic [ref=f101e72]: Multi-tenant
+                - generic [ref=f101e73]: GraphQL
+                - generic [ref=f101e74]: Facturación SIAT
+                - generic [ref=f101e75]: Búsqueda híbrida
+              - generic [ref=f101e76]:
+                - text: Ver caso
+                - generic [ref=f101e77]: 
+            - generic [ref=f101e78]:
+              - generic [ref=f101e79]: Bemorex Mi Negocio (SaaS) — directorio + back-office
+              - paragraph [ref=f101e80]: "SaaS multi-tenant: directorio de ~130.000 negocios + ERP con facturación fiscal boliviana"
+          - 'link "Ver caso de estudio: Ventur — POS / ERP retail" [ref=f101e82] [cursor=pointer]':
+            - /url: /proyectos/ventur
+            - generic [ref=f101e83]:
+              - generic [ref=f101e84]:
+                - img "Ventur — POS / ERP retail — POS + ERP de inventario, ventas, crédito y caja para una importadora de electrodomésticos"
+              - generic [ref=f101e85]: ERP / Punto de venta2025–2026
+              - generic [ref=f101e86]:
+                - generic [ref=f101e87]: POS
+                - generic [ref=f101e88]: Kardex FIFO
+                - generic [ref=f101e89]: Multi-presentación
+                - generic [ref=f101e90]: RLS
+              - generic [ref=f101e91]:
+                - text: Ver caso
+                - generic [ref=f101e92]: 
+            - generic [ref=f101e93]:
+              - generic [ref=f101e94]: Ventur — POS / ERP retail
+              - paragraph [ref=f101e95]: POS + ERP de inventario, ventas, crédito y caja para una importadora de electrodomésticos
+          - 'link "Ver caso de estudio: Kairos — Gestión + e-commerce multi-sucursal" [ref=f101e97] [cursor=pointer]':
+            - /url: /proyectos/kairos
+            - generic [ref=f101e98]:
+              - generic [ref=f101e99]:
+                - img "Kairos — Gestión + e-commerce multi-sucursal — ERP multi-moneda y tienda pública para una importadora, sobre SPA estática + Supabase"
+              - generic [ref=f101e100]: ERP / Punto de venta + e-commerce2026
+              - generic [ref=f101e101]:
+                - generic [ref=f101e102]: Multi-moneda
+                - generic [ref=f101e103]: FIFO
+                - generic [ref=f101e104]: RLS
+                - generic [ref=f101e105]: E-commerce
+              - generic [ref=f101e106]:
+                - text: Ver caso
+                - generic [ref=f101e107]: 
+            - generic [ref=f101e108]:
+              - generic [ref=f101e109]: Kairos — Gestión + e-commerce multi-sucursal
+              - paragraph [ref=f101e110]: ERP multi-moneda y tienda pública para una importadora, sobre SPA estática + Supabase
+          - 'link "Ver caso de estudio: UTO Learn — LMS de postgrado" [ref=f101e112] [cursor=pointer]':
+            - /url: /proyectos/uto-lms
+            - generic [ref=f101e113]:
+              - generic [ref=f101e114]:
+                - img "UTO Learn — LMS de postgrado — Plataforma e-learning con catálogo, matrícula, kárdex académico y tienda de cursos"
+              - generic [ref=f101e115]: LMS / plataforma educativa2026
+              - generic [ref=f101e116]:
+                - generic [ref=f101e117]: LMS
+                - generic [ref=f101e118]: Kárdex
+                - generic [ref=f101e119]: Carrito
+                - generic [ref=f101e120]: RBAC
+              - generic [ref=f101e121]:
+                - text: Ver caso
+                - generic [ref=f101e122]: 
+            - generic [ref=f101e123]:
+              - generic [ref=f101e124]: UTO Learn — LMS de postgrado
+              - paragraph [ref=f101e125]: Plataforma e-learning con catálogo, matrícula, kárdex académico y tienda de cursos
+          - 'link "Ver caso de estudio: CirGuZ — Plataforma de e-learning médico" [ref=f101e127] [cursor=pointer]':
+            - /url: /proyectos/cirguz
+            - generic [ref=f101e128]:
+              - generic [ref=f101e129]:
+                - img "CirGuZ — Plataforma de e-learning médico — Biblioteca y lecciones de cirugía con dashboard del estudiante y panel admin, como PWA"
+              - generic [ref=f101e130]: E-learning médico2025
+              - generic [ref=f101e131]:
+                - generic [ref=f101e132]: E-learning
+                - generic [ref=f101e133]: Biblioteca médica
+                - generic [ref=f101e134]: PWA
+                - generic [ref=f101e135]: Dashboard
+              - generic [ref=f101e136]:
+                - text: Ver caso
+                - generic [ref=f101e137]: 
+            - generic [ref=f101e138]:
+              - generic [ref=f101e139]: CirGuZ — Plataforma de e-learning médico
+              - paragraph [ref=f101e140]: Biblioteca y lecciones de cirugía con dashboard del estudiante y panel admin, como PWA
+          - 'link "Ver caso de estudio: Zyrax ERP — Sistema de gestión empresarial" [ref=f101e142] [cursor=pointer]':
+            - /url: /proyectos/zyrax
+            - generic [ref=f101e143]:
+              - generic [ref=f101e144]:
+                - 'img "Zyrax ERP — Sistema de gestión empresarial — ERP modular con design system propio (Zephyrus): dashboard, RRHH, administración y analíticas"'
+              - generic [ref=f101e145]: ERP / gestión empresarial2025
+              - generic [ref=f101e146]:
+                - generic [ref=f101e147]: ERP
+                - generic [ref=f101e148]: RRHH
+                - generic [ref=f101e149]: Analíticas
+                - generic [ref=f101e150]: Design system
+              - generic [ref=f101e151]:
+                - text: Ver caso
+                - generic [ref=f101e152]: 
+            - generic [ref=f101e153]:
+              - generic [ref=f101e154]: Zyrax ERP — Sistema de gestión empresarial
+              - paragraph [ref=f101e155]: "ERP modular con design system propio (Zephyrus): dashboard, RRHH, administración y analíticas"
+          - 'link "Ver caso de estudio: Bemorex Learn — Plataforma de aprendizaje" [ref=f101e157] [cursor=pointer]':
+            - /url: /proyectos/learn-bemorex
+            - generic [ref=f101e158]:
+              - generic [ref=f101e159]:
+                - img "Bemorex Learn — Plataforma de aprendizaje — Cursos interactivos, blog técnico y rutas de aprendizaje de desarrollo, 100% gratis y open source"
+              - generic [ref=f101e160]: Plataforma educativa / e-learning2026
+              - generic [ref=f101e161]:
+                - generic [ref=f101e162]: E-learning
+                - generic [ref=f101e163]: Open source
+                - generic [ref=f101e164]: Blog técnico
+                - generic [ref=f101e165]: PWA
+              - generic [ref=f101e166]:
+                - text: Ver caso
+                - generic [ref=f101e167]: 
+            - generic [ref=f101e168]:
+              - generic [ref=f101e169]: Bemorex Learn — Plataforma de aprendizaje
+              - paragraph [ref=f101e170]: Cursos interactivos, blog técnico y rutas de aprendizaje de desarrollo, 100% gratis y open source
+          - 'link "Ver caso de estudio: Lilaohu — Portal consultora legal-contable" [ref=f101e172] [cursor=pointer]':
+            - /url: /proyectos/lilaohu
+            - generic [ref=f101e173]:
+              - generic [ref=f101e174]:
+                - img "Lilaohu — Portal consultora legal-contable — Sitio corporativo + portal privado de documentos PDF con control de acceso por cliente"
+              - generic [ref=f101e175]: Sitio corporativo + portal de clientes2026
+              - generic [ref=f101e176]:
+                - generic [ref=f101e177]: Serverless
+                - generic [ref=f101e178]: RBAC
+                - generic [ref=f101e179]: Visor PDF
+                - generic [ref=f101e180]: SEO
+              - generic [ref=f101e181]:
+                - text: Ver caso
+                - generic [ref=f101e182]: 
+            - generic [ref=f101e183]:
+              - generic [ref=f101e184]: Lilaohu — Portal consultora legal-contable
+              - paragraph [ref=f101e185]: Sitio corporativo + portal privado de documentos PDF con control de acceso por cliente
+          - 'link "Ver caso de estudio: CISEP — Sitio web institucional estratégico" [ref=f101e187] [cursor=pointer]':
+            - /url: /proyectos/cisep
+            - generic [ref=f101e188]:
+              - generic [ref=f101e189]:
+                - 'img "CISEP — Sitio web institucional estratégico — Sitio estratégico de una ONG: donaciones, denuncia anónima, transparencia y voluntariado"'
+              - generic [ref=f101e190]: Sitio institucional estratégico (ONG)2026
+              - generic [ref=f101e191]:
+                - generic [ref=f101e192]: ONG
+                - generic [ref=f101e193]: Denuncia anónima
+                - generic [ref=f101e194]: SEO/301
+                - generic [ref=f101e195]: HTML-in-React
+              - generic [ref=f101e196]:
+                - text: Ver caso
+                - generic [ref=f101e197]: 
+            - generic [ref=f101e198]:
+              - generic [ref=f101e199]: CISEP — Sitio web institucional estratégico
+              - paragraph [ref=f101e200]: "Sitio estratégico de una ONG: donaciones, denuncia anónima, transparencia y voluntariado"
+          - 'link "Ver caso de estudio: Personas Desaparecidas — Plataforma FELCC" [ref=f101e202] [cursor=pointer]':
+            - /url: /proyectos/xmissing
+            - generic [ref=f101e203]:
+              - generic [ref=f101e204]:
+                - img "Personas Desaparecidas — Plataforma FELCC — Registro y búsqueda de personas desaparecidas con panel de moderación y mapa de calor"
+              - generic [ref=f101e205]: Plataforma pública + admin (seguridad ciudadana)2026
+              - generic [ref=f101e206]:
+                - generic [ref=f101e207]: Mapa
+                - generic [ref=f101e208]: Alertas
+                - generic [ref=f101e209]: Admin
+                - generic [ref=f101e210]: Denuncias
+              - generic [ref=f101e211]:
+                - text: Ver caso
+                - generic [ref=f101e212]: 
+            - generic [ref=f101e213]:
+              - generic [ref=f101e214]: Personas Desaparecidas — Plataforma FELCC
+              - paragraph [ref=f101e215]: Registro y búsqueda de personas desaparecidas con panel de moderación y mapa de calor
+          - 'link "Ver caso de estudio: Bemorex — Sitio web de la agencia" [ref=f101e217] [cursor=pointer]':
+            - /url: /proyectos/bemorex-website
+            - generic [ref=f101e218]:
+              - generic [ref=f101e219]:
+                - img "Bemorex — Sitio web de la agencia — Sitio de marca + blog SEO + suite de herramientas, migrado a Next.js como export estático"
+              - generic [ref=f101e220]: Sitio corporativo + blog + herramientas2026
+              - generic [ref=f101e221]:
+                - generic [ref=f101e222]: Next.js
+                - generic [ref=f101e223]: SSG estático
+                - generic [ref=f101e224]: SEO técnico
+                - generic [ref=f101e225]: Hexagonal
+              - generic [ref=f101e226]:
+                - text: Ver caso
+                - generic [ref=f101e227]: 
+            - generic [ref=f101e228]:
+              - generic [ref=f101e229]: Bemorex — Sitio web de la agencia
+              - paragraph [ref=f101e230]: Sitio de marca + blog SEO + suite de herramientas, migrado a Next.js como export estático
+          - 'link "Ver caso de estudio: PhysioLife — Centro de rehabilitación y fisioterapia" [ref=f101e232] [cursor=pointer]':
+            - /url: /proyectos/physiolife
+            - generic [ref=f101e233]:
+              - generic [ref=f101e234]:
+                - img "PhysioLife — Centro de rehabilitación y fisioterapia — Sitio de captación con SSR/SSG, catálogos ricos, blog SEO y analítica propia"
+              - generic [ref=f101e235]: Sitio institucional + catálogo + blog SEO2025–2026
+              - generic [ref=f101e236]:
+                - generic [ref=f101e237]: SSR/SSG
+                - generic [ref=f101e238]: SEO schema.org
+                - generic [ref=f101e239]: Analítica propia
+                - generic [ref=f101e240]: PWA
+              - generic [ref=f101e241]:
+                - text: Ver caso
+                - generic [ref=f101e242]: 
+            - generic [ref=f101e243]:
+              - generic [ref=f101e244]: PhysioLife — Centro de rehabilitación y fisioterapia
+              - paragraph [ref=f101e245]: Sitio de captación con SSR/SSG, catálogos ricos, blog SEO y analítica propia
+          - 'link "Ver caso de estudio: Vive Sin Miedo — App de prevención de violencia" [ref=f101e247] [cursor=pointer]':
+            - /url: /proyectos/vive-sin-miedo
+            - generic [ref=f101e248]:
+              - generic [ref=f101e249]:
+                - 'img "Vive Sin Miedo — App de prevención de violencia — App móvil de prevención de violencia de género: botón de auxilio, violentómetro y mapa de instituciones"'
+              - generic [ref=f101e250]: App móvil / impacto social2024
+              - generic [ref=f101e251]:
+                - generic [ref=f101e252]: Impacto social
+                - generic [ref=f101e253]: Botón de pánico
+                - generic [ref=f101e254]: Violentómetro
+                - generic [ref=f101e255]: Mapa
+              - generic [ref=f101e256]:
+                - text: Ver caso
+                - generic [ref=f101e257]: 
+            - generic [ref=f101e258]:
+              - generic [ref=f101e259]: Vive Sin Miedo — App de prevención de violencia
+              - paragraph [ref=f101e260]: "App móvil de prevención de violencia de género: botón de auxilio, violentómetro y mapa de instituciones"
+          - 'link "Ver caso de estudio: Revista Renacer — Plataforma editorial" [ref=f101e262] [cursor=pointer]':
+            - /url: /proyectos/renacer
+            - generic [ref=f101e263]:
+              - generic [ref=f101e264]:
+                - 'img "Revista Renacer — Plataforma editorial — Sitio de la revista educativa Renacer: blog SEO, portal y edición digital"'
+              - generic [ref=f101e265]: Medio digital / editorial2026
+              - generic [ref=f101e266]:
+                - generic [ref=f101e267]: Editorial
+                - generic [ref=f101e268]: Blog
+                - generic [ref=f101e269]: SEO
+                - generic [ref=f101e270]: Next.js
+              - generic [ref=f101e271]:
+                - text: Ver caso
+                - generic [ref=f101e272]: 
+            - generic [ref=f101e273]:
+              - generic [ref=f101e274]: Revista Renacer — Plataforma editorial
+              - paragraph [ref=f101e275]: "Sitio de la revista educativa Renacer: blog SEO, portal y edición digital"
+          - 'link "Ver caso de estudio: Romaneo — Digitalización del romaneo de madera" [ref=f101e277] [cursor=pointer]':
+            - /url: /proyectos/romaneo
+            - generic [ref=f101e278]:
+              - generic [ref=f101e279]:
+                - img "Romaneo — Digitalización del romaneo de madera — PWA offline-first de campo para medir madera y calcular pies tablares en aserradero"
+              - generic [ref=f101e280]: PWA de operación en campo2025
+              - generic [ref=f101e281]:
+                - generic [ref=f101e282]: PWA
+                - generic [ref=f101e283]: Offline-first
+                - generic [ref=f101e284]: Pies tablares
+                - generic [ref=f101e285]: Exportación PDF/Excel
+              - generic [ref=f101e286]:
+                - text: Ver caso
+                - generic [ref=f101e287]: 
+            - generic [ref=f101e288]:
+              - generic [ref=f101e289]: Romaneo — Digitalización del romaneo de madera
+              - paragraph [ref=f101e290]: PWA offline-first de campo para medir madera y calcular pies tablares en aserradero
+          - 'link "Ver caso de estudio: Ferromader — Gestión de barraca de madera" [ref=f101e292] [cursor=pointer]':
+            - /url: /proyectos/ferromader
+            - generic [ref=f101e293]:
+              - generic [ref=f101e294]:
+                - img "Ferromader — Gestión de barraca de madera — ERP ligero de ventas e inventario con cálculo automático de pies tablares"
+              - generic [ref=f101e295]: ERP ligero / gestión comercial2026
+              - generic [ref=f101e296]:
+                - generic [ref=f101e297]: Pies tablares
+                - generic [ref=f101e298]: Kardex
+                - generic [ref=f101e299]: RBAC
+                - generic [ref=f101e300]: Auditoría
+              - generic [ref=f101e301]:
+                - text: Ver caso
+                - generic [ref=f101e302]: 
+            - generic [ref=f101e303]:
+              - generic [ref=f101e304]: Ferromader — Gestión de barraca de madera
+              - paragraph [ref=f101e305]: ERP ligero de ventas e inventario con cálculo automático de pies tablares
+          - 'link "Ver caso de estudio: Ascenso de Categoría — PWA de estudio docente" [ref=f101e307] [cursor=pointer]':
+            - /url: /proyectos/ascenso
+            - generic [ref=f101e308]:
+              - generic [ref=f101e309]:
+                - img "Ascenso de Categoría — PWA de estudio docente — Simulacros y fichas para preparar el examen de ascenso docente 2026"
+              - generic [ref=f101e310]: PWA educativa (preparación de examen)2026
+              - generic [ref=f101e311]:
+                - generic [ref=f101e312]: PWA
+                - generic [ref=f101e313]: Simulacros
+                - generic [ref=f101e314]: Offline
+                - generic [ref=f101e315]: Progreso
+              - generic [ref=f101e316]:
+                - text: Ver caso
+                - generic [ref=f101e317]: 
+            - generic [ref=f101e318]:
+              - generic [ref=f101e319]: Ascenso de Categoría — PWA de estudio docente
+              - paragraph [ref=f101e320]: Simulacros y fichas para preparar el examen de ascenso docente 2026
+          - 'link "Ver caso de estudio: Peluditos — Registro y adopción de mascotas" [ref=f101e322] [cursor=pointer]':
+            - /url: /proyectos/peluditos
+            - generic [ref=f101e323]:
+              - generic [ref=f101e324]:
+                - img "Peluditos — Registro y adopción de mascotas — PWA para registrar y buscar mascotas perdidas y en adopción"
+              - generic [ref=f101e325]: PWA comunitaria (mascotas)2026
+              - generic [ref=f101e326]:
+                - generic [ref=f101e327]: PWA
+                - generic [ref=f101e328]: Adopción
+                - generic [ref=f101e329]: Búsqueda
+                - generic [ref=f101e330]: Comunidad
+              - generic [ref=f101e331]:
+                - text: Ver caso
+                - generic [ref=f101e332]: 
+            - generic [ref=f101e333]:
+              - generic [ref=f101e334]: Peluditos — Registro y adopción de mascotas
+              - paragraph [ref=f101e335]: PWA para registrar y buscar mascotas perdidas y en adopción
+        - link "Hablemos de tu proyecto " [ref=f101e337] [cursor=pointer]:
+          - /url: /contacto
+          - generic [ref=f101e338]: Hablemos de tu proyecto
+          - generic [ref=f101e339]: 
+      - generic [ref=f101e346]:
+        - paragraph [ref=f101e347]:
+          - img "Icon" [ref=f101e349]
+          - text: Hablemos de tu proyecto!
+        - link "Contáctame" [ref=f101e351] [cursor=pointer]:
+          - /url: /contacto
+          - generic [ref=f101e352]:
+            - generic [ref=f101e353]: Contáctame
+            - generic [ref=f101e354]: Contáctame
+          - generic [ref=f101e355]: 
+    - generic [ref=f101e357]:
+      - heading "David Morales Vega" [level=1] [ref=f101e361]
+      - generic [ref=f101e362]:
+        - generic [ref=f101e364]:
+          - list [ref=f101e366]:
+            - listitem [ref=f101e367]:
+              - link "Inicio" [ref=f101e368] [cursor=pointer]:
+                - /url: /
+                - generic [ref=f101e369]:
+                  - generic [ref=f101e370]: Inicio
+                  - generic [ref=f101e371]: Inicio
+            - listitem [ref=f101e372]:
+              - link "Proyectos" [ref=f101e373] [cursor=pointer]:
+                - /url: /proyectos
+                - generic [ref=f101e374]:
+                  - generic [ref=f101e375]: Proyectos
+                  - generic [ref=f101e376]: Proyectos
+              - paragraph [ref=f101e377]:
+                - img [ref=f101e378]
+                - generic [ref=f101e380]: "20"
+            - listitem [ref=f101e381]:
+              - link "Conferencias" [ref=f101e382] [cursor=pointer]:
+                - /url: /conferencias
+                - generic [ref=f101e383]:
+                  - generic [ref=f101e384]: Conferencias
+                  - generic [ref=f101e385]: Conferencias
+              - paragraph [ref=f101e386]:
+                - img [ref=f101e387]
+                - generic [ref=f101e389]: "16"
+            - listitem [ref=f101e390]:
+              - link "Blog" [ref=f101e391] [cursor=pointer]:
+                - /url: /blog
+                - generic [ref=f101e392]:
+                  - generic [ref=f101e393]: Blog
+                  - generic [ref=f101e394]: Blog
+            - listitem [ref=f101e395]:
+              - link "Contacto" [ref=f101e396] [cursor=pointer]:
+                - /url: /contacto
+                - generic [ref=f101e397]:
+                  - generic [ref=f101e398]: Contacto
+                  - generic [ref=f101e399]: Contacto
+          - generic [ref=f101e400]:
+            - link "Política de privacidad" [ref=f101e401] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=f101e402]:
+                - generic [ref=f101e403]: Política de privacidad
+                - generic [ref=f101e404]: Política de privacidad
+              - generic [ref=f101e405]: 
+            - link "Términos y condiciones" [ref=f101e406] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=f101e407]:
+                - generic [ref=f101e408]: Términos y condiciones
+                - generic [ref=f101e409]: Términos y condiciones
+              - generic [ref=f101e410]: 
+        - generic [ref=f101e411]:
+          - paragraph [ref=f101e413]:
+            - img [ref=f101e414]
+            - link "moralesvegadavid@gmail.com" [ref=f101e416] [cursor=pointer]:
+              - /url: mailto:moralesvegadavid@gmail.com?subject=Contacto%20desde%20tu%20sitio%20web
+          - paragraph [ref=f101e418]:
+            - img [ref=f101e419]
+            - link "+591 61816001" [ref=f101e421] [cursor=pointer]:
+              - /url: tel:+59161816001
+          - generic [ref=f101e422]:
+            - paragraph [ref=f101e424]: "Suscríbete a mis novedades:"
+            - generic [ref=f101e425]:
+              - generic [ref=f101e427]: Listo! Gracias por suscribirte.
+              - generic [ref=f101e429]: Oops! Algo salió mal. Intenta de nuevo más tarde.
+              - generic [ref=f101e430]:
+                - textbox "Tu correo" [ref=f101e431]
+                - button "Suscribirse al newsletter" [ref=f101e432] [cursor=pointer]:
+                  - generic [ref=f101e433]: 
+        - generic [ref=f101e435]:
+          - generic [ref=f101e436]:
+            - paragraph [ref=f101e438]: Redes
+            - list [ref=f101e440]:
+              - listitem [ref=f101e441]:
+                - link "LinkedIn" [ref=f101e442] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/morales-vega-david/
+              - listitem [ref=f101e443]:
+                - link "GitHub" [ref=f101e444] [cursor=pointer]:
+                  - /url: https://github.com/DavidMoralesVega
+              - listitem [ref=f101e445]:
+                - link "Facebook" [ref=f101e446] [cursor=pointer]:
+                  - /url: https://www.facebook.com/moralesvegadavid/
+              - listitem [ref=f101e447]:
+                - link "Instagram" [ref=f101e448] [cursor=pointer]:
+                  - /url: https://www.instagram.com/moralesvegadaviddante/
+              - listitem [ref=f101e449]:
+                - link "Bemorex" [ref=f101e450] [cursor=pointer]:
+                  - /url: https://www.bemorex.com
+              - listitem [ref=f101e451]:
+                - link "Web Personal" [ref=f101e452] [cursor=pointer]:
+                  - /url: https://www.moralesvegadavid.com
+          - paragraph [ref=f101e454]:
+            - link "David Morales Vega" [ref=f101e455] [cursor=pointer]:
+              - /url: https://www.moralesvegadavid.com
+            - generic [ref=f101e456]: 
+            - text: "2026"
