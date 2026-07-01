@@ -18,10 +18,24 @@ export interface RouteConfig {
 
 export const staticRoutes: RouteConfig[] = [
   { path: "/", changeFrequency: "weekly", priority: 1.0 },
+  { path: "/proyectos", changeFrequency: "weekly", priority: 0.9 },
   { path: "/conferencias", changeFrequency: "weekly", priority: 0.9 },
   { path: "/blog", changeFrequency: "weekly", priority: 0.8 },
   { path: "/contacto", changeFrequency: "monthly", priority: 0.8 },
 ];
+
+export function getProjectRoutes(): RouteConfig[] {
+  try {
+    const { projects } = require("@/data/projects.json");
+    return (projects as { slug: string }[]).map((p) => ({
+      path: `/proyectos/${p.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    }));
+  } catch {
+    return [];
+  }
+}
 
 export function getBlogArticles() {
   const fs = require("fs");
@@ -71,5 +85,5 @@ export function getBlogRoutes(): RouteConfig[] {
 }
 
 export function getAllRoutes(): RouteConfig[] {
-  return [...staticRoutes, ...getBlogRoutes()];
+  return [...staticRoutes, ...getProjectRoutes(), ...getBlogRoutes()];
 }

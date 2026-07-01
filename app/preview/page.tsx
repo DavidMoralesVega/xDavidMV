@@ -9,6 +9,10 @@ const ParallaxVideoDivider = dynamic(
   () => import("@/components/sections/dividers/ParallaxVideoDivider"),
   { ssr: true }
 );
+const ProjectsSection = dynamic(
+  () => import("@/components/sections/ProjectsSection"),
+  { ssr: true }
+);
 const ConferencesSection = dynamic(
   () => import("@/components/sections/ConferencesSection"),
   { ssr: true }
@@ -65,7 +69,10 @@ export default function PreviewPage() {
         {/* 3. Visual divider - Video */}
         <ParallaxVideoDivider />
 
-        {/* 3. CONFERENCIAS - Credibilidad y autoridad (16+ eventos) */}
+        {/* 4. PROYECTOS - Prueba de trabajo (20 productos en producción) */}
+        <ProjectsSection />
+
+        {/* 5. CONFERENCIAS - Credibilidad y autoridad (16+ eventos) */}
         <ConferencesSection />
 
         {/* 4. Servicios/Expertise - Qué ofrezco */}
