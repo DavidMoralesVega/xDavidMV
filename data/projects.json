@@ -142,7 +142,8 @@
       "coverAlt": "Bemorex Mi Negocio (SaaS) — directorio + back-office — SaaS multi-tenant: directorio de ~130.000 negocios + ERP con facturación fiscal boliviana",
       "images": [
         "/images/projects/bemorex-saas/cover.webp",
-        "/images/projects/bemorex-saas/01.webp"
+        "/images/projects/bemorex-saas/01.webp",
+        "/images/projects/bemorex-saas/02.webp"
       ],
       "tags": [
         "Multi-tenant",
@@ -314,6 +315,145 @@
     },
     {
       "id": 7,
+      "slug": "cirguz",
+      "title": "CirGuZ — Plataforma de e-learning médico",
+      "tagline": "Biblioteca y lecciones de cirugía con dashboard del estudiante y panel admin, como PWA",
+      "category": "E-learning médico",
+      "year": "2025",
+      "client": "CirGuZ (educación médica, Bolivia)",
+      "role": "Solutions Architect & Full Stack",
+      "stack": [
+        "Angular",
+        "TypeScript",
+        "Firebase",
+        "Tailwind CSS",
+        "PWA"
+      ],
+      "liveUrl": "https://bemorex.com/proyectos/cirguz/",
+      "featured": false,
+      "cover": "/images/projects/cirguz/cover.webp",
+      "coverAlt": "CirGuZ — Plataforma de e-learning médico — Biblioteca y lecciones de cirugía con dashboard del estudiante y panel admin, como PWA",
+      "images": [
+        "/images/projects/cirguz/cover.webp",
+        "/images/projects/cirguz/01.webp",
+        "/images/projects/cirguz/02.webp",
+        "/images/projects/cirguz/03.webp",
+        "/images/projects/cirguz/04.webp",
+        "/images/projects/cirguz/05.webp"
+      ],
+      "tags": [
+        "E-learning",
+        "Biblioteca médica",
+        "PWA",
+        "Dashboard",
+        "Cirugía"
+      ],
+      "summary": "Plataforma de aprendizaje para estudiantes de medicina y cirugía: biblioteca de libros médicos, lecciones estructuradas con figuras, dashboard del estudiante y panel de administración de contenidos. Instalable como PWA.",
+      "challenge": "El material de estudio de cirugía estaba disperso en PDFs y libros físicos. Se necesitaba una plataforma centralizada, navegable y usable sin conexión, con lecciones ilustradas y seguimiento del progreso del estudiante.",
+      "solution": "Desarrollé una PWA con biblioteca de libros médicos, lecciones de cirugía ilustradas con figuras anatómicas, dashboard del estudiante con guardado de progreso y un panel de administración para gestionar cursos y contenidos, con temas personalizables.",
+      "highlights": [
+        "Biblioteca de libros médicos navegable",
+        "Lecciones de cirugía ilustradas con figuras",
+        "Dashboard del estudiante con progreso guardado",
+        "Panel de administración de contenidos",
+        "Instalable como PWA (offline)"
+      ]
+    },
+    {
+      "id": 8,
+      "slug": "zyrax",
+      "title": "Zyrax ERP — Sistema de gestión empresarial",
+      "tagline": "ERP modular con design system propio (Zephyrus): dashboard, RRHH, administración y analíticas",
+      "category": "ERP / gestión empresarial",
+      "year": "2025",
+      "client": "Zyrax (producto)",
+      "role": "Solutions Architect & Full Stack",
+      "stack": [
+        "Angular",
+        "TypeScript",
+        "Tailwind CSS",
+        "Firebase",
+        "Chart.js"
+      ],
+      "liveUrl": "https://bemorex.com/proyectos/zyrax/",
+      "featured": false,
+      "cover": "/images/projects/zyrax/cover.webp",
+      "coverAlt": "Zyrax ERP — Sistema de gestión empresarial — ERP modular con design system propio (Zephyrus): dashboard, RRHH, administración y analíticas",
+      "images": [
+        "/images/projects/zyrax/cover.webp",
+        "/images/projects/zyrax/01.webp",
+        "/images/projects/zyrax/02.webp",
+        "/images/projects/zyrax/03.webp",
+        "/images/projects/zyrax/04.webp",
+        "/images/projects/zyrax/05.webp"
+      ],
+      "tags": [
+        "ERP",
+        "RRHH",
+        "Analíticas",
+        "Design system",
+        "Modo oscuro"
+      ],
+      "summary": "ERP modular empresarial construido sobre un design system propio (Zephyrus): panel principal, módulo de recursos humanos, módulos administrativos y reportes/analíticas, con soporte de tema oscuro.",
+      "challenge": "Unificar la gestión administrativa, de personal y de reportes de una empresa en un sistema coherente, con una interfaz consistente y escalable a múltiples módulos.",
+      "solution": "Diseñé un ERP modular con un design system propio (Zephyrus) que garantiza consistencia visual, con módulos de dashboard, recursos humanos, administración y analíticas, y soporte de tema claro/oscuro.",
+      "highlights": [
+        "Design system propio (Zephyrus)",
+        "Módulo de recursos humanos (RRHH)",
+        "Módulos administrativos",
+        "Reportes y analíticas",
+        "Tema oscuro / claro"
+      ]
+    },
+    {
+      "id": 9,
+      "slug": "learn-bemorex",
+      "title": "Bemorex Learn — Plataforma de aprendizaje",
+      "tagline": "Cursos interactivos, blog técnico y rutas de aprendizaje de desarrollo, 100% gratis y open source",
+      "category": "Plataforma educativa / e-learning",
+      "year": "2026",
+      "client": "Bemorex (producto propio)",
+      "role": "Fundador / Solutions Architect & Full Stack",
+      "stack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "MDX",
+        "Firebase",
+        "PWA"
+      ],
+      "liveUrl": "https://learn.bemorex.com",
+      "featured": true,
+      "cover": "/images/projects/learn-bemorex/cover.webp",
+      "coverAlt": "Bemorex Learn — Plataforma de aprendizaje — Cursos interactivos, blog técnico y rutas de aprendizaje de desarrollo, 100% gratis y open source",
+      "images": [
+        "/images/projects/learn-bemorex/cover.webp",
+        "/images/projects/learn-bemorex/01.webp",
+        "/images/projects/learn-bemorex/02.webp",
+        "/images/projects/learn-bemorex/03.webp"
+      ],
+      "tags": [
+        "E-learning",
+        "Open source",
+        "Blog técnico",
+        "PWA",
+        "Bilingüe"
+      ],
+      "summary": "Plataforma abierta de aprendizaje de desarrollo de software: cursos interactivos, un blog técnico y rutas de aprendizaje guiadas, desde HTML hasta Go y Angular. 100% gratuita, open source y bilingüe.",
+      "challenge": "Democratizar el acceso a formación técnica de calidad en español: hacía falta una plataforma rápida, indexable y usable sin conexión, que combinara cursos, artículos y rutas de aprendizaje en un solo lugar y sin muros de pago.",
+      "solution": "Desarrollé una plataforma con cursos y lecciones estructuradas, un blog técnico y rutas de aprendizaje, con búsqueda instantánea (Ctrl-K), soporte bilingüe (es/en), tema claro/oscuro e instalación como PWA para uso offline.",
+      "highlights": [
+        "14 cursos y 110+ lecciones interactivas",
+        "Blog técnico de 70 artículos",
+        "Rutas de aprendizaje guiadas",
+        "Bilingüe (español / inglés) con búsqueda instantánea",
+        "100% gratuito y open source",
+        "Instalable como PWA (offline)"
+      ]
+    },
+    {
+      "id": 10,
       "slug": "lilaohu",
       "title": "Lilaohu — Portal consultora legal-contable",
       "tagline": "Sitio corporativo + portal privado de documentos PDF con control de acceso por cliente",
@@ -362,7 +502,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": 11,
       "slug": "cisep",
       "title": "CISEP — Sitio web institucional estratégico",
       "tagline": "Sitio estratégico de una ONG: donaciones, denuncia anónima, transparencia y voluntariado",
@@ -411,7 +551,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": 12,
       "slug": "xmissing",
       "title": "Personas Desaparecidas — Plataforma FELCC",
       "tagline": "Registro y búsqueda de personas desaparecidas con panel de moderación y mapa de calor",
@@ -457,7 +597,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": 13,
       "slug": "bemorex-website",
       "title": "Bemorex — Sitio web de la agencia",
       "tagline": "Sitio de marca + blog SEO + suite de herramientas, migrado a Next.js como export estático",
@@ -506,7 +646,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": 14,
       "slug": "physiolife",
       "title": "PhysioLife — Centro de rehabilitación y fisioterapia",
       "tagline": "Sitio de captación con SSR/SSG, catálogos ricos, blog SEO y analítica propia",
@@ -558,7 +698,52 @@
       ]
     },
     {
-      "id": 12,
+      "id": 15,
+      "slug": "vive-sin-miedo",
+      "title": "Vive Sin Miedo — App de prevención de violencia",
+      "tagline": "App móvil de prevención de violencia de género: botón de auxilio, violentómetro y mapa de instituciones",
+      "category": "App móvil / impacto social",
+      "year": "2024",
+      "client": "Vive Sin Miedo (impacto social, Bolivia)",
+      "role": "Solutions Architect & Full Stack",
+      "stack": [
+        "Flutter",
+        "Firebase",
+        "Google Maps"
+      ],
+      "liveUrl": "https://bemorex.com/proyectos/vive-sin-miedo/",
+      "featured": false,
+      "cover": "/images/projects/vive-sin-miedo/cover.webp",
+      "coverAlt": "Vive Sin Miedo — App de prevención de violencia — App móvil de prevención de violencia de género: botón de auxilio, violentómetro y mapa de instituciones",
+      "images": [
+        "/images/projects/vive-sin-miedo/cover.webp",
+        "/images/projects/vive-sin-miedo/01.webp",
+        "/images/projects/vive-sin-miedo/02.webp",
+        "/images/projects/vive-sin-miedo/03.webp",
+        "/images/projects/vive-sin-miedo/04.webp",
+        "/images/projects/vive-sin-miedo/05.webp"
+      ],
+      "tags": [
+        "Impacto social",
+        "Botón de pánico",
+        "Violentómetro",
+        "Mapa",
+        "Play Store"
+      ],
+      "summary": "Aplicación móvil de prevención de violencia de género: incluye botón de auxilio/pánico, un violentómetro digital, mapa de instituciones de ayuda, información sobre tipos de violencia y canal de denuncia. Publicada en Google Play Store.",
+      "challenge": "Poner en el celular de las víctimas una herramienta de respuesta rápida y educación sobre violencia de género, con acceso inmediato a ayuda y a la ubicación de instituciones de apoyo.",
+      "solution": "Desarrollé una app móvil con botón de auxilio de acceso inmediato, un violentómetro digital para autoevaluación, mapa geolocalizado de instituciones de ayuda, información educativa por tipos de violencia y un canal de denuncia.",
+      "highlights": [
+        "Botón de auxilio / pánico de acceso inmediato",
+        "Violentómetro digital de autoevaluación",
+        "Mapa de instituciones de ayuda",
+        "Información por tipos de violencia",
+        "Canal de denuncia",
+        "Publicada en Google Play Store"
+      ]
+    },
+    {
+      "id": 16,
       "slug": "renacer",
       "title": "Revista Renacer — Plataforma editorial",
       "tagline": "Sitio de la revista educativa Renacer: blog SEO, portal y edición digital",
@@ -603,7 +788,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": 17,
       "slug": "romaneo",
       "title": "Romaneo — Digitalización del romaneo de madera",
       "tagline": "PWA offline-first de campo para medir madera y calcular pies tablares en aserradero",
@@ -651,7 +836,7 @@
       ]
     },
     {
-      "id": 14,
+      "id": 18,
       "slug": "ferromader",
       "title": "Ferromader — Gestión de barraca de madera",
       "tagline": "ERP ligero de ventas e inventario con cálculo automático de pies tablares",
@@ -698,7 +883,7 @@
       ]
     },
     {
-      "id": 15,
+      "id": 19,
       "slug": "ascenso",
       "title": "Ascenso de Categoría — PWA de estudio docente",
       "tagline": "Simulacros y fichas para preparar el examen de ascenso docente 2026",
@@ -742,7 +927,7 @@
       ]
     },
     {
-      "id": 16,
+      "id": 20,
       "slug": "peluditos",
       "title": "Peluditos — Registro y adopción de mascotas",
       "tagline": "PWA para registrar y buscar mascotas perdidas y en adopción",
