@@ -228,7 +228,7 @@ export default function HeroSection() {
                       id="stats-counter-1"
                       className="mxd-counter__number mxd-stats-number small"
                     >
-                      <Counter max={7} />+
+                      <Counter max={8} />+
                     </p>
                     <p className="mxd-counter__descr t-140 t-bright t-small">
                       Años de experiencia
@@ -256,7 +256,7 @@ export default function HeroSection() {
                   <p className="t-large t-medium t-140 t-bright">
                     Hola! Soy David Morales Vega.
                     <br />
-                    Arquitecto de Soluciones, Tech Lead e Ing. de Software.
+                    Arquitecto de Soluciones, Tech Lead, Abogado e Ing. de Software.
                   </p>
                 </div>
                 <div className="hero-07-info__tags">

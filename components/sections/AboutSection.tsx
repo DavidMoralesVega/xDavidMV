@@ -16,11 +16,12 @@ export default function AboutSection() {
                       as="p"
                       className="mxd-manifest mxd-manifest-l reveal-type"
                     >
-                      Diseño ecosistemas digitales escalables alineando
-                      estrategia de negocio, cumplimiento normativo y
-                      tecnología. Mi perfil híbrido único combina Ingeniería de
-                      Sistemas y Derecho para liderar equipos de alto
-                      rendimiento.
+                      Con 8+ años diseño ecosistemas digitales escalables sobre
+                      microservicios, alineando estrategia de negocio,
+                      cumplimiento normativo y tecnología. Mi perfil híbrido
+                      combina Ingeniería de Sistemas, Derecho y formación en
+                      Inteligencia Artificial, Machine Learning y Data Science
+                      para liderar equipos de alto rendimiento.
                     </RevealText>
                     <div className="mxd-manifest__controls anim-uni-in-up">
                       <div className="mxd-btngroup centered">

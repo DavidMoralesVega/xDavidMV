@@ -9,12 +9,12 @@ const ParallaxVideoDivider = dynamic(
   () => import("@/components/sections/dividers/ParallaxVideoDivider"),
   { ssr: true }
 );
-const ProjectsSection = dynamic(
-  () => import("@/components/sections/ProjectsSection"),
+const ProjectsShowcase = dynamic(
+  () => import("@/components/sections/ProjectsShowcase"),
   { ssr: true }
 );
-const ConferencesSection = dynamic(
-  () => import("@/components/sections/ConferencesSection"),
+const ConferencesShowcase = dynamic(
+  () => import("@/components/sections/ConferencesShowcase"),
   { ssr: true }
 );
 const ServicesSection = dynamic(
@@ -69,11 +69,11 @@ export default function PreviewPage() {
         {/* 3. Visual divider - Video */}
         <ParallaxVideoDivider />
 
-        {/* 4. PROYECTOS - Prueba de trabajo (20 productos en producción) */}
-        <ProjectsSection />
+        {/* 4. PROYECTOS - Showcase destacado (pinned) con proyectos reales */}
+        <ProjectsShowcase />
 
-        {/* 5. CONFERENCIAS - Credibilidad y autoridad (16+ eventos) */}
-        <ConferencesSection />
+        {/* 5. CONFERENCIAS - Showcase (pinned) con eventos reales */}
+        <ConferencesShowcase />
 
         {/* 4. Servicios/Expertise - Qué ofrezco */}
         <ServicesSection />
