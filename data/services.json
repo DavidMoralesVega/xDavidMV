@@ -13,6 +13,19 @@
     ]
   },
   {
+    "title": "Inteligencia Artificial & Data Science",
+    "image": "/images/services/architecture-software.webp",
+    "desc": "Integro IA en productos reales: OCR y visión con Gemini, búsqueda semántica y vectorial (pgvector + embeddings) y análisis de datos. Con formación de maestría en IA, Machine Learning y Data Science.",
+    "tags": [
+      "Machine Learning",
+      "Data Science",
+      "Gemini / LLMs",
+      "Búsqueda vectorial",
+      "OCR / Visión",
+      "Python"
+    ]
+  },
+  {
     "title": "Desarrollo Frontend & Mobile",
     "image": "/images/services/development-frontend-apps.webp",
     "desc": "Implemento aplicaciones modernas con Angular, Next.js y Flutter. Especializado en PWA, componentes Standalone, Signals y sistemas de diseño UI/UX.",
