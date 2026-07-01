@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 import ImageLightbox from "@/components/ui/ImageLightbox";
@@ -13,6 +13,23 @@ export default function ProjectDetail({ slug }: { slug: string }) {
 
   const [open, setOpen] = useState(false);
   const [slide, setSlide] = useState(0);
+
+  // Portrait screenshots (phone mockups) look wrong cropped edge-to-edge; show
+  // them fully with object-fit:contain over the container's subtle background.
+  useEffect(() => {
+    const imgs = document.querySelectorAll<HTMLImageElement>(
+      ".pd-cover img, .pd-gallery__item img"
+    );
+    imgs.forEach((img) => {
+      const mark = () => {
+        if (img.naturalWidth && img.naturalHeight > img.naturalWidth * 1.15) {
+          img.classList.add("is-portrait");
+        }
+      };
+      if (img.complete && img.naturalWidth) mark();
+      else img.addEventListener("load", mark, { once: true });
+    });
+  }, []);
 
   if (!project) return null;
 
@@ -403,6 +420,12 @@ export default function ProjectDetail({ slug }: { slug: string }) {
         }
         .pd-gallery__item:hover img {
           transform: scale(1.05);
+        }
+        /* Portrait screenshots (phone mockups): show the whole image, don't crop */
+        .pd-cover img.is-portrait,
+        .pd-gallery__item img.is-portrait {
+          object-fit: contain;
+          background: color-mix(in srgb, currentColor 5%, transparent);
         }
         .pd-nav {
           display: flex;
